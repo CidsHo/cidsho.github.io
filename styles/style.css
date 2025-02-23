@@ -21,11 +21,22 @@ header {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: none; /* 初始状态隐藏导航栏 */
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#nav-menu.active {
+    display: flex; /* 点击后显示导航栏 */
 }
 
 #nav-menu li {
-    margin-left: 20px;
+    margin: 10px 0;
 }
 
 #nav-menu li a {
@@ -33,12 +44,36 @@ header {
     color: #333;
 }
 
+/* 导航栏图标样式 */
 #nav-toggle {
-    display: none;
-    font-size: 24px;
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icon {
+    width: 24px; /* 根据图片尺寸调整 */
+    height: 24px; /* 根据图片尺寸调整 */
+    transition: transform 0.3s ease; /* 添加旋转动画 */
+}
+
+/* 鼠标悬停时放大图标 */
+#nav-toggle:hover .nav-icon {
+    transform: scale(1.1);
+}
+
+/* 点击时缩小图标 */
+#nav-toggle:active .nav-icon {
+    transform: scale(0.9);
+}
+
+/* 点击后旋转 90 度 */
+#nav-toggle.rotate .nav-icon {
+    transform: rotate(90deg);
 }
 
 .welcome-section {
@@ -54,25 +89,4 @@ header {
 .content-section {
     padding: 60px 20px;
     text-align: center;
-}
-
-@media (max-width: 768px) {
-    #nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        right: 10px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-        padding: 10px;
-    }
-
-    #nav-menu.active {
-        display: flex;
-    }
-
-    #nav-toggle {
-        display: block;
-    }
 }
