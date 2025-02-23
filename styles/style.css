@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden; /* 防止水平滚动 */
 }
 
 header {
@@ -10,38 +11,12 @@ header {
     top: 0;
     right: 0;
     padding: 10px;
+    z-index: 1000; /* 确保导航栏图标在最上层 */
 }
 
 #navbar {
     display: flex;
     justify-content: flex-end;
-}
-
-#nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: none; /* 初始状态隐藏导航栏 */
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    right: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-
-#nav-menu.active {
-    display: flex; /* 点击后显示导航栏 */
-}
-
-#nav-menu li {
-    margin: 10px 0;
-}
-
-#nav-menu li a {
-    text-decoration: none;
-    color: #333;
 }
 
 /* 导航栏图标样式 */
@@ -74,6 +49,95 @@ header {
 /* 点击后旋转 90 度 */
 #nav-toggle.rotate .nav-icon {
     transform: rotate(90deg);
+}
+
+/* 菜单栏覆盖层 */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: -300px; /* 初始状态隐藏在右侧 */
+    width: 300px; /* 菜单栏宽度 */
+    height: 100vh; /* 菜单栏高度 */
+    background-color: #808080; /* 灰色背景 */
+    transition: right 0.3s ease; /* 推出动画 */
+    z-index: 999; /* 确保菜单栏在内容之上 */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); /* 添加阴影 */
+}
+
+/* 菜单栏展开状态 */
+.menu-overlay.active {
+    right: 0; /* 从右侧推出 */
+}
+
+/* 菜单栏内容 */
+#nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+}
+
+#nav-menu li {
+    margin: 20px 0;
+}
+
+/* 菜单栏条目样式 */
+#nav-menu li a {
+    text-decoration: none;
+    color: #fff; /* 菜单项文字颜色 */
+    font-size: 18px;
+    position: relative; /* 为伪元素定位做准备 */
+    display: inline-block; /* 确保伪元素宽度与文字一致 */
+}
+
+/* 下划线动画 */
+#nav-menu li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* 下划线位置 */
+    width: 0; /* 初始宽度为 0 */
+    height: 2px; /* 下划线高度 */
+    background-color: #fff; /* 下划线颜色 */
+    transition: width 0.3s ease; /* 动画效果 */
+}
+
+/* 鼠标悬停时显示下划线 */
+#nav-menu li a:hover::after {
+    width: 100%; /* 下划线宽度扩展到 100% */
+}
+
+/* More About Me 部分 */
+.more-about-me {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.more-about-me p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* 图标行 */
+.icon-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* 图标之间的间距 */
+}
+
+/* 图标样式 */
+.icon {
+    width: 24px; /* 图标尺寸 */
+    height: 24px;
+    transition: transform 0.3s ease; /* 添加 hover 动画 */
+}
+
+/* 鼠标悬停时放大图标 */
+.icon:hover {
+    transform: scale(1.2);
 }
 
 .welcome-section {

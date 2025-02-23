@@ -3,22 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人网页</title>
+    <title>Cids' Personal Website</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header>
         <nav id="navbar">
             <button id="nav-toggle">
-                <img src="assets/icon-placeholder.png" alt="导航栏图标" class="nav-icon">
+                <img src="assets/navigator.png" alt="Navigator" class="nav-icon">
             </button>
-            <ul id="nav-menu">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="portfolio.html">作品</a></li>
-                <li><a href="about.html">关于我</a></li>
-            </ul>
         </nav>
     </header>
+
+    <!-- 菜单栏 -->
+    <div id="menu-overlay" class="menu-overlay">
+        <ul id="nav-menu">
+            <li><a href="index.html">FrontPage</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About Me</a></li>
+        </ul>
+
+        <!-- More About Me 和图标 -->
+        <div class="more-about-me">
+            <p>More About Me</p>
+            <div class="icon-row">
+                <a href="mailto:hocids@tongji.edu.cn">
+                    <img src="assets/email-icon.png" alt="Email" class="icon">
+                </a>
+                <a href="https://github.com/CidsHo" target="_blank">
+                    <img src="assets/github-icon.png" alt="GitHub" class="icon">
+                </a>
+                <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                    <img src="assets/orcid-icon.png" alt="ORCID" class="icon">
+                </a>
+                <a href="https://scholar.google.com/citations?user=Cids%20Ho" target="_blank">
+                    <img src="assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                </a>
+            </div>
+        </div>
+    </div>
 
     <section id="welcome" class="welcome-section">
         <h1>欢迎来到我的个人网页</h1>
