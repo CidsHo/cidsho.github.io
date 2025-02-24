@@ -286,20 +286,20 @@
 /* 个人介绍部分 */
 
 .profile-image {
-    width: 100%;
+    width: 612.5px;
     max-width: 1225px;
-    height: auto;
+    height: 919px;
     position: absolute;
-    top: 281px;
-    left: 182px;
+    top: 140.5px;
+    left: 91px;
 }
 
 .about-title {
     position: absolute;
-    top: 250px;
-    left: 255px;
+    top: 155px;
+    left: 127.5px;
     color: white;
-    font-size: 128px;
+    font-size: 64px;
     font-family: Playfair Display, serif;
     font-weight: 400;
     text-shadow: -20px 0 10px rgba(0, 0, 0, 0.2);
@@ -307,11 +307,11 @@
 
 .arrow {
     position: absolute;
-    top: 2284px;
-    left: 182px;
-    width: 53px;
+    top: 1142px;
+    left: 91px;
+    width: 26.5px;
     height: 0;
-    border: 10px solid black;
+    border: 5px solid black;
 }
 
 /* 限制每行最多显示五个预览卡 */

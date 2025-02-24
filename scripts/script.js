@@ -10,6 +10,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// 导航函数
+function navigateTo(url) {
+    const content = document.getElementById('content');
+    content.classList.add('fade-out'); // 添加淡出动画
+
+    setTimeout(() => {
+        window.location.href = url; // 跳转到目标页面
+    }, 500); // 500ms 是过渡动画的持续时间
+}
+
+// 页面加载时添加淡入动画
+window.addEventListener('load', () => {
+    const content = document.getElementById('content');
+    content.classList.add('fade-in');
+});
+
 // 排序和筛选
 
 document.addEventListener('DOMContentLoaded', function() {

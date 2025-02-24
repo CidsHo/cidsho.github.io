@@ -17,16 +17,15 @@
 
 /* layout.css */
 .container {
-    width: 100%;
-    max-width: 3840px;
-    height: auto;
+    width: 1920px;
+    height: 1200px;
     position: relative;
     background: white;
 }
 
 .background {
-    width: 100%;
-    height: 100%;
+    width: 1920px;
+    height: 1200px;
     position: absolute;
     top: 0;
     left: 0;
@@ -34,52 +33,57 @@
 }
 
 .divider {
-    width: 100%;
+    width: 1861;
     height: 0;
     position: absolute;
-    top: 1771px;
-    left: 0;
-    border: 1px solid rgba(0, 0, 0, 0.10);
+    top: 885.5px;
+    left: 32.5;
+    border: 1.5px solid rgba(0, 0, 0, 0.10);
 }
 
 section {
     position: absolute;
-    font-size: 45px;
+    font-size: 22.5px;
     font-weight: 400;
 }
 
-.contact-info {
-    top: 1810px;
-    left: 1766px;
-    text-align: right;
+.education {
+    top: 100px;
+    left: 804px;
 }
 
 .research-interests {
-    top: 680px;
-    left: 1608px;
-}
-
-.education {
-    top: 374px;
-    left: 1608px;
-}
-
-.skills {
-    top: 1353px;
-    left: 1608px;
+    top: 250px;
+    left: 804px;
 }
 
 .creative-fields {
-    top: 900px;
-    left: 1608px;
+    top: 400px;
+    left: 804px;
 }
 
 .language {
-    top: 1170px;
-    left: 1608px;
+    top: 550px;
+    left: 804px;
 }
 
-.orcid, .email {
-    top: 1810px;
-    left: 2258px;
+.skills {
+    top: 700px;
+    left: 804px;
+}
+
+.orcid {
+    top: 905px;
+    left: 804px;
+}
+
+.email {
+    top: 905px;
+    left: 1300px;
+}
+
+.contact-info {
+    top: 905px;
+    left: 883px;
+    text-align: right;
 }
