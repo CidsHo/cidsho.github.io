@@ -12,6 +12,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative; /* 确保按钮可以设置 z-index */
+    z-index: 1000; /* 确保按钮位于菜单栏之上 */
 }
 
 .nav-icon {
@@ -82,8 +84,8 @@
     width: 100%;
 }
 
-/* More About Me 样式 */
-.more-about-me {
+/* More 样式 */
+.more-frontpage {
     position: absolute;
     bottom: 20px;
     left: 0;
@@ -91,7 +93,7 @@
     text-align: center;
 }
 
-.more-about-me p {
+.more-frontpage p {
     color: #fff;
     font-size: 16px;
     margin-bottom: 10px;
