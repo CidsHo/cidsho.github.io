@@ -21,6 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 排序函数
     function sortItems(order) {
+        // 添加移动动画
+        portfolioItems.forEach(item => item.classList.add('move'));
+
+        // 排序逻辑
         portfolioItems.sort((a, b) => {
             const dateA = new Date(a.getAttribute('data-date'));
             const dateB = new Date(b.getAttribute('data-date'));
@@ -30,6 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // 清空网格并重新添加排序后的项目
         portfolioGrid.innerHTML = '';
         portfolioItems.forEach(item => portfolioGrid.appendChild(item));
+
+        // 移除移动动画
+        setTimeout(() => {
+            portfolioItems.forEach(item => item.classList.remove('move'));
+        }, 500); // 动画持续时间
     }
 
     // 筛选函数
@@ -37,9 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
         portfolioItems.forEach(item => {
             const itemCategory = item.getAttribute('data-category');
             if (category === 'all' || itemCategory === category) {
-                item.style.display = 'block';
+                item.classList.remove('hide'); // 显示项目
             } else {
-                item.style.display = 'none';
+                item.classList.add('hide'); // 隐藏项目
             }
         });
     }

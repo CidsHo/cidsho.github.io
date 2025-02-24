@@ -181,6 +181,7 @@
     gap: 20px;
     padding: 20px;
     align-items: start; /* 让卡片从顶部对齐，避免拉伸 */
+    grid-auto-flow: dense; /* 启用密集填充模式 */
 }
 
 .portfolio-item {
@@ -188,9 +189,21 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     display: flex;
-    flex-direction: column; /* 让内容垂直排列 */
+    flex-direction: column;
+    opacity: 1; /* 初始透明度 */
+    transform: translateY(0); /* 初始位置 */
+    grid-row-end: span 2; /* 默认跨度为2，可以根据内容高度调整 */
+}
+
+.portfolio-item.hide {
+    opacity: 0; /* 隐藏时的透明度 */
+    transform: translateY(20px); /* 向下移动 20px */
+}
+
+.portfolio-item.move {
+    transition: transform 0.5s ease; /* 快速移动动画 */
 }
 
 .portfolio-item:hover {
