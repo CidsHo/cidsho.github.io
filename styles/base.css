@@ -1,3 +1,27 @@
+/* 全局样式 */
+body {
+    font-family: 'Anek Latin','Microsoft YaHei', sans-serif; /* 默认字体 */
+    margin: 20px 0; /* 上下留白 20px */
+    padding: 0;
+    background-color: #D9D9D9; /* 背景色 */
+    color: #333; /* 文字颜色 */
+    box-sizing: border-box;
+}
+
+/* 标题字体 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display','Microsoft YaHei', serif;
+    font-weight: 700; /* 使用粗体 */
+}
+
+/* 斜体样式 */
+.italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+/* 以下为定义字体 */
+
 /* 定义 Anek Latin 字体 */
 @font-face {
     font-family: 'Anek Latin';
@@ -118,26 +142,4 @@
     src: local('Microsoft YaHei'), local('微软雅黑'),
          url('../assets/fonts/microsoft-yahei.ttf') format('truetype');
     unicode-range: U+4E00-9FFF;
-}
-
-/* 全局样式 */
-body {
-    font-family: 'Anek Latin','Microsoft YaHei', sans-serif; /* 默认字体 */
-    margin: 20px 0; /* 上下留白 20px */
-    padding: 0;
-    background-color: #D9D9D9; /* 背景色 */
-    color: #333; /* 文字颜色 */
-    box-sizing: border-box;
-}
-
-/* 标题字体 */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display','Microsoft YaHei', serif;
-    font-weight: 700; /* 使用粗体 */
-}
-
-/* 斜体样式 */
-.italic {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
 }

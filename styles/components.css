@@ -37,6 +37,42 @@
     transform: rotate(90deg);
 }
 
+/* 排序和筛选按钮 */
+.filter-sort-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+    border-radius: 10px;
+}
+
+.sort-options, .filter-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-button, .filter-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.sort-button img, .filter-button img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.sort-button:hover img, .filter-button:hover img {
+    transform: scale(1.2);
+}
+
 /* 菜单栏样式 */
 .menu-overlay {
     position: fixed;
@@ -44,7 +80,7 @@
     right: -300px;
     width: 300px;
     height: calc(100vh - 0px); /* 减去顶部间距 */
-    background-color: #808080;
+    background-color: rgba(128, 128, 128, 0.9); /* 灰色背景，透明度 90% */
     transition: right 0.3s ease;
     z-index: 999; /* 确保菜单栏位于按钮之下 */
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
@@ -62,6 +98,8 @@
 
 #nav-menu li {
     margin: 20px 0;
+    position: relative; /* 为伪元素定位做准备 */
+    padding-left: 30px; /* 为图标留出空间 */
 }
 
 #nav-menu li a {
@@ -70,7 +108,19 @@
     font-size: 18px;
     position: relative;
     display: inline-block;
-    top: 30px;
+}
+
+/* 当前页面图标 */
+#nav-menu li.current-page::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* 图标宽度 */
+    height: 20px; /* 图标高度 */
+    background-image: url('../assets/current-page-icon.png');
+    background-size: cover; /* 确保图标完整显示 */
 }
 
 #nav-menu li a::after {
