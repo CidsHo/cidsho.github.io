@@ -3,25 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作品</title>
+    <title>Portfolio - Cids' Personal Website</title>
     <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <!-- Apple Touch Icon (iOS 和 iPadOS) -->
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <!-- Android Chrome -->
+    <link rel="manifest" href="assets/site.webmanifest">
+    <!-- Windows 8/10 磁贴 -->
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
 </head>
 <body>
     <header>
         <nav id="navbar">
-            <button id="nav-toggle">☰</button>
-            <ul id="nav-menu">
-                <li><a href="index.html">首页</a></li>
-                <li><a href="portfolio.html">作品</a></li>
-                <li><a href="about.html">关于我</a></li>
-            </ul>
+            <button id="nav-toggle">
+                <img src="assets/navigator.png" alt="Navigator" class="nav-icon">
+            </button>
         </nav>
     </header>
 
-    <section id="portfolio" class="content-section">
-        <h2>作品</h2>
-        <p>这里展示我的作品。</p>
-    </section>
+    <!-- 菜单栏 -->
+    <div id="menu-overlay" class="menu-overlay">
+        <ul id="nav-menu">
+            <li><a href="index.html">FrontPage</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About Me</a></li>
+        </ul>
+
+        <!-- More 和图标 -->
+        <div class="more-frontpage">
+            <p>More</p>
+            <div class="icon-row">
+                <a href="mailto:hocids@tongji.edu.cn">
+                    <img src="assets/email-icon.png" alt="Email" class="icon">
+                </a>
+                <a href="https://github.com/CidsHo" target="_blank">
+                    <img src="assets/github-icon.png" alt="GitHub" class="icon">
+                </a>
+                <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                    <img src="assets/orcid-icon.png" alt="ORCID" class="icon">
+                </a>
+                <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                    <img src="assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                </a>
+            </div>
+        </div>
+    </div>
+
+<!-- 作品页面内容 -->
+<section id="portfolio" class="portfolio-section">
+    <h1>作品集</h1>
+    <div class="portfolio-grid">
+        <!-- 实验页面 -->
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="articles/test-article/assets/1.jpg" alt="项目 1" class="portfolio-image">
+            </div>
+            <div class="portfolio-info">
+                <h2>项目 1 标题</h2>
+                <p>这是项目 1 的简介。点击“阅读更多”查看详细信息。</p>
+                <a href="articles/test-article/test-article.html" class="read-more">
+                    <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
+                </a>
+            </div>
+        </div>
+
+        <!-- 2-24-2025-prologue -->
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="articles/2-24-2025-prologue/assets/1.jpg" alt="项目 2" class="portfolio-image">
+            </div>
+            <div class="portfolio-info">
+                <h2>Prologue</h2>
+                <p>Things should have a begin, so it begins here.</p>
+                <a href="articles/2-24-2025-prologue/2-24-2025-prologue.html" class="read-more">
+                    <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
+                </a>
+            </div>
+        </div>
+
+        <!-- 项目 3 -->
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="assets/portfolio/project3.jpg" alt="项目 3" class="portfolio-image">
+            </div>
+            <div class="portfolio-info">
+                <h2>项目 3 标题</h2>
+                <p>这是项目 3 的简介。点击“阅读更多”查看详细信息。</p>
+                <a href="articles/project3.html" class="read-more">
+                    <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
+                </a>
+            </div>
+        </div>
+        
+        <!-- 项目 3 -->
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="assets/portfolio/project3.jpg" alt="项目 3" class="portfolio-image">
+            </div>
+            <div class="portfolio-info">
+                <h2>项目 3 标题</h2>
+                <p>这是项目 3 的简介。点击“阅读更多”查看详细信息。</p>
+                <a href="articles/project3.html" class="read-more">
+                    <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
+                </a>
+            </div>
+        </div>
+
+        <!-- 项目 3 -->
+        <div class="portfolio-item">
+            <div class="image-container">
+                <img src="assets/portfolio/project3.jpg" alt="项目 3" class="portfolio-image">
+            </div>
+            <div class="portfolio-info">
+                <h2>项目 3 标题</h2>
+                <p>这是项目 3 的简介。点击“阅读更多”查看详细信息。</p>
+                <a href="articles/project3.html" class="read-more">
+                    <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <script src="scripts/script.js"></script>
 </body>

@@ -4,6 +4,7 @@
     justify-content: flex-end;
 }
 
+/* 导航栏按钮样式 */
 #nav-toggle {
     background: none;
     border: none;
@@ -12,7 +13,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* 确保按钮可以设置 z-index */
+    position: fixed; /* 固定定位 */
+    top: 20px; /* 距离顶部 20px */
+    right: 20px; /* 距离右侧 20px */
     z-index: 1000; /* 确保按钮位于菜单栏之上 */
 }
 
@@ -37,13 +40,13 @@
 /* 菜单栏样式 */
 .menu-overlay {
     position: fixed;
-    top: 0;
+    top: 0; 
     right: -300px;
     width: 300px;
-    height: 100vh;
+    height: calc(100vh - 0px); /* 减去顶部间距 */
     background-color: #808080;
     transition: right 0.3s ease;
-    z-index: 999;
+    z-index: 999; /* 确保菜单栏位于按钮之下 */
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -67,6 +70,7 @@
     font-size: 18px;
     position: relative;
     display: inline-block;
+    top: 30px;
 }
 
 #nav-menu li a::after {
@@ -113,4 +117,110 @@
 
 .icon:hover {
     transform: scale(1.2);
+}
+
+/* 作品集部分样式 */
+.portfolio-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 每列最小宽度 200px */
+    gap: 20px;
+    padding: 20px;
+    align-items: start; /* 让卡片从顶部对齐，避免拉伸 */
+}
+
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* 让内容垂直排列 */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 图片容器 */
+.image-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.portfolio-image {
+    width: 100%;
+    height: auto; /* 高度根据图片比例自动调整 */
+    display: block; /* 避免图片下方出现空白间隙 */
+}
+
+.portfolio-info {
+    padding: 20px;
+    text-align: left;
+    flex-grow: 1; /* 让简介部分填充剩余空间 */
+}
+
+.portfolio-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.portfolio-info p {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.read-more-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.read-more-icon:hover {
+    transform: scale(1.2);
+}
+
+/* 限制每行最多显示五个预览卡 */
+@media (min-width: 1200px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(5, 1fr); /* 每行最多五个 */
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(4, 1fr); /* 每行最多四个 */
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr); /* 每行最多三个 */
+    }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* 每行最多两个 */
+    }
+}
+
+@media (max-width: 575px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* 竖版显示时每行最多两个 */
+    }
 }

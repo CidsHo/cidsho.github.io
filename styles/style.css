@@ -3,3 +3,39 @@
 @import url('layout.css');
 @import url('components.css');
 @import url('utilities.css');
+
+/* 全局样式 */
+body {
+    font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif;
+    margin: 20px 0;
+    padding: 0;
+    background-color: #D9D9D9; /* 底色 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-size: 500px 500px; /* 缩放材质图片 */
+    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* 确保页面高度为 100% */
+}
+
+/* 默认缩放比例 */
+body {
+    background-size: 500px 500px;
+}
+
+/* 在小屏幕上缩小材质图片 */
+@media (max-width: 768px) {
+    body {
+        background-size: 500px 500px;
+    }
+}
+
+/* 在更小的屏幕上进一步缩小材质图片 */
+@media (max-width: 480px) {
+    body {
+        background-size: 500px 500px;
+    }
+}
