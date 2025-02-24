@@ -1,13 +1,20 @@
 // 导航栏
 
-document.addEventListener('DOMContentLoaded', function() {
-    var navToggle = document.getElementById('nav-toggle');
-    var menuOverlay = document.getElementById('menu-overlay');
+// 获取 DOM 元素
+const navToggle = document.getElementById('nav-toggle');
+const menuOverlay = document.getElementById('menu-overlay');
 
-    navToggle.addEventListener('click', function() {
-        menuOverlay.classList.toggle('active');
-        navToggle.classList.toggle('rotate');
-    });
+// 点击按钮时切换菜单栏的显示状态
+navToggle.addEventListener('click', (event) => {
+    event.stopPropagation(); // 阻止事件冒泡
+    menuOverlay.classList.toggle('active');
+});
+
+// 点击菜单栏外部时关闭菜单
+document.addEventListener('click', (event) => {
+    if (!menuOverlay.contains(event.target) && !navToggle.contains(event.target)) {
+        menuOverlay.classList.remove('active');
+    }
 });
 
 // 导航函数

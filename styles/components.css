@@ -132,8 +132,18 @@
     text-decoration: none;
     color: #fff;
     font-size: 18px;
+    transition: color 0.3s ease;
     position: relative;
     display: inline-block;
+}
+
+#nav-menu li a:hover {
+    color: #ffcc00;
+}
+
+.current-page a {
+    font-weight: bold;
+    color: #ffcc00;
 }
 
 /* 当前页面图标 */
