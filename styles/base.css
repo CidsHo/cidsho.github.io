@@ -20,6 +20,15 @@ h1, h2, h3, h4, h5, h6 {
     font-style: italic;
 }
 
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* 以下为定义字体 */
 
 /* 定义 Anek Latin 字体 */

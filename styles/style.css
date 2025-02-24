@@ -27,15 +27,79 @@ body {
 }
 
 /* 在小屏幕上缩小材质图片 */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .profile-image {
+        max-width: 800px;
+        left: 50px;
+    }
+
+    .about-title {
+        font-size: 96px;
+        left: 100px;
+    }
+
+    section {
+        font-size: 35px;
+    }
+
+    .contact-info, .research-interests, .education, .skills, .creative-fields, .language, .orcid, .email {
+        left: 50px;
+        width: 90%;
+        position: static;
+        margin: 20px 0;
+    }
+
+    .divider, .arrow {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         background-size: 500px 500px;
     }
+    .about-title {
+        font-size: 64px;
+        left: 50px;
+    }
+
+    section {
+        font-size: 28px;
+    }
+
+    .contact-info p, .skills p, .language p {
+        font-size: 24px;
+    }
+
+    .profile-image {
+        max-width: 100%;
+        left: 0;
+        top: 150px;
+    }
 }
 
-/* 在更小的屏幕上进一步缩小材质图片 */
 @media (max-width: 480px) {
     body {
         background-size: 500px 500px;
+    }
+    .about-title {
+        font-size: 48px;
+        left: 20px;
+    }
+
+    section {
+        font-size: 24px;
+    }
+
+    .contact-info p, .skills p, .language p {
+        font-size: 20px;
+    }
+
+    .profile-image {
+        top: 100px;
     }
 }
