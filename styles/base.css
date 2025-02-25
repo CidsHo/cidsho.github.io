@@ -152,3 +152,11 @@ img {
          url('../assets/fonts/microsoft-yahei.ttf') format('truetype');
     unicode-range: U+4E00-9FFF;
 }
+
+/* 得意黑（用于中文） */
+@font-face {
+    font-family: 'SmilySans';
+    src: local('SmilySans'), local('得意黑'),
+         url('../assets/fonts/SmileySans/SmileySans-Oblique.ttf') format('truetype');
+    unicode-range: U+4E00-9FFF;
+}

@@ -21,23 +21,38 @@ document.addEventListener('click', (event) => {
 const images = [
     {
         src: 'assets/screen-images/jianghezhishou.jpg',
-        captionLine1: '江河守护 River Guardian',
-        captionLine2: '2019-05-08'
+        captionLine1: '江河守護 River Guardian',
+        captionLine2: '武漢, 湖北, 中國. ',
+        captionLine3: 'Wuhan, Hubei, China'
     },
     {
         src: 'assets/screen-images/void.jpg',
         captionLine1: '空中 VOID',
-        captionLine2: '2019-05-02'
+        captionLine2: '上海, 中國.',
+        captionLine3: 'Shanghai, China.'
     },
     {
         src: 'assets/screen-images/danxia.jpg',
         captionLine1: '丹霞 Danxia',
-        captionLine2: '2019-07-19'
+        captionLine2: '張掖, 甘肅, 中國',
+        captionLine3: 'Zhangye, Gansu, China'
     },
     {
         src: 'assets/screen-images/sandroad.jpg',
         captionLine1: '沙路 Road to the Sand',
-        captionLine2: '2019-07-19'
+        captionLine2: '阿拉善左旗, 内蒙古自治區, 中國.',
+        captionLine3: 'Alxa East Country, Inner Mongolia, China.'
+    },
+    {
+        src: 'assets/screen-images/desk.JPG',
+        captionLine1: '書桌一隅 Something on Desk',
+        captionLine2: '中國.',
+        captionLine3: 'China.'
+    },
+    {
+        src: 'assets/screen-images/sakana.JPG',
+        captionLine1: '魚 Sakana',
+        captionLine2: '2020-8-17.',
     }
 ];
 
@@ -45,6 +60,7 @@ const images = [
 const screenMedia = document.querySelector('.screen-media');
 const captionLine1 = document.querySelector('.caption-line-1');
 const captionLine2 = document.querySelector('.caption-line-2');
+const captionLine3 = document.querySelector('.caption-line-3');
 
 // 随机选择一张图片并更新文字介绍
 function showRandomImage() {
@@ -55,12 +71,13 @@ function showRandomImage() {
     screenMedia.src = randomImage.src;
     captionLine1.textContent = randomImage.captionLine1;
     captionLine2.textContent = randomImage.captionLine2;
+    captionLine3.textContent = randomImage.captionLine3;
 }
 
 // 初始加载一张随机图片
 showRandomImage();
 
-// 每隔 5 秒切换一张图片
+// 每隔 10 秒切换一张图片
 setInterval(showRandomImage, 10000);
 
 // 点击银幕容器时跳转到 portfolio.html
@@ -172,7 +189,6 @@ document.addEventListener('DOMContentLoaded', function() {
     resetFilter.addEventListener('click', resetFilters);
 });
 
-
 // 动态添加高亮效果
 
 function setActiveButton(button) {
@@ -199,4 +215,3 @@ resetFilter.addEventListener('click', () => {
     resetFilters();
     setActiveButton(null); // 重置时取消高亮
 });
-
