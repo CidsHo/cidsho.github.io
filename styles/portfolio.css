@@ -2,12 +2,12 @@
 
 /* 页面背景 */
 .portfolio-page {
-    background-color: #D9D9D9; /* 底色 */
-    background-image: url('../assets/texture.png'); /* 材质背景 */
-    background-repeat: repeat; /* 平铺材质 */
-    background-size: 500px 500px; /* 缩放材质图片 */
-    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
-    overflow: hidden; /* 隐藏溢出内容 */
+    background-color: #D9D9D9;
+    background-image: url('../assets/texture.png');
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    background-blend-mode: overlay;
+    overflow: auto; /* 允许滚动 */
 }
 
 /* 作品集部分 */
@@ -30,7 +30,7 @@
     align-items: center;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
 }
 
@@ -59,14 +59,21 @@
     transform: scale(1.2);
 }
 
+/* 筛选按钮高亮样式 */
+.filter-button.active {
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+}
+
 /* 作品集网格 */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 每列最小宽度 200px */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
-    align-items: start; /* 让卡片从顶部对齐，避免拉伸 */
-    grid-auto-flow: dense; /* 启用密集填充模式 */
+    align-items: start;
+    grid-auto-flow: dense;
 }
 
 /* 作品项 */
@@ -78,8 +85,8 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
     display: flex;
     flex-direction: column;
-    opacity: 1; /* 初始透明度 */
-    transform: translateY(0); /* 初始位置 */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .portfolio-item:hover {
@@ -95,15 +102,15 @@
 
 .portfolio-image {
     width: 100%;
-    height: auto; /* 高度根据图片比例自动调整 */
-    display: block; /* 避免图片下方出现空白间隙 */
+    height: auto;
+    display: block;
 }
 
 /* 作品信息 */
 .portfolio-info {
     padding: 20px;
     text-align: left;
-    flex-grow: 1; /* 让简介部分填充剩余空间 */
+    flex-grow: 1;
 }
 
 .portfolio-info h2 {
@@ -135,27 +142,45 @@
     transform: scale(1.2);
 }
 
+/* 底部提示 */
+.bottom-tip {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: bottom 0.5s ease;
+    z-index: 1000;
+}
+
+.bottom-tip.show {
+    bottom: 20px;
+}
+
 /* 响应式设计 */
 @media (max-width: 1200px) {
     .portfolio-grid {
-        grid-template-columns: repeat(4, 1fr); /* 每行最多四个 */
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (max-width: 991px) {
     .portfolio-grid {
-        grid-template-columns: repeat(3, 1fr); /* 每行最多三个 */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 767px) {
     .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr); /* 每行最多两个 */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 575px) {
     .portfolio-grid {
-        grid-template-columns: 1fr; /* 竖版显示时每行一个 */
+        grid-template-columns: 1fr;
     }
 }

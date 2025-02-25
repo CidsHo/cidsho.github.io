@@ -1,68 +1,78 @@
-/* 按钮样式 */
-
-/* 基础按钮样式 */
-.button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* 添加过渡效果 */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Anek Latin', sans-serif;
-    font-size: 14px;
-    color: #333;
+/* 默认按钮样式 */
+.filter-button {
+    background-color: #fff; /* 默认背景色 */
+    color: #333; /* 默认文字颜色 */
+    border: 1px solid #ccc; /* 默认边框 */
+    padding: 8px 16px; /* 内边距 */
+    border-radius: 5px; /* 圆角 */
+    cursor: pointer; /* 鼠标指针 */
+    font-family: 'Anek Latin', sans-serif; /* 字体 */
+    font-size: 14px; /* 字体大小 */
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; /* 过渡效果 */
+    margin: 5px; /* 外边距 */
 }
 
-/* 鼠标悬停时改变背景颜色 */
-.button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
+/* 鼠标悬停效果 */
+.filter-button:hover {
+    background-color: #f0f0f0; /* 悬停背景色 */
+    border-color: #999; /* 悬停边框颜色 */
 }
 
-/* 激活状态按钮 */
-.button.active {
+/* 高亮样式 */
+.filter-button.active {
     background-color: #ffcc00; /* 高亮背景色 */
     color: #000; /* 高亮文字颜色 */
     font-weight: bold; /* 高亮文字加粗 */
 }
 
-/* 排序和筛选按钮 */
-.sort-button, .filter-button {
+/* 禁用状态 */
+.filter-button:disabled {
+    background-color: #e0e0e0; /* 禁用背景色 */
+    color: #999; /* 禁用文字颜色 */
+    cursor: not-allowed; /* 禁用鼠标指针 */
+    border-color: #ccc; /* 禁用边框颜色 */
+}
+
+/* 图标按钮样式 */
+.icon-button {
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.sort-button img, .filter-button img {
+.icon-button img {
     width: 24px;
     height: 24px;
-    transition: transform 0.3s ease; /* 添加缩放动画 */
+    transition: transform 0.3s ease;
 }
 
-/* 鼠标悬停时放大图标 */
-.sort-button:hover img, .filter-button:hover img {
+.icon-button:hover img {
     transform: scale(1.2);
 }
 
-/* 阅读更多按钮 */
+/* 阅读更多按钮样式 */
 .read-more {
     display: inline-block;
     text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #ffcc00;
 }
 
 .read-more-icon {
     width: 24px;
     height: 24px;
-    transition: transform 0.3s ease; /* 添加缩放动画 */
+    transition: transform 0.3s ease;
 }
 
-/* 鼠标悬停时放大图标 */
 .read-more-icon:hover {
     transform: scale(1.2);
 }

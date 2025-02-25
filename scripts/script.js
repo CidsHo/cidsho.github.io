@@ -1,4 +1,4 @@
-// 导航栏
+// 导航栏逻辑
 
 // 获取 DOM 元素
 const navToggle = document.getElementById('nav-toggle');
@@ -73,10 +73,6 @@ const captionLine2 = document.querySelector('.caption-line-2');
 const captionLine3 = document.querySelector('.caption-line-3');
 const screenContainer = document.querySelector('.screen-container');
 
-// 调试信息
-console.log('screenMedia:', screenMedia);
-console.log('screenContainer:', screenContainer);
-
 // 当前显示的图片索引
 let currentImageIndex = 0;
 
@@ -107,26 +103,6 @@ function navigateToImagePage() {
     }
 }
 
-// 随机选择一张图片并更新文字介绍
-function showRandomImage() {
-    const randomIndex = Math.floor(Math.random() * images.length); // 随机索引
-    const randomImage = images[randomIndex]; // 随机图片数据
-
-    // 更新图片和文字介绍
-    if (screenMedia) {
-        screenMedia.src = randomImage.src;
-    }
-    if (captionLine1) {
-        captionLine1.textContent = randomImage.captionLine1;
-    }
-    if (captionLine2) {
-        captionLine2.textContent = randomImage.captionLine2;
-    }
-    if (captionLine3) {
-        captionLine3.textContent = randomImage.captionLine3;
-    }
-}
-
 // 初始加载第一张图片
 showImage(currentImageIndex);
 
@@ -143,27 +119,7 @@ if (screenContainer) {
     console.error('screenContainer not found');
 }
 
-// 导航函数
-function navigateTo(url) {
-    const content = document.getElementById('content');
-    if (content) {
-        content.classList.add('fade-out'); // 添加淡出动画
-    }
-
-    setTimeout(() => {
-        window.location.href = url; // 跳转到目标页面
-    }, 500); // 500ms 是过渡动画的持续时间
-}
-
-// 页面加载时添加淡入动画
-window.addEventListener('load', () => {
-    const content = document.getElementById('content');
-    if (content) {
-        content.classList.add('fade-in');
-    }
-});
-
-// 排序和筛选
+// 排序和筛选逻辑
 
 document.addEventListener('DOMContentLoaded', function() {
     const portfolioGrid = document.querySelector('.portfolio-grid');
@@ -262,37 +218,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// 动态添加高亮效果
+// 底部提示逻辑
+window.addEventListener('scroll', function() {
+    const bottomTip = document.getElementById('bottom-tip');
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
 
-function setActiveButton(button) {
-    document.querySelectorAll('.filter-button').forEach(btn => btn.classList.remove('active'));
-    if (button) button.classList.add('active');
-}
-
-if (filterPhotography) {
-    filterPhotography.addEventListener('click', () => {
-        filterItems('photography');
-        setActiveButton(filterPhotography);
-    });
-}
-
-if (filterDesign) {
-    filterDesign.addEventListener('click', () => {
-        filterItems('design');
-        setActiveButton(filterDesign);
-    });
-}
-
-if (filterIdeas) {
-    filterIdeas.addEventListener('click', () => {
-        filterItems('ideas');
-        setActiveButton(filterIdeas);
-    });
-}
-
-if (resetFilter) {
-    resetFilter.addEventListener('click', () => {
-        resetFilters();
-        setActiveButton(null); // 重置时取消高亮
-    });
-}
+    // 判断是否滚动到底部
+    if (scrollTop + clientHeight >= scrollHeight - 50) { // 50 是容错范围
+        bottomTip.classList.add('show'); // 显示提示
+    } else {
+        bottomTip.classList.remove('show'); // 隐藏提示
+    }
+});
