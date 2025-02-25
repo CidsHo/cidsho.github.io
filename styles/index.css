@@ -1,0 +1,183 @@
+/* 首页样式 */
+
+/* 首页背景 */
+.home-page {
+    background-color: #000; /* 黑色背景 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-blend-mode: overlay; /* 混合模式 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif; /* 默认字体 */
+}
+
+/* 首页文字按钮 */
+.home-buttons {
+    position: fixed; /* 固定在页面顶部 */
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 20px; /* 按钮间距 */
+    z-index: 1000; /* 确保按钮位于最上层 */
+}
+
+.home-button {
+    color: #fff; /* 文字颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    font-family: 'Anek Latin', sans-serif; /* 按钮字体 */
+    font-size: 1rem;
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+}
+
+.home-button:hover {
+    color: #ffcc00; /* 鼠标悬停时改变颜色 */
+}
+
+/* 欢迎部分 */
+.welcome-section {
+    width: 100%; /* 占满整个页面宽度 */
+    height: 100vh; /* 占满整个页面高度 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 隐藏溢出内容 */
+}
+
+/* 21:9 银幕容器 */
+.screen-container {
+    width: 90%; /* 左右各留白 5% */
+    aspect-ratio: 21 / 9; /* 21:9 比例 */
+    max-width: 1200px; /* 最大宽度 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    margin-bottom: 40px; /* 与文字的间距 */
+    overflow: hidden;
+    cursor: pointer; /* 鼠标悬停时显示手型 */
+    position: relative; /* 为文字区定位做准备 */
+}
+
+/* 银幕图片 */
+.screen-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持比例并覆盖整个容器 */
+}
+
+/* 图片介绍文字区 */
+.image-caption {
+    position: absolute; /* 绝对定位 */
+    top: 5px; /* 距离顶部 5px */
+    left: 5px; /* 距离左侧 5px */
+    color: #fff; /* 文字颜色 */
+    text-align: left; /* 文字左对齐 */
+    font-family: 'Anek Latin', sans-serif; /* 字体 */
+    border-radius: 5px; /* 圆角 */
+    font-size: xx-small; /* 字体大小为 xx-small */
+}
+
+.caption-line-1 {
+    margin: 0;
+}
+
+.caption-line-2 {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8); /* 第二行文字稍浅 */
+}
+
+.caption-line-3 {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8); /* 第三行文字稍浅 */
+}
+
+/* 银幕下方文字 */
+.screen-text {
+    font-family: 'Playfair Display', serif; /* 标题字体 */
+    font-weight: 400; /* Regular */
+    text-transform: uppercase; /* 大写字母 */
+    text-align: center; /* 文字居中 */
+}
+
+.screen-text .line-1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.screen-text .line-2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.screen-text .line-3 {
+    font-size: 1.5rem;
+}
+
+/* Cids Ho 链接样式 */
+.cids-ho-link {
+    color: inherit; /* 继承父元素颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+}
+
+.cids-ho-link:hover {
+    color: #ffcc00; /* 鼠标悬停时改变颜色 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .screen-container {
+        width: 95%; /* 在小屏幕上增加留白 */
+    }
+
+    .screen-text .line-1 {
+        font-size: 1.2rem;
+    }
+
+    .screen-text .line-2 {
+        font-size: 1.5rem;
+    }
+
+    .screen-text .line-3 {
+        font-size: 1.2rem;
+    }
+
+    .home-buttons {
+        top: 10px;
+        right: 10px;
+        gap: 10px;
+    }
+
+    .home-button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .screen-container {
+        aspect-ratio: 16 / 9; /* 在小屏幕上调整为 16:9 */
+    }
+
+    .screen-text .line-1 {
+        font-size: 1rem;
+    }
+
+    .screen-text .line-2 {
+        font-size: 1.2rem;
+    }
+
+    .screen-text .line-3 {
+        font-size: 1rem;
+    }
+
+    .home-buttons {
+        top: 5px;
+        right: 5px;
+        gap: 5px;
+    }
+
+    .home-button {
+        font-size: 0.8rem;
+    }
+}

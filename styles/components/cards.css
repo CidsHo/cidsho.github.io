@@ -1,0 +1,79 @@
+/* 卡片样式 */
+
+/* 基础卡片样式 */
+.card {
+    background-color: #fff; /* 白色背景 */
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* 添加过渡效果 */
+    display: flex;
+    flex-direction: column;
+    opacity: 1; /* 初始透明度 */
+    transform: translateY(0); /* 初始位置 */
+}
+
+/* 鼠标悬停时提升卡片 */
+.card:hover {
+    transform: translateY(-10px); /* 向上移动 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 增强阴影 */
+}
+
+/* 图片容器 */
+.image-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 卡片图片 */
+.card-image {
+    width: 100%;
+    height: auto; /* 高度根据图片比例自动调整 */
+    display: block; /* 避免图片下方出现空白间隙 */
+    transition: transform 0.3s ease; /* 添加缩放动画 */
+}
+
+/* 鼠标悬停时放大图片 */
+.card:hover .card-image {
+    transform: scale(1.05); /* 轻微放大 */
+}
+
+/* 卡片信息 */
+.card-info {
+    padding: 20px;
+    text-align: left;
+    flex-grow: 1; /* 让简介部分填充剩余空间 */
+}
+
+/* 卡片标题 */
+.card-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* 卡片简介 */
+.card-info p {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* 阅读更多按钮 */
+.read-more {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.read-more-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease; /* 添加缩放动画 */
+}
+
+/* 鼠标悬停时放大图标 */
+.read-more-icon:hover {
+    transform: scale(1.2);
+}

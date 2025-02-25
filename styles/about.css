@@ -1,0 +1,223 @@
+/* 自我介绍页面样式 */
+
+/* 页面背景 */
+.about-page {
+    background-color: #D9D9D9; /* 底色 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-size: 500px 500px; /* 缩放材质图片 */
+    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
+    overflow: hidden; /* 隐藏溢出内容 */
+}
+
+/* 容器 */
+.about-container {
+    width: 1920px;
+    height: 1200px;
+    position: relative;
+    background: white;
+    margin: 0 auto; /* 居中 */
+}
+
+/* 背景 */
+.about-background {
+    width: 1920px;
+    height: 1200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #D9D9D9;
+}
+
+/* 分隔线 */
+.about-divider {
+    width: 1861px;
+    height: 0;
+    position: absolute;
+    top: 885.5px;
+    left: 32.5px;
+    border: 1.5px solid rgba(0, 0, 0, 0.10);
+}
+
+/* 个人肖像 */
+.about-profile-image {
+    width: 612.5px;
+    max-width: 1225px;
+    height: 919px;
+    position: absolute;
+    top: 140.5px;
+    left: 91px;
+}
+
+/* 标题 */
+.about-title {
+    position: absolute;
+    top: 155px;
+    left: 127.5px;
+    color: white;
+    font-size: 64px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    text-shadow: -20px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 箭头 */
+.about-arrow {
+    position: absolute;
+    top: 1142px;
+    left: 91px;
+    width: 26.5px;
+    height: 0;
+    border: 5px solid black;
+}
+
+/* 联系方式 */
+.about-contact-info {
+    position: absolute;
+    top: 905px;
+    left: 883px;
+    font-size: 22.5px;
+    font-weight: 400;
+    text-align: right;
+}
+
+/* 研究兴趣 */
+.about-research-interests {
+    position: absolute;
+    top: 250px;
+    left: 804px;
+    font-size: 22.5px;
+    font-weight: 400;
+}
+
+/* 教育背景 */
+.about-education {
+    position: absolute;
+    top: 100px;
+    left: 804px;
+    font-size: 22.5px;
+    font-weight: 400;
+}
+
+/* 技能 */
+.about-skills {
+    position: absolute;
+    top: 700px;
+    left: 804px;
+    font-size: 22.5px;
+    font-weight: 400;
+}
+
+/* 创意领域 */
+.about-creative-fields {
+    position: absolute;
+    top: 400px;
+    left: 804px;
+    font-size: 22.5px;
+    font-weight: 400;
+}
+
+/* 语言能力 */
+.about-language {
+    position: absolute;
+    top: 550px;
+    left: 804px;
+    font-size: 22.5px;
+    font-weight: 400;
+}
+
+/* ORCID */
+.about-orcid {
+    position: absolute;
+    top: 905px;
+    left: 804px;
+    font-size: 22.5px;
+    font-weight: 400;
+}
+
+/* 电子邮件 */
+.about-email {
+    position: absolute;
+    top: 905px;
+    left: 1300px;
+    font-size: 22.5px;
+    font-weight: 400;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .about-container {
+        max-width: 1200px;
+    }
+
+    .about-profile-image {
+        max-width: 800px;
+        left: 50px;
+    }
+
+    .about-title {
+        font-size: 96px;
+        left: 100px;
+    }
+
+    section {
+        font-size: 35px;
+    }
+
+    .about-contact-info, .about-research-interests, .about-education, .about-skills, .about-creative-fields, .about-language, .about-orcid, .about-email {
+        left: 50px;
+        width: 90%;
+        position: static;
+        margin: 20px 0;
+    }
+
+    .about-divider, .about-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: 500px 500px;
+    }
+    .about-title {
+        font-size: 64px;
+        left: 50px;
+    }
+
+    section {
+        font-size: 28px;
+    }
+
+    .about-contact-info p, .about-skills p, .about-language p {
+        font-size: 24px;
+    }
+
+    .about-profile-image {
+        max-width: 100%;
+        left: 0;
+        top: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: 500px 500px;
+    }
+    .about-title {
+        font-size: 48px;
+        left: 20px;
+    }
+
+    section {
+        font-size: 24px;
+    }
+
+    .about-contact-info p, .about-skills p, .about-language p {
+        font-size: 20px;
+    }
+
+    .about-profile-image {
+        top: 100px;
+    }
+}

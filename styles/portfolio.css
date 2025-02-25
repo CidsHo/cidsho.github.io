@@ -1,0 +1,161 @@
+/* 作品集页面样式 */
+
+/* 页面背景 */
+.portfolio-page {
+    background-color: #D9D9D9; /* 底色 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-size: 500px 500px; /* 缩放材质图片 */
+    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
+    overflow: hidden; /* 隐藏溢出内容 */
+}
+
+/* 作品集部分 */
+.portfolio-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.portfolio-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* 排序和筛选按钮 */
+.filter-sort-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景 */
+    border-radius: 10px;
+}
+
+.sort-options, .filter-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-button, .filter-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.sort-button img, .filter-button img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.sort-button:hover img, .filter-button:hover img {
+    transform: scale(1.2);
+}
+
+/* 作品集网格 */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 每列最小宽度 200px */
+    gap: 20px;
+    padding: 20px;
+    align-items: start; /* 让卡片从顶部对齐，避免拉伸 */
+    grid-auto-flow: dense; /* 启用密集填充模式 */
+}
+
+/* 作品项 */
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    opacity: 1; /* 初始透明度 */
+    transform: translateY(0); /* 初始位置 */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 图片容器 */
+.image-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.portfolio-image {
+    width: 100%;
+    height: auto; /* 高度根据图片比例自动调整 */
+    display: block; /* 避免图片下方出现空白间隙 */
+}
+
+/* 作品信息 */
+.portfolio-info {
+    padding: 20px;
+    text-align: left;
+    flex-grow: 1; /* 让简介部分填充剩余空间 */
+}
+
+.portfolio-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.portfolio-info p {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* 阅读更多按钮 */
+.read-more {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.read-more-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.read-more-icon:hover {
+    transform: scale(1.2);
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(4, 1fr); /* 每行最多四个 */
+    }
+}
+
+@media (max-width: 991px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr); /* 每行最多三个 */
+    }
+}
+
+@media (max-width: 767px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* 每行最多两个 */
+    }
+}
+
+@media (max-width: 575px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* 竖版显示时每行一个 */
+    }
+}

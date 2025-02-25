@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Cids' Personal Website</title>
-    <link rel="stylesheet" href="styles/style.css">
-
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/about.css"> <!-- 自我介绍页面样式 -->
     <!-- Favicon 配置 -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <!-- Apple Touch Icon (iOS 和 iPadOS) -->
     <link rel="apple-touch-icon" href="assets/favicon.png">
-    <!-- Android Chrome -->
     <link rel="manifest" href="assets/site.webmanifest">
-    <!-- Windows 8/10 磁贴 -->
     <meta name="msapplication-TileImage" content="assets/favicon.png">
     <meta name="msapplication-TileColor" content="#ffffff">
 </head>
-<body>
+<body class="about-page">
+    <!-- 导航栏 -->
     <header>
         <nav id="navbar">
             <button id="nav-toggle">
@@ -53,61 +51,86 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="background"></div>
-        <div class="divider"></div>
-        <img src="assets/aboutme/portrait.png" alt="Profile Image" class="profile-image">
-        <h1 class="about-title">About <br> Me<</h1>
-        <section class="contact-info">
+    <!-- 自我介绍内容 -->
+    <div class="about-container">
+        <!-- 背景和分隔线 -->
+        <div class="about-background"></div>
+        <div class="about-divider"></div>
+
+        <!-- 个人肖像 -->
+        <img src="assets/aboutme/portrait.png" alt="Profile Image" class="about-profile-image">
+
+        <!-- 标题 -->
+        <h1 class="about-title">About <br> Me</h1>
+
+        <!-- 联系方式 -->
+        <section class="about-contact-info">
             <h2>Contact</h2>
             <p>+852 5223 4424; +86 156 2767 7007</p>
-            <p>Address: School of Art and Media, Tongji University (Jiading Campus),
-Cao'an Road 4800, Jiading District, Shanghai, China
-Postal Code: 201804</p>
+            <p>Address: School of Art and Media, Tongji University (Jiading Campus),<br>
+               Cao'an Road 4800, Jiading District, Shanghai, China<br>
+               Postal Code: 201804</p>
         </section>
-        <section class="research-interests">
+
+        <!-- 研究兴趣 -->
+        <section class="about-research-interests">
             <h2>Research Interests</h2>
-            <p>Virtual Reality Experience Design
-Creative-Support Virtual Reality
-Embodied and Multimodal Interaction</p>
+            <p>Virtual Reality Experience Design<br>
+               Creative-Support Virtual Reality<br>
+               Embodied and Multimodal Interaction</p>
         </section>
-        <section class="education">
+
+        <!-- 教育背景 -->
+        <section class="about-education">
             <h2>Education</h2>
-            <p>Master of Art
-<span>College of Arts and Media, Tongji University | [2021-2024]</span></p>
-            <p>Bachelor of Management
-<span>Zhongnan University of Economic and Law | [2017-2021]</span></p>
+            <p>Master of Art<br>
+               <span>College of Arts and Media, Tongji University | [2021-2024]</span></p>
+            <p>Bachelor of Management<br>
+               <span>Zhongnan University of Economic and Law | [2017-2021]</span></p>
         </section>
-        <section class="skills">
+
+        <!-- 技能 -->
+        <section class="about-skills">
             <h2>Skills</h2>
             <p>Tools/Software</p>
-            <p>Programming and data analytics tools: C# (Unity 3D), NVivo. <br>
-                Design and Prototyping Tools: Unity 3D, Photoshop, Illustrator, Figma. <br>
-                Multimedia and Visual Production Tools: Adobe Suite.</p>
+            <p>Programming and data analytics tools: C# (Unity 3D), NVivo.<br>
+               Design and Prototyping Tools: Unity 3D, Photoshop, Illustrator, Figma.<br>
+               Multimedia and Visual Production Tools: Adobe Suite.</p>
         </section>
-        <section class="creative-fields">
+
+        <!-- 创意领域 -->
+        <section class="about-creative-fields">
             <h2>Creative Fields</h2>
-            <p>Design Thinking
-UI/Ux/IxD
-Virtual Reality Experience
-Illustration</p>
+            <p>Design Thinking<br>
+               UI/Ux/IxD<br>
+               Virtual Reality Experience<br>
+               Illustration</p>
         </section>
-        <section class="language">
+
+        <!-- 语言能力 -->
+        <section class="about-language">
             <h2>Language</h2>
-            <p>English(CET-6, IELTS 7.5), Cantonese, Mandarin</p>
-            <p>Full professional proficiency</p>
+            <p>English (CET-6, IELTS 7.5), Cantonese, Mandarin<br>
+               Full professional proficiency</p>
         </section>
-        <section class="orcid">
+
+        <!-- ORCID -->
+        <section class="about-orcid">
             <h2>ORCID</h2>
             <p>0009-0001-3477-7817</p>
         </section>
-        <section class="email">
+
+        <!-- 电子邮件 -->
+        <section class="about-email">
             <h2>Email</h2>
             <p>hocids@tongji.edu.cn</p>
         </section>
-        <div class="arrow"></div>
+
+        <!-- 箭头 -->
+        <div class="about-arrow"></div>
     </div>
 
+    <!-- 脚本 -->
     <script src="scripts/script.js"></script>
 </body>
 </html>

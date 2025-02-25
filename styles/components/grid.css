@@ -1,0 +1,36 @@
+/* 网格布局样式 */
+
+/* 基础网格布局 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 每列最小宽度 200px */
+    gap: 20px; /* 网格间距 */
+    padding: 20px; /* 内边距 */
+    align-items: start; /* 让卡片从顶部对齐，避免拉伸 */
+    grid-auto-flow: dense; /* 启用密集填充模式 */
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr); /* 每行最多四个 */
+    }
+}
+
+@media (max-width: 991px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* 每行最多三个 */
+    }
+}
+
+@media (max-width: 767px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* 每行最多两个 */
+    }
+}
+
+@media (max-width: 575px) {
+    .grid {
+        grid-template-columns: 1fr; /* 竖版显示时每行一个 */
+    }
+}

@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Cids' Personal Website</title>
-    <link rel="stylesheet" href="styles/style.css">
-
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/portfolio.css"> <!-- 作品集页面样式 -->
     <!-- Favicon 配置 -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <!-- Apple Touch Icon (iOS 和 iPadOS) -->
     <link rel="apple-touch-icon" href="assets/favicon.png">
-    <!-- Android Chrome -->
     <link rel="manifest" href="assets/site.webmanifest">
-    <!-- Windows 8/10 磁贴 -->
     <meta name="msapplication-TileImage" content="assets/favicon.png">
     <meta name="msapplication-TileColor" content="#ffffff">
 </head>
-<body>
+<body class="portfolio-page">
+    <!-- 导航栏 -->
     <header>
         <nav id="navbar">
             <button id="nav-toggle">
@@ -28,8 +26,8 @@
     <!-- 菜单栏 -->
     <div id="menu-overlay" class="menu-overlay">
         <ul id="nav-menu">
-            <li><a href="index.html">Welcome &emsp;&thinsp;欢迎</a></li>
-            <li class="current-page"><a href="portfolio.html">Portfolio &emsp;作品</a></li>
+            <li><a href="index.html">Welcome &emsp;&thinsp;&thinsp;欢迎</a></li>
+            <li class="current-page"><a href="portfolio.html">Portfolio &emsp;&thinsp;&thinsp;作品</a></li>
             <li><a href="about.html">About Me &emsp;我是谁？</a></li>
         </ul>
 
@@ -53,112 +51,144 @@
         </div>
     </div>
 
-<!-- 作品页面内容 -->
-<section id="portfolio" class="portfolio-section">
-    <h1>作品集</h1>
-        
-    <!-- 排序和筛选按钮 -->
-    <div class="filter-sort-options">
-        <div class="sort-options">
-            <span>Sort by:</span>
-            <button id="sort-date-asc" class="sort-button">
-                <img src="assets/sort-asc-icon.png" alt="Sort by Date (Ascending)" class="icon">
-            </button>
-            <button id="sort-date-desc" class="sort-button">
-                <img src="assets/sort-desc-icon.png" alt="Sort by Date (Descending)" class="icon">
-            </button>
-        </div>
-        <div class="filter-options">
-            <span>Filter by:</span>
-            <button id="reset-filter" class="filter-button">
-                <img src="assets/reset-icon.png" alt="Reset Filter" class="icon">
-            </button>
-            <button id="filter-photography" class="filter-button">
-                <img src="assets/filter-photography-icon.png" alt="Photography" class="icon">
-            </button>
-            <button id="filter-design" class="filter-button">
-                <img src="assets/filter-design-icon.png" alt="Design" class="icon">
-            </button>
-            <button id="filter-ideas" class="filter-button">
-                <img src="assets/filter-ideas-icon.png" alt="Ideas" class="icon">
-            </button>
-        </div>
-    </div>
+    <!-- 作品集内容 -->
+    <section id="portfolio" class="portfolio-section">
+        <h1>作品集</h1>
 
-    <!-- 作品集网格 -->
-    <div class="portfolio-grid">
-        <!-- 实验页面 -->
-        <div class="portfolio-item" data-date="2023-10-01" data-category="photography">
-            <div class="image-container">
-                <img src="articles/blog/test-article/assets/1.jpg" alt="项目 1" class="portfolio-image">
+        <!-- 排序和筛选按钮 -->
+        <div class="filter-sort-options">
+            <div class="sort-options">
+                <span>Sort by:</span>
+                <button id="sort-date-asc" class="sort-button">
+                    <img src="assets/sort-asc-icon.png" alt="Sort by Date (Ascending)" class="icon">
+                </button>
+                <button id="sort-date-desc" class="sort-button">
+                    <img src="assets/sort-desc-icon.png" alt="Sort by Date (Descending)" class="icon">
+                </button>
             </div>
-            <div class="portfolio-info">
-                <h2>项目 1 标题</h2>
-                <p>这是项目 1 的简介。点击“阅读更多”查看详细信息。</p>
-                <a href="articles/blog/test-article/test-article.html" class="read-more">
-                    <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
-                </a>
+            <div class="filter-options">
+                <span>Filter by:</span>
+                <button id="reset-filter" class="filter-button">
+                    <img src="assets/reset-icon.png" alt="Reset Filter" class="icon">
+                </button>
+                <button id="filter-photography" class="filter-button">
+                    <img src="assets/filter-photography-icon.png" alt="Photography" class="icon">
+                </button>
+                <button id="filter-design" class="filter-button">
+                    <img src="assets/filter-design-icon.png" alt="Design" class="icon">
+                </button>
+                <button id="filter-ideas" class="filter-button">
+                    <img src="assets/filter-ideas-icon.png" alt="Ideas" class="icon">
+                </button>
             </div>
         </div>
 
-        <!-- 2-24-2025-prologue -->
-        <div class="portfolio-item" data-date="2025-2-24" data-category="design">
-            <div class="image-container">
-                <img src="articles/blog/2-24-2025-prologue/assets/1.jpg" alt="项目 2" class="portfolio-image">
+        <!-- 作品集网格 -->
+        <div class="portfolio-grid">
+            <!-- 项目 1 -->
+            <div class="portfolio-item" data-date="2023-10-01" data-category="photography">
+                <div class="image-container">
+                    <img src="articles/blog/test-article/assets/1.jpg" alt="项目 1" class="portfolio-image">
+                </div>
+                <div class="portfolio-info">
+                    <h2>项目 1 标题</h2>
+                    <p>这是项目 1 的简介。点击“阅读更多”查看详细信息。</p>
+                    <a href="articles/blog/test-article/test-article.html" class="read-more">
+                        <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
+                    </a>
+                </div>
             </div>
-            <div class="portfolio-info">
-                <h2>Prologue</h2>
-                <p>Things should have a begin, so it begins here.</p>
-                <a href="articles/blog/2-24-2025-prologue/2-24-2025-prologue.html" class="read-more">
-                    <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
-                </a>
-            </div>
-        </div>
 
-        <!-- 项目 2 -->
-        <div class="portfolio-item" data-date="2023-09-15" data-category="Ideas">
-            <div class="image-container">
-                <img src="assets/portfolio/2-24-2025-prologue/assets/1.jpg" alt="项目 2" class="portfolio-image">
+            <!-- 项目 2 -->
+            <div class="portfolio-item" data-date="2025-02-24" data-category="design">
+                <div class="image-container">
+                    <img src="articles/blog/2-24-2025-prologue/assets/1.jpg" alt="项目 2" class="portfolio-image">
+                </div>
+                <div class="portfolio-info">
+                    <h2>Prologue</h2>
+                    <p>Things should have a begin, so it begins here.</p>
+                    <a href="articles/blog/2-24-2025-prologue/2-24-2025-prologue.html" class="read-more">
+                        <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
+                    </a>
+                </div>
             </div>
-            <div class="portfolio-info">
-                <h2>Prologue</h2>
-                <p>Things should have a begin, so it begins here.</p>
-                <a href="articles/2-24-2025-prologue/2-24-2025-prologue.html" class="read-more">
-                    <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
-                </a>
-            </div>
-        </div>
-        
-        <!-- 项目 2 -->
-        <div class="portfolio-item" data-date="2023-09-15" data-category="design">
-            <div class="image-container">
-                <img src="assets/portfolio/2-24-2025-prologue/assets/1.jpg" alt="项目 2" class="portfolio-image">
-            </div>
-            <div class="portfolio-info">
-                <h2>Prologue</h2>
-                <p>Things should have a begin, so it begins here.</p>
-                <a href="articles/2-24-2025-prologue/2-24-2025-prologue.html" class="read-more">
-                    <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
-                </a>
-            </div>
-        </div>
 
-        <!-- 项目 2 -->
-        <div class="portfolio-item" data-date="2023-09-15" data-category="design">
-            <div class="image-container">
-                <img src="assets/portfolio/2-24-2025-prologue/assets/1.jpg" alt="项目 2" class="portfolio-image">
+            <!-- 项目 3 -->
+            <div class="portfolio-item" data-date="2025-02-24" data-category="design">
+                <div class="image-container">
+                    <img src="articles/blog/2-24-2025-prologue/assets/2.jpg" alt="项目 2" class="portfolio-image">
+                </div>
+                <div class="portfolio-info">
+                    <h2>Prologue</h2>
+                    <p>Things should have a begin, so it begins here.</p>
+                    <a href="articles/blog/2-24-2025-prologue/2-24-2025-prologue.html" class="read-more">
+                        <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
+                    </a>
+                </div>
             </div>
-            <div class="portfolio-info">
-                <h2>Prologue</h2>
-                <p>Things should have a begin, so it begins here.</p>
-                <a href="articles/2-24-2025-prologue/2-24-2025-prologue.html" class="read-more">
-                    <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
-                </a>
+            
+            <!-- 项目 3 -->
+            <div class="portfolio-item" data-date="2025-02-24" data-category="design">
+                <div class="image-container">
+                    <img src="articles/blog/2-24-2025-prologue/assets/2.jpg" alt="项目 2" class="portfolio-image">
+                </div>
+                <div class="portfolio-info">
+                    <h2>Prologue</h2>
+                    <p>Things should have a begin, so it begins here.</p>
+                    <a href="articles/blog/2-24-2025-prologue/2-24-2025-prologue.html" class="read-more">
+                        <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
+                    </a>
+                </div>
+            </div> 
+            
+            <!-- 项目 3 -->
+            <div class="portfolio-item" data-date="2025-02-24" data-category="design">
+                <div class="image-container">
+                    <img src="articles/blog/2-24-2025-prologue/assets/2.jpg" alt="项目 2" class="portfolio-image">
+                </div>
+                <div class="portfolio-info">
+                    <h2>Prologue</h2>
+                    <p>Things should have a begin, so it begins here.</p>
+                    <a href="articles/blog/2-24-2025-prologue/2-24-2025-prologue.html" class="read-more">
+                        <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
+                    </a>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+            
+            <!-- 项目 3 -->
+            <div class="portfolio-item" data-date="2025-02-24" data-category="design">
+                <div class="image-container">
+                    <img src="articles/blog/2-24-2025-prologue/assets/2.jpg" alt="项目 2" class="portfolio-image">
+                </div>
+                <div class="portfolio-info">
+                    <h2>Prologue</h2>
+                    <p>Things should have a begin, so it begins here.</p>
+                    <a href="articles/blog/2-24-2025-prologue/2-24-2025-prologue.html" class="read-more">
+                        <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 项目 3 -->
+            <div class="portfolio-item" data-date="2025-02-24" data-category="design">
+                <div class="image-container">
+                    <img src="articles/blog/2-24-2025-prologue/assets/2.jpg" alt="项目 2" class="portfolio-image">
+                </div>
+                <div class="portfolio-info">
+                    <h2>Prologue</h2>
+                    <p>Things should have a begin, so it begins here.</p>
+                    <a href="articles/blog/2-24-2025-prologue/2-24-2025-prologue.html" class="read-more">
+                        <img src="assets/read-more-icon.png" alt="阅读更多" class="read-more-icon">
+                    </a>
+                </div>
+            </div>            
 
+            <!-- 更多项目 -->
+            <!-- 可以根据需要添加更多项目 -->
+        </div>
+    </section>
+
+    <!-- 脚本 -->
     <script src="scripts/script.js"></script>
 </body>
 </html>

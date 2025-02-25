@@ -1,0 +1,59 @@
+/* 背景样式 */
+
+/* 页面背景 */
+.page-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #D9D9D9; /* 底色 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-size: 500px 500px; /* 缩放材质图片 */
+    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
+}
+
+/* 首页背景 */
+.home-background {
+    background-color: #000; /* 黑色背景 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-blend-mode: overlay; /* 混合模式 */
+}
+
+/* 作品集页面背景 */
+.portfolio-background {
+    background-color: #D9D9D9; /* 底色 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-size: 500px 500px; /* 缩放材质图片 */
+    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
+}
+
+/* 自我介绍页面背景 */
+.about-background {
+    background-color: #D9D9D9; /* 底色 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-size: 500px 500px; /* 缩放材质图片 */
+    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
+}
+
+/* 分隔线 */
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1); /* 浅灰色分隔线 */
+    margin: 20px 0; /* 上下边距 */
+}
+
+/* 箭头 */
+.arrow {
+    width: 26.5px;
+    height: 0;
+    border: 5px solid black; /* 黑色箭头 */
+    position: absolute;
+    top: 1142px;
+    left: 91px;
+}
