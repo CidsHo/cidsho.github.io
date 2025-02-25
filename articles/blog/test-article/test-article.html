@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Article - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/style.css"> <!-- 调整路径 -->
+
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+    <!-- Apple Touch Icon (iOS 和 iPadOS) -->
+    <link rel="apple-touch-icon" href="../../../assets/favicon.png">
+    <!-- Android Chrome -->
+    <link rel="manifest" href="../../../assets/site.webmanifest">
+    <!-- Windows 8/10 磁贴 -->
+    <meta name="msapplication-TileImage" content="../../../assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="portfolio-page"> <!-- 使用 portfolio 页面的背景样式 -->
+    <header>
+        <nav id="navbar">
+            <button id="nav-toggle">
+                <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+            </button>
+        </nav>
+    </header>
+
+    <!-- 菜单栏 -->
+    <div id="menu-overlay" class="menu-overlay">
+        <ul id="nav-menu">
+            <li><a href="../../../index.html">FrontPage</a></li>
+            <li><a href="../../../portfolio.html">Portfolio</a></li>
+            <li><a href="../../../about.html">About Me</a></li>
+        </ul>
+
+        <!-- More 和图标 -->
+        <div class="more-frontpage">
+            <p>More</p>
+            <div class="icon-row">
+                <a href="mailto:hocids@tongji.edu.cn">
+                    <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                </a>
+                <a href="https://github.com/CidsHo" target="_blank">
+                    <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                </a>
+                <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                    <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                </a>
+                <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                    <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主图 + 文字说明 -->
+    <section class="article-content">
+        <div class="article-image">
+            <img src="../../../assets/screen-images/jianghezhishou.jpg" alt="Main Image">
+        </div>
+        <div class="article-text">
+            <h1>Test Article</h1>
+            <p class="caption-line-1">这是一个测试文章。</p>
+            <p class="caption-line-2">This is a test article.</p>
+            <p class="description">
+                这是关于测试文章的详细介绍。你可以在这里添加更多内容。
+            </p>
+        </div>
+    </section>
+
+    <script src="../../../scripts/script.js"></script>
+</body>
+</html>

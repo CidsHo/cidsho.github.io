@@ -97,6 +97,28 @@
     color: #ffcc00; /* 鼠标悬停时改变颜色 */
 }
 
+/* 首页文字按钮样式 */
+.home-buttons {
+    position: fixed; /* 固定在页面顶部 */
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 20px; /* 按钮间距 */
+    z-index: 1000; /* 确保按钮位于最上层 */
+}
+
+.home-button {
+    color: #fff; /* 文字颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+}
+
+.home-button:hover {
+    color: #ffcc00; /* 鼠标悬停时改变颜色 */
+}
+
 /* 全局样式 */
 body.home-page {
     background-color: #000; /* 背景为黑色 */
@@ -121,6 +143,82 @@ body {
     box-sizing: border-box;
     overflow: hidden; /* 隐藏滚动条 */
 }
+
+/* 使用 portfolio 页面的背景样式 */
+body.portfolio-page {
+    background-color: #D9D9D9; /* 底色 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-size: 500px 500px; /* 缩放材质图片 */
+    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
+}
+
+/* 主图 + 文字说明布局 */
+.article-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.article-image {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+}
+
+.article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; /* 图片缩放动画 */
+}
+
+.article-image:hover img {
+    transform: scale(1.05); /* 鼠标悬停时放大图片 */
+}
+
+.article-text {
+    width: 100%;
+    max-width: 800px;
+    background: #fff; /* 白色背景 */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    text-align: left;
+}
+
+.article-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; /* 标题居中 */
+}
+
+.article-text .caption-line-1,
+.article-text .caption-line-2 {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center; /* 文字居中 */
+}
+
+.article-text .description {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.8; /* 增加行高 */
+    margin-top: 20px;
+}
+
+
 
 /* 在小屏幕上缩小材质图片 */
 @media (max-width: 1200px) {

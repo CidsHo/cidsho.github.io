@@ -102,14 +102,15 @@
 /* 菜单栏样式 */
 .menu-overlay {
     position: fixed;
-    top: 0; 
+    top: 0;
     right: -300px;
     width: 300px;
-    height: calc(100vh - 0px); /* 减去顶部间距 */
-    background-color: rgba(128, 128, 128, 0.9); /* 灰色背景，透明度 90% */
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.9); /* 半透明背景 */
+    backdrop-filter: blur(10px); /* 背景模糊 */
     transition: right 0.3s ease;
-    z-index: 999; /* 确保菜单栏位于按钮之下 */
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .menu-overlay.active {
@@ -322,6 +323,18 @@
     width: 26.5px;
     height: 0;
     border: 5px solid black;
+}
+
+/* 修改文本选中框的颜色 */
+::selection {
+    background-color: #ffcc00; /* 选中背景颜色 */
+    color: #000; /* 选中文字颜色 */
+}
+
+/* 兼容 Firefox */
+::-moz-selection {
+    background-color: #ffcc00; /* 选中背景颜色 */
+    color: #000; /* 选中文字颜色 */
 }
 
 /* 限制每行最多显示五个预览卡 */
