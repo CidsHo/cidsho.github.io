@@ -337,6 +337,130 @@
     color: #000; /* 选中文字颜色 */
 }
 
+/* 图片介绍文字区 */
+.image-caption {
+    position: absolute; /* 绝对定位 */
+    top: 5px; /* 距离顶部 5px */
+    left: 5px; /* 距离左侧 5px */
+    color: #fff; /* 文字颜色 */
+    text-align: left; /* 文字左对齐 */
+    font-family: 'Anek Latin', sans-serif; /* 字体 */
+    border-radius: 5px; /* 圆角 */
+    font-size: xx-small; /* 字体大小为 xx-small */
+}
+
+/* 图片 */
+.screen-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持比例并覆盖整个容器 */
+}
+
+.article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; /* 图片缩放动画 */
+}
+
+.article-image:hover img {
+    transform: scale(1.05); /* 鼠标悬停时放大图片 */
+}
+
+/* 银幕下方文字 */
+.screen-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400; /* Regular */
+    text-transform: uppercase; /* 大写字母 */
+    text-align: center; /* 文字居中 */
+}
+
+.screen-text .line-1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.screen-text .line-2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.screen-text .line-3 {
+    font-size: 1.5rem;
+}
+
+.caption-line-1 {
+    margin: 0;
+}
+
+.caption-line-2 {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8); /* 第二行文字稍浅 */
+}
+
+.caption-line-3 {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8); /* 第三行文字稍浅 */
+}
+
+/* Cids Ho 链接样式 */
+.cids-ho-link {
+    color: inherit; /* 继承父元素颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+}
+
+.cids-ho-link:hover {
+    color: #ffcc00; /* 鼠标悬停时改变颜色 */
+}
+
+/* 首页文字按钮样式 */
+.home-buttons {
+    position: fixed; /* 固定在页面顶部 */
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 20px; /* 按钮间距 */
+    z-index: 1000; /* 确保按钮位于最上层 */
+}
+
+.home-button {
+    color: #fff; /* 文字颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 1rem;
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+}
+
+.home-button:hover {
+    color: #ffcc00; /* 鼠标悬停时改变颜色 */
+}
+
+.article-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; /* 标题居中 */
+}
+
+.article-text .caption-line-1,
+.article-text .caption-line-2 {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: center; /* 文字居中 */
+}
+
+.article-text .description {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.8; /* 增加行高 */
+    margin-top: 20px;
+}
+
 /* 限制每行最多显示五个预览卡 */
 @media (min-width: 1200px) {
     .portfolio-grid {

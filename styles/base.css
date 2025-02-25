@@ -1,11 +1,36 @@
 /* 全局样式 */
 body {
-    font-family: 'Anek Latin','Microsoft YaHei', sans-serif; /* 默认字体 */
-    margin: 20px 0; /* 上下留白 20px */
+    font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif;
+    margin: 0; /* 去掉默认外边距 */
     padding: 0;
-    background-color: #D9D9D9; /* 背景色 */
-    color: #333; /* 文字颜色 */
+    width: 100%; /* 确保宽度占满视口 */
+    height: 100%; /* 确保高度占满视口 */
+    min-width: 1200px; /* 设置最小宽度 */
+    min-height: 800px; /* 设置最小高度 */
+    background-color: #D9D9D9; /* 底色 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-size: 500px 500px; /* 缩放材质图片 */
+    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
     box-sizing: border-box;
+    overflow: hidden; /* 隐藏滚动条 */
+}
+
+/* 首页背景样式 */
+body.home-page {
+    background-color: #000; /* 背景为黑色 */
+    background-image: url('../assets/texture.png'); /* 覆盖纹理 */
+    background-repeat: repeat; /* 平铺纹理 */
+    background-blend-mode: overlay; /* 混合模式 */
+}
+
+/* portfolio 页面背景样式 */
+body.portfolio-page {
+    background-color: #D9D9D9; /* 底色 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-size: 500px 500px; /* 缩放材质图片 */
+    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
 }
 
 /* 标题字体 */

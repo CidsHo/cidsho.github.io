@@ -1,11 +1,16 @@
-/* 页面布局样式 */
+/* 欢迎部分样式 */
 .welcome-section {
-    height: 100vh;
+    width: 100%; /* 占满整个页面宽度 */
+    height: 100vh; /* 占满整个页面高度 */
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    color: #fff;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 隐藏溢出内容 */
 }
 
 .content-section {
@@ -13,9 +18,49 @@
     text-align: center;
 }
 
+/* 21:9 银幕容器 */
+.screen-container {
+    width: 90%; /* 左右各留白 5% */
+    aspect-ratio: 21 / 9; /* 21:9 比例 */
+    max-width: 1200px; /* 最大宽度 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    margin-bottom: 40px; /* 与文字的间距 */
+    overflow: hidden;
+    cursor: pointer; /* 鼠标悬停时显示手型 */
+    position: relative; /* 为文字区定位做准备 */
+}
+
+/* 主图 + 文字说明布局 */
+.article-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.article-image {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+}
+
+.article-text {
+    width: 100%;
+    max-width: 800px;
+    background: #fff; /* 白色背景 */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    text-align: left;
+}
+
 /* 个人介绍部分样式 */
 
-/* layout.css */
 .container {
     width: 1920px;
     height: 1200px;
