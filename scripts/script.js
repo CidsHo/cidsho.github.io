@@ -17,6 +17,58 @@ document.addEventListener('click', (event) => {
     }
 });
 
+// 图片和文字数据
+const images = [
+    {
+        src: 'assets/screen-images/jianghezhishou.jpg',
+        captionLine1: '江河守护 River Guardian',
+        captionLine2: '2019-05-08'
+    },
+    {
+        src: 'assets/screen-images/void.jpg',
+        captionLine1: '空中 VOID',
+        captionLine2: '2019-05-02'
+    },
+    {
+        src: 'assets/screen-images/danxia.jpg',
+        captionLine1: '丹霞 Danxia',
+        captionLine2: '2019-07-19'
+    },
+    {
+        src: 'assets/screen-images/sandroad.jpg',
+        captionLine1: '沙路 Road to the Sand',
+        captionLine2: '2019-07-19'
+    }
+];
+
+// 获取 DOM 元素
+const screenMedia = document.querySelector('.screen-media');
+const captionLine1 = document.querySelector('.caption-line-1');
+const captionLine2 = document.querySelector('.caption-line-2');
+
+// 随机选择一张图片并更新文字介绍
+function showRandomImage() {
+    const randomIndex = Math.floor(Math.random() * images.length); // 随机索引
+    const randomImage = images[randomIndex]; // 随机图片数据
+
+    // 更新图片和文字介绍
+    screenMedia.src = randomImage.src;
+    captionLine1.textContent = randomImage.captionLine1;
+    captionLine2.textContent = randomImage.captionLine2;
+}
+
+// 初始加载一张随机图片
+showRandomImage();
+
+// 每隔 5 秒切换一张图片
+setInterval(showRandomImage, 10000);
+
+// 点击银幕容器时跳转到 portfolio.html
+const screenContainer = document.querySelector('.screen-container');
+screenContainer.addEventListener('click', () => {
+    window.location.href = 'portfolio.html';
+});
+
 // 导航函数
 function navigateTo(url) {
     const content = document.getElementById('content');
@@ -147,3 +199,4 @@ resetFilter.addEventListener('click', () => {
     resetFilters();
     setActiveButton(null); // 重置时取消高亮
 });
+
