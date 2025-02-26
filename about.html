@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Cids' Personal Website</title>
-    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/components-about.css">
     <link rel="stylesheet" href="styles/about.css"> <!-- 自我介绍页面样式 -->
     <!-- Favicon 配置 -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -51,83 +51,88 @@
         </div>
     </div>
 
+    <!-- 语言切换按钮 -->
+    <div class="language-switcher">
+        <button onclick="switchLanguage('en')">EN</button>
+        <button onclick="switchLanguage('zh-Hant')">繁</button>
+        <button onclick="switchLanguage('zh-Hans')">简</button>
+    </div>
+
     <!-- 自我介绍内容 -->
     <div class="about-container">
-        <!-- 背景和分隔线 -->
-        <div class="about-background"></div>
-        <div class="about-divider"></div>
+        <!-- 左侧：照片 -->
+        <div class="about-left">
+            <img src="assets/aboutme/portrait.png" alt="Profile Image" class="about-profile-image">
+        </div>
 
-        <!-- 个人肖像 -->
-        <img src="assets/aboutme/portrait.png" alt="Profile Image" class="about-profile-image">
+        <!-- 右侧：文字内容 -->
+        <div class="about-right">
+            <!-- 研究兴趣 -->
+            <div class="content-row">
+                <div class="content-title">
+                    <h2>Research Interest</h2>
+                </div>
+                <div class="content-text">
+                    <p>Human-Computer Interaction; Creative-Support Virtual Reality; Embodied and Multimodal Interaction</p>
+                </div>
+            </div>
 
-        <!-- 标题 -->
-        <h1 class="about-title">About <br> Me</h1>
+            <!-- 教育背景 -->
+            <div class="content-row">
+                <div class="content-title">
+                    <h2>Educations</h2>
+                </div>
+                <div class="content-text">
+                    <p>Master of Art<br>
+                       <span>College of Arts and Media, Tongji University | [2021-2024]</span></p>
+                    <p>Bachelor of Management<br>
+                       <span>Zhongnan University of Economic and Law | [2017-2021]</span></p>
+                </div>
+            </div>
 
-        <!-- 联系方式 -->
-        <section class="about-contact-info">
-            <h2>Contact</h2>
-            <p>+852 5223 4424; +86 156 2767 7007</p>
-            <p>Address: School of Art and Media, Tongji University (Jiading Campus),<br>
-               Cao'an Road 4800, Jiading District, Shanghai, China<br>
-               Postal Code: 201804</p>
-        </section>
+            <!-- 出版物 -->
+            <div class="content-row">
+                <div class="content-title">
+                    <h2>Publications</h2>
+                </div>
+                <div class="content-text">
+                    <ul>
+                        <li><strong>Architecting Social VR: Exploring Encounter and Serendipitous Interactions in Virtual Public Spaces.</strong><br>
+                            <em>Yihao He.</em><br>
+                            In HCII'24: Human-Computer Interaction International 2024. Communications in Computer and Information Science, vol 2320. Springer, Cham. <a href="https://doi.org/10.1007/978-3-031-78531-3_2" target="_blank"><em>[DOI]</em></a></li>
+                        <li><strong>Not Just a Gimmick: A Preliminary Study on Designing Interactive Media Art to Empower Embedded Culture's Practitioner.</strong><br>
+                            <em>Yihao He.</em><br>
+                            In SA'24: SIGGRAPH ASIA 2024. Association for Computing Machinery, New York, NY, United States. <a href="https://doi.org/10.1145/3681756.3697872" target="_blank"><em>[DOI]</em></a></li>
+                        <li><strong>ShadowRehearsal: Enhancing Traditional Art Design Workflows with XR Technology - A Preliminary Case Study of Shadow Puppetry.</strong><br>
+                            <em>Yihao He.</em><br>
+                            In ISMAR'24: 2024 IEEE International Symposium on Mixed and Augmented Reality Proceedings. <a href="https://doi.org/10.1109/ismar-adjunct64951.2024.00072" target="_blank"><em>[DOI]</em></a></li>
+                        <li><strong>Shadow Costar: Exploring Collaborative Performances in Virtual Reality.</strong><br>
+                            <em>Yihao He.</em><br>
+                            In HAI'24: In Proceedings of the 11th International Conference on Human-Agent Interaction. <a href="https://doi.org/10.1145/3623809.3623943" target="_blank"><em>[DOI]</em></a></li>
+                        <li><strong>ShadowPlayVR: Understanding Traditional Shadow Puppetry Performance Techniques Through Non-Intuitive Embodied Interactions.</strong><br>
+                            <em>Yihao He.</em><br>
+                            In VRST'23: 29th ACM Symposium on Virtual Reality Software and Technology Proceedings. <a href="https://dl.acm.org/doi/10.1145/3611659.3617226" target="_blank"><em>[DOI]</em></a></li>
+                    </ul>
+                </div>
+            </div>
 
-        <!-- 研究兴趣 -->
-        <section class="about-research-interests">
-            <h2>Research Interests</h2>
-            <p>Virtual Reality Experience Design<br>
-               Creative-Support Virtual Reality<br>
-               Embodied and Multimodal Interaction</p>
-        </section>
-
-        <!-- 教育背景 -->
-        <section class="about-education">
-            <h2>Education</h2>
-            <p>Master of Art<br>
-               <span>College of Arts and Media, Tongji University | [2021-2024]</span></p>
-            <p>Bachelor of Management<br>
-               <span>Zhongnan University of Economic and Law | [2017-2021]</span></p>
-        </section>
-
-        <!-- 技能 -->
-        <section class="about-skills">
-            <h2>Skills</h2>
-            <p>Tools/Software</p>
-            <p>Programming and data analytics tools: C# (Unity 3D), NVivo.<br>
-               Design and Prototyping Tools: Unity 3D, Photoshop, Illustrator, Figma.<br>
-               Multimedia and Visual Production Tools: Adobe Suite.</p>
-        </section>
-
-        <!-- 创意领域 -->
-        <section class="about-creative-fields">
-            <h2>Creative Fields</h2>
-            <p>Design Thinking<br>
-               UI/Ux/IxD<br>
-               Virtual Reality Experience<br>
-               Illustration</p>
-        </section>
-
-        <!-- 语言能力 -->
-        <section class="about-language">
-            <h2>Language</h2>
-            <p>English (CET-6, IELTS 7.5), Cantonese, Mandarin<br>
-               Full professional proficiency</p>
-        </section>
-
-        <!-- ORCID -->
-        <section class="about-orcid">
-            <h2>ORCID</h2>
-            <p>0009-0001-3477-7817</p>
-        </section>
-
-        <!-- 电子邮件 -->
-        <section class="about-email">
-            <h2>Email</h2>
-            <p>hocids@tongji.edu.cn</p>
-        </section>
-
-        <!-- 箭头 -->
-        <div class="about-arrow"></div>
+            <!-- 项目经验 -->
+            <div class="content-row">
+                <div class="content-title">
+                    <h2>Project Experience</h2>
+                </div>
+                <div class="content-text">
+                    <ul>
+                        <li><em>2022-2024</em>, Multimodal Interactive Audio Design in Augmented Reality Environments, Tongji University, China.<br>
+                            > Member, Project from High-End Foreign Expert Recruitment Program by the Ministry of Science and Technology</li>
+                        <li><em>2022-2023</em>, EEG-based AIGC Immersive Art Creation Experiment and Evaluation, Tongji University, China.<br>
+                            > Member, Project from Huawei TECHNOLOGIES Co., Ltd</li>
+                        <li><em>2022-2023</em>, Emotional Human-Robot Collaboration Technology Development, Tongji University, China.<br>
+                            > Member, Project from Huawei TECHNOLOGIES Co., Ltd</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- 脚本 -->

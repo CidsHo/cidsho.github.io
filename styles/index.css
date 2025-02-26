@@ -13,21 +13,21 @@
 /* 首页文字按钮 */
 .home-buttons {
     position: fixed;
-    top: 20px;
-    right: 15px;
+    top: 250px; /* 靠近银幕顶部 */
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    flex-direction: column; /* 上下排列 */
-    gap: 10px; /* 按钮间距 */
+    flex-direction: column;
+    gap: 20px;
     z-index: 1000;
-    text-align: right;
-    margin-right: 5px;
+    align-items: center; /* 按钮内容居中 */
 }
 
 .home-button {
     color: #fff;
     text-decoration: none;
-    font-family: 'Playfair Display', serif; /* 与银幕下文字同字体 */
-    font-size: 1.5rem; /* 与银幕下文字同大小 */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
@@ -145,15 +145,45 @@
 }
 
 /*联系方式*/
-.contact-info {
+.contact-section {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 150px; /* 靠近银幕底部 */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+    max-width: 300px;
+}
+
+.icon-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.icon-buttons .icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.icon-buttons .icon:hover {
+    transform: scale(1.2);
+}
+
+.contact-info {
     color: #fff;
     font-family: 'Anek Latin', sans-serif;
-    font-size: large;
-    text-align: right;
+    font-size: 14px;
+    text-align: center;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .contact-info p {
@@ -210,11 +240,15 @@
     }
 
     .home-buttons {
-        top: 10px;
-        right: 10px;
+        top: 20px;
+        right: 20px;
     }
     .home-button {
         font-size: 1.4rem; /* 缩小字体 */
+    }
+    .contact-section {
+        bottom: 20px;
+        right: 20px;
     }
     .copy-notification {
         bottom: 50px;
@@ -261,27 +295,29 @@
     }
      /* 右上角按钮居中 */
      .home-buttons {
-        top: 10px;
+        top: 20px;
         left: 50%;
         right: auto;
         transform: translateX(-50%);
-        flex-direction: column; /* 上下排布 */
-        gap: 10px; /* 按钮间距 */
-        align-items: center; /* 按钮内容居中 */
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
     }
-
-    /* 右下角联系方式居中 */
-    .contact-info {
-        bottom: 10px;
+    .contact-section {
+        bottom: 20px;
         left: 50%;
         right: auto;
         transform: translateX(-50%);
-        text-align: center; /* 文字居中 */
-        width: 90%; /* 增加宽度 */
-        font-size: 12px; /* 进一步缩小字体 */
-        max-width: 300px; /* 限制最大宽度 */
+        width: 90%;
+        max-width: 300px;
     }
-
+    .icon-buttons {
+        gap: 10px;
+    }
+    .icon-buttons .icon {
+        width: 20px;
+        height: 20px;
+    }
     /* 复制提示框居中 */
     .copy-notification {
         bottom: 60px;

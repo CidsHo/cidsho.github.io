@@ -251,3 +251,18 @@ function showNotification(message = '已复制到剪贴板！') {
         }, 3000);
     }
 }
+
+// 语言切换逻辑
+function switchLanguage(lang) {
+    const elements = document.querySelectorAll('[data-lang]');
+    elements.forEach(el => {
+        if (el.getAttribute('data-lang') === lang) {
+            el.style.display = 'block';
+        } else {
+            el.style.display = 'none';
+        }
+    });
+}
+
+// 默认显示英文
+switchLanguage('en');
