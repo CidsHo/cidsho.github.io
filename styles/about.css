@@ -34,6 +34,84 @@
     margin-bottom: 20px;
 }
 
+/* 姓名区 */
+.name-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.name-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #333;
+    margin: 0;
+}
+
+.name-section h2 {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 24px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.name-section p {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 18px;
+    color: #999;
+    margin: 0;
+}
+
+/* 联系方式 */
+.contact-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.contact-section p {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.contact-section a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-section a:hover {
+    color: #0056b3;
+}
+
+/* 语言切换按钮 */
+.language-switcher {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.language-switcher button {
+    background: none;
+    border: none;
+    color: #333;
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin: 0 5px;
+}
+
+.language-switcher button:hover {
+    color: #ffcc00;
+}
+
 /* 右侧：文字内容 */
 .about-right {
     width: 60%;
@@ -90,30 +168,6 @@
     font-style: normal;
     font-weight: bold;
     color: #007BFF; /* 蓝色 */
-}
-
-/* 语言切换按钮 */
-.language-switcher {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    gap: 10px;
-    z-index: 1000;
-}
-
-.language-switcher button {
-    background: none;
-    border: none;
-    color: #333;
-    font-family: 'Anek Latin', sans-serif;
-    font-size: 16px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.language-switcher button:hover {
-    color: #ffcc00;
 }
 
 /* 响应式设计 */

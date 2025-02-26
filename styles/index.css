@@ -13,7 +13,7 @@
 /* 首页文字按钮 */
 .home-buttons {
     position: fixed;
-    top: 250px; /* 靠近银幕顶部 */
+    top: 180px; /* 靠近银幕顶部 */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
