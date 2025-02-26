@@ -1,1724 +1,203 @@
-以下是about.css 的内容:
-
-/* 自我介绍页面样式 */
-
-/* 页面背景 */
-.about-page {
-    background-color: #D9D9D9; /* 底色 */
-    background-image: url('../assets/texture.png'); /* 材质背景 */
-    background-repeat: repeat; /* 平铺材质 */
-    background-size: 500px 500px; /* 缩放材质图片 */
-    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
-    overflow: hidden; /* 隐藏溢出内容 */
-}
-
-/* 容器 */
-.about-container {
-    width: 1920px;
-    height: 1200px;
-    position: relative;
-    background: white;
-    margin: 0 auto; /* 居中 */
-}
-
-/* 背景 */
-.about-background {
-    width: 1920px;
-    height: 1200px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #D9D9D9;
-}
-
-/* 分隔线 */
-.about-divider {
-    width: 1861px;
-    height: 0;
-    position: absolute;
-    top: 885.5px;
-    left: 32.5px;
-    border: 1.5px solid rgba(0, 0, 0, 0.10);
-}
-
-/* 个人肖像 */
-.about-profile-image {
-    width: 612.5px;
-    max-width: 1225px;
-    height: 919px;
-    position: absolute;
-    top: 140.5px;
-    left: 91px;
-}
-
-/* 标题 */
-.about-title {
-    position: absolute;
-    top: 155px;
-    left: 127.5px;
-    color: white;
-    font-size: 64px;
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    text-shadow: -20px 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* 箭头 */
-.about-arrow {
-    position: absolute;
-    top: 1142px;
-    left: 91px;
-    width: 26.5px;
-    height: 0;
-    border: 5px solid black;
-}
-
-/* 联系方式 */
-.about-contact-info {
-    position: absolute;
-    top: 905px;
-    left: 883px;
-    font-size: 22.5px;
-    font-weight: 400;
-    text-align: right;
-}
-
-/* 研究兴趣 */
-.about-research-interests {
-    position: absolute;
-    top: 250px;
-    left: 804px;
-    font-size: 22.5px;
-    font-weight: 400;
-}
-
-/* 教育背景 */
-.about-education {
-    position: absolute;
-    top: 100px;
-    left: 804px;
-    font-size: 22.5px;
-    font-weight: 400;
-}
-
-/* 技能 */
-.about-skills {
-    position: absolute;
-    top: 700px;
-    left: 804px;
-    font-size: 22.5px;
-    font-weight: 400;
-}
-
-/* 创意领域 */
-.about-creative-fields {
-    position: absolute;
-    top: 400px;
-    left: 804px;
-    font-size: 22.5px;
-    font-weight: 400;
-}
-
-/* 语言能力 */
-.about-language {
-    position: absolute;
-    top: 550px;
-    left: 804px;
-    font-size: 22.5px;
-    font-weight: 400;
-}
-
-/* ORCID */
-.about-orcid {
-    position: absolute;
-    top: 905px;
-    left: 804px;
-    font-size: 22.5px;
-    font-weight: 400;
-}
-
-/* 电子邮件 */
-.about-email {
-    position: absolute;
-    top: 905px;
-    left: 1300px;
-    font-size: 22.5px;
-    font-weight: 400;
-}
-
-/* 响应式设计 */
-@media (max-width: 1200px) {
-    .about-container {
-        max-width: 1200px;
-    }
-
-    .about-profile-image {
-        max-width: 800px;
-        left: 50px;
-    }
-
-    .about-title {
-        font-size: 96px;
-        left: 100px;
-    }
-
-    section {
-        font-size: 35px;
-    }
-
-    .about-contact-info, .about-research-interests, .about-education, .about-skills, .about-creative-fields, .about-language, .about-orcid, .about-email {
-        left: 50px;
-        width: 90%;
-        position: static;
-        margin: 20px 0;
-    }
-
-    .about-divider, .about-arrow {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        background-size: 500px 500px;
-    }
-    .about-title {
-        font-size: 64px;
-        left: 50px;
-    }
-
-    section {
-        font-size: 28px;
-    }
-
-    .about-contact-info p, .about-skills p, .about-language p {
-        font-size: 24px;
-    }
-
-    .about-profile-image {
-        max-width: 100%;
-        left: 0;
-        top: 150px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        background-size: 500px 500px;
-    }
-    .about-title {
-        font-size: 48px;
-        left: 20px;
-    }
-
-    section {
-        font-size: 24px;
-    }
-
-    .about-contact-info p, .about-skills p, .about-language p {
-        font-size: 20px;
-    }
-
-    .about-profile-image {
-        top: 100px;
-    }
-}
-
-以下是components.css 的内容:
-
-/* 引用所有通用组件样式 */
-
-/* 基础样式 */
-@import url('components/base.css');
-
-/* 字体定义 */
-@import url('components/fonts.css');
-
-/* 导航栏 */
-@import url('components/navbar.css');
-
-/* 按钮 */
-@import url('components/buttons.css');
-
-/* 卡片 */
-@import url('components/cards.css');
-
-/* 网格布局 */
-@import url('components/grid.css');
-
-/* 字体和排版 */
-@import url('components/typography.css');
-
-/* 图标 */
-@import url('components/icons.css');
-
-/* 菜单栏 */
-@import url('components/menu.css');
-
-/* 背景 */
-@import url('components/background.css');
-
-/* 工具类 */
-@import url('components/utilities.css');
-
-以下是index.css 的内容:
-
-/* 首页样式 */
-
-/* 首页背景 */
-.home-page {
-    background-color: #000; /* 黑色背景 */
-    background-image: url('../assets/texture.png'); /* 材质背景 */
-    background-repeat: repeat; /* 平铺材质 */
-    background-blend-mode: overlay; /* 混合模式 */
-    overflow: hidden; /* 隐藏溢出内容 */
-    font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif; /* 默认字体 */
-}
-
-/* 首页文字按钮 */
-.home-buttons {
-    position: fixed; /* 固定在页面顶部 */
-    top: 20px;
-    right: 20px;
-    display: flex;
-    gap: 20px; /* 按钮间距 */
-    z-index: 1000; /* 确保按钮位于最上层 */
-}
-
-.home-button {
-    color: #fff; /* 文字颜色 */
-    text-decoration: none; /* 去掉下划线 */
-    font-family: 'Anek Latin', sans-serif; /* 按钮字体 */
-    font-size: 1rem;
-    transition: color 0.3s ease; /* 添加颜色过渡效果 */
-}
-
-.home-button:hover {
-    color: #ffcc00; /* 鼠标悬停时改变颜色 */
-}
-
-/* 欢迎部分 */
-.welcome-section {
-    width: 100%; /* 占满整个页面宽度 */
-    height: 100vh; /* 占满整个页面高度 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* 垂直居中 */
-    align-items: center; /* 水平居中 */
-    color: #fff;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* 隐藏溢出内容 */
-}
-
-/* 21:9 银幕容器 */
-.screen-container {
-    width: 90%; /* 左右各留白 5% */
-    aspect-ratio: 21 / 9; /* 21:9 比例 */
-    max-width: 1200px; /* 最大宽度 */
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
-    margin-bottom: 40px; /* 与文字的间距 */
-    overflow: hidden;
-    cursor: pointer; /* 鼠标悬停时显示手型 */
-    position: relative; /* 为文字区定位做准备 */
-}
-
-/* 银幕图片 */
-.screen-media {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 保持比例并覆盖整个容器 */
-}
-
-/* 图片介绍文字区 */
-.image-caption {
-    position: absolute; /* 绝对定位 */
-    top: 5px; /* 距离顶部 5px */
-    left: 5px; /* 距离左侧 5px */
-    color: #fff; /* 文字颜色 */
-    text-align: left; /* 文字左对齐 */
-    font-family: 'Anek Latin', sans-serif; /* 字体 */
-    border-radius: 5px; /* 圆角 */
-    font-size: xx-small; /* 字体大小为 xx-small */
-}
-
-.caption-line-1 {
-    margin: 0;
-}
-
-.caption-line-2 {
-    margin: 0;
-    color: rgba(255, 255, 255, 0.8); /* 第二行文字稍浅 */
-}
-
-.caption-line-3 {
-    margin: 0;
-    color: rgba(255, 255, 255, 0.8); /* 第三行文字稍浅 */
-}
-
-/* 银幕下方文字 */
-.screen-text {
-    font-family: 'Playfair Display', serif; /* 标题字体 */
-    font-weight: 400; /* Regular */
-    text-transform: uppercase; /* 大写字母 */
-    text-align: center; /* 文字居中 */
-}
-
-.screen-text .line-1 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.screen-text .line-2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.screen-text .line-3 {
-    font-size: 1.5rem;
-}
-
-/* Cids Ho 链接样式 */
-.cids-ho-link {
-    color: inherit; /* 继承父元素颜色 */
-    text-decoration: none; /* 去掉下划线 */
-    transition: color 0.3s ease; /* 添加颜色过渡效果 */
-}
-
-.cids-ho-link:hover {
-    color: #ffcc00; /* 鼠标悬停时改变颜色 */
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    .screen-container {
-        width: 95%; /* 在小屏幕上增加留白 */
-    }
-
-    .screen-text .line-1 {
-        font-size: 1.2rem;
-    }
-
-    .screen-text .line-2 {
-        font-size: 1.5rem;
-    }
-
-    .screen-text .line-3 {
-        font-size: 1.2rem;
-    }
-
-    .home-buttons {
-        top: 10px;
-        right: 10px;
-        gap: 10px;
-    }
-
-    .home-button {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .screen-container {
-        aspect-ratio: 16 / 9; /* 在小屏幕上调整为 16:9 */
-    }
-
-    .screen-text .line-1 {
-        font-size: 1rem;
-    }
-
-    .screen-text .line-2 {
-        font-size: 1.2rem;
-    }
-
-    .screen-text .line-3 {
-        font-size: 1rem;
-    }
-
-    .home-buttons {
-        top: 5px;
-        right: 5px;
-        gap: 5px;
-    }
-
-    .home-button {
-        font-size: 0.8rem;
-    }
-}
-
-以下是portfolio.css：
-
-/* 作品集页面样式 */
-
-/* 页面背景 */
-.portfolio-page {
-    background-color: #D9D9D9;
-    background-image: url('../assets/texture.png');
-    background-repeat: repeat;
-    background-size: 500px 500px;
-    background-blend-mode: overlay;
-    overflow: auto; /* 允许滚动 */
-}
-
-/* 作品集部分 */
-.portfolio-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.portfolio-section h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    margin-bottom: 40px;
-    color: #333;
-}
-
-/* 排序和筛选按钮 */
-.filter-sort-options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-}
-
-.sort-options, .filter-options {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.sort-button, .filter-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-.sort-button img, .filter-button img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
-}
-
-.sort-button:hover img, .filter-button:hover img {
-    transform: scale(1.2);
-}
-
-/* 筛选按钮高亮样式 */
-.filter-button.active {
-    background-color: #ffcc00;
-    color: #000;
-    font-weight: bold;
-}
-
-/* 作品集网格 */
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    align-items: start;
-    grid-auto-flow: dense;
-}
-
-/* 作品项 */
-.portfolio-item {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.portfolio-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* 图片容器 */
-.image-container {
-    width: 100%;
-    overflow: hidden;
-}
-
-.portfolio-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* 作品信息 */
-.portfolio-info {
-    padding: 20px;
-    text-align: left;
-    flex-grow: 1;
-}
-
-.portfolio-info h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.portfolio-info p {
-    font-family: 'Anek Latin', sans-serif;
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* 阅读更多按钮 */
-.read-more {
-    display: inline-block;
-    text-decoration: none;
-}
-
-.read-more-icon {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
-}
-
-.read-more-icon:hover {
-    transform: scale(1.2);
-}
-
-/* 底部提示 */
-.bottom-tip {
-    position: fixed;
-    bottom: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: bottom 0.5s ease;
-    z-index: 1000;
-}
-
-.bottom-tip.show {
-    bottom: 20px;
-}
-
-/* 响应式设计 */
-@media (max-width: 1200px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 991px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 767px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 575px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-以下是components/background.css
-
-/* 背景样式 */
-
-/* 页面背景 */
-.page-background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #D9D9D9; /* 底色 */
-    background-image: url('../assets/texture.png'); /* 材质背景 */
-    background-repeat: repeat; /* 平铺材质 */
-    background-size: 500px 500px; /* 缩放材质图片 */
-    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
-}
-
-/* 首页背景 */
-.home-background {
-    background-color: #000; /* 黑色背景 */
-    background-image: url('../assets/texture.png'); /* 材质背景 */
-    background-repeat: repeat; /* 平铺材质 */
-    background-blend-mode: overlay; /* 混合模式 */
-}
-
-/* 作品集页面背景 */
-.portfolio-background {
-    background-color: #D9D9D9; /* 底色 */
-    background-image: url('../assets/texture.png'); /* 材质背景 */
-    background-repeat: repeat; /* 平铺材质 */
-    background-size: 500px 500px; /* 缩放材质图片 */
-    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
-}
-
-/* 自我介绍页面背景 */
-.about-background {
-    background-color: #D9D9D9; /* 底色 */
-    background-image: url('../assets/texture.png'); /* 材质背景 */
-    background-repeat: repeat; /* 平铺材质 */
-    background-size: 500px 500px; /* 缩放材质图片 */
-    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
-}
-
-/* 分隔线 */
-.divider {
-    width: 100%;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.1); /* 浅灰色分隔线 */
-    margin: 20px 0; /* 上下边距 */
-}
-
-/* 箭头 */
-.arrow {
-    width: 26.5px;
-    height: 0;
-    border: 5px solid black; /* 黑色箭头 */
-    position: absolute;
-    top: 1142px;
-    left: 91px;
-}
-
-以下是components/base.css
-
-/* 全局样式 */
-body {
-    font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh; /* 最小高度为视口高度 */
-    background-color: #D9D9D9;
-    background-image: url('../assets/texture.png');
-    background-repeat: repeat;
-    background-size: 500px 500px;
-    background-blend-mode: overlay;
-    box-sizing: border-box;
-}
-
-/* 容器 */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-/* 标题 */
-h1 {
-    font-size: clamp(1.5rem, 5vw, 3rem);
-    margin-bottom: 1.5rem;
-}
-
-/* 段落 */
-p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    .container {
-        padding: 0.5rem;
-    }
-    h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0.25rem;
-    }
-    h1 {
-        font-size: 1.5rem;
-    }
-}
-
-以下是components/buttons.css
-
-/* 默认按钮样式 */
-.filter-button {
-    background-color: #fff; /* 默认背景色 */
-    color: #333; /* 默认文字颜色 */
-    border: 1px solid #ccc; /* 默认边框 */
-    padding: 8px 16px; /* 内边距 */
-    border-radius: 5px; /* 圆角 */
-    cursor: pointer; /* 鼠标指针 */
-    font-family: 'Anek Latin', sans-serif; /* 字体 */
-    font-size: 14px; /* 字体大小 */
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease; /* 过渡效果 */
-    margin: 5px; /* 外边距 */
-}
-
-/* 鼠标悬停效果 */
-.filter-button:hover {
-    background-color: #f0f0f0; /* 悬停背景色 */
-    border-color: #999; /* 悬停边框颜色 */
-}
-
-/* 高亮样式 */
-.filter-button.active {
-    background-color: #ffcc00; /* 高亮背景色 */
-    color: #000; /* 高亮文字颜色 */
-    font-weight: bold; /* 高亮文字加粗 */
-}
-
-/* 禁用状态 */
-.filter-button:disabled {
-    background-color: #e0e0e0; /* 禁用背景色 */
-    color: #999; /* 禁用文字颜色 */
-    cursor: not-allowed; /* 禁用鼠标指针 */
-    border-color: #ccc; /* 禁用边框颜色 */
-}
-
-/* 图标按钮样式 */
-.icon-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon-button img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
-}
-
-.icon-button:hover img {
-    transform: scale(1.2);
-}
-
-/* 阅读更多按钮样式 */
-.read-more {
-    display: inline-block;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.read-more:hover {
-    color: #ffcc00;
-}
-
-.read-more-icon {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
-}
-
-.read-more-icon:hover {
-    transform: scale(1.2);
-}
-
-以下是components/cards.css
-
-/* 卡片样式 */
-
-/* 基础卡片样式 */
-.card {
-    background-color: #fff; /* 白色背景 */
-    border-radius: 10px; /* 圆角 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
-    overflow: hidden; /* 隐藏溢出内容 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* 添加过渡效果 */
-    display: flex;
-    flex-direction: column;
-    opacity: 1; /* 初始透明度 */
-    transform: translateY(0); /* 初始位置 */
-}
-
-/* 鼠标悬停时提升卡片 */
-.card:hover {
-    transform: translateY(-10px); /* 向上移动 */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 增强阴影 */
-}
-
-/* 图片容器 */
-.image-container {
-    width: 100%;
-    overflow: hidden;
-}
-
-/* 卡片图片 */
-.card-image {
-    width: 100%;
-    height: auto; /* 高度根据图片比例自动调整 */
-    display: block; /* 避免图片下方出现空白间隙 */
-    transition: transform 0.3s ease; /* 添加缩放动画 */
-}
-
-/* 鼠标悬停时放大图片 */
-.card:hover .card-image {
-    transform: scale(1.05); /* 轻微放大 */
-}
-
-/* 卡片信息 */
-.card-info {
-    padding: 20px;
-    text-align: left;
-    flex-grow: 1; /* 让简介部分填充剩余空间 */
-}
-
-/* 卡片标题 */
-.card-info h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-/* 卡片简介 */
-.card-info p {
-    font-family: 'Anek Latin', sans-serif;
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-/* 阅读更多按钮 */
-.read-more {
-    display: inline-block;
-    text-decoration: none;
-}
-
-.read-more-icon {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease; /* 添加缩放动画 */
-}
-
-/* 鼠标悬停时放大图标 */
-.read-more-icon:hover {
-    transform: scale(1.2);
-}
-
-以下是components/fonts.css
-
-/* 字体定义 */
-
-/* 定义 Anek Latin 字体 */
-@font-face {
-    font-family: 'Anek Latin';
-    src: url('../assets/fonts/anek-latin/AnekLatin-Thin.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Anek Latin';
-    src: url('../assets/fonts/anek-latin/AnekLatin-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Anek Latin';
-    src: url('../assets/fonts/anek-latin/AnekLatin-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Anek Latin';
-    src: url('../assets/fonts/anek-latin/AnekLatin-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Anek Latin';
-    src: url('../assets/fonts/anek-latin/AnekLatin-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Anek Latin';
-    src: url('../assets/fonts/anek-latin/AnekLatin-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Anek Latin';
-    src: url('../assets/fonts/anek-latin/AnekLatin-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Anek Latin';
-    src: url('../assets/fonts/anek-latin/AnekLatin-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* 定义 Playfair Display 字体 */
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/fonts/playfair-display/PlayfairDisplay-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/fonts/playfair-display/PlayfairDisplay-Italic.ttf') format('truetype');
-    font-weight: 400;
-    font-style: italic;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/fonts/playfair-display/PlayfairDisplay-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/fonts/playfair-display/PlayfairDisplay-BoldItalic.ttf') format('truetype');
-    font-weight: 700;
-    font-style: italic;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/fonts/playfair-display/PlayfairDisplay-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-    font-family: 'Playfair Display';
-    src: url('../assets/fonts/playfair-display/PlayfairDisplay-BlackItalic.ttf') format('truetype');
-    font-weight: 900;
-    font-style: italic;
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* 定义微软雅黑字体（用于中文） */
-@font-face {
-    font-family: 'Microsoft YaHei';
-    src: local('Microsoft YaHei'), local('微软雅黑'),
-         url('../assets/fonts/microsoft-yahei.ttf') format('truetype');
-    unicode-range: U+4E00-9FFF;
-}
-
-/* 得意黑（用于中文） */
-@font-face {
-    font-family: 'SmilySans';
-    src: local('SmilySans'), local('得意黑'),
-         url('../assets/fonts/SmileySans/SmileySans-Oblique.ttf') format('truetype');
-    unicode-range: U+4E00-9FFF;
-}
-
-以下是components/grid.css
-
-/* 网格布局样式 */
-
-/* 基础网格布局 */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 每列最小宽度 200px */
-    gap: 20px; /* 网格间距 */
-    padding: 20px; /* 内边距 */
-    align-items: start; /* 让卡片从顶部对齐，避免拉伸 */
-    grid-auto-flow: dense; /* 启用密集填充模式 */
-}
-
-/* 响应式设计 */
-@media (max-width: 1200px) {
-    .grid {
-        grid-template-columns: repeat(4, 1fr); /* 每行最多四个 */
-    }
-}
-
-@media (max-width: 991px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr); /* 每行最多三个 */
-    }
-}
-
-@media (max-width: 767px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr); /* 每行最多两个 */
-    }
-}
-
-@media (max-width: 575px) {
-    .grid {
-        grid-template-columns: 1fr; /* 竖版显示时每行一个 */
-    }
-}
-
-以下是components/icons.css
-
-/* 图标样式 */
-
-/* 基础图标样式 */
-.icon {
-    width: 24px; /* 图标宽度 */
-    height: 24px; /* 图标高度 */
-    transition: transform 0.3s ease; /* 添加缩放动画 */
-}
-
-/* 鼠标悬停时放大图标 */
-.icon:hover {
-    transform: scale(1.2); /* 放大 1.2 倍 */
-}
-
-/* 社交图标容器 */
-.social-icons {
-    display: flex;
-    gap: 15px; /* 图标间距 */
-    justify-content: center; /* 居中显示 */
-}
-
-/* 导航栏图标 */
-.nav-icon {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease; /* 添加缩放动画 */
-}
-
-/* 鼠标悬停时放大导航栏图标 */
-.nav-icon:hover {
-    transform: scale(1.1);
-}
-
-/* 排序和筛选按钮图标 */
-.sort-button img, .filter-button img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease; /* 添加缩放动画 */
-}
-
-/* 鼠标悬停时放大排序和筛选按钮图标 */
-.sort-button:hover img, .filter-button:hover img {
-    transform: scale(1.2);
-}
-
-/* 阅读更多按钮图标 */
-.read-more-icon {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease; /* 添加缩放动画 */
-}
-
-/* 鼠标悬停时放大阅读更多按钮图标 */
-.read-more-icon:hover {
-    transform: scale(1.2);
-}
-
-以下是components/menu.css
-
-/* 菜单栏样式 */
-
-/* 菜单栏覆盖层 */
-.menu-overlay {
-    position: fixed;
-    top: 0;
-    right: -300px; /* 初始位置在屏幕外 */
-    width: 300px;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.9); /* 半透明背景 */
-    backdrop-filter: blur(10px); /* 背景模糊 */
-    transition: right 0.3s ease; /* 添加滑动动画 */
-    z-index: 999;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影 */
-}
-
-/* 菜单栏展开时 */
-.menu-overlay.active {
-    right: 0; /* 滑动到屏幕内 */
-}
-
-/* 菜单项列表 */
-#nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 20px;
-}
-
-/* 菜单项 */
-#nav-menu li {
-    margin: 20px 0;
-    position: relative;
-    padding-left: 30px; /* 为图标留出空间 */
-}
-
-/* 菜单项链接 */
-#nav-menu li a {
-    text-decoration: none;
-    color: #333; /* 文字颜色 */
-    font-size: 18px;
-    transition: color 0.3s ease; /* 添加颜色过渡效果 */
-    position: relative;
-    display: inline-block;
-}
-
-/* 鼠标悬停时改变文字颜色 */
-#nav-menu li a:hover {
-    color: #ffcc00;
-}
-
-/* 当前页面菜单项 */
-.current-page a {
-    font-weight: bold;
-    color: #ffcc00;
-}
-
-/* 当前页面图标 */
-#nav-menu li.current-page::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px; /* 图标宽度 */
-    height: 20px; /* 图标高度 */
-    background-image: url('../assets/current-page-icon.png'); /* 图标路径 */
-    background-size: cover; /* 确保图标完整显示 */
-}
-
-/* 菜单项下划线动画 */
-#nav-menu li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: #333; /* 下划线颜色 */
-    transition: width 0.3s ease; /* 添加宽度过渡效果 */
-}
-
-/* 鼠标悬停时显示下划线 */
-#nav-menu li a:hover::after {
-    width: 100%;
-}
-
-以下是components/navbar.css
-
-/* 导航栏样式 */
-
-/* 导航栏容器 */
-#navbar {
-    display: flex;
-    justify-content: flex-end; /* 导航栏内容靠右 */
-    padding: 20px;
-    position: fixed; /* 固定定位 */
-    top: 0;
-    right: 0;
-    z-index: 1000; /* 确保导航栏位于最上层 */
-}
-
-/* 导航栏按钮 */
-#nav-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* 导航栏图标 */
-.nav-icon {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease; /* 添加缩放动画 */
-}
-
-/* 鼠标悬停时放大图标 */
-#nav-toggle:hover .nav-icon {
-    transform: scale(1.1);
-}
-
-/* 点击时缩小图标 */
-#nav-toggle:active .nav-icon {
-    transform: scale(0.9);
-}
-
-/* 旋转图标（用于菜单展开时） */
-#nav-toggle.rotate .nav-icon {
-    transform: rotate(90deg);
-}
-
-/* 菜单栏覆盖层 */
-.menu-overlay {
-    position: fixed;
-    top: 0;
-    right: -300px; /* 初始位置在屏幕外 */
-    width: 300px;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.9); /* 半透明背景 */
-    backdrop-filter: blur(10px); /* 背景模糊 */
-    transition: right 0.3s ease; /* 添加滑动动画 */
-    z-index: 999;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影 */
-}
-
-/* 菜单栏展开时 */
-.menu-overlay.active {
-    right: 0; /* 滑动到屏幕内 */
-}
-
-/* 菜单项列表 */
-#nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 20px;
-}
-
-/* 菜单项 */
-#nav-menu li {
-    margin: 20px 0;
-    position: relative;
-    padding-left: 30px; /* 为图标留出空间 */
-}
-
-/* 菜单项链接 */
-#nav-menu li a {
-    text-decoration: none;
-    color: #333; /* 文字颜色 */
-    font-size: 18px;
-    transition: color 0.3s ease; /* 添加颜色过渡效果 */
-    position: relative;
-    display: inline-block;
-}
-
-/* 鼠标悬停时改变文字颜色 */
-#nav-menu li a:hover {
-    color: #ffcc00;
-}
-
-/* 当前页面菜单项 */
-.current-page a {
-    font-weight: bold;
-    color: #ffcc00;
-}
-
-/* 当前页面图标 */
-#nav-menu li.current-page::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px; /* 图标宽度 */
-    height: 20px; /* 图标高度 */
-    background-image: url('../assets/current-page-icon.png'); /* 图标路径 */
-    background-size: cover; /* 确保图标完整显示 */
-}
-
-/* 菜单项下划线动画 */
-#nav-menu li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: #333; /* 下划线颜色 */
-    transition: width 0.3s ease; /* 添加宽度过渡效果 */
-}
-
-/* 鼠标悬停时显示下划线 */
-#nav-menu li a:hover::after {
-    width: 100%;
-}
-
-以下是components/typography.css
-
-/* 字体和排版样式 */
-
-/* 全局字体设置 */
-body {
-    font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif; /* 默认字体 */
-    color: #333; /* 默认文字颜色 */
-    line-height: 1.6; /* 行高 */
-    margin: 0;
-    padding: 0;
-}
-
-/* 标题字体 */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', 'Microsoft YaHei', serif; /* 标题字体 */
-    font-weight: 700; /* 加粗 */
-    margin: 0; /* 去掉默认外边距 */
-}
-
-/* 一级标题 */
-h1 {
-    font-size: 48px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-/* 二级标题 */
-h2 {
-    font-size: 36px;
-    line-height: 1.3;
-    margin-bottom: 16px;
-}
-
-/* 三级标题 */
-h3 {
-    font-size: 28px;
-    line-height: 1.4;
-    margin-bottom: 12px;
-}
-
-/* 四级标题 */
-h4 {
-    font-size: 24px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
-/* 五级标题 */
-h5 {
-    font-size: 20px;
-    line-height: 1.5;
-    margin-bottom: 8px;
-}
-
-/* 六级标题 */
-h6 {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 6px;
-}
-
-/* 段落 */
-p {
-    font-size: 16px;
-    margin: 0 0 20px 0; /* 下边距 */
-    color: #666; /* 段落文字颜色 */
-}
-
-/* 链接 */
-a {
-    color: inherit; /* 继承父元素颜色 */
-    text-decoration: none; /* 去掉下划线 */
-    transition: color 0.3s ease; /* 添加颜色过渡效果 */
-}
-
-/* 鼠标悬停时改变链接颜色 */
-a:hover {
-    color: #ffcc00; /* 悬停颜色 */
-}
-
-/* 斜体文本 */
-.italic {
-    font-style: italic; /* 斜体 */
-}
-
-/* 粗体文本 */
-.bold {
-    font-weight: bold; /* 加粗 */
-}
-
-/* 文字居中 */
-.text-center {
-    text-align: center; /* 居中 */
-}
-
-/* 文字右对齐 */
-.text-right {
-    text-align: right; /* 右对齐 */
-}
-
-/* 文字左对齐 */
-.text-left {
-    text-align: left; /* 左对齐 */
-}
-
-/* 小号文字 */
-.small-text {
-    font-size: 14px;
-    color: #999; /* 浅灰色 */
-}
-
-/* 大号文字 */
-.large-text {
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-/* 文字阴影 */
-.text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 阴影效果 */
-}
-
-/* 文字大写 */
-.uppercase {
-    text-transform: uppercase; /* 大写字母 */
-}
-
-/* 文字小写 */
-.lowercase {
-    text-transform: lowercase; /* 小写字母 */
-}
-
-/* 文字首字母大写 */
-.capitalize {
-    text-transform: capitalize; /* 首字母大写 */
-}
-
-/* 文字颜色 */
-.text-primary {
-    color: #333; /* 主要文字颜色 */
-}
-
-.text-secondary {
-    color: #666; /* 次要文字颜色 */
-}
-
-.text-accent {
-    color: #ffcc00; /* 强调文字颜色 */
-}
-
-/* 文字选中样式 */
-::selection {
-    background-color: #ffcc00; /* 选中背景颜色 */
-    color: #000; /* 选中文字颜色 */
-}
-
-/* 兼容 Firefox */
-::-moz-selection {
-    background-color: #ffcc00; /* 选中背景颜色 */
-    color: #000; /* 选中文字颜色 */
-}
-
-以下是components/utilities.css
-
-/* 工具类样式 */
-
-/* 文字居中 */
-.text-center {
-    text-align: center;
-}
-
-/* 文字右对齐 */
-.text-right {
-    text-align: right;
-}
-
-/* 文字左对齐 */
-.text-left {
-    text-align: left;
-}
-
-/* 上边距 */
-.mt-10 {
-    margin-top: 10px;
-}
-
-.mt-20 {
-    margin-top: 20px;
-}
-
-.mt-30 {
-    margin-top: 30px;
-}
-
-/* 下边距 */
-.mb-10 {
-    margin-bottom: 10px;
-}
-
-.mb-20 {
-    margin-bottom: 20px;
-}
-
-.mb-30 {
-    margin-bottom: 30px;
-}
-
-/* 左边距 */
-.ml-10 {
-    margin-left: 10px;
-}
-
-.ml-20 {
-    margin-left: 20px;
-}
-
-.ml-30 {
-    margin-left: 30px;
-}
-
-/* 右边距 */
-.mr-10 {
-    margin-right: 10px;
-}
-
-.mr-20 {
-    margin-right: 20px;
-}
-
-.mr-30 {
-    margin-right: 30px;
-}
-
-/* 内边距 */
-.p-10 {
-    padding: 10px;
-}
-
-.p-20 {
-    padding: 20px;
-}
-
-.p-30 {
-    padding: 30px;
-}
-
-/* 隐藏元素 */
-.hidden {
-    display: none;
-}
-
-/* 显示元素 */
-.visible {
-    display: block;
-}
-
-/* 浮动左 */
-.float-left {
-    float: left;
-}
-
-/* 浮动右 */
-.float-right {
-    float: right;
-}
-
-/* 清除浮动 */
-.clearfix::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-/* 弹性布局容器 */
-.flex-container {
-    display: flex;
-    justify-content: space-between; /* 两端对齐 */
-    align-items: center; /* 垂直居中 */
-}
-
-/* 弹性布局项 */
-.flex-item {
-    flex: 1; /* 均匀分配空间 */
-}
-
-/* 固定宽度 */
-.width-100 {
-    width: 100%;
-}
-
-.width-50 {
-    width: 50%;
-}
-
-.width-25 {
-    width: 25%;
-}
-
-/* 固定高度 */
-.height-100 {
-    height: 100%;
-}
-
-.height-50 {
-    height: 50%;
-}
-
-.height-25 {
-    height: 25%;
-}
-
-/* 圆角 */
-.rounded {
-    border-radius: 10px;
-}
-
-.rounded-full {
-    border-radius: 50%;
-}
-
-/* 阴影 */
-.shadow {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.shadow-lg {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* 透明度 */
-.opacity-50 {
-    opacity: 0.5;
-}
-
-.opacity-75 {
-    opacity: 0.75;
-}
-
-/* 鼠标指针 */
-.cursor-pointer {
-    cursor: pointer;
-}
-
-.cursor-default {
-    cursor: default;
-}
-
-以下为about.html
+这是我的文件架构：
+│  .gitattributes
+│  about.html
+│  index.html
+│  portfolio.html
+│  TBD
+│
+├─articles
+│  ├─blog
+│  │  ├─2-24-2025-prologue
+│  │  │  │  2-24-2025-prologue.html
+│  │  │  │
+│  │  │  └─assets
+│  │  │          1.jpg
+│  │  │          3.jpg
+│  │  │
+│  │  └─test-article
+│  │      │  test-article.html
+│  │      │
+│  │      └─assets
+│  │              1.jpg
+│  │
+│  ├─design
+│  │      sakana.html
+│  │
+│  └─photograph
+│          RiverGuardian.html
+│          VOID.html
+│
+├─assets
+│  │  current-page-icon.png
+│  │  email-icon.png
+│  │  favicon.png
+│  │  filter-design-icon.png
+│  │  filter-ideas-icon.png
+│  │  filter-photography-icon.png
+│  │  github-icon.png
+│  │  navigator.png
+│  │  orcid-icon.png
+│  │  read-more-icon.png
+│  │  reset-icon.png
+│  │  scholar-icon.png
+│  │  screen-image.png
+│  │  site.webmanifest
+│  │  sort-asc-icon.png
+│  │  sort-desc-icon.png
+│  │  texture.png
+│  │
+│  ├─aboutme
+│  │      portrait.png
+│  │
+│  ├─data
+│  │      images.json
+│  │
+│  ├─photos
+│  │  └─selfies
+│  │          2020-7-11.JPG
+│  │
+│  ├─screen-images
+│  │      danxia.jpg
+│  │      desk.JPG
+│  │      jianghezhishou.jpg
+│  │      sakana.JPG
+│  │      sandroad.jpg
+│  │      void.jpg
+│  │
+│  └─translations
+│          en.json
+│          zh-Hans.json
+│          zh-Hant.json
+│
+├─scripts
+│      script.js
+│
+└─styles
+    │  about.css
+    │  components-about.css
+    │  components-index.css
+    │  components.css
+    │  index.css
+    │  portfolio.css
+    │  tem.txt
+    │
+    ├─assets
+    │  └─fonts
+    │      │  microsoft-yahei.ttf
+    │      │
+    │      ├─anek-latin
+    │      │      AnekLatin-Bold.ttf
+    │      │      AnekLatin-ExtraBold.ttf
+    │      │      AnekLatin-ExtraLight.ttf
+    │      │      AnekLatin-Light.ttf
+    │      │      AnekLatin-Medium.ttf
+    │      │      AnekLatin-Regular.ttf
+    │      │      AnekLatin-SemiBold.ttf
+    │      │      AnekLatin-Thin.ttf
+    │      │
+    │      ├─playfair-display
+    │      │      PlayfairDisplay-Black.ttf
+    │      │      PlayfairDisplay-BlackItalic.ttf
+    │      │      PlayfairDisplay-Bold.ttf
+    │      │      PlayfairDisplay-BoldItalic.ttf
+    │      │      PlayfairDisplay-Italic.ttf
+    │      │      PlayfairDisplay-Regular.ttf
+    │      │
+    │      └─SmileySans
+    │              SmileySans-Oblique.ttf
+    │
+    └─components
+            background.css
+            base.css
+            buttons.css
+            cards.css
+            fonts.css
+            grid.css
+            icons.css
+            navbar.css
+            typography.css
+            utilities.css
+
+这是我的主页：
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cids' Personal Website</title>
+    <link rel="stylesheet" href="styles/components-index.css"> <!-- 引用所有通用组件样式 -->
+    <link rel="stylesheet" href="styles/index.css"> <!-- 首页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="home-page">
+    <!-- 首页文字按钮 -->
+    <div class="home-buttons">
+        <a href="about.html" class="home-button">About Me&lt;</a>
+        <a href="portfolio.html" class="home-button">Portfolio</a>
+    </div>
+
+    <!-- 欢迎部分 -->
+    <section id="welcome" class="welcome-section">
+        <!-- 21:9 银幕容器 -->
+        <div class="screen-container">
+            <!-- 图片 -->
+            <img class="screen-media" src="" alt="Screen Image">
+
+            <!-- 图片介绍文字区 -->
+            <div class="image-caption">
+                <p class="caption-line-1"></p>
+                <p class="caption-line-2"></p>
+                <p class="caption-line-3"></p>
+            </div>
+        </div>
+
+        <!-- 银幕下方文字 -->
+        <div class="screen-text">
+            <p class="line-1">Wor/D Th/nk/ng</p>
+            <p class="line-2">&</p>
+            <p class="line-3">The Selected Work of <a href="about.html" class="cids-ho-link">&lt;Cids_Ho/&gt;</a></p>
+        </div>
+        
+        <div class="contact-section">
+            <!-- Icon 按钮 -->
+            <div class="icon-buttons">
+                <a href="https://github.com/CidsHo" target="_blank">
+                    <img src="assets/github-icon.png" alt="GitHub" class="icon">
+                </a>
+                <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                    <img src="assets/orcid-icon.png" alt="ORCID" class="icon">
+                </a>
+                <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                    <img src="assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                </a>
+            </div>
+        
+            <!-- 联系方式 -->
+            <div class="contact-info">
+                <p onclick="copyText('+852 5223 4424')">Contact: tel: +852 5223 4424</p>
+                <p onclick="copyText('hocids@tongji.edu.cn')">Email: hocids@tongji.edu.cn</p>
+            </div>
+        </div>
+
+        <!-- 复制成功提示框 -->
+        <div id="copy-notification" class="copy-notification">
+            <p>已复制到剪贴板！</p>
+        </div>
+    </section>
+
+
+    <!-- 脚本 -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>
+
+这是about
 
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -1726,8 +205,8 @@ a:hover {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Cids' Personal Website</title>
-    <link rel="stylesheet" href="styles/components.css">
-    <link rel="stylesheet" href="styles/about.css"> <!-- 自我介绍页面样式 -->
+    <link rel="stylesheet" href="styles/components-about.css">
+    <link rel="stylesheet" href="styles/about.css">
     <!-- Favicon 配置 -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -1775,141 +254,102 @@ a:hover {
 
     <!-- 自我介绍内容 -->
     <div class="about-container">
-        <!-- 背景和分隔线 -->
-        <div class="about-background"></div>
-        <div class="about-divider"></div>
+        <!-- 左侧：照片和姓名区 -->
+        <div class="about-left">
+            <img src="assets/aboutme/portrait.png" alt="Profile Image" class="about-profile-image">
+            
+            <!-- 姓名区 -->
+            <div class="name-section">
+                <h1>Jat-Hou Cids Ho</h1>
+                <h2>何逸豪 Yihao He</h2>
+                <p>Interactive Media Art Designer, HCI Researcher, VR Addict.</p>
+            </div>
 
-        <!-- 个人肖像 -->
-        <img src="assets/aboutme/portrait.png" alt="Profile Image" class="about-profile-image">
+            <!-- 联系方式 -->
+            <div class="contact-section">
+                <h3>Contact Me</h3>
+                <p>Email: <a href="mailto:hocids@tongji.edu.cn">hocids@tongji.edu.cn</a></p>
+                <p>Tel: +852 5223 4424</p>
+            </div>
 
-        <!-- 标题 -->
-        <h1 class="about-title">About <br> Me</h1>
-
-        <!-- 联系方式 -->
-        <section class="about-contact-info">
-            <h2>Contact</h2>
-            <p>+852 5223 4424; +86 156 2767 7007</p>
-            <p>Address: School of Art and Media, Tongji University (Jiading Campus),<br>
-               Cao'an Road 4800, Jiading District, Shanghai, China<br>
-               Postal Code: 201804</p>
-        </section>
-
-        <!-- 研究兴趣 -->
-        <section class="about-research-interests">
-            <h2>Research Interests</h2>
-            <p>Virtual Reality Experience Design<br>
-               Creative-Support Virtual Reality<br>
-               Embodied and Multimodal Interaction</p>
-        </section>
-
-        <!-- 教育背景 -->
-        <section class="about-education">
-            <h2>Education</h2>
-            <p>Master of Art<br>
-               <span>College of Arts and Media, Tongji University | [2021-2024]</span></p>
-            <p>Bachelor of Management<br>
-               <span>Zhongnan University of Economic and Law | [2017-2021]</span></p>
-        </section>
-
-        <!-- 技能 -->
-        <section class="about-skills">
-            <h2>Skills</h2>
-            <p>Tools/Software</p>
-            <p>Programming and data analytics tools: C# (Unity 3D), NVivo.<br>
-               Design and Prototyping Tools: Unity 3D, Photoshop, Illustrator, Figma.<br>
-               Multimedia and Visual Production Tools: Adobe Suite.</p>
-        </section>
-
-        <!-- 创意领域 -->
-        <section class="about-creative-fields">
-            <h2>Creative Fields</h2>
-            <p>Design Thinking<br>
-               UI/Ux/IxD<br>
-               Virtual Reality Experience<br>
-               Illustration</p>
-        </section>
-
-        <!-- 语言能力 -->
-        <section class="about-language">
-            <h2>Language</h2>
-            <p>English (CET-6, IELTS 7.5), Cantonese, Mandarin<br>
-               Full professional proficiency</p>
-        </section>
-
-        <!-- ORCID -->
-        <section class="about-orcid">
-            <h2>ORCID</h2>
-            <p>0009-0001-3477-7817</p>
-        </section>
-
-        <!-- 电子邮件 -->
-        <section class="about-email">
-            <h2>Email</h2>
-            <p>hocids@tongji.edu.cn</p>
-        </section>
-
-        <!-- 箭头 -->
-        <div class="about-arrow"></div>
-    </div>
-
-    <!-- 脚本 -->
-    <script src="scripts/script.js"></script>
-</body>
-</html>
-
-以下为index.html
-
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cids' Personal Website</title>
-    <link rel="stylesheet" href="styles/components.css"> <!-- 引用所有通用组件样式 -->
-    <link rel="stylesheet" href="styles/index.css"> <!-- 首页特有样式 -->
-    <!-- Favicon 配置 -->
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="apple-touch-icon" href="assets/favicon.png">
-    <link rel="manifest" href="assets/site.webmanifest">
-    <meta name="msapplication-TileImage" content="assets/favicon.png">
-    <meta name="msapplication-TileColor" content="#ffffff">
-</head>
-<body class="home-page">
-    <!-- 首页文字按钮 -->
-    <div class="home-buttons">
-        <a href="about.html" class="home-button">About Me</a>
-        <a href="portfolio.html" class="home-button">Portfolio</a>
-    </div>
-
-    <!-- 欢迎部分 -->
-    <section id="welcome" class="welcome-section">
-        <!-- 21:9 银幕容器 -->
-        <div class="screen-container">
-            <!-- 图片 -->
-            <img class="screen-media" src="" alt="Screen Image">
-
-            <!-- 图片介绍文字区 -->
-            <div class="image-caption">
-                <p class="caption-line-1"></p>
-                <p class="caption-line-2"></p>
-                <p class="caption-line-3"></p>
+            <!-- 语言切换按钮 -->
+            <div class="language-switcher">
+                <button onclick="switchLanguage('en')">EN</button>
+                <button onclick="switchLanguage('zh-Hans')">简</button>
+                <button onclick="switchLanguage('zh-Hant')">繁</button>
             </div>
         </div>
 
-        <!-- 银幕下方文字 -->
-        <div class="screen-text">
-            <p class="line-1">Wor/D Th/nk/ng</p>
-            <p class="line-2">&</p>
-            <p class="line-3">The Selected Work of <a href="about.html" class="cids-ho-link">Cids Ho</a></p>
+        <!-- 右侧：文字内容 -->
+        <div class="about-right">
+            <!-- 研究兴趣 -->
+            <div class="content-row">
+                <div class="content-title">
+                    <h2 data-key="researchInterest"></h2>
+                </div>
+                <div class="content-text">
+                    <p data-key="researchInterestText"></p>
+                </div>
+            </div>
+
+            <!-- 教育背景 -->
+            <div class="content-row">
+                <div class="content-title">
+                    <h2 data-key="educations"></h2>
+                </div>
+                <div class="content-text">
+                    <p data-key="educationsText"></p>
+                </div>
+            </div>
+
+            <!-- 技能 -->
+            <div class="content-row">
+                <div class="content-title">
+                    <h2 data-key="skills"></h2>
+                </div>
+                <div class="content-text">
+                    <div data-key="skillsText"></div>
+                </div>
+            </div>
+
+            <!-- 出版物 -->
+            <div class="content-row">
+                <div class="content-title">
+                    <h2 data-key="publications"></h2>
+                </div>
+                <div class="content-text">
+                    <ul data-key="publicationsList"></ul>
+                </div>
+            </div>
+
+            <!-- 项目经验 -->
+            <div class="content-row">
+                <div class="content-title">
+                    <h2 data-key="projectExperience"></h2>
+                </div>
+                <div class="content-text">
+                    <ul data-key="projectExperienceList"></ul>
+                </div>
+            </div>
+
+            <!-- 奖项 -->
+            <div class="content-row">
+                <div class="content-title">
+                    <h2 data-key="awards"></h2>
+                </div>
+                <div class="content-text">
+                    <ul data-key="awardsList"></ul>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
     <!-- 脚本 -->
     <script src="scripts/script.js"></script>
 </body>
 </html>
 
-以下为portfolio.html
+这是portfolio页
 
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -2111,11 +551,1928 @@ a:hover {
 </body>
 </html>
 
-以下为script.js
+这是about.css ：
+
+/* 自我介绍页面样式 */
+.about-page {
+    background-color: #D9D9D9;
+    background-image: url('../assets/texture.png');
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    background-blend-mode: overlay;
+    overflow: hidden;
+}
+
+.about-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* 左侧：照片和标题 */
+.about-left {
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+}
+
+.about-profile-image {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* 姓名区 */
+.name-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.name-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #333;
+    margin: 0;
+}
+
+.name-section h2 {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 24px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.name-section p {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 18px;
+    color: #999;
+    margin: 0;
+}
+
+/* 联系方式 */
+.contact-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.contact-section p {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.contact-section a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-section a:hover {
+    color: #0056b3;
+}
+
+/* 语言切换按钮容器 */
+.language-switcher {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    gap: 10px; /* 按钮间距 */
+    margin-top: 20px;
+}
+
+/* 语言切换按钮 */
+.language-switcher button {
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+    border: 1px solid #ccc; /* 浅灰色边框 */
+    border-radius: 5px; /* 圆角 */
+    color: #333; /* 文字颜色 */
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* 添加过渡效果 */
+    padding: 8px 16px; /* 内边距 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    flex: 1; /* 让按钮均匀分布 */
+    max-width: 80px; /* 最大宽度 */
+    text-align: center; /* 文字居中 */
+}
+
+
+/* 鼠标悬停效果 */
+.language-switcher button:hover {
+    background-color: #ffcc00; /* 悬停时背景变为黄色 */
+    color: #000; /* 悬停时文字变为黑色 */
+    border-color: #ffcc00; /* 悬停时边框变为黄色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 悬停时阴影加深 */
+}
+
+/* 当前选中按钮样式 */
+.language-switcher button.active {
+    background-color: #ffcc00; /* 选中时背景变为黄色 */
+    color: #000; /* 选中时文字变为黑色 */
+    border-color: #ffcc00; /* 选中时边框变为黄色 */
+    font-weight: bold; /* 选中时文字加粗 */
+}
+
+/* 右侧：文字内容 */
+.about-right {
+    width: 60%;
+    margin-left: 40%;
+    padding: 40px;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.content-row {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.content-title {
+    width: 40%;
+    padding-right: 20px;
+    text-align: left;
+    font-family: 'Playfair Display',  serif;
+}
+
+/* 大标题字体 */
+.about-right .content-title h2 {
+    font-family: 'Playfair Display', serif; /* 默认字体 */
+}
+
+/* 中文情况下的大标题字体 */
+[lang="zh-Hans"] .about-right .content-title h2,
+[lang="zh-Hant"] .about-right .content-title h2 {
+    font-family: 'Microsoft YaHei', sans-serif !important; /* 使用 SmilySans */
+    font-weight: 350;
+}
+
+.content-text {
+    width: 70%;
+}
+
+.content-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content-text ul li {
+    margin-bottom: 20px;
+}
+
+/* 项目经验中的 > 符号 */
+.content-text ul li > em {
+    font-style: normal;
+    color: #333; /* 黑色 */
+    font-weight: bold;
+}
+
+/* 技能部分样式 */
+.skill-category {
+    margin-bottom: 20px;
+}
+
+.skill-category h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+/* Skills 部分的内容标题字体 */
+.about-right .skill-category h3 {
+    font-family: 'Playfair Display', serif; /* 默认字体 */
+}
+
+/* 中文情况下的 Skills 部分内容标题字体 */
+[lang="zh-Hans"] .about-right .skill-category h3,
+[lang="zh-Hant"] .about-right .skill-category h3 {
+    font-family: 'Microsoft YaHei', sans-serif !important; /* 使用 SmilySans */
+    font-weight: 350;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category ul li {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.skill-category ul li::before {
+    content: "•";
+    color: #007BFF;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* DOI 链接样式 */
+.content-text a {
+    color: #007BFF; /* 蓝色链接 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.content-text a:hover {
+    color: #0056b3; /* 深蓝色悬停效果 */
+}
+
+.content-text a em {
+    font-style: normal;
+    font-weight: bold;
+    color: #007BFF; /* 蓝色 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-left {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding: 20px 0;
+    }
+
+    .about-right {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .content-row {
+        flex-direction: column;
+    }
+
+    .content-title {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .content-text {
+        width: 100%;
+    }
+}
+
+这是components.css
+
+/* 引用所有通用组件样式 */
+
+/* 基础样式 */
+@import url('components/base.css');
+
+/* 字体定义 */
+@import url('components/fonts.css');
+
+/* 导航栏 */
+@import url('components/navbar.css');
+
+/* 按钮 */
+@import url('components/buttons.css');
+
+/* 卡片 */
+@import url('components/cards.css');
+
+/* 网格布局 */
+@import url('components/grid.css');
+
+/* 字体和排版 */
+@import url('components/typography.css');
+
+/* 图标 */
+@import url('components/icons.css');
+
+/* 菜单栏 */
+@import url('components/menu.css');
+
+/* 背景 */
+@import url('components/background.css');
+
+/* 工具类 */
+@import url('components/utilities.css');
+
+这是components-about.css
+
+/* 引用所有通用组件样式 */
+
+/* 字体定义 */
+@import url('components/fonts.css');
+
+/* 导航栏 */
+@import url('components/navbar.css');
+
+/* 按钮 */
+@import url('components/buttons.css');
+
+/* 卡片 */
+@import url('components/cards.css');
+
+/* 网格布局 */
+@import url('components/grid.css');
+
+/* 图标 */
+@import url('components/icons.css');
+
+/* 菜单栏 */
+@import url('components/menu.css');
+
+/* 背景 */
+@import url('components/background.css');
+
+/* 工具类 */
+@import url('components/utilities.css');
+
+这是components-index.css
+
+/* 引用所有通用组件样式 */
+
+/* 字体定义 */
+@import url('components/fonts.css');
+
+/* 导航栏 */
+@import url('components/navbar.css');
+
+/* 按钮 */
+@import url('components/buttons.css');
+
+/* 卡片 */
+@import url('components/cards.css');
+
+/* 网格布局 */
+@import url('components/grid.css');
+
+/* 图标 */
+@import url('components/icons.css');
+
+/* 菜单栏 */
+@import url('components/menu.css');
+
+/* 背景 */
+@import url('components/background.css');
+
+/* 工具类 */
+@import url('components/utilities.css');
+
+这是index.css：
+
+/* 首页样式 */
+
+/* 首页背景 */
+.home-page {
+    background-color: #000; /* 黑色背景 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-blend-mode: overlay; /* 混合模式 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif; /* 默认字体 */
+}
+
+/* 首页文字按钮 */
+.home-buttons {
+    position: fixed;
+    top: 180px; /* 靠近银幕顶部 */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+    align-items: center; /* 按钮内容居中 */
+}
+
+.home-button {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.home-button:hover {
+    color: #ffcc00;
+}
+
+/* 欢迎部分 */
+.welcome-section {
+    width: 100%; /* 占满整个页面宽度 */
+    height: 100vh; /* 占满整个页面高度 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+    align-items: center; /* 水平居中 */
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 隐藏溢出内容 */
+}
+
+/* 21:9 银幕容器 */
+.screen-container {
+    width: 90%; /* 左右各留白 5% */
+    aspect-ratio: 21 / 9; /* 21:9 比例 */
+    max-width: 1200px; /* 最大宽度 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    margin-bottom: 40px; /* 与文字的间距 */
+    overflow: hidden;
+    cursor: pointer; /* 鼠标悬停时显示手型 */
+    position: relative; /* 为文字区定位做准备 */
+}
+
+/* 银幕图片 */
+.screen-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保持比例并覆盖整个容器 */
+}
+
+/* 图片介绍文字区 */
+.image-caption {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #fff;
+    text-align: left;
+    font-family: 'Anek Latin', sans-serif;
+    border-radius: 1px;
+    font-size: medium;
+}
+
+.caption-line-1 {
+    margin: 0;
+    color: #fff; /* 第一行白色 */
+    line-height: 1.5; /* 缩小行距 */
+}
+
+.caption-line-2 {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8); /* 第二行稍浅 */
+    line-height: 2; /* 缩小行距 */
+}
+
+.caption-line-3 {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6); /* 第三行更浅 */
+}
+
+/* 图片淡入淡出动画 */
+.screen-media {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.screen-media.fade-out {
+    opacity: 0;
+}
+
+/* 银幕下方文字 */
+.screen-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff; /* 改为白色 */
+}
+
+.screen-text .line-1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    line-height: 0.6; /* 缩小行距 */
+}
+
+.screen-text .line-2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    line-height: 0.4; /* 缩小行距 */
+}
+
+.screen-text .line-3 {
+    font-size: 1.5rem;
+}
+
+/* Cids Ho 链接样式 */
+.cids-ho-link {
+    color: inherit; /* 继承父元素颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+}
+
+.cids-ho-link:hover {
+    color: #ffcc00; /* 鼠标悬停时改变颜色 */
+}
+
+/*联系方式*/
+.contact-section {
+    position: fixed;
+    bottom: 150px; /* 靠近银幕底部 */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+    max-width: 300px;
+}
+
+.icon-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.icon-buttons .icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.icon-buttons .icon:hover {
+    transform: scale(1.2);
+}
+
+.contact-info {
+    color: #fff;
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.contact-info p:hover {
+    color: #ffcc00;
+}
+
+/* 复制成功提示框 */
+.copy-notification {
+    position: fixed;
+    bottom: 60px; /* 在联系信息上方显示 */
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* 防止干扰点击 */
+}
+
+.copy-notification.show {
+    opacity: 1;
+}
+
+/* 响应式设计 */
+
+@media (max-width: 768px) {
+    .image-caption {
+        top: 10px;
+        left: 10px;
+        font-size: 12px; /* 缩小字体 */
+    }
+    .screen-container {
+        width: 95%; /* 在小屏幕上增加留白 */
+    }
+
+    .screen-text .line-1 {
+        font-size: 1.2rem;
+    }
+
+    .screen-text .line-2 {
+        font-size: 1.5rem;
+    }
+
+    .screen-text .line-3 {
+        font-size: 1.2rem;
+    }
+
+    .home-buttons {
+        top: 20px;
+        right: 20px;
+    }
+    .home-button {
+        font-size: 1.4rem; /* 缩小字体 */
+    }
+    .contact-section {
+        bottom: 20px;
+        right: 20px;
+    }
+    .copy-notification {
+        bottom: 50px;
+        right: 10px;
+        font-size: 12px; /* 缩小字体 */
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-caption {
+        top: 5px;
+        left: 5px;
+        font-size: 10px; /* 进一步缩小字体 */
+    }
+    .screen-container {
+        aspect-ratio: 16 / 9; /* 在小屏幕上调整为 16:9 */
+    }
+
+    .screen-text .line-1 {
+        font-size: 1rem;
+    }
+
+    .screen-text .line-2 {
+        font-size: 1.2rem;
+    }
+
+    .screen-text .line-3 {
+        font-size: 1rem;
+    }
+
+    .home-buttons {
+        top: 5px;
+        right: 5px;
+    }
+    .home-button {
+        font-size: 1.2rem; /* 进一步缩小字体 */
+    }
+    .copy-notification {
+        bottom: 40px;
+        right: 5px;
+        font-size: 10px; /* 进一步缩小字体 */
+        padding: 5px 10px;
+    }
+     /* 右上角按钮居中 */
+     .home-buttons {
+        top: 20px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .contact-section {
+        bottom: 20px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 300px;
+    }
+    .icon-buttons {
+        gap: 10px;
+    }
+    .icon-buttons .icon {
+        width: 20px;
+        height: 20px;
+    }
+    /* 复制提示框居中 */
+    .copy-notification {
+        bottom: 60px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+}
+
+/* 为移动设备添加点击效果 */
+@media (hover: none) and (pointer: coarse) {
+    .home-button:active,
+    .contact-info p:active {
+        color: #ffcc00; /* 点击时改变颜色 */
+    }
+}
+
+这是portfolio.css
+
+/* 作品集页面样式 */
+
+/* 页面背景 */
+.portfolio-page {
+    background-color: #D9D9D9;
+    background-image: url('../assets/texture.png');
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    background-blend-mode: overlay;
+    overflow: auto; /* 允许滚动 */
+}
+
+/* 作品集部分 */
+.portfolio-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.portfolio-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* 排序和筛选按钮 */
+.filter-sort-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+.sort-options, .filter-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-button, .filter-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.sort-button img, .filter-button img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.sort-button:hover img, .filter-button:hover img {
+    transform: scale(1.2);
+}
+
+/* 筛选按钮高亮样式 */
+.filter-button.active {
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: bold;
+}
+
+/* 作品集网格 */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    align-items: start;
+    grid-auto-flow: dense;
+}
+
+/* 作品项 */
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 图片容器 */
+.image-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.portfolio-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 作品信息 */
+.portfolio-info {
+    padding: 20px;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.portfolio-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.portfolio-info p {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* 阅读更多按钮 */
+.read-more {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.read-more-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.read-more-icon:hover {
+    transform: scale(1.2);
+}
+
+/* 底部提示 */
+.bottom-tip {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: bottom 0.5s ease;
+    z-index: 1000;
+}
+
+.bottom-tip.show {
+    bottom: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+这是components/background.css
+
+/* 背景样式 */
+
+/* 页面背景 */
+.page-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #D9D9D9; /* 底色 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-size: 500px 500px; /* 缩放材质图片 */
+    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
+}
+
+/* 首页背景 */
+.home-background {
+    background-color: #000; /* 黑色背景 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-blend-mode: overlay; /* 混合模式 */
+}
+
+/* 作品集页面背景 */
+.portfolio-background {
+    background-color: #D9D9D9; /* 底色 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-size: 500px 500px; /* 缩放材质图片 */
+    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
+}
+
+/* 自我介绍页面背景 */
+.about-background {
+    background-color: #D9D9D9; /* 底色 */
+    background-image: url('../assets/texture.png'); /* 材质背景 */
+    background-repeat: repeat; /* 平铺材质 */
+    background-size: 500px 500px; /* 缩放材质图片 */
+    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
+}
+
+/* 分隔线 */
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1); /* 浅灰色分隔线 */
+    margin: 20px 0; /* 上下边距 */
+}
+
+/* 箭头 */
+.arrow {
+    width: 26.5px;
+    height: 0;
+    border: 5px solid black; /* 黑色箭头 */
+    position: absolute;
+    top: 1142px;
+    left: 91px;
+}
+
+这是components/base.css
+
+/* 全局样式 */
+body {
+    font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; /* 最小高度为视口高度 */
+    background-color: #D9D9D9;
+    background-image: url('../assets/texture.png');
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    background-blend-mode: overlay;
+    box-sizing: border-box;
+}
+
+/* 容器 */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* 标题 */
+h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin-bottom: 1.5rem;
+}
+
+/* 段落 */
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.25rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+这是components/buttons.css
+
+/* 全局样式 */
+body {
+    font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; /* 最小高度为视口高度 */
+    background-color: #D9D9D9;
+    background-image: url('../assets/texture.png');
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    background-blend-mode: overlay;
+    box-sizing: border-box;
+}
+
+/* 容器 */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* 标题 */
+h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    margin-bottom: 1.5rem;
+}
+
+/* 段落 */
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.25rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+这是components/cards.css
+
+/* 卡片样式 */
+
+/* 基础卡片样式 */
+.card {
+    background-color: #fff; /* 白色背景 */
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* 添加过渡效果 */
+    display: flex;
+    flex-direction: column;
+    opacity: 1; /* 初始透明度 */
+    transform: translateY(0); /* 初始位置 */
+}
+
+/* 鼠标悬停时提升卡片 */
+.card:hover {
+    transform: translateY(-10px); /* 向上移动 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 增强阴影 */
+}
+
+/* 图片容器 */
+.image-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 卡片图片 */
+.card-image {
+    width: 100%;
+    height: auto; /* 高度根据图片比例自动调整 */
+    display: block; /* 避免图片下方出现空白间隙 */
+    transition: transform 0.3s ease; /* 添加缩放动画 */
+}
+
+/* 鼠标悬停时放大图片 */
+.card:hover .card-image {
+    transform: scale(1.05); /* 轻微放大 */
+}
+
+/* 卡片信息 */
+.card-info {
+    padding: 20px;
+    text-align: left;
+    flex-grow: 1; /* 让简介部分填充剩余空间 */
+}
+
+/* 卡片标题 */
+.card-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* 卡片简介 */
+.card-info p {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* 阅读更多按钮 */
+.read-more {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.read-more-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease; /* 添加缩放动画 */
+}
+
+/* 鼠标悬停时放大图标 */
+.read-more-icon:hover {
+    transform: scale(1.2);
+}
+
+这是components/fonts.css
+
+/* 字体定义 */
+
+/* 定义 Anek Latin 字体 */
+@font-face {
+    font-family: 'Anek Latin';
+    src: url('../assets/fonts/anek-latin/AnekLatin-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Anek Latin';
+    src: url('../assets/fonts/anek-latin/AnekLatin-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Anek Latin';
+    src: url('../assets/fonts/anek-latin/AnekLatin-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Anek Latin';
+    src: url('../assets/fonts/anek-latin/AnekLatin-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Anek Latin';
+    src: url('../assets/fonts/anek-latin/AnekLatin-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Anek Latin';
+    src: url('../assets/fonts/anek-latin/AnekLatin-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Anek Latin';
+    src: url('../assets/fonts/anek-latin/AnekLatin-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Anek Latin';
+    src: url('../assets/fonts/anek-latin/AnekLatin-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* 定义 Playfair Display 字体 */
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../assets/fonts/playfair-display/PlayfairDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../assets/fonts/playfair-display/PlayfairDisplay-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../assets/fonts/playfair-display/PlayfairDisplay-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../assets/fonts/playfair-display/PlayfairDisplay-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../assets/fonts/playfair-display/PlayfairDisplay-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../assets/fonts/playfair-display/PlayfairDisplay-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* 定义微软雅黑字体（用于中文） */
+@font-face {
+    font-family: 'Microsoft YaHei';
+    src: local('Microsoft YaHei'), local('微软雅黑'),
+         url('../assets/fonts/microsoft-yahei.ttf') format('truetype');
+    unicode-range: U+4E00-9FFF;
+}
+
+/* 得意黑（用于中文） */
+@font-face {
+    font-family: 'SmilySans';
+    src: local('SmilySans'), local('得意黑'),
+         url('../assets/fonts/SmileySans/SmileySans-Oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+4E00-9FFF;
+}
+
+这是components/grid.css
+
+/* 网格布局样式 */
+
+/* 基础网格布局 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 每列最小宽度 200px */
+    gap: 20px; /* 网格间距 */
+    padding: 20px; /* 内边距 */
+    align-items: start; /* 让卡片从顶部对齐，避免拉伸 */
+    grid-auto-flow: dense; /* 启用密集填充模式 */
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr); /* 每行最多四个 */
+    }
+}
+
+@media (max-width: 991px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /* 每行最多三个 */
+    }
+}
+
+@media (max-width: 767px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* 每行最多两个 */
+    }
+}
+
+@media (max-width: 575px) {
+    .grid {
+        grid-template-columns: 1fr; /* 竖版显示时每行一个 */
+    }
+}
+
+这是components/icons.css
+
+/* 图标样式 */
+
+/* 基础图标样式 */
+.icon {
+    width: 24px; /* 图标宽度 */
+    height: 24px; /* 图标高度 */
+    transition: transform 0.3s ease; /* 添加缩放动画 */
+}
+
+/* 鼠标悬停时放大图标 */
+.icon:hover {
+    transform: scale(1.2); /* 放大 1.2 倍 */
+}
+
+/* 社交图标容器 */
+.social-icons {
+    display: flex;
+    gap: 15px; /* 图标间距 */
+    justify-content: center; /* 居中显示 */
+}
+
+/* 导航栏图标 */
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease; /* 添加缩放动画 */
+}
+
+/* 鼠标悬停时放大导航栏图标 */
+.nav-icon:hover {
+    transform: scale(1.1);
+}
+
+/* 排序和筛选按钮图标 */
+.sort-button img, .filter-button img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease; /* 添加缩放动画 */
+}
+
+/* 鼠标悬停时放大排序和筛选按钮图标 */
+.sort-button:hover img, .filter-button:hover img {
+    transform: scale(1.2);
+}
+
+/* 阅读更多按钮图标 */
+.read-more-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease; /* 添加缩放动画 */
+}
+
+/* 鼠标悬停时放大阅读更多按钮图标 */
+.read-more-icon:hover {
+    transform: scale(1.2);
+}
+
+这是components/navbar.css
+
+/* 导航栏容器 */
+#navbar {
+    display: flex;
+    justify-content: flex-end; /* 导航栏内容靠右 */
+    padding: 20px;
+    position: fixed; /* 固定定位 */
+    top: 0;
+    right: 0;
+    z-index: 1000; /* 确保导航栏位于最上层 */
+    background-color: rgba(255, 255, 255, 0.2); /* 半透明白色背景 */
+    backdrop-filter: blur(10px); /* 背景模糊 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    border-radius: 10px; /* 圆角 */
+    margin: 10px; /* 外边距 */
+}
+
+/* 导航栏按钮 */
+#nav-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 导航栏图标 */
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease; /* 添加缩放动画 */
+}
+
+/* 鼠标悬停时放大图标 */
+#nav-toggle:hover .nav-icon {
+    transform: scale(1.1);
+}
+
+/* 点击时缩小图标 */
+#nav-toggle:active .nav-icon {
+    transform: scale(0.9);
+}
+
+/* 旋转图标（用于菜单展开时） */
+#nav-toggle.rotate .nav-icon {
+    transform: rotate(90deg);
+}
+
+/* 菜单栏覆盖层 */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: -100%; /* 初始位置完全隐藏在屏幕外 */
+    width: 300px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1); /* 更透明的白色背景 */
+    backdrop-filter: blur(20px); /* 更强的背景模糊 */
+    transition: right 0.3s ease; /* 添加滑动动画 */
+    z-index: 999;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    padding: 20px; /* 内边距 */
+    border-left: 1px solid rgba(0, 0, 0, 0.1); /* 左侧边框 */
+}
+
+/* 菜单栏展开时 */
+.menu-overlay.active {
+    right: 0; /* 滑动到屏幕内 */
+}
+
+/* 菜单项列表 */
+#nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* 菜单项 */
+#nav-menu li {
+    margin: 20px 0;
+    position: relative;
+    padding-left: 30px; /* 为图标留出空间 */
+}
+
+/* 菜单项链接 */
+#nav-menu li a {
+    text-decoration: none;
+    color: #333; /* 文字颜色 */
+    font-size: 18px;
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+    position: relative;
+    display: inline-block;
+}
+
+/* 鼠标悬停时改变文字颜色 */
+#nav-menu li a:hover {
+    color: #ffcc00;
+}
+
+/* 当前页面菜单项 */
+.current-page a {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* 当前页面图标 */
+#nav-menu li.current-page::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* 图标宽度 */
+    height: 20px; /* 图标高度 */
+    background-image: url('../assets/current-page-icon.png'); /* 图标路径 */
+    background-size: cover; /* 确保图标完整显示 */
+}
+
+/* 菜单项下划线动画 */
+#nav-menu li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #333; /* 下划线颜色 */
+    transition: width 0.3s ease; /* 添加宽度过渡效果 */
+}
+
+/* 鼠标悬停时显示下划线 */
+#nav-menu li a:hover::after {
+    width: 100%;
+}
+
+/* More 和图标 */
+.more-frontpage {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.more-frontpage p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* 图标间距 */
+}
+
+.icon-row .icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease; /* 添加缩放动画 */
+}
+
+.icon-row .icon:hover {
+    transform: scale(1.2);
+}
+
+这是components/typography.css
+
+/* 字体和排版样式 */
+
+/* 全局字体设置 */
+body {
+    font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif; /* 默认字体 */
+    color: #333; /* 默认文字颜色 */
+    line-height: 1.6; /* 行高 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 标题字体 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', 'Microsoft YaHei', serif; /* 标题字体 */
+    font-weight: 700; /* 加粗 */
+    margin: 0; /* 去掉默认外边距 */
+}
+
+/* 一级标题 */
+h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* 二级标题 */
+h2 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+}
+
+/* 三级标题 */
+h3 {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+/* 四级标题 */
+h4 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* 五级标题 */
+h5 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+/* 六级标题 */
+h6 {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+/* 段落 */
+p {
+    font-size: 16px;
+    margin: 0 0 20px 0; /* 下边距 */
+    color: #666; /* 段落文字颜色 */
+}
+
+/* 链接 */
+a {
+    color: inherit; /* 继承父元素颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+}
+
+/* 鼠标悬停时改变链接颜色 */
+a:hover {
+    color: #ffcc00; /* 悬停颜色 */
+}
+
+/* 斜体文本 */
+.italic {
+    font-style: italic; /* 斜体 */
+}
+
+/* 粗体文本 */
+.bold {
+    font-weight: bold; /* 加粗 */
+}
+
+/* 文字居中 */
+.text-center {
+    text-align: center; /* 居中 */
+}
+
+/* 文字右对齐 */
+.text-right {
+    text-align: right; /* 右对齐 */
+}
+
+/* 文字左对齐 */
+.text-left {
+    text-align: left; /* 左对齐 */
+}
+
+/* 小号文字 */
+.small-text {
+    font-size: 14px;
+    color: #999; /* 浅灰色 */
+}
+
+/* 大号文字 */
+.large-text {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* 文字阴影 */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+}
+
+/* 文字大写 */
+.uppercase {
+    text-transform: uppercase; /* 大写字母 */
+}
+
+/* 文字小写 */
+.lowercase {
+    text-transform: lowercase; /* 小写字母 */
+}
+
+/* 文字首字母大写 */
+.capitalize {
+    text-transform: capitalize; /* 首字母大写 */
+}
+
+/* 文字颜色 */
+.text-primary {
+    color: #333; /* 主要文字颜色 */
+}
+
+.text-secondary {
+    color: #666; /* 次要文字颜色 */
+}
+
+.text-accent {
+    color: #ffcc00; /* 强调文字颜色 */
+}
+
+/* 文字选中样式 */
+::selection {
+    background-color: #ffcc00; /* 选中背景颜色 */
+    color: #000; /* 选中文字颜色 */
+}
+
+/* 兼容 Firefox */
+::-moz-selection {
+    background-color: #ffcc00; /* 选中背景颜色 */
+    color: #000; /* 选中文字颜色 */
+}
+
+这是components/utilities.css
+
+/* 工具类样式 */
+
+/* 文字居中 */
+.text-center {
+    text-align: center;
+}
+
+/* 文字右对齐 */
+.text-right {
+    text-align: right;
+}
+
+/* 文字左对齐 */
+.text-left {
+    text-align: left;
+}
+
+/* 上边距 */
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+/* 下边距 */
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+/* 左边距 */
+.ml-10 {
+    margin-left: 10px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.ml-30 {
+    margin-left: 30px;
+}
+
+/* 右边距 */
+.mr-10 {
+    margin-right: 10px;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.mr-30 {
+    margin-right: 30px;
+}
+
+/* 内边距 */
+.p-10 {
+    padding: 10px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.p-30 {
+    padding: 30px;
+}
+
+/* 隐藏元素 */
+.hidden {
+    display: none;
+}
+
+/* 显示元素 */
+.visible {
+    display: block;
+}
+
+/* 浮动左 */
+.float-left {
+    float: left;
+}
+
+/* 浮动右 */
+.float-right {
+    float: right;
+}
+
+/* 清除浮动 */
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* 弹性布局容器 */
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* 两端对齐 */
+    align-items: center; /* 垂直居中 */
+}
+
+/* 弹性布局项 */
+.flex-item {
+    flex: 1; /* 均匀分配空间 */
+}
+
+/* 固定宽度 */
+.width-100 {
+    width: 100%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-25 {
+    width: 25%;
+}
+
+/* 固定高度 */
+.height-100 {
+    height: 100%;
+}
+
+.height-50 {
+    height: 50%;
+}
+
+.height-25 {
+    height: 25%;
+}
+
+/* 圆角 */
+.rounded {
+    border-radius: 10px;
+}
+
+.rounded-full {
+    border-radius: 50%;
+}
+
+/* 阴影 */
+.shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-lg {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 透明度 */
+.opacity-50 {
+    opacity: 0.5;
+}
+
+.opacity-75 {
+    opacity: 0.75;
+}
+
+/* 鼠标指针 */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+这是script.js
 
 // 导航栏逻辑
-
-// 获取 DOM 元素
 const navToggle = document.getElementById('nav-toggle');
 const menuOverlay = document.getElementById('menu-overlay');
 
@@ -2136,51 +2493,6 @@ if (navToggle && menuOverlay) {
     console.error('navToggle or menuOverlay not found');
 }
 
-// 图片和文字数据
-const images = [
-    {
-        src: 'assets/screen-images/jianghezhishou.jpg',
-        captionLine1: '江河守護 River Guardian',
-        captionLine2: '武漢, 湖北, 中國. ',
-        captionLine3: 'Wuhan, Hubei, China',
-        link: 'articles/photograph/RiverGuardian.html' // 专属介绍页链接
-    },
-    {
-        src: 'assets/screen-images/void.jpg',
-        captionLine1: '空中 VOID',
-        captionLine2: '上海, 中國.',
-        captionLine3: 'Shanghai, China.',
-        link: 'articles/photograph/void.html' // 专属介绍页链接
-    },
-    {
-        src: 'assets/screen-images/danxia.jpg',
-        captionLine1: '丹霞 Danxia',
-        captionLine2: '張掖, 甘肅, 中國',
-        captionLine3: 'Zhangye, Gansu, China',
-        link: 'articles/photograph/danxia.html' // 专属介绍页链接
-    },
-    {
-        src: 'assets/screen-images/sandroad.jpg',
-        captionLine1: '沙路 Road to the Sand',
-        captionLine2: '阿拉善左旗, 内蒙古自治區, 中國.',
-        captionLine3: 'Alxa East Country, Inner Mongolia, China.',
-        link: 'articles/photograph/sandroad.html' // 专属介绍页链接
-    },
-    {
-        src: 'assets/screen-images/desk.JPG',
-        captionLine1: '書桌一隅 Something on Desk',
-        captionLine2: '中國.',
-        captionLine3: 'China.',
-        link: 'articles/photograph/desk.html' // 专属介绍页链接
-    },
-    {
-        src: 'assets/screen-images/sakana.JPG',
-        captionLine1: '魚 Sakana',
-        captionLine2: '2020-8-17.',
-        link: 'articles/design/sakana.html' // 专属介绍页链接
-    }
-];
-
 // 获取 DOM 元素
 const screenMedia = document.querySelector('.screen-media');
 const captionLine1 = document.querySelector('.caption-line-1');
@@ -2188,54 +2500,86 @@ const captionLine2 = document.querySelector('.caption-line-2');
 const captionLine3 = document.querySelector('.caption-line-3');
 const screenContainer = document.querySelector('.screen-container');
 
-// 当前显示的图片索引
-let currentImageIndex = 0;
+let images = []; // 存储图片数据
+let currentImageIndex = 0; // 当前显示的图片索引
+
+// 加载图片数据
+async function loadImages() {
+    try {
+        const response = await fetch('assets/data/images.json');
+        if (!response.ok) {
+            throw new Error('Failed to load images');
+        }
+        images = await response.json();
+        console.log('Loaded images:', images); // 打印加载的图片数据
+        startSlideshow(); // 数据加载完成后启动幻灯片
+    } catch (error) {
+        console.error('Error loading images:', error);
+    }
+}
 
 // 显示指定索引的图片
 function showImage(index) {
     const image = images[index];
+    console.log('Showing image:', image); // 打印当前图片信息
     if (screenMedia) {
-        screenMedia.src = image.src;
+        screenMedia.classList.add('fade-out'); // 添加淡出效果
+        setTimeout(() => {
+            screenMedia.src = image.src;
+            screenMedia.classList.remove('fade-out'); // 移除淡出效果
+        }, 500); // 500ms 是淡出动画的持续时间
     }
-    if (captionLine1) {
-        captionLine1.textContent = image.captionLine1;
-    }
-    if (captionLine2) {
-        captionLine2.textContent = image.captionLine2;
-    }
-    if (captionLine3) {
-        captionLine3.textContent = image.captionLine3;
-    }
+    if (captionLine1) captionLine1.textContent = image.captionLine1;
+    if (captionLine2) captionLine2.textContent = image.captionLine2;
+    if (captionLine3) captionLine3.textContent = image.captionLine3;
 }
 
-// 跳转到当前图片的专属介绍页
-function navigateToImagePage() {
-    const currentImage = images[currentImageIndex];
-    if (currentImage && currentImage.link) {
-        window.location.href = currentImage.link;
-    } else {
-        console.error('Current image or link not found');
+// 随机切换图片
+function showRandomImage() {
+    if (playedIndices.length === images.length) {
+        playedIndices = []; // 如果所有图片都已播放，重置列表
     }
-}
 
-// 初始加载第一张图片
-showImage(currentImageIndex);
+    let newIndex;
+    do {
+        newIndex = Math.floor(Math.random() * images.length); // 生成随机索引
+    } while (playedIndices.includes(newIndex)); // 确保新索引未被播放过
 
-// 每隔 10 秒切换一张图片
-setInterval(() => {
-    currentImageIndex = (currentImageIndex + 1) % images.length; // 循环切换
+    playedIndices.push(newIndex); // 记录已播放的索引
+    currentImageIndex = newIndex;
     showImage(currentImageIndex);
-}, 10000);
+}
+
+// 启动幻灯片
+function startSlideshow() {
+    if (images.length > 0) {
+        showImage(currentImageIndex); // 初始加载第一张图片
+        setInterval(showRandomImage, 10000); // 每隔 10 秒随机切换一张图片
+    } else {
+        console.error('No images loaded');
+    }
+}
 
 // 点击银幕容器时跳转到专属介绍页
 if (screenContainer) {
-    screenContainer.addEventListener('click', navigateToImagePage);
+    screenContainer.addEventListener('click', () => {
+        const currentImage = images[currentImageIndex];
+        if (currentImage && currentImage.link) {
+            window.location.href = currentImage.link;
+        } else {
+            console.error('Current image or link not found');
+        }
+    });
 } else {
     console.error('screenContainer not found');
 }
 
-// 排序和筛选逻辑
+// 页面加载时初始化
+document.addEventListener('DOMContentLoaded', () => {
+    loadImages(); // 加载图片数据
+});
 
+// 排序和筛选逻辑
 document.addEventListener('DOMContentLoaded', function() {
     const portfolioGrid = document.querySelector('.portfolio-grid');
     const sortDateAsc = document.getElementById('sort-date-asc');
@@ -2348,115 +2692,131 @@ window.addEventListener('scroll', function() {
     }
 });
 
-以下为文件架构：
+// 复制文本函数
+function copyText(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        showNotification(); // 显示提示框
+    }).catch(() => {
+        showNotification('复制失败，请手动复制'); // 显示错误提示
+    });
+}
 
-│  .gitattributes
-│  about.html
-│  index.html
-│  portfolio.html
-│  TBD
-│
-├─articles
-│  ├─blog
-│  │  ├─2-24-2025-prologue
-│  │  │  │  2-24-2025-prologue.html
-│  │  │  │
-│  │  │  └─assets
-│  │  │          1.jpg
-│  │  │          3.jpg
-│  │  │
-│  │  └─test-article
-│  │      │  test-article.html
-│  │      │
-│  │      └─assets
-│  │              1.jpg
-│  │
-│  ├─design
-│  │      sakana.html
-│  │
-│  └─photograph
-│          RiverGuardian.html
-│          VOID.html
-│
-├─assets
-│  │  current-page-icon.png
-│  │  email-icon.png
-│  │  favicon.png
-│  │  filter-design-icon.png
-│  │  filter-ideas-icon.png
-│  │  filter-photography-icon.png
-│  │  github-icon.png
-│  │  navigator.png
-│  │  orcid-icon.png
-│  │  read-more-icon.png
-│  │  reset-icon.png
-│  │  scholar-icon.png
-│  │  screen-image.png
-│  │  site.webmanifest
-│  │  sort-asc-icon.png
-│  │  sort-desc-icon.png
-│  │  texture.png
-│  │
-│  ├─aboutme
-│  │      portrait-text.png
-│  │      portrait.png
-│  │
-│  ├─photos
-│  │  └─selfies
-│  │          2020-7-11.JPG
-│  │
-│  └─screen-images
-│          danxia.jpg
-│          desk.JPG
-│          jianghezhishou.jpg
-│          sakana.JPG
-│          sandroad.jpg
-│          void.jpg
-│
-├─scripts
-│      script.js
-│
-└─styles
-    │  about.css
-    │  components.css
-    │  index.css
-    │  portfolio.css
-    │  tem.txt
-    │
-    ├─assets
-    │  └─fonts
-    │      │  microsoft-yahei.ttf
-    │      │
-    │      ├─anek-latin
-    │      │      AnekLatin-Bold.ttf
-    │      │      AnekLatin-ExtraBold.ttf
-    │      │      AnekLatin-ExtraLight.ttf
-    │      │      AnekLatin-Light.ttf
-    │      │      AnekLatin-Medium.ttf
-    │      │      AnekLatin-Regular.ttf
-    │      │      AnekLatin-SemiBold.ttf
-    │      │      AnekLatin-Thin.ttf
-    │      │
-    │      ├─playfair-display
-    │      │      PlayfairDisplay-Black.ttf
-    │      │      PlayfairDisplay-BlackItalic.ttf
-    │      │      PlayfairDisplay-Bold.ttf
-    │      │      PlayfairDisplay-BoldItalic.ttf
-    │      │      PlayfairDisplay-Italic.ttf
-    │      │      PlayfairDisplay-Regular.ttf
-    │      │
-    │      └─SmileySans
-    │              SmileySans-Oblique.ttf
-    │
-    └─components
-            background.css
-            base.css
-            buttons.css
-            cards.css
-            fonts.css
-            grid.css
-            icons.css
-            menu.css
-            navbar.css
-            typography.css
-            utilities.css
+// 显示提示框
+function showNotification(message = '已复制到剪贴板！') {
+    const notification = document.getElementById('copy-notification');
+    if (notification) {
+        notification.querySelector('p').textContent = message; // 更新提示内容
+        notification.classList.add('show'); // 显示提示框
+        setTimeout(() => {
+            notification.classList.remove('show'); // 3秒后隐藏提示框
+        }, 3000);
+    }
+}
+
+// 语言切换逻辑
+let translations = {};
+
+async function loadTranslations(lang) {
+    try {
+        const response = await fetch(`assets/translations/${lang}.json`);
+        if (!response.ok) {
+            throw new Error(`Failed to load ${lang}.json: ${response.statusText}`);
+        }
+        translations[lang] = await response.json();
+        console.log(`Loaded ${lang}.json:`, translations[lang]);
+        switchLanguage(lang);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+function switchLanguage(lang) {
+    document.documentElement.lang = lang;
+    if (!translations[lang]) {
+        loadTranslations(lang);
+        return;
+    }
+
+    // 获取所有需要翻译的元素
+    const elements = document.querySelectorAll('[data-key]');
+    elements.forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang][key]) {
+            if (Array.isArray(translations[lang][key])) {
+                // 如果是数组，动态生成列表项
+                if (key === 'publicationsList') {
+                    // 处理出版物列表
+                    el.innerHTML = translations[lang][key].map(item => `
+                        <li>
+                            <strong>${item.title}</strong><br>
+                            <em>${item.author}</em><br>
+                            ${item.conference}<br>
+                            <a href="${item.doi}" target="_blank"><em>[DOI]</em></a>
+                        </li>
+                    `).join('');
+                } else if (key === 'projectExperienceList') {
+                    // 处理项目经验列表
+                    el.innerHTML = translations[lang][key].map(item => `
+                        <li>
+                            <em>${item.period}</em>, ${item.title}<br>
+                            <span>${item.institution}</span><br>
+                            > ${item.role}
+                        </li>
+                    `).join('');
+                } else if (key === 'awardsList') {
+                    // 处理奖项列表
+                    el.innerHTML = translations[lang][key].map(item => `<li>${item}</li>`).join('');
+                }
+            } else if (typeof translations[lang][key] === 'object') {
+                // 如果是对象，根据对象结构动态生成内容
+                if (key === 'skillsText') {
+                    const skills = translations[lang][key];
+                    el.innerHTML = `
+                        <div class="skill-category">
+                            <h3>${skills.designTools}</h3>
+                            <ul>${skills.designToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>${skills.multimediaTools}</h3>
+                            <ul>${skills.multimediaToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>${skills.languageProficiency}</h3>
+                            <ul>${skills.languageProficiencyList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                    `;
+                }
+            } else {
+                // 如果是普通文本，直接更新内容
+                el.innerHTML = translations[lang][key];
+            }
+        } else {
+            console.warn(`Translation not found for key: ${key} in language: ${lang}`);
+        }
+    });
+
+    // 更新语言切换按钮的状态
+    const languageButtons = document.querySelectorAll('.language-switcher button');
+    languageButtons.forEach(button => {
+        if (button.getAttribute('onclick').includes(lang)) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+
+    // 存储语言偏好
+    localStorage.setItem('preferredLanguage', lang);
+}
+
+document.querySelectorAll('.language-switcher button').forEach(button => {
+    button.addEventListener('click', () => {
+        const lang = button.getAttribute('onclick').match(/'(.*?)'/)[1];
+        switchLanguage(lang);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+    switchLanguage(preferredLanguage);
+});

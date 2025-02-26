@@ -1,6 +1,4 @@
 // 导航栏逻辑
-
-// 获取 DOM 元素
 const navToggle = document.getElementById('nav-toggle');
 const menuOverlay = document.getElementById('menu-overlay');
 
@@ -21,51 +19,6 @@ if (navToggle && menuOverlay) {
     console.error('navToggle or menuOverlay not found');
 }
 
-// 图片和文字数据
-const images = [
-    {
-        src: 'assets/screen-images/jianghezhishou.jpg',
-        captionLine1: '江河守護 River Guardian',
-        captionLine2: '武漢, 湖北, 中國. ',
-        captionLine3: 'Wuhan, Hubei, China',
-        link: 'articles/photograph/RiverGuardian.html' // 专属介绍页链接
-    },
-    {
-        src: 'assets/screen-images/void.jpg',
-        captionLine1: '空中 VOID',
-        captionLine2: '上海, 中國.',
-        captionLine3: 'Shanghai, China.',
-        link: 'articles/photograph/void.html' // 专属介绍页链接
-    },
-    {
-        src: 'assets/screen-images/danxia.jpg',
-        captionLine1: '丹霞 Danxia',
-        captionLine2: '張掖, 甘肅, 中國',
-        captionLine3: 'Zhangye, Gansu, China',
-        link: 'articles/photograph/danxia.html' // 专属介绍页链接
-    },
-    {
-        src: 'assets/screen-images/sandroad.jpg',
-        captionLine1: '沙路 Road to the Sand',
-        captionLine2: '阿拉善左旗, 内蒙古自治區, 中國.',
-        captionLine3: 'Alxa East Country, Inner Mongolia, China.',
-        link: 'articles/photograph/sandroad.html' // 专属介绍页链接
-    },
-    {
-        src: 'assets/screen-images/desk.JPG',
-        captionLine1: '書桌一隅 Something on Desk',
-        captionLine2: '中國.',
-        captionLine3: 'China.',
-        link: 'articles/photograph/desk.html' // 专属介绍页链接
-    },
-    {
-        src: 'assets/screen-images/sakana.JPG',
-        captionLine1: '魚 Sakana',
-        captionLine2: '2020-8-17.',
-        link: 'articles/design/sakana.html' // 专属介绍页链接
-    }
-];
-
 // 获取 DOM 元素
 const screenMedia = document.querySelector('.screen-media');
 const captionLine1 = document.querySelector('.caption-line-1');
@@ -73,12 +26,29 @@ const captionLine2 = document.querySelector('.caption-line-2');
 const captionLine3 = document.querySelector('.caption-line-3');
 const screenContainer = document.querySelector('.screen-container');
 
-// 当前显示的图片索引
-let currentImageIndex = 0;
+let images = []; // 存储图片数据
+let currentImageIndex = 0; // 当前显示的图片索引
+let playedIndices = []; // 记录已经播放过的图片索引
+
+// 加载图片数据
+async function loadImages() {
+    try {
+        const response = await fetch('assets/data/images.json');
+        if (!response.ok) {
+            throw new Error('Failed to load images');
+        }
+        images = await response.json();
+        console.log('Loaded images:', images); // 打印加载的图片数据
+        startSlideshow(); // 数据加载完成后启动幻灯片
+    } catch (error) {
+        console.error('Error loading images:', error);
+    }
+}
 
 // 显示指定索引的图片
 function showImage(index) {
     const image = images[index];
+    console.log('Showing image:', image); // 打印当前图片信息
     if (screenMedia) {
         screenMedia.classList.add('fade-out'); // 添加淡出效果
         setTimeout(() => {
@@ -91,34 +61,52 @@ function showImage(index) {
     if (captionLine3) captionLine3.textContent = image.captionLine3;
 }
 
-// 跳转到当前图片的专属介绍页
-function navigateToImagePage() {
-    const currentImage = images[currentImageIndex];
-    if (currentImage && currentImage.link) {
-        window.location.href = currentImage.link;
+// 随机切换图片
+function showRandomImage() {
+    if (playedIndices.length === images.length) {
+        playedIndices = []; // 如果所有图片都已播放，重置列表
+    }
+
+    let newIndex;
+    do {
+        newIndex = Math.floor(Math.random() * images.length); // 生成随机索引
+    } while (playedIndices.includes(newIndex)); // 确保新索引未被播放过
+
+    playedIndices.push(newIndex); // 记录已播放的索引
+    currentImageIndex = newIndex;
+    showImage(currentImageIndex);
+}
+
+// 启动幻灯片
+function startSlideshow() {
+    if (images.length > 0) {
+        showImage(currentImageIndex); // 初始加载第一张图片
+        setInterval(showRandomImage, 10000); // 每隔 10 秒随机切换一张图片
     } else {
-        console.error('Current image or link not found');
+        console.error('No images loaded');
     }
 }
 
-// 初始加载第一张图片
-showImage(currentImageIndex);
-
-// 每隔 10 秒切换一张图片
-setInterval(() => {
-    currentImageIndex = (currentImageIndex + 1) % images.length; // 循环切换
-    showImage(currentImageIndex);
-}, 10000);
-
 // 点击银幕容器时跳转到专属介绍页
 if (screenContainer) {
-    screenContainer.addEventListener('click', navigateToImagePage);
+    screenContainer.addEventListener('click', () => {
+        const currentImage = images[currentImageIndex];
+        if (currentImage && currentImage.link) {
+            window.location.href = currentImage.link;
+        } else {
+            console.error('Current image or link not found');
+        }
+    });
 } else {
     console.error('screenContainer not found');
 }
 
-// 排序和筛选逻辑
+// 页面加载时初始化
+document.addEventListener('DOMContentLoaded', () => {
+    loadImages(); // 加载图片数据
+});
 
+// 排序和筛选逻辑
 document.addEventListener('DOMContentLoaded', function() {
     const portfolioGrid = document.querySelector('.portfolio-grid');
     const sortDateAsc = document.getElementById('sort-date-asc');
@@ -253,16 +241,109 @@ function showNotification(message = '已复制到剪贴板！') {
 }
 
 // 语言切换逻辑
-function switchLanguage(lang) {
-    const elements = document.querySelectorAll('[data-lang]');
-    elements.forEach(el => {
-        if (el.getAttribute('data-lang') === lang) {
-            el.style.display = 'block';
-        } else {
-            el.style.display = 'none';
+let translations = {};
+
+async function loadTranslations(lang) {
+    try {
+        const response = await fetch(`assets/translations/${lang}.json`);
+        if (!response.ok) {
+            throw new Error(`Failed to load ${lang}.json: ${response.statusText}`);
         }
-    });
+        translations[lang] = await response.json();
+        console.log(`Loaded ${lang}.json:`, translations[lang]);
+        switchLanguage(lang);
+    } catch (error) {
+        console.error(error);
+    }
 }
 
-// 默认显示英文
-switchLanguage('en');
+function switchLanguage(lang) {
+    document.documentElement.lang = lang;
+    if (!translations[lang]) {
+        loadTranslations(lang);
+        return;
+    }
+
+    // 获取所有需要翻译的元素
+    const elements = document.querySelectorAll('[data-key]');
+    elements.forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang][key]) {
+            if (Array.isArray(translations[lang][key])) {
+                // 如果是数组，动态生成列表项
+                if (key === 'publicationsList') {
+                    // 处理出版物列表
+                    el.innerHTML = translations[lang][key].map(item => `
+                        <li>
+                            <strong>${item.title}</strong><br>
+                            <em>${item.author}</em><br>
+                            ${item.conference}<br>
+                            <a href="${item.doi}" target="_blank"><em>[DOI]</em></a>
+                        </li>
+                    `).join('');
+                } else if (key === 'projectExperienceList') {
+                    // 处理项目经验列表
+                    el.innerHTML = translations[lang][key].map(item => `
+                        <li>
+                            <em>${item.period}</em>, ${item.title}<br>
+                            <span>${item.institution}</span><br>
+                            > ${item.role}
+                        </li>
+                    `).join('');
+                } else if (key === 'awardsList') {
+                    // 处理奖项列表
+                    el.innerHTML = translations[lang][key].map(item => `<li>${item}</li>`).join('');
+                }
+            } else if (typeof translations[lang][key] === 'object') {
+                // 如果是对象，根据对象结构动态生成内容
+                if (key === 'skillsText') {
+                    const skills = translations[lang][key];
+                    el.innerHTML = `
+                        <div class="skill-category">
+                            <h3>${skills.designTools}</h3>
+                            <ul>${skills.designToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>${skills.multimediaTools}</h3>
+                            <ul>${skills.multimediaToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>${skills.languageProficiency}</h3>
+                            <ul>${skills.languageProficiencyList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                    `;
+                }
+            } else {
+                // 如果是普通文本，直接更新内容
+                el.innerHTML = translations[lang][key];
+            }
+        } else {
+            console.warn(`Translation not found for key: ${key} in language: ${lang}`);
+        }
+    });
+
+    // 更新语言切换按钮的状态
+    const languageButtons = document.querySelectorAll('.language-switcher button');
+    languageButtons.forEach(button => {
+        if (button.getAttribute('onclick').includes(lang)) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+
+    // 存储语言偏好
+    localStorage.setItem('preferredLanguage', lang);
+}
+
+document.querySelectorAll('.language-switcher button').forEach(button => {
+    button.addEventListener('click', () => {
+        const lang = button.getAttribute('onclick').match(/'(.*?)'/)[1];
+        switchLanguage(lang);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
+    switchLanguage(preferredLanguage);
+});

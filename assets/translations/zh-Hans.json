@@ -1,0 +1,94 @@
+{
+    "researchInterest": "研究兴趣",
+    "researchInterestText": "人机交互；创意支持虚拟现实；具身和多模态交互。",
+    "educations": "教育背景",
+    "educationsText": "艺术硕士<br><span>同济大学艺术与传媒学院 | [2021-2024]</span><br><br>管理学学士<br><span>中南财经政法大学 | [2017-2021]</span>",
+    "skills": "技能",
+    "skillsText": {
+        "designTools": "设计与原型工具",
+        "designToolsList": [
+            "Unity 3D - 为 Quest3 构建 3D 场景和交互控制方法",
+            "Photoshop、Illustrator 和 Procreate - 平面设计",
+            "Figma 和 Adobe XD - UI 设计"
+        ],
+        "multimediaTools": "多媒体与视觉制作工具",
+        "multimediaToolsList": [
+            "商业摄影、视频/音频录制",
+            "Adobe Premiere、Adobe After Effects 和 Adobe Audition - 基础特效和其他后期制作"
+        ],
+        "languageProficiency": "语言能力",
+        "languageProficiencyList": [
+            "英语（专业水平，雅思：7）",
+            "普通话（母语）",
+            "粤语（母语）"
+        ]
+    },
+    "publications": "出版物",
+    "publicationsList": [
+        {
+            "title": "Architecting Social VR: Exploring Encounter and Serendipitous Interactions in Virtual Public Spaces.",
+            "author": "Yihao He.",
+            "conference": "In HCII'24: Human-Computer Interaction International 2024. Communications in Computer and Information Science, vol 2320. Springer, Cham.",
+            "doi": "https://doi.org/10.1007/978-3-031-78531-3_2"
+        },
+        {
+            "title": "Not Just a Gimmick: A Preliminary Study on Designing Interactive Media Art to Empower Embedded Culture's Practitioner.",
+            "author": "Yihao He.",
+            "conference": "In SA'24: SIGGRAPH ASIA 2024. Association for Computing Machinery, New York, NY, United States.",
+            "doi": "https://doi.org/10.1145/3681756.3697872"
+        },
+        {
+            "title": "ShadowRehearsal: Enhancing Traditional Art Design Workflows with XR Technology - A Preliminary Case Study of Shadow Puppetry.",
+            "author": "Yihao He.",
+            "conference": "In ISMAR'24: 2024 IEEE International Symposium on Mixed and Augmented Reality Proceedings.",
+            "doi": "https://doi.org/10.1109/ismar-adjunct64951.2024.00072"
+        },
+        {
+            "title": "Shadow Costar: Exploring Collaborative Performances in Virtual Reality.",
+            "author": "Yihao He.",
+            "conference": "In HAI'24: In Proceedings of the 11th International Conference on Human-Agent Interaction.",
+            "doi": "https://doi.org/10.1145/3623809.3623943"
+        },
+        {
+            "title": "ShadowPlayVR: Understanding Traditional Shadow Puppetry Performance Techniques Through Non-Intuitive Embodied Interactions.",
+            "author": "Yihao He.",
+            "conference": "In VRST'23: 29th ACM Symposium on Virtual Reality Software and Technology Proceedings.",
+            "doi": "https://dl.acm.org/doi/10.1145/3611659.3617226"
+        }
+    ],
+    "projectExperience": "项目经验",
+    "projectExperienceList": [
+        {
+            "period": "2024-进行中",
+            "title": "港铁 XR 互动体验：通过无接触 XR 技术增强乘客互动",
+            "institution": "香港理工大学，中国。",
+            "role": "研究助理，设计师, 在研项目"
+        },
+        {
+            "period": "2022-2024",
+            "title": "增强现实环境中的多模态互动音频设计",
+            "institution": "同济大学，中国。",
+            "role": "成员，科技部高端外国专家引进计划项目"
+        },
+        {
+            "period": "2022-2023",
+            "title": "基于脑电波的 AIGC 沉浸式艺术创作实验与评估",
+            "institution": "同济大学，中国。",
+            "role": "成员，华为技术有限公司项目"
+        },
+        {
+            "period": "2022-2023",
+            "title": "情感人机协作技术开发",
+            "institution": "同济大学，中国。",
+            "role": "成员，华为技术有限公司项目"
+        }
+    ],
+    "awards": "奖项",
+    "awardsList": [
+        "优秀学生奖学金（特等奖）| 2024",
+        "研究生奖学金 | 2021-2024",
+        "优秀学生奖学金（三等奖）| 2023",
+        "全国大学生 VR 竞赛优秀奖（组长）| 2022",
+        "优秀学生干部 | 2017-2019, 2021"
+    ]
+}

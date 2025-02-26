@@ -91,25 +91,46 @@
     color: #0056b3;
 }
 
-/* 语言切换按钮 */
+/* 语言切换按钮容器 */
 .language-switcher {
-    text-align: center;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    gap: 10px; /* 按钮间距 */
     margin-top: 20px;
 }
 
+/* 语言切换按钮 */
 .language-switcher button {
-    background: none;
-    border: none;
-    color: #333;
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+    border: 1px solid #ccc; /* 浅灰色边框 */
+    border-radius: 5px; /* 圆角 */
+    color: #333; /* 文字颜色 */
     font-family: 'Anek Latin', sans-serif;
     font-size: 16px;
     cursor: pointer;
-    transition: color 0.3s ease;
-    margin: 0 5px;
+    transition: all 0.3s ease; /* 添加过渡效果 */
+    padding: 8px 16px; /* 内边距 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    flex: 1; /* 让按钮均匀分布 */
+    max-width: 80px; /* 最大宽度 */
+    text-align: center; /* 文字居中 */
 }
 
+
+/* 鼠标悬停效果 */
 .language-switcher button:hover {
-    color: #ffcc00;
+    background-color: #ffcc00; /* 悬停时背景变为黄色 */
+    color: #000; /* 悬停时文字变为黑色 */
+    border-color: #ffcc00; /* 悬停时边框变为黄色 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 悬停时阴影加深 */
+}
+
+/* 当前选中按钮样式 */
+.language-switcher button.active {
+    background-color: #ffcc00; /* 选中时背景变为黄色 */
+    color: #000; /* 选中时文字变为黑色 */
+    border-color: #ffcc00; /* 选中时边框变为黄色 */
+    font-weight: bold; /* 选中时文字加粗 */
 }
 
 /* 右侧：文字内容 */
@@ -130,7 +151,19 @@
     width: 40%;
     padding-right: 20px;
     text-align: left;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display',  serif;
+}
+
+/* 大标题字体 */
+.about-right .content-title h2 {
+    font-family: 'Playfair Display', serif; /* 默认字体 */
+}
+
+/* 中文情况下的大标题字体 */
+[lang="zh-Hans"] .about-right .content-title h2,
+[lang="zh-Hant"] .about-right .content-title h2 {
+    font-family: 'Microsoft YaHei', sans-serif !important; /* 使用 SmilySans */
+    font-weight: 350;
 }
 
 .content-text {
@@ -151,6 +184,51 @@
     font-style: normal;
     color: #333; /* 黑色 */
     font-weight: bold;
+}
+
+/* 技能部分样式 */
+.skill-category {
+    margin-bottom: 20px;
+}
+
+.skill-category h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+/* Skills 部分的内容标题字体 */
+.about-right .skill-category h3 {
+    font-family: 'Playfair Display', serif; /* 默认字体 */
+}
+
+/* 中文情况下的 Skills 部分内容标题字体 */
+[lang="zh-Hans"] .about-right .skill-category h3,
+[lang="zh-Hant"] .about-right .skill-category h3 {
+    font-family: 'Microsoft YaHei', sans-serif !important; /* 使用 SmilySans */
+    font-weight: 350;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category ul li {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.skill-category ul li::before {
+    content: "•";
+    color: #007BFF;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 
 /* DOI 链接样式 */

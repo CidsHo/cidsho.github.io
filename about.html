@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Cids' Personal Website</title>
     <link rel="stylesheet" href="styles/components-about.css">
-    <link rel="stylesheet" href="styles/about.css"> <!-- 自我介绍页面样式 -->
+    <link rel="stylesheet" href="styles/about.css">
     <!-- Favicon 配置 -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -74,8 +74,8 @@
             <!-- 语言切换按钮 -->
             <div class="language-switcher">
                 <button onclick="switchLanguage('en')">EN</button>
-                <button onclick="switchLanguage('zh-Hant')">繁</button>
                 <button onclick="switchLanguage('zh-Hans')">简</button>
+                <button onclick="switchLanguage('zh-Hant')">繁</button>
             </div>
         </div>
 
@@ -84,83 +84,60 @@
             <!-- 研究兴趣 -->
             <div class="content-row">
                 <div class="content-title">
-                    <h2>Research Interest</h2>
+                    <h2 data-key="researchInterest"></h2>
                 </div>
                 <div class="content-text">
-                    <p>Human-Computer Interaction; Creative-Support Virtual Reality; Embodied and Multimodal Interaction.</p>
+                    <p data-key="researchInterestText"></p>
                 </div>
             </div>
 
             <!-- 教育背景 -->
             <div class="content-row">
                 <div class="content-title">
-                    <h2>Educations</h2>
+                    <h2 data-key="educations"></h2>
                 </div>
                 <div class="content-text">
-                    <p>Master of Art<br>
-                       <span>College of Arts and Media, Tongji University | [2021-2024]</span></p>
-                    <p>Bachelor of Management<br>
-                       <span>Zhongnan University of Economic and Law | [2017-2021]</span></p>
+                    <p data-key="educationsText"></p>
+                </div>
+            </div>
+
+            <!-- 技能 -->
+            <div class="content-row">
+                <div class="content-title">
+                    <h2 data-key="skills"></h2>
+                </div>
+                <div class="content-text">
+                    <div data-key="skillsText"></div>
                 </div>
             </div>
 
             <!-- 出版物 -->
             <div class="content-row">
                 <div class="content-title">
-                    <h2>Publications</h2>
+                    <h2 data-key="publications"></h2>
                 </div>
                 <div class="content-text">
-                    <ul>
-                        <li><strong>Architecting Social VR: Exploring Encounter and Serendipitous Interactions in Virtual Public Spaces.</strong><br>
-                            <em>Yihao He.</em><br>
-                            In HCII'24: Human-Computer Interaction International 2024. Communications in Computer and Information Science, vol 2320. Springer, Cham. <a href="https://doi.org/10.1007/978-3-031-78531-3_2" target="_blank"><em>[DOI]</em></a></li>
-                        <li><strong>Not Just a Gimmick: A Preliminary Study on Designing Interactive Media Art to Empower Embedded Culture's Practitioner.</strong><br>
-                            <em>Yihao He.</em><br>
-                            In SA'24: SIGGRAPH ASIA 2024. Association for Computing Machinery, New York, NY, United States. <a href="https://doi.org/10.1145/3681756.3697872" target="_blank"><em>[DOI]</em></a></li>
-                        <li><strong>ShadowRehearsal: Enhancing Traditional Art Design Workflows with XR Technology - A Preliminary Case Study of Shadow Puppetry.</strong><br>
-                            <em>Yihao He.</em><br>
-                            In ISMAR'24: 2024 IEEE International Symposium on Mixed and Augmented Reality Proceedings. <a href="https://doi.org/10.1109/ismar-adjunct64951.2024.00072" target="_blank"><em>[DOI]</em></a></li>
-                        <li><strong>Shadow Costar: Exploring Collaborative Performances in Virtual Reality.</strong><br>
-                            <em>Yihao He.</em><br>
-                            In HAI'24: In Proceedings of the 11th International Conference on Human-Agent Interaction. <a href="https://doi.org/10.1145/3623809.3623943" target="_blank"><em>[DOI]</em></a></li>
-                        <li><strong>ShadowPlayVR: Understanding Traditional Shadow Puppetry Performance Techniques Through Non-Intuitive Embodied Interactions.</strong><br>
-                            <em>Yihao He.</em><br>
-                            In VRST'23: 29th ACM Symposium on Virtual Reality Software and Technology Proceedings. <a href="https://dl.acm.org/doi/10.1145/3611659.3617226" target="_blank"><em>[DOI]</em></a></li>
-                    </ul>
+                    <ul data-key="publicationsList"></ul>
                 </div>
             </div>
 
             <!-- 项目经验 -->
             <div class="content-row">
                 <div class="content-title">
-                    <h2>Project Experience</h2>
+                    <h2 data-key="projectExperience"></h2>
                 </div>
                 <div class="content-text">
-                    <ul>
-                        <li><em>2024-Ongoing</em>, MTR XR Interactive Experience: Enhancing Passenger Interaction with Contactless XR Technology, The Hong Kong Polytechnic University, China.<br>
-                            > Research Assistant, Designer</li>
-                        <li><em>2022-2024</em>, Multimodal Interactive Audio Design in Augmented Reality Environments, Tongji University, China.<br>
-                            > Member, Project from High-End Foreign Expert Recruitment Program by the Ministry of Science and Technology</li>
-                        <li><em>2022-2023</em>, EEG-based AIGC Immersive Art Creation Experiment and Evaluation, Tongji University, China.<br>
-                            > Member, Project from Huawei TECHNOLOGIES Co., Ltd</li>
-                        <li><em>2022-2023</em>, Emotional Human-Robot Collaboration Technology Development, Tongji University, China.<br>
-                            > Member, Project from Huawei TECHNOLOGIES Co., Ltd</li>
-                    </ul>
+                    <ul data-key="projectExperienceList"></ul>
                 </div>
             </div>
-             <!-- Awards -->
+
+            <!-- 奖项 -->
             <div class="content-row">
                 <div class="content-title">
-                    <h2>Awards</h2>
+                    <h2 data-key="awards"></h2>
                 </div>
                 <div class="content-text">
-                    <ul>
-                        <li><strong>Outstanding Student Scholarship (Grand Prize)</strong> | 2024</li>
-                        <li><strong>Graduate Scholarship</strong> | 2021-2024</li>
-                        <li><strong>Outstanding Student Scholarship (Grade 3)</strong> | 2023</li>
-                        <li><strong>Excellent Award in the National College Student VR Competition (Leader)</strong> | 2022</li>
-                        <li><strong>Excellent Student Cadre</strong> | 2017-2019, 2021</li>
-                    </ul>
+                    <ul data-key="awardsList"></ul>
                 </div>
             </div>
         </div>

@@ -1,0 +1,94 @@
+{
+    "researchInterest": "Research Interest",
+    "researchInterestText": "Human-Computer Interaction; Creative-Support Virtual Reality; Embodied and Multimodal Interaction.",
+    "educations": "Educations",
+    "educationsText": "Master of Art<br><span>College of Arts and Media, Tongji University | [2021-2024]</span><br><br>Bachelor of Management<br><span>Zhongnan University of Economic and Law | [2017-2021]</span>",
+    "skills": "Skills",
+    "skillsText": {
+        "designTools": "<br>Design and Prototyping Tools",
+        "designToolsList": [
+            "Unity 3D - Building 3D scenes and interactive control methods for Quest3",
+            "Photoshop, Illustrator and Procreate - Graphic design",
+            "Figma & Adobe XD - UI design"
+        ],
+        "multimediaTools": "Multimedia and Visual Production Tools",
+        "multimediaToolsList": [
+            "Commercial photography, video/audio recording",
+            "Adobe Premiere, Adobe After Effects & Adobe Audition - Basic VFX and other post-production"
+        ],
+        "languageProficiency": "Language Proficiency",
+        "languageProficiencyList": [
+            "English (Professional level, IELTS: 7)",
+            "Mandarin (Native)",
+            "Cantonese (Native)"
+        ]
+    },
+    "publications": "Publications",
+    "publicationsList": [
+        {
+            "title": "Architecting Social VR: Exploring Encounter and Serendipitous Interactions in Virtual Public Spaces.",
+            "author": "Yihao He.",
+            "conference": "In HCII'24: Human-Computer Interaction International 2024. Communications in Computer and Information Science, vol 2320. Springer, Cham.",
+            "doi": "https://doi.org/10.1007/978-3-031-78531-3_2"
+        },
+        {
+            "title": "Not Just a Gimmick: A Preliminary Study on Designing Interactive Media Art to Empower Embedded Culture's Practitioner.",
+            "author": "Yihao He.",
+            "conference": "In SA'24: SIGGRAPH ASIA 2024. Association for Computing Machinery, New York, NY, United States.",
+            "doi": "https://doi.org/10.1145/3681756.3697872"
+        },
+        {
+            "title": "ShadowRehearsal: Enhancing Traditional Art Design Workflows with XR Technology - A Preliminary Case Study of Shadow Puppetry.",
+            "author": "Yihao He.",
+            "conference": "In ISMAR'24: 2024 IEEE International Symposium on Mixed and Augmented Reality Proceedings.",
+            "doi": "https://doi.org/10.1109/ismar-adjunct64951.2024.00072"
+        },
+        {
+            "title": "Shadow Costar: Exploring Collaborative Performances in Virtual Reality.",
+            "author": "Yihao He.",
+            "conference": "In HAI'24: In Proceedings of the 11th International Conference on Human-Agent Interaction.",
+            "doi": "https://doi.org/10.1145/3623809.3623943"
+        },
+        {
+            "title": "ShadowPlayVR: Understanding Traditional Shadow Puppetry Performance Techniques Through Non-Intuitive Embodied Interactions.",
+            "author": "Yihao He.",
+            "conference": "In VRST'23: 29th ACM Symposium on Virtual Reality Software and Technology Proceedings.",
+            "doi": "https://dl.acm.org/doi/10.1145/3611659.3617226"
+        }
+    ],
+    "projectExperience": "Project Experience",
+    "projectExperienceList": [
+        {
+            "period": "2024-Ongoing",
+            "title": "MTR XR Interactive Experience: Enhancing Passenger Interaction with Contactless XR Technology",
+            "institution": "The Hong Kong Polytechnic University, China.",
+            "role": "Research Assistant, Designer"
+        },
+        {
+            "period": "2022-2024",
+            "title": "Multimodal Interactive Audio Design in Augmented Reality Environments",
+            "institution": "Tongji University, China.",
+            "role": "Member, Project from High-End Foreign Expert Recruitment Program by the Ministry of Science and Technology"
+        },
+        {
+            "period": "2022-2023",
+            "title": "EEG-based AIGC Immersive Art Creation Experiment and Evaluation",
+            "institution": "Tongji University, China.",
+            "role": "Member, Project from Huawei TECHNOLOGIES Co., Ltd"
+        },
+        {
+            "period": "2022-2023",
+            "title": "Emotional Human-Robot Collaboration Technology Development",
+            "institution": "Tongji University, China.",
+            "role": "Member, Project from Huawei TECHNOLOGIES Co., Ltd"
+        }
+    ],
+    "awards": "Awards",
+    "awardsList": [
+        "Outstanding Student Scholarship (Grand Prize) | 2024",
+        "Graduate Scholarship | 2021-2024",
+        "Outstanding Student Scholarship (Grade 3) | 2023",
+        "Excellent Award in the National College Student VR Competition (Leader) | 2022",
+        "Excellent Student Cadre | 2017-2019, 2021"
+    ]
+}
