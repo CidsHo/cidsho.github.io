@@ -12,24 +12,27 @@
 
 /* 首页文字按钮 */
 .home-buttons {
-    position: fixed; /* 固定在页面顶部 */
+    position: fixed;
     top: 20px;
-    right: 20px;
+    right: 15px;
     display: flex;
-    gap: 20px; /* 按钮间距 */
-    z-index: 1000; /* 确保按钮位于最上层 */
+    flex-direction: column; /* 上下排列 */
+    gap: 10px; /* 按钮间距 */
+    z-index: 1000;
+    text-align: right;
+    margin-right: 5px;
 }
 
 .home-button {
-    color: #fff; /* 文字颜色 */
-    text-decoration: none; /* 去掉下划线 */
-    font-family: 'Anek Latin', sans-serif; /* 按钮字体 */
-    font-size: 1rem;
-    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif; /* 与银幕下文字同字体 */
+    font-size: 1.5rem; /* 与银幕下文字同大小 */
+    transition: color 0.3s ease;
 }
 
 .home-button:hover {
-    color: #ffcc00; /* 鼠标悬停时改变颜色 */
+    color: #ffcc00;
 }
 
 /* 欢迎部分 */
@@ -68,46 +71,62 @@
 
 /* 图片介绍文字区 */
 .image-caption {
-    position: absolute; /* 绝对定位 */
-    top: 5px; /* 距离顶部 5px */
-    left: 5px; /* 距离左侧 5px */
-    color: #fff; /* 文字颜色 */
-    text-align: left; /* 文字左对齐 */
-    font-family: 'Anek Latin', sans-serif; /* 字体 */
-    border-radius: 5px; /* 圆角 */
-    font-size: xx-small; /* 字体大小为 xx-small */
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #fff;
+    text-align: left;
+    font-family: 'Anek Latin', sans-serif;
+    border-radius: 1px;
+    font-size: medium;
 }
 
 .caption-line-1 {
     margin: 0;
+    color: #fff; /* 第一行白色 */
+    line-height: 1.5; /* 缩小行距 */
 }
 
 .caption-line-2 {
     margin: 0;
-    color: rgba(255, 255, 255, 0.8); /* 第二行文字稍浅 */
+    color: rgba(255, 255, 255, 0.8); /* 第二行稍浅 */
+    line-height: 2; /* 缩小行距 */
 }
 
 .caption-line-3 {
     margin: 0;
-    color: rgba(255, 255, 255, 0.8); /* 第三行文字稍浅 */
+    color: rgba(255, 255, 255, 0.6); /* 第三行更浅 */
+}
+
+/* 图片淡入淡出动画 */
+.screen-media {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.screen-media.fade-out {
+    opacity: 0;
 }
 
 /* 银幕下方文字 */
 .screen-text {
-    font-family: 'Playfair Display', serif; /* 标题字体 */
-    font-weight: 400; /* Regular */
-    text-transform: uppercase; /* 大写字母 */
-    text-align: center; /* 文字居中 */
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff; /* 改为白色 */
 }
 
 .screen-text .line-1 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    line-height: 0.6; /* 缩小行距 */
 }
 
 .screen-text .line-2 {
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    line-height: 0.4; /* 缩小行距 */
 }
 
 .screen-text .line-3 {
@@ -125,8 +144,55 @@
     color: #ffcc00; /* 鼠标悬停时改变颜色 */
 }
 
+/*联系方式*/
+.contact-info {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    font-family: 'Anek Latin', sans-serif;
+    font-size: large;
+    text-align: right;
+    cursor: pointer;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.contact-info p:hover {
+    color: #ffcc00;
+}
+
+/* 复制成功提示框 */
+.copy-notification {
+    position: fixed;
+    bottom: 60px; /* 在联系信息上方显示 */
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* 防止干扰点击 */
+}
+
+.copy-notification.show {
+    opacity: 1;
+}
+
 /* 响应式设计 */
+
 @media (max-width: 768px) {
+    .image-caption {
+        top: 10px;
+        left: 10px;
+        font-size: 12px; /* 缩小字体 */
+    }
     .screen-container {
         width: 95%; /* 在小屏幕上增加留白 */
     }
@@ -146,15 +212,24 @@
     .home-buttons {
         top: 10px;
         right: 10px;
-        gap: 10px;
     }
-
     .home-button {
-        font-size: 0.9rem;
+        font-size: 1.4rem; /* 缩小字体 */
+    }
+    .copy-notification {
+        bottom: 50px;
+        right: 10px;
+        font-size: 12px; /* 缩小字体 */
+        padding: 8px 16px;
     }
 }
 
 @media (max-width: 480px) {
+    .image-caption {
+        top: 5px;
+        left: 5px;
+        font-size: 10px; /* 进一步缩小字体 */
+    }
     .screen-container {
         aspect-ratio: 16 / 9; /* 在小屏幕上调整为 16:9 */
     }
@@ -174,10 +249,52 @@
     .home-buttons {
         top: 5px;
         right: 5px;
-        gap: 5px;
+    }
+    .home-button {
+        font-size: 1.2rem; /* 进一步缩小字体 */
+    }
+    .copy-notification {
+        bottom: 40px;
+        right: 5px;
+        font-size: 10px; /* 进一步缩小字体 */
+        padding: 5px 10px;
+    }
+     /* 右上角按钮居中 */
+     .home-buttons {
+        top: 10px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        flex-direction: column; /* 上下排布 */
+        gap: 10px; /* 按钮间距 */
+        align-items: center; /* 按钮内容居中 */
     }
 
-    .home-button {
-        font-size: 0.8rem;
+    /* 右下角联系方式居中 */
+    .contact-info {
+        bottom: 10px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        text-align: center; /* 文字居中 */
+        width: 90%; /* 增加宽度 */
+        font-size: 12px; /* 进一步缩小字体 */
+        max-width: 300px; /* 限制最大宽度 */
+    }
+
+    /* 复制提示框居中 */
+    .copy-notification {
+        bottom: 60px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+}
+
+/* 为移动设备添加点击效果 */
+@media (hover: none) and (pointer: coarse) {
+    .home-button:active,
+    .contact-info p:active {
+        color: #ffcc00; /* 点击时改变颜色 */
     }
 }

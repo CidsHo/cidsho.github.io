@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cids' Personal Website</title>
-    <link rel="stylesheet" href="styles/components.css"> <!-- 引用所有通用组件样式 -->
+    <link rel="stylesheet" href="styles/components-index.css"> <!-- 引用所有通用组件样式 -->
     <link rel="stylesheet" href="styles/index.css"> <!-- 首页特有样式 -->
     <!-- Favicon 配置 -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -41,7 +41,19 @@
             <p class="line-2">&</p>
             <p class="line-3">The Selected Work of <a href="about.html" class="cids-ho-link">Cids Ho</a></p>
         </div>
+        
+        <!-- 右下角联系信息 -->
+        <div class="contact-info">
+            <p onclick="copyText('+852 5223 4424')">Tel: +852 5223 4424</p>
+            <p onclick="copyText('hocids@tongji.edu.cn')">Email: hocids@tongji.edu.cn</p>
+        </div>
+
+        <!-- 复制成功提示框 -->
+        <div id="copy-notification" class="copy-notification">
+            <p>已复制到剪贴板！</p>
+        </div>
     </section>
+
 
     <!-- 脚本 -->
     <script src="scripts/script.js"></script>

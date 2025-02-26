@@ -80,17 +80,15 @@ let currentImageIndex = 0;
 function showImage(index) {
     const image = images[index];
     if (screenMedia) {
-        screenMedia.src = image.src;
+        screenMedia.classList.add('fade-out'); // 添加淡出效果
+        setTimeout(() => {
+            screenMedia.src = image.src;
+            screenMedia.classList.remove('fade-out'); // 移除淡出效果
+        }, 500); // 500ms 是淡出动画的持续时间
     }
-    if (captionLine1) {
-        captionLine1.textContent = image.captionLine1;
-    }
-    if (captionLine2) {
-        captionLine2.textContent = image.captionLine2;
-    }
-    if (captionLine3) {
-        captionLine3.textContent = image.captionLine3;
-    }
+    if (captionLine1) captionLine1.textContent = image.captionLine1;
+    if (captionLine2) captionLine2.textContent = image.captionLine2;
+    if (captionLine3) captionLine3.textContent = image.captionLine3;
 }
 
 // 跳转到当前图片的专属介绍页
@@ -232,3 +230,24 @@ window.addEventListener('scroll', function() {
         bottomTip.classList.remove('show'); // 隐藏提示
     }
 });
+
+// 复制文本函数
+function copyText(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        showNotification(); // 显示提示框
+    }).catch(() => {
+        showNotification('复制失败，请手动复制'); // 显示错误提示
+    });
+}
+
+// 显示提示框
+function showNotification(message = '已复制到剪贴板！') {
+    const notification = document.getElementById('copy-notification');
+    if (notification) {
+        notification.querySelector('p').textContent = message; // 更新提示内容
+        notification.classList.add('show'); // 显示提示框
+        setTimeout(() => {
+            notification.classList.remove('show'); // 3秒后隐藏提示框
+        }, 3000);
+    }
+}
