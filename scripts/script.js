@@ -46,15 +46,19 @@ async function loadImages() {
 }
 
 // 显示指定索引的图片
-function showImage(index) {
+function showImage(index, skipAnimation = false) {
     const image = images[index];
     console.log('Showing image:', image); // 打印当前图片信息
     if (screenMedia) {
-        screenMedia.classList.add('fade-out'); // 添加淡出效果
+        if (!skipAnimation) {
+            screenMedia.classList.add('fade-out'); // 添加淡出效果
+        }
         setTimeout(() => {
             screenMedia.src = image.src;
-            screenMedia.classList.remove('fade-out'); // 移除淡出效果
-        }, 500); // 500ms 是淡出动画的持续时间
+            if (!skipAnimation) {
+                screenMedia.classList.remove('fade-out'); // 移除淡出效果
+            }
+        }, skipAnimation ? 0 : 500); // 如果跳过动画，延迟为 0
     }
     if (captionLine1) captionLine1.textContent = image.captionLine1;
     if (captionLine2) captionLine2.textContent = image.captionLine2;
@@ -62,7 +66,7 @@ function showImage(index) {
 }
 
 // 随机切换图片
-function showRandomImage() {
+function showRandomImage(skipAnimation = false) {
     if (playedIndices.length === images.length) {
         playedIndices = []; // 如果所有图片都已播放，重置列表
     }
@@ -74,13 +78,13 @@ function showRandomImage() {
 
     playedIndices.push(newIndex); // 记录已播放的索引
     currentImageIndex = newIndex;
-    showImage(currentImageIndex);
+    showImage(currentImageIndex, skipAnimation); // 根据参数决定是否跳过动画
 }
 
 // 启动幻灯片
 function startSlideshow() {
     if (images.length > 0) {
-        showImage(currentImageIndex); // 初始加载第一张图片
+        showRandomImage(true); // 初始加载第一张图片，跳过动画
         setInterval(showRandomImage, 10000); // 每隔 10 秒随机切换一张图片
     } else {
         console.error('No images loaded');

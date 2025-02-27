@@ -2,16 +2,22 @@
 #navbar {
     display: flex;
     justify-content: flex-end; /* 导航栏内容靠右 */
-    padding: 20px;
+    padding: 8px;
     position: fixed; /* 固定定位 */
     top: 0;
     right: 0;
     z-index: 1000; /* 确保导航栏位于最上层 */
-    background-color: rgba(255, 255, 255, 0.2); /* 半透明白色背景 */
-    backdrop-filter: blur(10px); /* 背景模糊 */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
-    border-radius: 10px; /* 圆角 */
-    margin: 10px; /* 外边距 */
+    background-color: rgba(255, 255, 255, 0.3); /* 更透明的白色背景 */
+    backdrop-filter: blur(15px); /* 背景模糊 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 更柔和的阴影 */
+    border-radius: 8px; /* 更大的圆角 */
+    margin: 28px; /* 外边距 */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+}
+
+#navbar:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* 悬停时背景更明显 */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* 悬停时阴影更深 */
 }
 
 /* 导航栏按钮 */
@@ -29,12 +35,13 @@
 .nav-icon {
     width: 24px;
     height: 24px;
-    transition: transform 0.3s ease; /* 添加缩放动画 */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* 添加缩放和透明度动画 */
 }
 
 /* 鼠标悬停时放大图标 */
 #nav-toggle:hover .nav-icon {
     transform: scale(1.1);
+    opacity: 0.8; /* 悬停时稍微透明 */
 }
 
 /* 点击时缩小图标 */
@@ -52,13 +59,13 @@
     position: fixed;
     top: 0;
     right: -100%; /* 初始位置完全隐藏在屏幕外 */
-    width: 300px;
+    width: 280px; /* 稍微加宽 */
     height: 100vh;
-    background: rgba(255, 255, 255, 0.1); /* 更透明的白色背景 */
+    background: rgba(255, 255, 255, 0.2); /* 更透明的白色背景 */
     backdrop-filter: blur(20px); /* 更强的背景模糊 */
-    transition: right 0.3s ease; /* 添加滑动动画 */
+    transition: right 0.5s ; /* 弹性动画 */
     z-index: 999;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1); /* 更柔和的阴影 */
     padding: 20px; /* 内边距 */
     border-left: 1px solid rgba(0, 0, 0, 0.1); /* 左侧边框 */
 }
@@ -73,13 +80,37 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    font-family: "Playfair Display", "Microsoft Yahei", sans-serif;
+    font-weight: 300;
 }
 
 /* 菜单项 */
 #nav-menu li {
-    margin: 20px 0;
+    top: 50px;
+    margin: 25px 0; /* 增加间距 */
     position: relative;
     padding-left: 30px; /* 为图标留出空间 */
+    opacity: 0; /* 初始隐藏 */
+    transform: translateX(20px); /* 初始偏移 */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* 添加动画 */
+}
+
+/* 菜单项逐项显示 */
+.menu-overlay.active #nav-menu li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.menu-overlay.active #nav-menu li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.menu-overlay.active #nav-menu li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.menu-overlay.active #nav-menu li:nth-child(3) {
+    transition-delay: 0.3s;
 }
 
 /* 菜单项链接 */
@@ -87,14 +118,15 @@
     text-decoration: none;
     color: #333; /* 文字颜色 */
     font-size: 18px;
-    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+    transition: color 0.3s ease, transform 0.3s ease; /* 添加颜色和缩放动画 */
     position: relative;
     display: inline-block;
 }
 
-/* 鼠标悬停时改变文字颜色 */
+/* 鼠标悬停时改变文字颜色和缩放 */
 #nav-menu li a:hover {
     color: #ffcc00;
+    transform: translateX(5px); /* 悬停时向右移动 */
 }
 
 /* 当前页面菜单项 */
@@ -124,7 +156,7 @@
     bottom: -5px;
     width: 0;
     height: 2px;
-    background-color: #333; /* 下划线颜色 */
+    background-color: #ffcc00; /* 下划线颜色 */
     transition: width 0.3s ease; /* 添加宽度过渡效果 */
 }
 
@@ -135,7 +167,7 @@
 
 /* More 和图标 */
 .more-frontpage {
-    margin-top: 40px;
+    margin-top: 120px;
     text-align: center;
 }
 
@@ -154,9 +186,10 @@
 .icon-row .icon {
     width: 24px;
     height: 24px;
-    transition: transform 0.3s ease; /* 添加缩放动画 */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* 添加缩放和透明度动画 */
 }
 
 .icon-row .icon:hover {
     transform: scale(1.2);
+    opacity: 0.8; /* 悬停时稍微透明 */
 }

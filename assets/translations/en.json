@@ -1,8 +1,10 @@
 {
+    "aboutMe": "To begin with...",
+    "aboutMeText": "<b>Greetings from Cids!</b> <br><br>As a <b>human-computer interaction(HCI) researcher</b>, my work focuses on integrating natural interaction design into design workflows and building virtual reality systems that support creative expression. <br><br>I am passionate about VR technology and continuously contribute to the virtual reality community. Currently, I am dedicated to recreating real-world interactive experiences in virtual environments, exploring the intersection of technology and art.<br><br>I am also a <b>creator</b>, primarily active in the field of interactive media art, and occasionally dabble in other mediums. Feel free to visit my Works page to explore my past creative projects and works!",
     "researchInterest": "Research Interest",
     "researchInterestText": "Human-Computer Interaction; Creative-Support Virtual Reality; Embodied and Multimodal Interaction.",
     "educations": "Educations",
-    "educationsText": "Master of Art<br><span>College of Arts and Media, Tongji University | [2021-2024]</span><br><br>Bachelor of Management<br><span>Zhongnan University of Economic and Law | [2017-2021]</span>",
+    "educationsText": "<b>Master of Art</b><br><span>College of Arts and Media, Tongji University, China | [2021-2024]</span><br><br><b>Bachelor of Management</b><br><span>School of Business Administration, Zhongnan University of Economic and Law, China | [2017-2021]</span>",
     "skills": "Skills",
     "skillsText": {
         "designTools": "<br>Design and Prototyping Tools",

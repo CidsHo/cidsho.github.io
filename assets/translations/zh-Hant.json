@@ -1,24 +1,26 @@
 {
+    "aboutMe": "開始之前...",
+    "aboutMeText": "<b>你好！我是Cids！</b> <br><br>作為一名<b>人機互動研究者</b>，我嘅研究集中於自然互動設計點樣融入設計工作流程，以及點樣建立支援創意表達嘅虛擬實境系統。<br><br>我對VR技術充滿熱情，並且持續為虛擬實境社群貢獻內容。而家，我專注於喺虛擬環境中還原現實世界嘅互動體驗，探索技術同藝術嘅交匯點。<br><br>同時，我都係一名<b>創作人</b>，主要活躍於互動媒體藝術領域，間中都會涉獵其他媒介嘅創作。歡迎瀏覽我嘅Works頁面，探索我過往嘅創意作品同項目！",
     "researchInterest": "研究興趣",
-    "researchInterestText": "人機交互；創意支持虛擬現實；具身和多模態交互。",
+    "researchInterestText": "人機互動；創意支援虛擬實境；具身和多模態互動。",
     "educations": "教育背景",
-    "educationsText": "藝術碩士<br><span>同濟大學藝術與傳媒學院 | [2021-2024]</span><br><br>管理學學士<br><span>中南財經政法大學 | [2017-2021]</span>",
+    "educationsText": "藝術學碩士<br><span>藝術與傳媒學院，同濟大學，中國 | [2021-2024]</span><br><br>管理學學士<br><span>工商管理學院，中南財經政法大學，中國 | [2017-2021]</span>",
     "skills": "技能",
     "skillsText": {
         "designTools": "設計與原型工具",
         "designToolsList": [
-            "Unity 3D - 為 Quest3 構建 3D 場景和交互控制方法",
+            "Unity 3D - 為 Quest3 構建 3D 場景和互動控制方法",
             "Photoshop、Illustrator 和 Procreate - 平面設計",
             "Figma 和 Adobe XD - UI 設計"
         ],
         "multimediaTools": "多媒體與視覺製作工具",
         "multimediaToolsList": [
-            "商業攝影、視頻/音頻錄製",
+            "商業攝影、影片/音頻錄製",
             "Adobe Premiere、Adobe After Effects 和 Adobe Audition - 基礎特效和其他後期製作"
         ],
         "languageProficiency": "語言能力",
         "languageProficiencyList": [
-            "英語（專業水平，雅思：7）",
+            "英語（專業水平，IELTS：7）",
             "普通話（母語）",
             "粵語（母語）"
         ]
@@ -60,7 +62,7 @@
     "projectExperienceList": [
         {
             "period": "2024-進行中",
-            "title": "港鐵 XR 互動體驗：通過無接觸 XR 技術增強乘客互動",
+            "title": "港鐵 XR 互動體驗：透過無接觸 XR 技術增強乘客互動",
             "institution": "香港理工大學，中國。",
             "role": "研究助理，設計師，在研項目"
         },
@@ -85,10 +87,10 @@
     ],
     "awards": "獎項",
     "awardsList": [
-        "優秀學生獎學金（特等獎）| 2024",
-        "研究生獎學金 | 2021-2024",
-        "優秀學生獎學金（三等獎）| 2023",
-        "全國大學生 VR 競賽優秀獎（組長）| 2022",
-        "優秀學生幹部 | 2017-2019, 2021"
+        "Outstanding Student Scholarship (Grand Prize) | 2024",
+        "Graduate Scholarship | 2021-2024",
+        "Outstanding Student Scholarship (Grade 3) | 2023",
+        "Excellent Award in the National College Student VR Competition (Leader) | 2022",
+        "Excellent Student Cadre | 2017-2019, 2021"
     ]
 }
