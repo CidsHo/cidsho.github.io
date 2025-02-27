@@ -251,8 +251,17 @@
 }
 
 /* 移动端样式 */
-/* 移动端样式 */
 @media (max-width: 768px) {
+    /* 禁用左右滚动条 */
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    /* 隐藏桌面端头像 */
+    .desktop-profile {
+        display: none !important; /* 强制隐藏 */
+    }
+    
     /* 整体布局 */
     .about-container {
         flex-direction: column; /* 上下排列 */
@@ -338,21 +347,21 @@
         width: 100%; /* 占满整个宽度 */
         margin-left: 0; /* 取消左侧留白 */
         padding: 15px; /* 调整内边距 */
-        text-align: center; /* 内容居中 */
+        text-align: left; /* 内容居中 */
     }
 
     /* 内容行 */
     .content-row {
         flex-direction: column; /* 垂直排列 */
         margin-bottom: 20px; /* 调整间距 */
-        text-align: center; /* 文本居中 */
+        text-align: left; /* 文本居中 */
     }
 
     /* 标题 */
     .content-title {
         width: 100%; /* 占满整个宽度 */
         padding-right: 0; /* 取消右侧留白 */
-        text-align: center; /* 标题居中 */
+        text-align: left; /* 标题居中 */
         margin-bottom: 10px; /* 与内容的间距 */
     }
 
@@ -364,12 +373,14 @@
     /* 内容 */
     .content-text {
         width: 100%; /* 占满整个宽度 */
-        text-align: center; /* 文本居中 */
+        text-align: adjusted; /* 文本居中 */
+        align-items: center; /* 子元素居中 */
     }
 
     .content-text p {
         font-size: 14px; /* 缩小字体 */
         margin-bottom: 10px; /* 调整间距 */
+        align-items: center; /* 子元素居中 */
     }
 }
 
