@@ -144,6 +144,17 @@
     color: #ffcc00; /* 鼠标悬停时改变颜色 */
 }
 
+/* The Selected Works 链接样式 */
+.selected-works-link {
+    color: inherit; /* 继承父元素颜色 */
+    text-decoration: none; /* 去掉下划线 */
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+}
+
+.selected-works-link:hover {
+    color: #ffcc00; /* 鼠标悬停时改变颜色 */
+}
+
 /*联系方式*/
 .contact-section {
     position: fixed;
