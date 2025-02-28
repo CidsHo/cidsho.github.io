@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // 排序和筛选逻辑
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const portfolioGrid = document.querySelector('.portfolio-grid');
     const sortDateAsc = document.getElementById('sort-date-asc');
     const sortDateDesc = document.getElementById('sort-date-desc');
@@ -208,8 +208,95 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// 加载 JSON 数据并生成卡片
+async function loadPortfolio() {
+    try {
+        const response = await fetch('assets/data/portfolio.json');
+        if (!response.ok) {
+            throw new Error('Failed to load portfolio data');
+        }
+        const portfolioData = await response.json();
+        console.log('Loaded portfolio data:', portfolioData);
+
+        // 按日期倒序排序
+        portfolioData.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        const portfolioGrid = document.querySelector('.portfolio-grid');
+        if (!portfolioGrid) {
+            console.error('Portfolio grid not found');
+            return;
+        }
+
+        // 清空现有内容
+        portfolioGrid.innerHTML = '';
+
+        // 动态生成卡片
+        portfolioData.forEach(item => {
+            const card = document.createElement('div');
+            card.classList.add('portfolio-item');
+            card.setAttribute('data-date', item.date);
+            card.setAttribute('data-tags', item.tags.join(','));
+
+            // 图片部分
+            const imageContainer = document.createElement('div');
+            imageContainer.classList.add('image-container');
+            const imageLink = document.createElement('a');
+            imageLink.href = item.link;
+            const image = document.createElement('img');
+            image.src = item.image;
+            image.alt = item.title;
+            image.classList.add('portfolio-image');
+            imageLink.appendChild(image);
+            imageContainer.appendChild(imageLink);
+
+            // 文字介绍部分
+            const info = document.createElement('div');
+            info.classList.add('portfolio-info');
+            const title = document.createElement('h2');
+            title.textContent = item.title;
+
+            // 标签部分
+            const tags = document.createElement('div');
+            tags.classList.add('portfolio-tags');
+            item.tags.slice(0, 5).forEach(tag => { // 限制最多显示五个标签
+                const tagSpan = document.createElement('span');
+                tagSpan.textContent = tag;
+                if (tag === '精选') { // 高亮“精选”标签
+                    tagSpan.classList.add('highlighted-tag');
+                }
+                tags.appendChild(tagSpan);
+            });
+
+            const description = document.createElement('p');
+            description.textContent = item.description;
+            const date = document.createElement('div');
+            date.classList.add('portfolio-date');
+            date.textContent = item.date;
+
+            info.appendChild(title);
+            info.appendChild(tags);
+            info.appendChild(description);
+            info.appendChild(date);
+
+            // 将图片和文字介绍添加到卡片
+            card.appendChild(imageContainer);
+            card.appendChild(info);
+
+            // 将卡片添加到网格
+            portfolioGrid.appendChild(card);
+        });
+    } catch (error) {
+        console.error('Error loading portfolio data:', error);
+    }
+}
+
+// 页面加载时初始化
+document.addEventListener('DOMContentLoaded', () => {
+    loadPortfolio();
+});
+
 // 底部提示逻辑
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const bottomTip = document.getElementById('bottom-tip');
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
@@ -351,3 +438,70 @@ document.addEventListener('DOMContentLoaded', () => {
     const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
     switchLanguage(preferredLanguage);
 });
+
+// 搜索功能
+function searchItems() {
+    const searchText = document.getElementById('search-input').value.toLowerCase();
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    let visibleCount = 0;
+
+    portfolioItems.forEach(item => {
+        const title = item.querySelector('h2').textContent.toLowerCase();
+        const tags = item.getAttribute('data-tags').toLowerCase();
+        if (title.includes(searchText) || tags.includes(searchText)) {
+            item.style.display = 'block';
+            visibleCount++;
+        } else {
+            item.style.display = 'none';
+        }
+    });
+
+    // 根据可见卡片数量调整布局
+    const portfolioGrid = document.querySelector('.portfolio-grid');
+    if (visibleCount <= 2) {
+        portfolioGrid.classList.add('few-results');
+    } else {
+        portfolioGrid.classList.remove('few-results');
+    }
+}
+
+// 绑定事件
+document.getElementById('search-button').addEventListener('click', searchItems);
+document.getElementById('search-input').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        searchItems();
+    }
+});
+
+// 绑定点击事件
+document.getElementById('filter-star').addEventListener('click', () => {
+    filterItems('精选'); // 调用筛选函数
+});
+
+// 筛选逻辑
+function filterItems(tag) {
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    portfolioItems.forEach(item => {
+        const itemTags = item.getAttribute('data-tags');
+        if (tag === 'all' || itemTags.includes(tag)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+
+    // 设置当前选中的按钮
+    setActiveButton(tag);
+}
+
+// 设置当前选中的按钮
+function setActiveButton(tag) {
+    const buttons = document.querySelectorAll('.filter-button');
+    buttons.forEach(button => {
+        if (button.getAttribute('data-tag') === tag) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+}
