@@ -32,18 +32,26 @@
         "date": "2023-10-09"
     },
     {
+        "title": "23岁生日自拍",
+        "image": "articles/photograph/23th-birthday/portrait.png",
+        "link": "articles/photograph/23th-birthday/23th-birthday.html",
+        "tags": ["摄影","自拍"],
+        "description": "23岁于封锁中悄然而至。非常偶然地站到镜头前面。（2022年年度肖像环节，也是最常用的一张肖像）",
+        "date": "2022-03-12"
+    },
+    {
         "title": "24岁生日自拍",
         "image": "articles/photograph/24th-birthday/portrait.png",
         "link": "articles/photograph/24th-birthday/24th-birthday.html",
-        "tags": ["摄影"],
-        "description": "年度肖像环节，也是最常用的一张肖像。",
-        "date": "2023-10-09"
+        "tags": ["摄影","自拍"],
+        "description": "24岁的帷幕于渐显的未来前揭示。愿我永远保留探索与玩乐之心，恣意快活，应对一切。",
+        "date": "2023-03-12"
     },
     {
         "title": "精选项目示例",
         "tags": ["精选", "设计", "摄影"],
         "date": "2023-01-01",
         "image": "assets/screen-images/sakana.JPG",
-        "link": "articles/design/sakana.html"
+        "link": "articles/photograph/models/photo.html"
     }
 ]
