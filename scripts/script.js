@@ -123,14 +123,11 @@ function setupFilterAndSort() {
     let currentFilter = 'all';
 
     function setActiveButton(button) {
-        console.log('设置高亮按钮:', button); // 调试用
         document.querySelectorAll('.filter-button').forEach(btn => {
-            console.log('移除 active 类:', btn); // 调试用
             btn.classList.remove('active');
         });
         if (button) {
             button.classList.add('active');
-            console.log('已添加 active 类:', button); // 调试用
         }
     }
 
@@ -153,17 +150,13 @@ function setupFilterAndSort() {
     }
 
     function filterItems(category, button) {
-        console.log(`当前筛选: ${category}`); // 调试用
         currentFilter = category;
         portfolioItems.forEach(item => {
             const itemTags = item.getAttribute('data-tags')
                 .split(',')
-                .map(tag => tag.trim().toLowerCase()); // 去除空格并转换为小写
+                .map(tag => tag.trim().toLowerCase());
 
-            console.log(`作品标签: ${itemTags}`); // 调试用
-
-            const isFeatured = itemTags.includes('精选'.toLowerCase()); // 统一转换为小写比较
-            console.log(`是否精选: ${isFeatured}`); // 调试用
+            const isFeatured = itemTags.includes('精选'.toLowerCase());
 
             if (category === '精选') {
                 item.style.display = isFeatured ? 'block' : 'none';
@@ -194,7 +187,6 @@ function setupFilterAndSort() {
     if (filterStar) filterStar.addEventListener('click', () => filterItems('精选', filterStar));
     if (filterStarIcon) {
         filterStarIcon.addEventListener('click', () => {
-            console.log('Icon 精选按钮被点击'); // 调试用
             filterItems('精选', filterStarIcon);
         });
     }
@@ -482,7 +474,6 @@ async function loadPortfolio() {
             card.setAttribute('data-date', item.date);
             card.setAttribute('data-tags', item.tags.join(','));
 
-            // 图片部分
             const imageContainer = document.createElement('div');
             imageContainer.classList.add('image-container');
             const imageLink = document.createElement('a');
@@ -495,13 +486,11 @@ async function loadPortfolio() {
             imageLink.appendChild(image);
             imageContainer.appendChild(imageLink);
 
-            // 文字介绍部分
             const info = document.createElement('div');
             info.classList.add('portfolio-info');
             const title = document.createElement('h2');
             title.textContent = item.title;
 
-            // 标签部分
             const tags = document.createElement('div');
             tags.classList.add('portfolio-tags');
             item.tags.slice(0, 5).forEach(tag => {
@@ -524,16 +513,17 @@ async function loadPortfolio() {
             info.appendChild(description);
             info.appendChild(date);
 
-            // 将图片和文字介绍添加到卡片
             card.appendChild(imageContainer);
             card.appendChild(info);
 
-            // 将卡片添加到网格
             portfolioGrid.appendChild(card);
         });
 
-        // 初始化懒加载
+        // 调用懒加载函数
         lazyLoadImages();
+
+        // 初始化筛选和排序功能
+        setupFilterAndSort();
     } catch (error) {
         console.error('Error loading portfolio data:', error);
     }
