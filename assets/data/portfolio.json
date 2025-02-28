@@ -16,11 +16,27 @@
         "date": "2025-02-24"
     },
     {
-        "title": "虚拟现实项目：ShadowPlayVR",
+        "title": "项目：ShadowPlayVR",
         "image": "articles/research/shadowplayvr/shadowplayvr.jpg",
         "link": "articles/research/shadowplayvr/shadowplayvr.html",
-        "tags": ["精选", "设计", "想法"],
+        "tags": ["精选", "设计", "想法", "虚拟现实"],
         "description": "系列项目ShadowPlayVR的一些实现.",
+        "date": "2023-10-09"
+    },
+    {
+        "title": "VRST'23 开会日常",
+        "image": "articles/research/shadowplayvr/shadowplayvr.jpg",
+        "link": "articles/research/shadowplayvr/shadowplayvr.html",
+        "tags": ["想法", "博客"],
+        "description": "第一次来到新西兰。",
+        "date": "2023-10-09"
+    },
+    {
+        "title": "24岁生日自拍",
+        "image": "articles/photograph/24th-birthday/portrait.png",
+        "link": "articles/photograph/24th-birthday/24th-birthday.html",
+        "tags": ["摄影"],
+        "description": "年度肖像环节，也是最常用的一张肖像。",
         "date": "2023-10-09"
     }
 ]

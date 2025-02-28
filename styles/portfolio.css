@@ -75,6 +75,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 默认列数 */
     gap: 20px;
     padding: 20px;
+    justify-content: center; /* 卡片居中 */
     align-items: start;
     grid-auto-flow: dense;
 }
@@ -88,7 +89,6 @@
 /* 卡片容器 */
 .portfolio-item {
     width: 100%;
-    max-width: 300px; /* 限制卡片最大宽度 */
     aspect-ratio: 1 / 2;
     background-color: #fff;
     border-radius: 10px;
