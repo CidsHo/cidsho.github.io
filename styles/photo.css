@@ -74,6 +74,37 @@
     border-radius: 5px;
 }
 
+/* 返回按钮样式 */
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffcc00; /* 黄色背景 */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 16px;
+    color: #000; /* 黑色文字 */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 20px; /* 与照片的间距 */
+}
+
+.back-button:hover {
+    background-color: #e6b800; /* 悬停时深黄色 */
+    transform: scale(1.05); /* 轻微放大 */
+}
+
+.back-button:active {
+    transform: scale(0.95); /* 点击时缩小 */
+}
+
+.back-icon {
+    width: 20px;
+    height: 20px;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .photo-title {

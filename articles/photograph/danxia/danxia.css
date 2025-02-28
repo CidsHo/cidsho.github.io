@@ -1,0 +1,8 @@
+.photo-container {
+    background-color: #fff; /* 白色画布 */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 2000px;
+    width: 100%;
+    padding: 20px;
+}
