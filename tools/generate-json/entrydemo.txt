@@ -1,0 +1,33 @@
+架构：
+
+project-folder/
+│
+├── data/
+│   ├── entries.txt
+│   ├── portfolio.json
+│   └── images.json
+│
+└── generate-json.bat
+
+entries.txt 文件的内容格式：
+
+作品 1
+这是作品 1 的描述。
+2023-10-01
+摄影, 精选
+assets/photos/photo1.jpg
+portfolio-item-1.html
+
+作品 2
+这是作品 2 的描述。
+2023-10-02
+设计, 想法
+assets/photos/photo2.jpg
+portfolio-item-2.html
+
+作品 3
+这是作品 3 的描述。
+2023-10-03
+摄影, 精选
+assets/photos/photo3.jpg
+portfolio-item-3.html

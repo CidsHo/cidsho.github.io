@@ -1,7 +1,8 @@
 [
     {
         "title": "开始 Begins",
-        "image": "articles/blog/test-article/assets/1.jpg",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/blog/test-article/assets/1.jpg", 
         "link": "portfolio.html",
         "tags": [],
         "description": "事情需要一个开端，但这是一个虚假的开端",
@@ -9,7 +10,8 @@
     },
     {
         "title": "Prologue",
-        "image": "articles/blog/2-24-2025-prologue/assets/1.jpg",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/blog/2-24-2025-prologue/assets/1.jpg", 
         "link": "articles/blog/2-24-2025-prologue/2-24-2025-prologue.html",
         "tags": ["设计", "想法"],
         "description": "Things should have a begin, so it begins here.",
@@ -17,7 +19,8 @@
     },
     {
         "title": "项目：ShadowPlayVR",
-        "image": "articles/research/shadowplayvr/shadowplayvr.jpg",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/research/shadowplayvr/shadowplayvr.jpg", 
         "link": "articles/research/shadowplayvr/shadowplayvr.html",
         "tags": ["精选", "设计", "想法", "虚拟现实"],
         "description": "系列项目ShadowPlayVR的一些实现.",
@@ -25,33 +28,35 @@
     },
     {
         "title": "VRST'23 开会日常",
-        "image": "articles/research/shadowplayvr/shadowplayvr.jpg",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/research/shadowplayvr/shadowplayvr.jpg", 
         "link": "articles/research/shadowplayvr/shadowplayvr.html",
         "tags": ["想法", "博客"],
         "description": "第一次来到新西兰。",
         "date": "2023-10-09"
     },
-
-
     {
         "title": "23岁 23rd",
-        "image": "articles/photograph/23th-birthday/portrait.png",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/photograph/23th-birthday/portrait.png", 
         "link": "articles/photograph/23th-birthday/23th-birthday.html",
         "tags": ["摄影","自拍"],
-        "description": "23岁于封锁中悄然而至。非常偶然地站到镜头前面。（2022年年度肖像环节，也是最常用的一张肖像）",
+        "description": "2022年年度肖像环节",
         "date": "2022-03-12"
     },
     {
         "title": "24岁 24th",
-        "image": "articles/photograph/24th-birthday/portrait.png",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/photograph/24th-birthday/portrait.png", 
         "link": "articles/photograph/24th-birthday/24th-birthday.html",
         "tags": ["摄影","自拍"],
-        "description": "24岁的帷幕于渐显的未来前揭示。愿我永远保留探索与玩乐之心，恣意快活，应对一切。",
+        "description": "24岁的帷幕于渐显的未来前揭示。",
         "date": "2023-03-12"
     },
     {
         "title": "锈蚀与鲜花 Rust & Blossom",
-        "image": "articles/photograph/rust&blossom/rust&blossom.jpg",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/photograph/rust&blossom/rust&blossom.jpg", 
         "link": "articles/photograph/rust&blossom/rust&blossom.html",
         "tags": ["摄影"],
         "description": "",
@@ -59,7 +64,8 @@
     },
     {
         "title": "空中 VOID",
-        "image": "articles/photograph/void/void.jpg",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/photograph/void/void.jpg", 
         "link": "articles/photograph/void/void.html",
         "tags": ["摄影"],
         "description": "",
@@ -67,7 +73,8 @@
     },
     {
         "title": "江河守护 River Guardian",
-        "image": "articles/photograph/riverguardian/rg.jpg",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/photograph/riverguardian/rg.jpg", 
         "link": "articles/photograph/riverguardian/riverguardian.html",
         "tags": ["摄影"],
         "description": "",
@@ -75,7 +82,8 @@
     },
     {
         "title": "丹霞 Danxia",
-        "image": "articles/photograph/danxia/danxia.jpg",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/photograph/danxia/danxia.jpg", 
         "link": "articles/photograph/danxia/danxia.html",
         "tags": ["摄影"],
         "description": "",
@@ -83,20 +91,19 @@
     },
     {
         "title": "舞者 Dancer",
-        "image": "articles/photograph/dancer/dancer.jpg",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/photograph/dancer/dancer.jpg", 
         "link": "articles/photograph/dancer/dancer.html",
         "tags": ["摄影"],
         "description": "某些夜晚，再进一步，振翅欲飞。",
         "date": "2022-11-19"
     },
-    
-
-
     {
         "title": "精选项目示例",
         "tags": ["精选", "设计", "摄影"],
         "date": "2023-01-01",
-        "image": "assets/screen-images/sakana.JPG",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "assets/screen-images/sakana.JPG", 
         "link": "articles/photograph/models/photo.html"
     }
 ]
