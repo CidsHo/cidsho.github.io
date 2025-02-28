@@ -2,8 +2,8 @@
     {
         "title": "开始",
         "image": "articles/blog/test-article/assets/1.jpg",
-        "link": "articles/blog/test-article/test-article.html",
-        "tags": ["设计", "想法"],
+        "link": "portfolio.html",
+        "tags": [],
         "description": "事情需要一个开端，但这是一个虚假的开端",
         "date": "1999-03-12"
     },
@@ -38,5 +38,12 @@
         "tags": ["摄影"],
         "description": "年度肖像环节，也是最常用的一张肖像。",
         "date": "2023-10-09"
+    },
+    {
+        "title": "精选项目示例",
+        "tags": ["精选", "设计", "摄影"],
+        "date": "2023-01-01",
+        "image": "assets/screen-images/sakana.JPG",
+        "link": "articles/design/sakana.html"
     }
 ]

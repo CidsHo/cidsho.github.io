@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Landscape 1",
+        "tags": ["landscape", "nature"],
+        "date": "2023-01-01",
+        "image": "../../assets/photos/landscape1.jpg",
+        "link": "#",
+        "description": "A beautiful landscape photo."
+    },
+    {
+        "title": "Portrait 1",
+        "tags": ["portrait", "people"],
+        "date": "2023-02-01",
+        "image": "../../assets/photos/portrait1.jpg",
+        "link": "#",
+        "description": "A stunning portrait photo."
+    }
+]

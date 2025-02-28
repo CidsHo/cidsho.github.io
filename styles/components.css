@@ -1,8 +1,5 @@
 /* 引用所有通用组件样式 */
 
-/* 基础样式 */
-@import url('components/base.css');
-
 /* 字体定义 */
 @import url('components/fonts.css');
 
@@ -17,9 +14,6 @@
 
 /* 网格布局 */
 @import url('components/grid.css');
-
-/* 字体和排版 */
-@import url('components/typography.css');
 
 /* 图标 */
 @import url('components/icons.css');

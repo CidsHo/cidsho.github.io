@@ -193,3 +193,24 @@
     transform: scale(1.2);
     opacity: 0.8; /* 悬停时稍微透明 */
 }
+
+@media (max-width: 768px) {
+    #navbar {
+        padding: 5px; /* 减少内边距 */
+        margin: 10px; /* 减少外边距 */
+    }
+
+    .menu-overlay {
+        width: 100%; /* 菜单栏占满整个屏幕宽度 */
+        right: -120%; /* 初始位置完全隐藏在屏幕外 */
+    }
+
+    .menu-overlay.active {
+        right: 0; /* 滑动到屏幕内 */
+    }
+
+    #nav-menu li {
+        margin: 15px 0; /* 减少菜单项间距 */
+        padding-left: 80px; /* 减少左侧留白 */
+    }
+}
