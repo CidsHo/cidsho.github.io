@@ -13,7 +13,7 @@
 /* 首页文字按钮 */
 .home-buttons {
     position: fixed;
-    top: 180px; /* 靠近银幕顶部 */
+    top: 130px; /* 靠近银幕顶部 */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -158,7 +158,7 @@
 /*联系方式*/
 .contact-section {
     position: fixed;
-    bottom: 150px; /* 靠近银幕底部 */
+    bottom: 100px; /* 靠近银幕底部 */
     left: 50%;
     transform: translateX(-50%);
     display: flex;

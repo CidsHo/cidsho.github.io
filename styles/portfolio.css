@@ -78,6 +78,7 @@
     justify-content: center; /* 卡片居中 */
     align-items: start;
     grid-auto-flow: dense;
+    transition: grid-template-columns 0.5s ease; /* 网格布局过渡 */
 }
 
 /* 搜索结果较少时的布局 */
@@ -94,8 +95,14 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.3s ease, opacity 0.5s ease;;
     margin: 0 auto; /* 居中显示 */
+}
+
+.portfolio-item.move {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0; /* 移动时暂时隐藏 */
+    transform: translateY(20px); /* 向下移动一点 */
 }
 
 .portfolio-item:hover {

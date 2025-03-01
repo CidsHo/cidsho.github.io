@@ -130,49 +130,85 @@ function setupFilterAndSort() {
     }
 
     function sortItems(order) {
+        // 添加移动动画
         portfolioItems.forEach(item => item.classList.add('move'));
-        portfolioItems.sort((a, b) => {
-            const dateA = new Date(a.getAttribute('data-date'));
-            const dateB = new Date(b.getAttribute('data-date'));
-            return order === 'asc' ? dateA - dateB : dateB - dateA;
-        });
-        portfolioGrid.innerHTML = '';
-        portfolioItems.forEach(item => {
-            if (currentFilter === 'all' || item.getAttribute('data-tags').includes(currentFilter)) {
-                portfolioGrid.appendChild(item);
-            }
-        });
+
+        // 延迟执行排序和重新布局
         setTimeout(() => {
-            portfolioItems.forEach(item => item.classList.remove('move'));
-        }, 500);
+            portfolioItems.sort((a, b) => {
+                const dateA = new Date(a.getAttribute('data-date'));
+                const dateB = new Date(b.getAttribute('data-date'));
+                return order === 'asc' ? dateA - dateB : dateB - dateA;
+            });
+
+            // 清空网格
+            portfolioGrid.innerHTML = '';
+
+            // 重新添加卡片
+            portfolioItems.forEach(item => {
+                if (currentFilter === 'all' || item.getAttribute('data-tags').includes(currentFilter)) {
+                    portfolioGrid.appendChild(item);
+                }
+            });
+
+            // 移除移动动画
+            setTimeout(() => {
+                portfolioItems.forEach(item => item.classList.remove('move'));
+            }, 10); // 稍微延迟以确保动画生效
+        }, 500); // 等待动画完成
     }
 
     function filterItems(category, button) {
         currentFilter = category;
-        portfolioItems.forEach(item => {
-            const itemTags = item.getAttribute('data-tags')
-                .split(',')
-                .map(tag => tag.trim().toLowerCase());
 
-            const isFeatured = itemTags.includes('精选'.toLowerCase());
+        // 添加移动动画
+        portfolioItems.forEach(item => item.classList.add('move'));
 
-            if (category === '精选') {
-                item.style.display = isFeatured ? 'block' : 'none';
-            } else if (category === 'all' || itemTags.includes(category.toLowerCase())) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
+        // 延迟执行筛选和重新布局
+        setTimeout(() => {
+            portfolioItems.forEach(item => {
+                const itemTags = item.getAttribute('data-tags')
+                    .split(',')
+                    .map(tag => tag.trim().toLowerCase());
+
+                const isFeatured = itemTags.includes('精选'.toLowerCase());
+
+                if (category === '精选') {
+                    item.style.display = isFeatured ? 'block' : 'none';
+                } else if (category === 'all' || itemTags.includes(category.toLowerCase())) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // 移除移动动画
+            setTimeout(() => {
+                portfolioItems.forEach(item => item.classList.remove('move'));
+            }, 10); // 稍微延迟以确保动画生效
+        }, 500); // 等待动画完成
 
         setActiveButton(button);
     }
 
     function resetFilters() {
         currentFilter = 'all';
-        portfolioItems.forEach(item => {
-            item.style.display = 'block';
-        });
+
+        // 添加移动动画
+        portfolioItems.forEach(item => item.classList.add('move'));
+
+        // 延迟执行重置和重新布局
+        setTimeout(() => {
+            portfolioItems.forEach(item => {
+                item.style.display = 'block';
+            });
+
+            // 移除移动动画
+            setTimeout(() => {
+                portfolioItems.forEach(item => item.classList.remove('move'));
+            }, 10); // 稍微延迟以确保动画生效
+        }, 500); // 等待动画完成
+
         setActiveButton(null);
     }
 
@@ -352,4 +388,139 @@ if (backButton) {
 document.addEventListener('DOMContentLoaded', () => {
     loadImages();
     loadPortfolio();
+});
+
+
+// 底部提示逻辑
+window.addEventListener('scroll', function() {
+    const bottomTip = document.getElementById('bottom-tip');
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+
+    // 判断是否滚动到底部
+    if (scrollTop + clientHeight >= scrollHeight - 50) { // 50 是容错范围
+        bottomTip.classList.add('show'); // 显示提示
+    } else {
+        bottomTip.classList.remove('show'); // 隐藏提示
+    }
+});
+
+// 复制文本函数
+function copyText(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        showNotification(); // 显示提示框
+    }).catch(() => {
+        showNotification('复制失败，请手动复制'); // 显示错误提示
+    });
+}
+
+// 显示提示框
+function showNotification(message = '已复制到剪贴板！') {
+    const notification = document.getElementById('copy-notification');
+    if (notification) {
+        notification.querySelector('p').textContent = message; // 更新提示内容
+        notification.classList.add('show'); // 显示提示框
+        setTimeout(() => {
+            notification.classList.remove('show'); // 3秒后隐藏提示框
+        }, 3000);
+    }
+}
+
+// 语言切换逻辑
+let translations = {};
+
+async function loadTranslations(lang) {
+    try {
+        const response = await fetch(`assets/translations/${lang}.json`);
+        if (!response.ok) {
+            throw new Error(`Failed to load ${lang}.json: ${response.statusText}`);
+        }
+        translations[lang] = await response.json();
+        console.log(`Loaded ${lang}.json:`, translations[lang]);
+        switchLanguage(lang);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+function switchLanguage(lang) {
+    document.documentElement.lang = lang;
+    if (!translations[lang]) {
+        loadTranslations(lang);
+        return;
+    }
+
+    // 获取所有需要翻译的元素
+    const elements = document.querySelectorAll('[data-key]');
+    elements.forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang][key]) {
+            if (Array.isArray(translations[lang][key])) {
+                // 如果是数组，动态生成列表项
+                if (key === 'publicationsList') {
+                    // 处理出版物列表
+                    el.innerHTML = translations[lang][key].map(item => `
+                        <li>
+                            <strong>${item.title}</strong><br>
+                            <em>${item.author}</em><br>
+                            ${item.conference}<br>
+                            <a href="${item.doi}" target="_blank"><em>[DOI]</em></a>
+                        </li>
+                    `).join('');
+                } else if (key === 'projectExperienceList') {
+                    // 处理项目经验列表
+                    el.innerHTML = translations[lang][key].map(item => `
+                        <li>
+                            <em>${item.period}</em>, ${item.title}<br>
+                            <span>${item.institution}</span><br>
+                            > ${item.role}
+                        </li>
+                    `).join('');
+                } else if (key === 'awardsList') {
+                    // 处理奖项列表
+                    el.innerHTML = translations[lang][key].map(item => `<li>${item}</li>`).join('');
+                }
+            } else if (typeof translations[lang][key] === 'object') {
+                // 如果是对象，根据对象结构动态生成内容
+                if (key === 'skillsText') {
+                    const skills = translations[lang][key];
+                    el.innerHTML = `
+                        <div class="skill-category">
+                            <h3>${skills.designTools}</h3>
+                            <ul>${skills.designToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>${skills.multimediaTools}</h3>
+                            <ul>${skills.multimediaToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>${skills.languageProficiency}</h3>
+                            <ul>${skills.languageProficiencyList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                    `;
+                }
+            } else {
+                // 如果是普通文本，直接更新内容
+                el.innerHTML = translations[lang][key];
+            }
+        } else {
+            console.warn(`Translation not found for key: ${key} in language: ${lang}`);
+        }
+    });
+
+    // 更新语言切换按钮的状态
+    const languageButtons = document.querySelectorAll('.language-switcher button');
+    languageButtons.forEach(button => {
+        if (button.getAttribute('onclick').includes(lang)) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+}
+
+// 默认显示英文
+document.addEventListener('DOMContentLoaded', () => {
+    switchLanguage('en');
 });

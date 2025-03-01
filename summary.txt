@@ -1,4 +1,253 @@
- 
+│  .gitattributes
+│  about.html
+│  index.html
+│  LICENSE
+│  portfolio.html
+│  README.md
+│  summary.bat
+│  summary.txt
+│  TBD
+│  _config.yml
+│
+├─1. tools
+│  └─generate-json
+│          entrydemo.txt
+│          generate-json.bat
+│          html.txt
+│          images.txt
+│          input.txt
+│          inputdemo.xlsx
+│          portfolio.txt
+│
+├─articles
+│  ├─blog
+│  │  ├─2-24-2025-prologue
+│  │  │  │  2-24-2025-prologue.html
+│  │  │  │
+│  │  │  └─assets
+│  │  │          1.jpg
+│  │  │          3.jpg
+│  │  │
+│  │  └─test-article
+│  │      │  test-article.html
+│  │      │
+│  │      └─assets
+│  │              1.jpg
+│  │
+│  ├─design
+│  │      sakana.html
+│  │
+│  ├─photograph
+│  │  ├─23th-birthday
+│  │  │      23th-birthday.html
+│  │  │      portrait.png
+│  │  │
+│  │  ├─24th-birthday
+│  │  │      24th-birthday.html
+│  │  │      portrait.png
+│  │  │
+│  │  ├─arch-wuhan
+│  │  │      arch.html
+│  │  │      arch.jpg
+│  │  │
+│  │  ├─beyondRadiance
+│  │  │      beyondRadiance.html
+│  │  │      beyondRadiance.jpg
+│  │  │
+│  │  ├─dancer
+│  │  │      dancer.html
+│  │  │      dancer.jpg
+│  │  │
+│  │  ├─danxia
+│  │  │      danxia.css
+│  │  │      danxia.html
+│  │  │      danxia.jpg
+│  │  │
+│  │  ├─dock
+│  │  │      dock.html
+│  │  │      dock.jpg
+│  │  │
+│  │  ├─fadingweddingdressing
+│  │  │      fadingweddingdressing.html
+│  │  │      fadingweddingdressing.jpg
+│  │  │
+│  │  ├─flowerVendor
+│  │  │      flowerVendor.html
+│  │  │      flowerVendor1.jpg
+│  │  │      flowerVendor2.jpg
+│  │  │
+│  │  ├─flowerVendor2
+│  │  │      flowerVendor.html
+│  │  │      flowerVendor1.jpg
+│  │  │      flowerVendor2.jpg
+│  │  │
+│  │  ├─grid1
+│  │  │      grid1.html
+│  │  │      grid1.jpg
+│  │  │      grid2.jpg
+│  │  │
+│  │  ├─hotelLisboaMacau
+│  │  │      hotelLisboaMacau.html
+│  │  │      hotelLisboaMacau.jpg
+│  │  │
+│  │  ├─leadOut
+│  │  │      leadOut.html
+│  │  │      leadOut.jpg
+│  │  │
+│  │  ├─models
+│  │  │      photo.html
+│  │  │
+│  │  ├─nightStall
+│  │  │      nightStall.html
+│  │  │      nightStall.jpg
+│  │  │      nightStall1.jpg
+│  │  │
+│  │  ├─riverguardian
+│  │  │      rg.jpg
+│  │  │      riverguardian.html
+│  │  │      riverguardian.jpg
+│  │  │
+│  │  ├─rust&blossom
+│  │  │      rust&blossom.html
+│  │  │      rust&blossom.jpg
+│  │  │
+│  │  ├─sh1
+│  │  │      sh1.html
+│  │  │      sh1.jpg
+│  │  │
+│  │  ├─shPolygrandtheatre
+│  │  │      shPolygrandtheatre.html
+│  │  │      shPolygrandtheatre.jpg
+│  │  │
+│  │  ├─urbanStyle
+│  │  │      urbanStyle.html
+│  │  │      urbanStyle.jpg
+│  │  │
+│  │  ├─vendor
+│  │  │      vendor.html
+│  │  │      vendor.jpg
+│  │  │
+│  │  ├─vendor2
+│  │  │      vendor.html
+│  │  │      vendor.jpg
+│  │  │
+│  │  ├─void
+│  │  │      void.html
+│  │  │      void.jpg
+│  │  │
+│  │  ├─walkPasssh
+│  │  │      walkPasssh.html
+│  │  │      walkPasssh.jpg
+│  │  │
+│  │  └─westernMarket
+│  │          westernMarket.html
+│  │          westernMarket.jpg
+│  │
+│  └─research
+│      └─shadowplayvr
+│          │  shadowplayvr.html
+│          │
+│          └─assets
+├─assets
+│  │  back-icon.png
+│  │  email-icon.png
+│  │  favicon.png
+│  │  filter-design-icon.png
+│  │  filter-ideas-icon.png
+│  │  filter-photography-icon.png
+│  │  github-icon.png
+│  │  navigator.png
+│  │  orcid-icon.png
+│  │  placeholder.jpg
+│  │  read-more-icon.png
+│  │  recommended-icon.png
+│  │  reset-icon.png
+│  │  scholar-icon.png
+│  │  screen-image.png
+│  │  site.webmanifest
+│  │  sort-asc-icon.png
+│  │  sort-desc-icon.png
+│  │  texture.png
+│  │
+│  ├─aboutme
+│  │      mobile-portrait.png
+│  │      portrait.png
+│  │
+│  ├─data
+│  │      images.json
+│  │      portfolio.json
+│  │
+│  ├─photos
+│  │  ├─photos
+│  │  │  └─your-photo.jpg
+│  │  └─selfies
+│  │          2020-7-11.JPG
+│  │
+│  ├─screen-images
+│  │      danxia.jpg
+│  │      desk.JPG
+│  │      fadingweddingdressing.jpg
+│  │      grid.jpg
+│  │      jianghezhishou.jpg
+│  │      nightStall.jpg
+│  │      sakana.JPG
+│  │      sandroad.jpg
+│  │      shPolygrandtheatre.jpg
+│  │      void.jpg
+│  │
+│  └─translations
+│          en.json
+│          zh-Hans.json
+│          zh-Hant.json
+│
+├─scripts
+│      script.js
+│
+└─styles
+    │  about.css
+    │  components.css
+    │  index.css
+    │  photo.css
+    │  portfolio.css
+    │
+    ├─assets
+    │  │  current-page-icon.png
+    │  │
+    │  └─fonts
+    │      │  microsoft-yahei.ttf
+    │      │
+    │      ├─anek-latin
+    │      │      AnekLatin-Bold.ttf
+    │      │      AnekLatin-ExtraBold.ttf
+    │      │      AnekLatin-ExtraLight.ttf
+    │      │      AnekLatin-Light.ttf
+    │      │      AnekLatin-Medium.ttf
+    │      │      AnekLatin-Regular.ttf
+    │      │      AnekLatin-SemiBold.ttf
+    │      │      AnekLatin-Thin.ttf
+    │      │
+    │      ├─playfair-display
+    │      │      PlayfairDisplay-Black.ttf
+    │      │      PlayfairDisplay-BlackItalic.ttf
+    │      │      PlayfairDisplay-Bold.ttf
+    │      │      PlayfairDisplay-BoldItalic.ttf
+    │      │      PlayfairDisplay-Italic.ttf
+    │      │      PlayfairDisplay-Regular.ttf
+    │      │
+    │      └─SmileySans
+    │              SmileySans-Oblique.ttf
+    │
+    └─components
+            background.css
+            base.css
+            buttons.css
+            cards.css
+            fonts.css
+            grid.css
+            icons.css
+            navbar.css
+            typography.css
+            utilities.css 
  
 以下是文件: about.html 
  
@@ -489,49 +738,85 @@ function setupFilterAndSort() {
     }
 
     function sortItems(order) {
+        // 添加移动动画
         portfolioItems.forEach(item => item.classList.add('move'));
-        portfolioItems.sort((a, b) => {
-            const dateA = new Date(a.getAttribute('data-date'));
-            const dateB = new Date(b.getAttribute('data-date'));
-            return order === 'asc' ? dateA - dateB : dateB - dateA;
-        });
-        portfolioGrid.innerHTML = '';
-        portfolioItems.forEach(item => {
-            if (currentFilter === 'all' || item.getAttribute('data-tags').includes(currentFilter)) {
-                portfolioGrid.appendChild(item);
-            }
-        });
+
+        // 延迟执行排序和重新布局
         setTimeout(() => {
-            portfolioItems.forEach(item => item.classList.remove('move'));
-        }, 500);
+            portfolioItems.sort((a, b) => {
+                const dateA = new Date(a.getAttribute('data-date'));
+                const dateB = new Date(b.getAttribute('data-date'));
+                return order === 'asc' ? dateA - dateB : dateB - dateA;
+            });
+
+            // 清空网格
+            portfolioGrid.innerHTML = '';
+
+            // 重新添加卡片
+            portfolioItems.forEach(item => {
+                if (currentFilter === 'all' || item.getAttribute('data-tags').includes(currentFilter)) {
+                    portfolioGrid.appendChild(item);
+                }
+            });
+
+            // 移除移动动画
+            setTimeout(() => {
+                portfolioItems.forEach(item => item.classList.remove('move'));
+            }, 10); // 稍微延迟以确保动画生效
+        }, 500); // 等待动画完成
     }
 
     function filterItems(category, button) {
         currentFilter = category;
-        portfolioItems.forEach(item => {
-            const itemTags = item.getAttribute('data-tags')
-                .split(',')
-                .map(tag => tag.trim().toLowerCase());
 
-            const isFeatured = itemTags.includes('精选'.toLowerCase());
+        // 添加移动动画
+        portfolioItems.forEach(item => item.classList.add('move'));
 
-            if (category === '精选') {
-                item.style.display = isFeatured ? 'block' : 'none';
-            } else if (category === 'all' || itemTags.includes(category.toLowerCase())) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
+        // 延迟执行筛选和重新布局
+        setTimeout(() => {
+            portfolioItems.forEach(item => {
+                const itemTags = item.getAttribute('data-tags')
+                    .split(',')
+                    .map(tag => tag.trim().toLowerCase());
+
+                const isFeatured = itemTags.includes('精选'.toLowerCase());
+
+                if (category === '精选') {
+                    item.style.display = isFeatured ? 'block' : 'none';
+                } else if (category === 'all' || itemTags.includes(category.toLowerCase())) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // 移除移动动画
+            setTimeout(() => {
+                portfolioItems.forEach(item => item.classList.remove('move'));
+            }, 10); // 稍微延迟以确保动画生效
+        }, 500); // 等待动画完成
 
         setActiveButton(button);
     }
 
     function resetFilters() {
         currentFilter = 'all';
-        portfolioItems.forEach(item => {
-            item.style.display = 'block';
-        });
+
+        // 添加移动动画
+        portfolioItems.forEach(item => item.classList.add('move'));
+
+        // 延迟执行重置和重新布局
+        setTimeout(() => {
+            portfolioItems.forEach(item => {
+                item.style.display = 'block';
+            });
+
+            // 移除移动动画
+            setTimeout(() => {
+                portfolioItems.forEach(item => item.classList.remove('move'));
+            }, 10); // 稍微延迟以确保动画生效
+        }, 500); // 等待动画完成
+
         setActiveButton(null);
     }
 
@@ -711,6 +996,141 @@ if (backButton) {
 document.addEventListener('DOMContentLoaded', () => {
     loadImages();
     loadPortfolio();
+});
+
+
+// 底部提示逻辑
+window.addEventListener('scroll', function() {
+    const bottomTip = document.getElementById('bottom-tip');
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+
+    // 判断是否滚动到底部
+    if (scrollTop + clientHeight >= scrollHeight - 50) { // 50 是容错范围
+        bottomTip.classList.add('show'); // 显示提示
+    } else {
+        bottomTip.classList.remove('show'); // 隐藏提示
+    }
+});
+
+// 复制文本函数
+function copyText(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        showNotification(); // 显示提示框
+    }).catch(() => {
+        showNotification('复制失败，请手动复制'); // 显示错误提示
+    });
+}
+
+// 显示提示框
+function showNotification(message = '已复制到剪贴板！') {
+    const notification = document.getElementById('copy-notification');
+    if (notification) {
+        notification.querySelector('p').textContent = message; // 更新提示内容
+        notification.classList.add('show'); // 显示提示框
+        setTimeout(() => {
+            notification.classList.remove('show'); // 3秒后隐藏提示框
+        }, 3000);
+    }
+}
+
+// 语言切换逻辑
+let translations = {};
+
+async function loadTranslations(lang) {
+    try {
+        const response = await fetch(`assets/translations/${lang}.json`);
+        if (!response.ok) {
+            throw new Error(`Failed to load ${lang}.json: ${response.statusText}`);
+        }
+        translations[lang] = await response.json();
+        console.log(`Loaded ${lang}.json:`, translations[lang]);
+        switchLanguage(lang);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+function switchLanguage(lang) {
+    document.documentElement.lang = lang;
+    if (!translations[lang]) {
+        loadTranslations(lang);
+        return;
+    }
+
+    // 获取所有需要翻译的元素
+    const elements = document.querySelectorAll('[data-key]');
+    elements.forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang][key]) {
+            if (Array.isArray(translations[lang][key])) {
+                // 如果是数组，动态生成列表项
+                if (key === 'publicationsList') {
+                    // 处理出版物列表
+                    el.innerHTML = translations[lang][key].map(item => `
+                        <li>
+                            <strong>${item.title}</strong><br>
+                            <em>${item.author}</em><br>
+                            ${item.conference}<br>
+                            <a href="${item.doi}" target="_blank"><em>[DOI]</em></a>
+                        </li>
+                    `).join('');
+                } else if (key === 'projectExperienceList') {
+                    // 处理项目经验列表
+                    el.innerHTML = translations[lang][key].map(item => `
+                        <li>
+                            <em>${item.period}</em>, ${item.title}<br>
+                            <span>${item.institution}</span><br>
+                            > ${item.role}
+                        </li>
+                    `).join('');
+                } else if (key === 'awardsList') {
+                    // 处理奖项列表
+                    el.innerHTML = translations[lang][key].map(item => `<li>${item}</li>`).join('');
+                }
+            } else if (typeof translations[lang][key] === 'object') {
+                // 如果是对象，根据对象结构动态生成内容
+                if (key === 'skillsText') {
+                    const skills = translations[lang][key];
+                    el.innerHTML = `
+                        <div class="skill-category">
+                            <h3>${skills.designTools}</h3>
+                            <ul>${skills.designToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>${skills.multimediaTools}</h3>
+                            <ul>${skills.multimediaToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>${skills.languageProficiency}</h3>
+                            <ul>${skills.languageProficiencyList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                    `;
+                }
+            } else {
+                // 如果是普通文本，直接更新内容
+                el.innerHTML = translations[lang][key];
+            }
+        } else {
+            console.warn(`Translation not found for key: ${key} in language: ${lang}`);
+        }
+    });
+
+    // 更新语言切换按钮的状态
+    const languageButtons = document.querySelectorAll('.language-switcher button');
+    languageButtons.forEach(button => {
+        if (button.getAttribute('onclick').includes(lang)) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+}
+
+// 默认显示英文
+document.addEventListener('DOMContentLoaded', () => {
+    switchLanguage('en');
 });
  
 以下是文件: about.css 
@@ -1159,7 +1579,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* 首页文字按钮 */
 .home-buttons {
     position: fixed;
-    top: 180px; /* 靠近银幕顶部 */
+    top: 130px; /* 靠近银幕顶部 */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -1304,7 +1724,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*联系方式*/
 .contact-section {
     position: fixed;
-    bottom: 150px; /* 靠近银幕底部 */
+    bottom: 100px; /* 靠近银幕底部 */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -1698,6 +2118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     justify-content: center; /* 卡片居中 */
     align-items: start;
     grid-auto-flow: dense;
+    transition: grid-template-columns 0.5s ease; /* 网格布局过渡 */
 }
 
 /* 搜索结果较少时的布局 */
@@ -1714,8 +2135,14 @@ document.addEventListener('DOMContentLoaded', () => {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.3s ease, opacity 0.5s ease;;
     margin: 0 auto; /* 居中显示 */
+}
+
+.portfolio-item.move {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0; /* 移动时暂时隐藏 */
+    transform: translateY(20px); /* 向下移动一点 */
 }
 
 .portfolio-item:hover {
