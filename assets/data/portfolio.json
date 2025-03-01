@@ -103,8 +103,8 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/beyondRadiance/beyondRadiance.jpg",
         "link": "articles/photograph/beyondRadiance/beyondRadiance.html",
-        "tags": ["精选，摄影"],
-        "description": "",
+        "tags": ["精选","摄影"],
+        "description": "竞赛作品",
         "date": "2022-07-06"
     },
     {
@@ -155,9 +155,9 @@
     {
         "title": "夜更 Night Stall",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/photograph/nightStall/nightStall.jpg",
+        "data-src": "articles/photograph/nightStall/nightStall1.jpg",
         "link": "articles/photograph/nightStall/nightStall.html",
-        "tags": ["摄影"],
+        "tags": ["精选","摄影"],
         "description": "",
         "date": "2023-02-07"
     },
