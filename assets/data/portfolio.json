@@ -97,5 +97,41 @@
         "tags": ["摄影"],
         "description": "某些夜晚，再进一步，振翅欲飞。",
         "date": "2022-11-19"
+    },
+    {
+        "title": "鲜艳幕后 Beyond Radiance",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/beyondRadiance/beyondRadiance.jpg",
+        "link": "articles/photograph/beyondRadiance/beyondRadiance.html",
+        "tags": ["精选，摄影"],
+        "description": "",
+        "date": "2022-07-06"
+    },
+    {
+        "title": "西区街市 Western Market",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/westernMarket/westernMarket.jpg",
+        "link": "articles/photograph/westernMarket/westernMarket.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2023-02-10"
+    },
+    {
+        "title": "葡京酒店 Hotel Lisboa Macau",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/hotelLisboaMacau/hotelLisboaMacau.jpg",
+        "link": "articles/photograph/hotelLisboaMacau/hotelLisboaMacau.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2023-02-19"
+    },
+    {
+        "title": "花贩 Flower Vendor",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/flowerVendor/flowerVendor2.jpg",
+        "link": "articles/photograph/flowerVendor/flowerVendor.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2022-11-16"
     }
 ]

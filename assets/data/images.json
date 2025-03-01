@@ -53,5 +53,19 @@
         "captionLine1": "魚 Sakana",
         "captionLine2": "2020-8-17.",
         "link": "articles/design/sakana.html"
+    },
+    {
+        "src": "",
+        "captionLine1": "葡京酒店 Hotel Lisboa Macau",
+        "captionLine2": "澳门，中国",
+        "captionLine3": "Macao, China",
+        "link": "articles/photograph/hotelLisboaMacau/hotelLisboaMacau.html"
+    },
+    {
+        "src": "",
+        "captionLine1": "西区街市 Western Market",
+        "captionLine2": "西环，香港，中国",
+        "captionLine3": "Sai Wan, Hong Kong, China",
+        "link": "articles/photograph/westernMarket/westernMarket.html"
     }
 ]

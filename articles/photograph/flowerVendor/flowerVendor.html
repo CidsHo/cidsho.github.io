@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/photo.css"> <!-- 照片展示页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="photo-page">
+    <!-- 照片展示部分 -->
+    <section class="photo-container">
+        <!-- 导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 菜单栏 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+            <!-- More 和图标 -->
+            <div class="more-frontpage">
+                <div class="icon-row">
+                    <a href="mailto:hocids@tongji.edu.cn">
+                        <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                    </a>
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-wrapper">
+            <img src="flowerVendor1.jpg" alt="照片标题" class="photo-image">
+            <div class="photo-info">
+                <h1 class="photo-title">花贩其一 Flower Vendor 1</h1>
+                <div class="photo-tags">
+                    <span class="tag">嘉定区，上海，中国</span>
+                    <span class="tag">Jiading District, Shanghai, China</span>
+                    <span class="tag">2022-11-16</span>
+                </div>
+                <p class="photo-description"></p>
+                <p class="photo-description"></p>
+                <div class="photo-tags">
+                    <span class="tag">人像</span>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="photo-wrapper">
+                <img src="flowerVendor2.jpg" alt="照片标题" class="photo-image">
+                <div class="photo-info">
+                    <h1 class="photo-title">花贩其二 Flower Vendor 2</h1>
+                    <div class="photo-tags">
+                        <span class="tag">嘉定区，上海，中国</span>
+                        <span class="tag">Jiading District, Shanghai, China</span>
+                        <span class="tag">2022-11-16</span>
+                    </div>
+                    <p class="photo-description"></p>
+                    <p class="photo-description"></p>
+                    <div class="photo-tags">
+                        <span class="tag">人像</span>
+                    </div>
+                </div>
+            
+            <br>
+            <!-- 返回按钮 -->
+            <button id="back-button" class="back-button">
+                <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+                返回
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 脚本 -->
+    <script src="../../../scripts/script.js"></script>
+    <script>
+        // 禁用右键菜单和复制功能
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+    </script>
+</body>
+</html>

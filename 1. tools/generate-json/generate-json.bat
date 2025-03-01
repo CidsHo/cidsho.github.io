@@ -43,16 +43,15 @@ for /f "tokens=*" %%a in (%input_file%) do (
         set /a line_num+=1
         if "!line!"=="/e" set "line="
         if !line_num!==1 set "title=!line!"
-        if !line_num!==2 set "image=!line!"
-        if !line_num!==3 set "data_src=!line!"
-        if !line_num!==4 set "link=!line!"
-        if !line_num!==5 set "tags=!line!"
-        if !line_num!==6 set "description_cn=!line!"
-        if !line_num!==7 set "description_en=!line!"
-        if !line_num!==8 set "date=!line!"
-        if !line_num!==9 set "src=!line!"
-        if !line_num!==10 set "location=!line!"
-        if !line_num!==11 set "location_en=!line!"
+        if !line_num!==2 set "data_src=!line!"
+        if !line_num!==3 set "link=!line!"
+        if !line_num!==4 set "tags=!line!"
+        if !line_num!==5 set "description_cn=!line!"
+        if !line_num!==6 set "description_en=!line!"
+        if !line_num!==7 set "date=!line!"
+        if !line_num!==8 set "src=!line!"
+        if !line_num!==9 set "location=!line!"
+        if !line_num!==10 set "location_en=!line!"
     )
 )
 
@@ -67,7 +66,6 @@ exit /b
 :generate_json
     :: 检查并处理空字段
     if "!title!"=="" set "title="
-    if "!image!"=="" set "image="
     if "!data_src!"=="" set "data_src="
     if "!link!"=="" set "link="
     if "!tags!"=="" set "tags="
@@ -82,7 +80,7 @@ exit /b
     (
         echo {
         echo     "title": "!title!",
-        echo     "image": "!image!",
+        echo     "image": "assets/placeholder.jpg",
         echo     "data-src": "!data_src!",
         echo     "link": "!link!",
         echo     "tags": ["!tags!"],
@@ -95,9 +93,9 @@ exit /b
     (
         echo {
         echo     "src": "!src!",
-        echo     "captionLine1": "!location!",
-        echo     "captionLine2": "!location_en!",
-        echo     "captionLine3": "!date!",
+        echo     "captionLine1": "!title!",
+        echo     "captionLine2": "!location!",
+        echo     "captionLine3": "!location_en!",
         echo     "link": "!link!"
         echo },
     ) >> %images_output%

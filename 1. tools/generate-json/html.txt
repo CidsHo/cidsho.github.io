@@ -1,14 +1,5 @@
  
-<div class="photo-info">
-    <h1 class="photo-title">上海保利大剧院 Shanghai Poly Grand Theatre</h1>
-    <div class="photo-tags">
-        <span class="tag">嘉定区，上海，中国</span>
-        <span class="tag">Jiading District, Shanghai, China</span>
-        <span class="tag">2022/11/6</span>
-    </div>
-    <p class="photo-description">商业摄影，请勿随意使用</p>
-    <p class="photo-description">Copyrighted Commercial Photography - All Rights Reserved</p>
-    <div class="photo-tags">
-        <span class="tag">精选，摄影</span>
-    </div>
-</div>
+
+
+
+

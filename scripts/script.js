@@ -1,5 +1,3 @@
-// script.js
-
 // 导航栏逻辑
 const navToggle = document.getElementById('nav-toggle');
 const menuOverlay = document.getElementById('menu-overlay');
@@ -338,6 +336,16 @@ function lazyLoadImages() {
     lazyImages.forEach(img => {
         observer.observe(img); // 开始观察图片
     });
+}
+
+// 返回按钮逻辑
+const backButton = document.getElementById('back-button');
+if (backButton) {
+    backButton.addEventListener('click', () => {
+        window.history.back(); // 返回上一个页面
+    });
+} else {
+    console.error('返回按钮未找到');
 }
 
 // 页面加载时初始化
