@@ -162,7 +162,7 @@
         "date": "2023-02-07"
     },
     {
-        "title": "商贩 Vendor",
+        "title": "小民 Vendor",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/vendor/vendor.jpg",
         "link": "articles/photograph/vendor/vendor.html",
@@ -178,7 +178,43 @@
         "tags": ["摄影"],
         "description": "",
         "date": "2022-11-04"
+    },
+    {
+        "title": "Fading Wedding Dressing",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/fadingweddingdressing/fadingweddingdressing.jpg",
+        "link": "articles/photograph/fadingweddingdressing/fadingweddingdressing.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2022-09-13"
+    },
+    {
+        "title": "小民 Vendor",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/vendor2/vendor.jpg",
+        "link": "articles/photograph/vendor2/vendor.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2023-05-02"
+    },
+    {
+        "title": "上海 Shanghai",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/sh1/sh1.jpg",
+        "link": "articles/photograph/sh1/sh1.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2022-10-03"
     },    
+    {
+        "title": "都市风格 Urban Style",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/urbanStyle/urbanStyle.jpg",
+        "link": "articles/photograph/urbanStyle/urbanStyle.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2022-09-30"
+    },
     {
         "title": "花贩 Flower Vendor",
         "image": "assets/placeholder.jpg",

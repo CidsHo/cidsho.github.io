@@ -1,60 +1,47 @@
-马鞍山码头 Dock
-articles/photograph/dock/dock.jpg
-articles/photograph/dock/dock.html
+Fading Wedding Dressing
+articles/photograph/fadingweddingdressing/fadingweddingdressing.jpg
+articles/photograph/fadingweddingdressing/fadingweddingdressing.html
 摄影
 /e
 /e
-2019-08-30
-/e
-马鞍山，沙田，香港，中国
-Ma On Shan, Shatin, Hong Kong, China
+2022-09-13
+assets/screen-images/fadingweddingdressing.jpg
+清远市，广东，中国
+Qingyuan, Guangdong, China
 /end
 
-淡出 Lead Out
-articles/photograph/leadOut/leadOut.jpg
-articles/photograph/leadOut/leadOut.html
+小民 Vendor
+articles/photograph/vendor2/vendor.jpg
+articles/photograph/vendor2/vendor.html
 摄影
 /e
 /e
-2022-10-07
+2023-05-02
+/e
+湾仔，香港，中国
+Wan Chai, Hong Kong, China
+/end
+
+上海 Shanghai
+articles/photograph/sh1/sh1.jpg
+articles/photograph/sh1/sh1.html
+摄影
+/e
+/e
+2022-10-03
 /e
 黄浦区，上海，中国
 Huangpu District, Shanghai, China
 /end
 
-夜更 Night Stall
-articles/photograph/nightStall/nightStall.jpg
-articles/photograph/nightStall/nightStall.html
+都市风格 Urban Style
+articles/photograph/urbanStyle/urbanStyle.jpg
+articles/photograph/urbanStyle/urbanStyle.html
 摄影
 /e
 /e
-2023-02-07
-/e
-上环，香港，中国
-Sheung Wan, Hong Kong, China
+2022-09-30
+assets/screen-images/urbanStyle.jpg
+黄浦区，上海，中国
+Huangpu District, Shanghai, China
 /end
-
-商贩 Vendor
-articles/photograph/vendor/vendor.jpg
-articles/photograph/vendor/vendor.html
-摄影
-/e
-/e
-2022-11-06
-/e
-嘉定区，上海，中国
-Jiading District, Shanghai, China
-/end
-
-Walk Pass SH
-articles/photograph/walkPasssh/walkPasssh.jpg
-articles/photograph/walkPasssh/walkPasssh.html
-摄影
-/e
-/e
-2022-11-04
-/e
-杨浦区，上海，中国
-Yangpu District, Shanghai, China
-/end
-

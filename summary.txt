@@ -1,168 +1,4 @@
- 这是文件架构：
-├─articles
-│  ├─blog
-│  │  ├─2-24-2025-prologue
-│  │  │  │  2-24-2025-prologue.html
-│  │  │  │
-│  │  │  └─assets
-│  │  │          1.jpg
-│  │  │          3.jpg
-│  │  │
-│  │  └─test-article
-│  │      │  test-article.html
-│  │      │
-│  │      └─assets
-│  │              1.jpg
-│  │
-│  ├─design
-│  │      sakana.html
-│  │
-│  ├─photograph
-│  │  ├─23th-birthday
-│  │  │      23th-birthday.html
-│  │  │      portrait.png
-│  │  │
-│  │  ├─24th-birthday
-│  │  │      24th-birthday.html
-│  │  │      portrait.png
-│  │  │
-│  │  ├─dancer
-│  │  │      dancer.html
-│  │  │      dancer.jpg
-│  │  │
-│  │  ├─danxia
-│  │  │      danxia.css
-│  │  │      danxia.html
-│  │  │      danxia.jpg
-│  │  │
-│  │  ├─models
-│  │  │      photo.html
-│  │  │
-│  │  ├─riverguardian
-│  │  │      rg.jpg
-│  │  │      riverguardian.html
-│  │  │      riverguardian.jpg
-│  │  │
-│  │  ├─rust&blossom
-│  │  │      rust&blossom.html
-│  │  │      rust&blossom.jpg
-│  │  │
-│  │  └─void
-│  │          void.html
-│  │          void.jpg
-│  │
-│  └─research
-│      └─shadowplayvr
-│          │  shadowplayvr.html
-│          │
-│          └─assets
-├─assets
-│  │  back-icon.png
-│  │  email-icon.png
-│  │  favicon.png
-│  │  filter-design-icon.png
-│  │  filter-ideas-icon.png
-│  │  filter-photography-icon.png
-│  │  github-icon.png
-│  │  navigator.png
-│  │  orcid-icon.png
-│  │  placeholder.jpg
-│  │  read-more-icon.png
-│  │  recommended-icon.png
-│  │  reset-icon.png
-│  │  scholar-icon.png
-│  │  screen-image.png
-│  │  site.webmanifest
-│  │  sort-asc-icon.png
-│  │  sort-desc-icon.png
-│  │  texture.png
-│  │
-│  ├─aboutme
-│  │      mobile-portrait.png
-│  │      portrait.png
-│  │
-│  ├─data
-│  │      images.json
-│  │      portfolio.json
-│  │
-│  ├─photos
-│  │  ├─photos
-│  │  │  └─your-photo.jpg
-│  │  └─selfies
-│  │          2020-7-11.JPG
-│  │
-│  ├─screen-images
-│  │      danxia.jpg
-│  │      desk.JPG
-│  │      jianghezhishou.jpg
-│  │      sakana.JPG
-│  │      sandroad.jpg
-│  │      void.jpg
-│  │
-│  └─translations
-│          en.json
-│          zh-Hans.json
-│          zh-Hant.json
-│
-├─scripts
-│      script.js
-│
-├─styles
-│  │  about.css
-│  │  components.css
-│  │  index.css
-│  │  photo.css
-│  │  portfolio.css
-│  │  tem.txt
-│  │
-│  ├─assets
-│  │  │  current-page-icon.png
-│  │  │
-│  │  └─fonts
-│  │      │  microsoft-yahei.ttf
-│  │      │
-│  │      ├─anek-latin
-│  │      │      AnekLatin-Bold.ttf
-│  │      │      AnekLatin-ExtraBold.ttf
-│  │      │      AnekLatin-ExtraLight.ttf
-│  │      │      AnekLatin-Light.ttf
-│  │      │      AnekLatin-Medium.ttf
-│  │      │      AnekLatin-Regular.ttf
-│  │      │      AnekLatin-SemiBold.ttf
-│  │      │      AnekLatin-Thin.ttf
-│  │      │
-│  │      ├─playfair-display
-│  │      │      PlayfairDisplay-Black.ttf
-│  │      │      PlayfairDisplay-BlackItalic.ttf
-│  │      │      PlayfairDisplay-Bold.ttf
-│  │      │      PlayfairDisplay-BoldItalic.ttf
-│  │      │      PlayfairDisplay-Italic.ttf
-│  │      │      PlayfairDisplay-Regular.ttf
-│  │      │
-│  │      └─SmileySans
-│  │              SmileySans-Oblique.ttf
-│  │
-│  └─components
-│          background.css
-│          base.css
-│          buttons.css
-│          cards.css
-│          fonts.css
-│          grid.css
-│          icons.css
-│          navbar.css
-│          typography.css
-│          utilities.css
-│
-└─tools
-    └─generate-json
-        │  entrydemo.txt
-        │  generate-json.bat
-        │
-        └─data
-                entries.txt
-
-
+ 
  
 以下是文件: about.html 
  
@@ -499,7 +335,7 @@
                 </button>
                 <button id="filter-star-icon" class="filter-button">
                     <img src="assets/recommended-icon.png" alt="精选" class="icon">
-                  </button>
+                </button>
             </div>
         </div>
 
@@ -786,6 +622,189 @@
 </body>
 </html>
  
+以下是文件: arch.html 
+ 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/photo.css"> <!-- 照片展示页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../assets/favicon.png">
+    <link rel="manifest" href="../../../assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="photo-page">
+    <!-- 导航栏 -->
+    <header>
+        <nav id="navbar">
+            <button id="nav-toggle">
+                <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+            </button>
+        </nav>
+    </header>
+
+    <!-- 菜单栏 -->
+    <div id="menu-overlay" class="menu-overlay">
+        <ul id="nav-menu">
+            <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+            <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+            <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
+        </ul>
+
+        <!-- More 和图标 -->
+        <div class="more-frontpage">
+            <div class="icon-row">
+                <a href="mailto:hocids@tongji.edu.cn">
+                    <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                </a>
+                <a href="https://github.com/CidsHo" target="_blank">
+                    <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                </a>
+                <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                    <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                </a>
+                <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                    <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 照片展示部分 -->
+    <section class="photo-container">
+        <div class="photo-wrapper">
+            <img src="arch.jpg" alt="照片标题" class="photo-image">
+            <div class="photo-info">
+                <h1 class="photo-title">拱 Arch</h1>
+                <div class="photo-tags">
+                    <span class="tag">武汉，湖北,中国</span>
+                    <span class="tag">Wuhan, Hubei, China</span>
+                    <span class="tag">2021-10-25</span>
+                </div>
+                <br>
+                <div class="photo-tags">
+                    <span class="tag">风景人像</span>
+                </div>
+            </div>
+            <br>
+            <!-- 返回按钮 -->
+            <button id="back-button" class="back-button">
+                <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+                返回
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 脚本 -->
+    <script src="../../../scripts/script.js"></script>
+    <script>
+        // 禁用右键菜单和复制功能
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+    </script>
+</body>
+</html>
+ 
+以下是文件: beyondRadiance.html 
+ 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/photo.css"> <!-- 照片展示页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="photo-page">
+    <!-- 照片展示部分 -->
+    <section class="photo-container">
+        <!-- 导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 菜单栏 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+            <!-- More 和图标 -->
+            <div class="more-frontpage">
+                <div class="icon-row">
+                    <a href="mailto:hocids@tongji.edu.cn">
+                        <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                    </a>
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-wrapper">
+            <img src="beyondRadiance.jpg" alt="照片标题" class="photo-image">
+            <div class="photo-info">
+                <h1 class="photo-title">鲜艳幕后 Beyond Radiance</h1>
+                <div class="photo-tags">
+                    <span class="tag">昆明，云南，中国</span>
+                    <span class="tag">Kunming, Yunnan, China</span>
+                    <span class="tag">2022-07-06</span>
+                </div>
+                <p class="photo-description">竞赛作品</p>
+                <p class="photo-description">For Competition Uses.</p>
+                <div class="photo-tags">
+                    <span class="tag">精选</span>
+                    <span class="tag">人像</span>
+                </div>
+            </div>
+            
+            <br>
+            <!-- 返回按钮 -->
+            <button id="back-button" class="back-button">
+                <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+                返回
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 脚本 -->
+    <script src="../../../scripts/script.js"></script>
+    <script>
+        // 禁用右键菜单和复制功能
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+    </script>
+</body>
+</html>
+ 
 以下是文件: dancer.html 
  
 <!DOCTYPE html>
@@ -982,6 +1001,609 @@
 </body>
 </html>
  
+以下是文件: dock.html 
+ 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/photo.css"> <!-- 照片展示页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="photo-page">
+    <!-- 照片展示部分 -->
+    <section class="photo-container">
+        <!-- 导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 菜单栏 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+            <!-- More 和图标 -->
+            <div class="more-frontpage">
+                <div class="icon-row">
+                    <a href="mailto:hocids@tongji.edu.cn">
+                        <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                    </a>
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-wrapper">
+            <img src="dock.jpg" alt="照片标题" class="photo-image">
+            <div class="photo-info">
+                <h1 class="photo-title">马鞍山码头 Dock</h1>
+                <div class="photo-tags">
+                    <span class="tag">马鞍山，沙田，香港，中国</span>
+                    <span class="tag">Ma On Shan, Shatin, Hong Kong, China</span>
+                    <span class="tag">2019-08-30</span>
+                </div>
+                <p class="photo-description"></p>
+                <p class="photo-description"></p>
+                <div class="photo-tags">
+                    <span class="tag">摄影</span>
+                </div>
+            </div>
+            
+            <br>
+            <!-- 返回按钮 -->
+            <button id="back-button" class="back-button">
+                <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+                返回
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 脚本 -->
+    <script src="../../../scripts/script.js"></script>
+    <script>
+        // 禁用右键菜单和复制功能
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+    </script>
+</body>
+</html>
+ 
+以下是文件: flowerVendor.html 
+ 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/photo.css"> <!-- 照片展示页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="photo-page">
+    <!-- 照片展示部分 -->
+    <section class="photo-container">
+        <!-- 导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 菜单栏 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+            <!-- More 和图标 -->
+            <div class="more-frontpage">
+                <div class="icon-row">
+                    <a href="mailto:hocids@tongji.edu.cn">
+                        <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                    </a>
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-wrapper">
+            <img src="flowerVendor1.jpg" alt="照片标题" class="photo-image">
+            <div class="photo-info">
+                <h1 class="photo-title">花贩其一 Flower Vendor 1</h1>
+                <div class="photo-tags">
+                    <span class="tag">嘉定区，上海，中国</span>
+                    <span class="tag">Jiading District, Shanghai, China</span>
+                    <span class="tag">2022-11-16</span>
+                </div>
+                <p class="photo-description"></p>
+                <p class="photo-description"></p>
+                <div class="photo-tags">
+                    <span class="tag">人像</span>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="photo-wrapper">
+                <img src="flowerVendor2.jpg" alt="照片标题" class="photo-image">
+                <div class="photo-info">
+                    <h1 class="photo-title">花贩其二 Flower Vendor 2</h1>
+                    <div class="photo-tags">
+                        <span class="tag">嘉定区，上海，中国</span>
+                        <span class="tag">Jiading District, Shanghai, China</span>
+                        <span class="tag">2022-11-16</span>
+                    </div>
+                    <p class="photo-description"></p>
+                    <p class="photo-description"></p>
+                    <div class="photo-tags">
+                        <span class="tag">人像</span>
+                    </div>
+                </div>
+            
+            <br>
+            <!-- 返回按钮 -->
+            <button id="back-button" class="back-button">
+                <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+                返回
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 脚本 -->
+    <script src="../../../scripts/script.js"></script>
+    <script>
+        // 禁用右键菜单和复制功能
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+    </script>
+</body>
+</html>
+ 
+以下是文件: flowerVendor.html 
+ 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/photo.css"> <!-- 照片展示页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="photo-page">
+    <!-- 照片展示部分 -->
+    <section class="photo-container">
+        <!-- 导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 菜单栏 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+            <!-- More 和图标 -->
+            <div class="more-frontpage">
+                <div class="icon-row">
+                    <a href="mailto:hocids@tongji.edu.cn">
+                        <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                    </a>
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-wrapper">
+            <img src="flowerVendor1.jpg" alt="照片标题" class="photo-image">
+            <div class="photo-info">
+                <h1 class="photo-title">花贩其一 Flower Vendor 1</h1>
+                <div class="photo-tags">
+                    <span class="tag">昆明，云南，中国</span>
+                    <span class="tag">Kunming, Yunnan, China</span>
+                    <span class="tag">2023-02-04</span>
+                </div>
+                <p class="photo-description"></p>
+                <p class="photo-description"></p>
+                <div class="photo-tags">
+                    <span class="tag">人像</span>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="photo-wrapper">
+                <img src="flowerVendor2.jpg" alt="照片标题" class="photo-image">
+                <div class="photo-info">
+                    <h1 class="photo-title">花贩其二 Flower Vendor 2</h1>
+                    <div class="photo-tags">
+                        <span class="tag">昆明，云南，中国</span>
+                        <span class="tag">Kunming, Yunnan, China</span>
+                        <span class="tag">2023-02-04</span>
+                    </div>
+                    <p class="photo-description"></p>
+                    <p class="photo-description"></p>
+                    <div class="photo-tags">
+                        <span class="tag">人像</span>
+                    </div>
+                </div>
+            
+            <br>
+            <!-- 返回按钮 -->
+            <button id="back-button" class="back-button">
+                <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+                返回
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 脚本 -->
+    <script src="../../../scripts/script.js"></script>
+    <script>
+        // 禁用右键菜单和复制功能
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+    </script>
+</body>
+</html>
+ 
+以下是文件: grid1.html 
+ 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/photo.css"> <!-- 照片展示页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="photo-page">
+    <!-- 照片展示部分 -->
+    <section class="photo-container">
+        <!-- 导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 菜单栏 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+            <!-- More 和图标 -->
+            <div class="more-frontpage">
+                <div class="icon-row">
+                    <a href="mailto:hocids@tongji.edu.cn">
+                        <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                    </a>
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-wrapper">
+            <img src="grid1.jpg" alt="照片标题" class="photo-image">
+            <div class="photo-info">
+                <h1 class="photo-title">格子山道其一 Grid 1</h1>
+                <div class="photo-tags">
+                    <span class="tag">炮台山，北角，香港，中国</span>
+                    <span class="tag">Fortress Hill, North Point, Hong Kong, China</span>
+                    <span class="tag">2023/02/05</span>
+                </div>
+                <p class="photo-description">格子山道其一</p>
+                <p class="photo-description">Grid 1</p>
+                <div class="photo-tags">
+                    <span class="tag">摄影</span>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="photo-wrapper">
+                <img src="grid2.jpg" alt="照片标题" class="photo-image">
+                <div class="photo-info">
+                    <h1 class="photo-title">格子山道其二 Grid 2</h1>
+                    <div class="photo-tags">
+                        <span class="tag">炮台山，北角，香港，中国</span>
+                        <span class="tag">Fortress Hill, North Point, Hong Kong, China</span>
+                        <span class="tag">2023/02/05</span>
+                    </div>
+                    <p class="photo-description">格子山道其二</p>
+                    <p class="photo-description">Grid 2</p>
+                    <div class="photo-tags">
+                        <span class="tag">摄影</span>
+                    </div>
+                </div>
+            
+            <br>
+            <!-- 返回按钮 -->
+            <button id="back-button" class="back-button">
+                <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+                返回
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 脚本 -->
+    <script src="../../../scripts/script.js"></script>
+    <script>
+        // 禁用右键菜单和复制功能
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+    </script>
+</body>
+</html>
+ 
+以下是文件: hotelLisboaMacau.html 
+ 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/photo.css"> <!-- 照片展示页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="photo-page">
+    <!-- 照片展示部分 -->
+    <section class="photo-container">
+        <!-- 导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 菜单栏 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+            <!-- More 和图标 -->
+            <div class="more-frontpage">
+                <div class="icon-row">
+                    <a href="mailto:hocids@tongji.edu.cn">
+                        <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                    </a>
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-wrapper">
+            <img src="hotelLisboaMacau.jpg" alt="照片标题" class="photo-image">
+            <div class="photo-info">
+                <h1 class="photo-title">葡京酒店 Hotel Lisboa Macau</h1>
+                <div class="photo-tags">
+                    <span class="tag">澳门，中国</span>
+                    <span class="tag">Macao, China</span>
+                    <span class="tag">2023-02-19</span>
+                </div>
+                <p class="photo-description"></p>
+                <p class="photo-description"></p>
+                <div class="photo-tags">
+                    <span class="tag">风景</span>
+                </div>
+            </div>
+            
+            <br>
+            <!-- 返回按钮 -->
+            <button id="back-button" class="back-button">
+                <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+                返回
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 脚本 -->
+    <script src="../../../scripts/script.js"></script>
+    <script>
+        // 禁用右键菜单和复制功能
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+    </script>
+</body>
+</html>
+ 
+以下是文件: leadOut.html 
+ 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/photo.css"> <!-- 照片展示页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="photo-page">
+    <!-- 照片展示部分 -->
+    <section class="photo-container">
+        <!-- 导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 菜单栏 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+            <!-- More 和图标 -->
+            <div class="more-frontpage">
+                <div class="icon-row">
+                    <a href="mailto:hocids@tongji.edu.cn">
+                        <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                    </a>
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-wrapper">
+            <img src="leadOut.jpg" alt="照片标题" class="photo-image">
+            <div class="photo-info">
+                <h1 class="photo-title">淡出 Lead Out</h1>
+                <div class="photo-tags">
+                    <span class="tag">黄浦区，上海，中国</span>
+                    <span class="tag">Huangpu District, Shanghai, China</span>
+                    <span class="tag">2022-10-07</span>
+                </div>
+                <p class="photo-description"></p>
+                <p class="photo-description"></p>
+                <div class="photo-tags">
+                    <span class="tag">摄影</span>
+                </div>
+            </div>
+            
+            <br>
+            <!-- 返回按钮 -->
+            <button id="back-button" class="back-button">
+                <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+                返回
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 脚本 -->
+    <script src="../../../scripts/script.js"></script>
+    <script>
+        // 禁用右键菜单和复制功能
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+    </script>
+</body>
+</html>
+ 
 以下是文件: photo.html 
  
 <!DOCTYPE html>
@@ -1055,6 +1677,99 @@
                     <span class="tag">风景</span>
                 </div>
             </div>
+            <br>
+            <!-- 返回按钮 -->
+            <button id="back-button" class="back-button">
+                <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+                返回
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 脚本 -->
+    <script src="../../../scripts/script.js"></script>
+    <script>
+        // 禁用右键菜单和复制功能
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+    </script>
+</body>
+</html>
+ 
+以下是文件: nightStall.html 
+ 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/photo.css"> <!-- 照片展示页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="photo-page">
+    <!-- 照片展示部分 -->
+    <section class="photo-container">
+        <!-- 导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 菜单栏 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+            <!-- More 和图标 -->
+            <div class="more-frontpage">
+                <div class="icon-row">
+                    <a href="mailto:hocids@tongji.edu.cn">
+                        <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                    </a>
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-wrapper">
+            <img src="nightStall.jpg" alt="照片标题" class="photo-image">
+            <div class="photo-info">
+                <h1 class="photo-title">夜更 Night Stall</h1>
+                <div class="photo-tags">
+                    <span class="tag">上环，香港，中国</span>
+                    <span class="tag">Sheung Wan, Hong Kong, China</span>
+                    <span class="tag">2023-02-07</span>
+                </div>
+                <p class="photo-description"></p>
+                <p class="photo-description"></p>
+                <div class="photo-tags">
+                    <span class="tag">精选</span>
+                    <span class="tag">摄影</span>
+                </div>
+            </div>
+            
             <br>
             <!-- 返回按钮 -->
             <button id="back-button" class="back-button">
@@ -1255,6 +1970,191 @@
 </body>
 </html>
  
+以下是文件: shPolygrandtheatre.html 
+ 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/photo.css"> <!-- 照片展示页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="photo-page">
+    <!-- 照片展示部分 -->
+    <section class="photo-container">
+        <!-- 导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 菜单栏 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+            <!-- More 和图标 -->
+            <div class="more-frontpage">
+                <div class="icon-row">
+                    <a href="mailto:hocids@tongji.edu.cn">
+                        <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                    </a>
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-wrapper">
+            <img src="shPolygrandtheatre.jpg" alt="照片标题" class="photo-image">
+            <div class="photo-info">
+                <h1 class="photo-title">上海保利大剧院 Shanghai Poly Grand Theatre</h1>
+                <div class="photo-tags">
+                    <span class="tag">嘉定区，上海，中国</span>
+                    <span class="tag">Jiading District, Shanghai, China</span>
+                    <span class="tag">2022/11/6</span>
+                </div>
+                <p class="photo-description">商业摄影，请勿使用</p>
+                <p class="photo-description">Copyrighted Commercial Photography - All Rights Reserved</p>
+                <div class="photo-tags">
+                    <span class="tag">精选</span>
+                    <span class="tag">摄影</span>
+                </div>
+            </div>
+            
+            <br>
+            <!-- 返回按钮 -->
+            <button id="back-button" class="back-button">
+                <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+                返回
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 脚本 -->
+    <script src="../../../scripts/script.js"></script>
+    <script>
+        // 禁用右键菜单和复制功能
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+    </script>
+</body>
+</html>
+ 
+以下是文件: vendor.html 
+ 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/photo.css"> <!-- 照片展示页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="photo-page">
+    <!-- 照片展示部分 -->
+    <section class="photo-container">
+        <!-- 导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 菜单栏 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+            <!-- More 和图标 -->
+            <div class="more-frontpage">
+                <div class="icon-row">
+                    <a href="mailto:hocids@tongji.edu.cn">
+                        <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                    </a>
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-wrapper">
+            <img src="vendor.jpg" alt="照片标题" class="photo-image">
+            <div class="photo-info">
+                <h1 class="photo-title">商贩 Vendor</h1>
+                <div class="photo-tags">
+                    <span class="tag">嘉定区，上海，中国</span>
+                    <span class="tag">Jiading District, Shanghai, China</span>
+                    <span class="tag">2022-11-06</span>
+                </div>
+                <p class="photo-description"></p>
+                <p class="photo-description"></p>
+                <div class="photo-tags">
+                    <span class="tag">摄影</span>
+                </div>
+            </div>
+            
+            <br>
+            <!-- 返回按钮 -->
+            <button id="back-button" class="back-button">
+                <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+                返回
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 脚本 -->
+    <script src="../../../scripts/script.js"></script>
+    <script>
+        // 禁用右键菜单和复制功能
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+    </script>
+</body>
+</html>
+ 
 以下是文件: void.html 
  
 <!DOCTYPE html>
@@ -1345,13 +2245,196 @@
 </body>
 </html>
  
+以下是文件: walkPasssh.html 
+ 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/photo.css"> <!-- 照片展示页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="photo-page">
+    <!-- 照片展示部分 -->
+    <section class="photo-container">
+        <!-- 导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 菜单栏 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+            <!-- More 和图标 -->
+            <div class="more-frontpage">
+                <div class="icon-row">
+                    <a href="mailto:hocids@tongji.edu.cn">
+                        <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                    </a>
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-wrapper">
+            <img src="walkPasssh.jpg" alt="照片标题" class="photo-image">
+            <div class="photo-info">
+                <h1 class="photo-title">Walk Pass SH</h1>
+                <div class="photo-tags">
+                    <span class="tag">杨浦区，上海，中国</span>
+                    <span class="tag">Yangpu District, Shanghai, China</span>
+                    <span class="tag">2022-11-04</span>
+                </div>
+                <p class="photo-description"></p>
+                <p class="photo-description"></p>
+                <div class="photo-tags">
+                    <span class="tag">摄影</span>
+                </div>
+            </div>
+            
+            
+            <br>
+            <!-- 返回按钮 -->
+            <button id="back-button" class="back-button">
+                <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+                返回
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 脚本 -->
+    <script src="../../../scripts/script.js"></script>
+    <script>
+        // 禁用右键菜单和复制功能
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+    </script>
+</body>
+</html>
+ 
+以下是文件: westernMarket.html 
+ 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/photo.css"> <!-- 照片展示页特有样式 -->
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body class="photo-page">
+    <!-- 照片展示部分 -->
+    <section class="photo-container">
+        <!-- 导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 菜单栏 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+            <!-- More 和图标 -->
+            <div class="more-frontpage">
+                <div class="icon-row">
+                    <a href="mailto:hocids@tongji.edu.cn">
+                        <img src="../../../assets/email-icon.png" alt="Email" class="icon">
+                    </a>
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="photo-wrapper">
+            <img src="westernMarket.jpg" alt="照片标题" class="photo-image">
+            <div class="photo-info">
+                <h1 class="photo-title">西区街市 Western Market</h1>
+                <div class="photo-tags">
+                    <span class="tag">西环，香港，中国</span>
+                    <span class="tag">Sai Wan, Hong Kong, China</span>
+                    <span class="tag">2023-02-10</span>
+                </div>
+                <p class="photo-description"></p>
+                <p class="photo-description"></p>
+                <div class="photo-tags">
+                    <span class="tag">风景</span>
+                </div>
+            </div>
+            
+            <br>
+            <!-- 返回按钮 -->
+            <button id="back-button" class="back-button">
+                <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+                返回
+            </button>
+
+        </div>
+    </section>
+
+    <!-- 脚本 -->
+    <script src="../../../scripts/script.js"></script>
+    <script>
+        // 禁用右键菜单和复制功能
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+        document.addEventListener('copy', (e) => e.preventDefault());
+    </script>
+</body>
+</html>
+ 
 以下是文件: shadowplayvr.html 
  
  
 以下是文件: script.js 
  
-// script.js
-
 // 导航栏逻辑
 const navToggle = document.getElementById('nav-toggle');
 const menuOverlay = document.getElementById('menu-overlay');
@@ -1475,14 +2558,11 @@ function setupFilterAndSort() {
     let currentFilter = 'all';
 
     function setActiveButton(button) {
-        console.log('设置高亮按钮:', button); // 调试用
         document.querySelectorAll('.filter-button').forEach(btn => {
-            console.log('移除 active 类:', btn); // 调试用
             btn.classList.remove('active');
         });
         if (button) {
             button.classList.add('active');
-            console.log('已添加 active 类:', button); // 调试用
         }
     }
 
@@ -1505,17 +2585,13 @@ function setupFilterAndSort() {
     }
 
     function filterItems(category, button) {
-        console.log(`当前筛选: ${category}`); // 调试用
         currentFilter = category;
         portfolioItems.forEach(item => {
             const itemTags = item.getAttribute('data-tags')
                 .split(',')
-                .map(tag => tag.trim().toLowerCase()); // 去除空格并转换为小写
+                .map(tag => tag.trim().toLowerCase());
 
-            console.log(`作品标签: ${itemTags}`); // 调试用
-
-            const isFeatured = itemTags.includes('精选'.toLowerCase()); // 统一转换为小写比较
-            console.log(`是否精选: ${isFeatured}`); // 调试用
+            const isFeatured = itemTags.includes('精选'.toLowerCase());
 
             if (category === '精选') {
                 item.style.display = isFeatured ? 'block' : 'none';
@@ -1546,8 +2622,48 @@ function setupFilterAndSort() {
     if (filterStar) filterStar.addEventListener('click', () => filterItems('精选', filterStar));
     if (filterStarIcon) {
         filterStarIcon.addEventListener('click', () => {
-            console.log('Icon 精选按钮被点击'); // 调试用
             filterItems('精选', filterStarIcon);
+        });
+    }
+}
+
+// 搜索功能逻辑
+function setupSearch() {
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    if (!searchInput || !searchButton || !portfolioItems) {
+        console.error('Search elements not found');
+        return;
+    }
+
+    // 搜索按钮点击事件
+    searchButton.addEventListener('click', () => {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        filterPortfolioItems(searchTerm);
+    });
+
+    // 输入框回车事件
+    searchInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            filterPortfolioItems(searchTerm);
+        }
+    });
+
+    // 筛选作品函数
+    function filterPortfolioItems(searchTerm) {
+        portfolioItems.forEach(item => {
+            const title = item.querySelector('h2').textContent.toLowerCase();
+            const tags = item.querySelector('.portfolio-tags').textContent.toLowerCase();
+            const description = item.querySelector('p').textContent.toLowerCase();
+
+            if (title.includes(searchTerm) || tags.includes(searchTerm) || description.includes(searchTerm)) {
+                item.style.display = 'block'; // 显示匹配的作品
+            } else {
+                item.style.display = 'none'; // 隐藏不匹配的作品
+            }
         });
     }
 }
@@ -1577,7 +2693,6 @@ async function loadPortfolio() {
             card.classList.add('portfolio-item');
             card.setAttribute('data-date', item.date);
             card.setAttribute('data-tags', item.tags.join(','));
-            card.setAttribute('data-category', item.category || 'all');
 
             const imageContainer = document.createElement('div');
             imageContainer.classList.add('image-container');
@@ -1624,165 +2739,17 @@ async function loadPortfolio() {
             portfolioGrid.appendChild(card);
         });
 
+        // 初始化搜索功能
+        setupSearch();
+
+        // 初始化筛选和排序功能
         setupFilterAndSort();
+
+        // 初始化懒加载
+        lazyLoadImages();
     } catch (error) {
         console.error('Error loading portfolio data:', error);
     }
-}
-
-// 页面加载时初始化
-document.addEventListener('DOMContentLoaded', () => {
-    loadImages();
-    loadPortfolio();
-
-    const languages = ['en', 'zh-Hans', 'zh-Hant'];
-    languages.forEach(lang => {
-        loadTranslations(lang);
-    });
-
-    const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
-    switchLanguage(preferredLanguage);
-});
-
-// 底部提示逻辑
-window.addEventListener('scroll', function () {
-    const bottomTip = document.getElementById('bottom-tip');
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-    const clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
-
-    // 判断是否滚动到底部
-    if (scrollTop + clientHeight >= scrollHeight - 50) { // 50 是容错范围
-        bottomTip.classList.add('show'); // 显示提示
-    } else {
-        bottomTip.classList.remove('show'); // 隐藏提示
-    }
-});
-
-// 复制文本函数
-function copyText(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        showNotification(); // 显示提示框
-    }).catch(() => {
-        showNotification('复制失败，请手动复制'); // 显示错误提示
-    });
-}
-
-// 显示提示框
-function showNotification(message = '已复制到剪贴板！') {
-    const notification = document.getElementById('copy-notification');
-    if (notification) {
-        notification.querySelector('p').textContent = message; // 更新提示内容
-        notification.classList.add('show'); // 显示提示框
-        setTimeout(() => {
-            notification.classList.remove('show'); // 3秒后隐藏提示框
-        }, 3000);
-    }
-}
-
-// 语言切换逻辑
-let translations = {};
-
-async function loadTranslations(lang) {
-    try {
-        const response = await fetch(`assets/translations/${lang}.json`);
-        if (!response.ok) {
-            throw new Error(`Failed to load ${lang}.json: ${response.statusText}`);
-        }
-        translations[lang] = await response.json();
-        console.log(`Loaded ${lang}.json:`, translations[lang]);
-        switchLanguage(lang);
-    } catch (error) {
-        console.error(error);
-    }
-}
-
-function switchLanguage(lang) {
-    document.documentElement.lang = lang;
-    if (!translations[lang]) {
-        loadTranslations(lang);
-        return;
-    }
-
-// 获取所有需要翻译的元素
-const elements = document.querySelectorAll('[data-key]');
-elements.forEach(el => {
-    const key = el.getAttribute('data-key');
-    if (translations[lang][key]) {
-        if (Array.isArray(translations[lang][key])) {
-            // 如果是数组，动态生成列表项
-            if (key === 'publicationsList') {
-                // 处理出版物列表
-                el.innerHTML = translations[lang][key].map(item => `
-                    <li>
-                        <strong>${item.title}</strong><br>
-                        <em>${item.author}</em><br>
-                        ${item.conference}<br>
-                        <a href="${item.doi}" target="_blank"><em>[DOI]</em></a>
-                    </li>
-                `).join('');
-            } else if (key === 'projectExperienceList') {
-                // 处理项目经验列表
-                el.innerHTML = translations[lang][key].map(item => `
-                    <li>
-                        <em>${item.period}</em>, ${item.title}<br>
-                        <span>${item.institution}</span><br>
-                        > ${item.role}
-                    </li>
-                `).join('');
-            } else if (key === 'awardsList') {
-                // 处理奖项列表
-                el.innerHTML = translations[lang][key].map(item => `<li>${item}</li>`).join('');
-            }
-        } else if (typeof translations[lang][key] === 'object') {
-            // 如果是对象，根据对象结构动态生成内容
-            if (key === 'skillsText') {
-                const skills = translations[lang][key];
-                el.innerHTML = `
-                    <div class="skill-category">
-                        <h3>${skills.designTools}</h3>
-                        <ul>${skills.designToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>${skills.multimediaTools}</h3>
-                        <ul>${skills.multimediaToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>${skills.languageProficiency}</h3>
-                        <ul>${skills.languageProficiencyList.map(item => `<li>${item}</li>`).join('')}</ul>
-                    </div>
-                `;
-            }
-        } else {
-            // 如果是普通文本，直接更新内容
-            el.innerHTML = translations[lang][key];
-        }
-    } else {
-        console.warn(`Translation not found for key: ${key} in language: ${lang}`);
-    }
-});
-
-// 更新语言切换按钮的状态
-const languageButtons = document.querySelectorAll('.language-switcher button');
-languageButtons.forEach(button => {
-    if (button.getAttribute('onclick').includes(lang)) {
-        button.classList.add('active');
-    } else {
-        button.classList.remove('active');
-    }
-});
-
-// 存储语言偏好
-localStorage.setItem('preferredLanguage', lang);}
-
-// 返回按钮逻辑
-const backButton = document.getElementById('back-button');
-if (backButton) {
-    backButton.addEventListener('click', () => {
-        window.history.back(); // 返回上一个页面
-    });
-} else {
-    console.error('返回按钮未找到');
 }
 
 // 懒加载逻辑
@@ -1808,88 +2775,21 @@ function lazyLoadImages() {
     });
 }
 
-// 在加载作品集数据后调用懒加载逻辑
-async function loadPortfolio() {
-    try {
-        const response = await fetch('assets/data/portfolio.json');
-        if (!response.ok) {
-            throw new Error('Failed to load portfolio data');
-        }
-        const portfolioData = await response.json();
-        console.log('Loaded portfolio data:', portfolioData);
-
-        portfolioData.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-        const portfolioGrid = document.querySelector('.portfolio-grid');
-        if (!portfolioGrid) {
-            console.error('Portfolio grid not found');
-            return;
-        }
-
-        portfolioGrid.innerHTML = '';
-
-        portfolioData.forEach(item => {
-            const card = document.createElement('div');
-            card.classList.add('portfolio-item');
-            card.setAttribute('data-date', item.date);
-            card.setAttribute('data-tags', item.tags.join(','));
-
-            // 图片部分
-            const imageContainer = document.createElement('div');
-            imageContainer.classList.add('image-container');
-            const imageLink = document.createElement('a');
-            imageLink.href = item.link;
-            const image = document.createElement('img');
-            image.src = item.image; // 占位符图片
-            image.setAttribute('data-src', item['data-src']); // 实际图片 URL
-            image.alt = item.title;
-            image.classList.add('portfolio-image', 'lazy-load'); // 添加 lazy-load 类
-            imageLink.appendChild(image);
-            imageContainer.appendChild(imageLink);
-
-            // 文字介绍部分
-            const info = document.createElement('div');
-            info.classList.add('portfolio-info');
-            const title = document.createElement('h2');
-            title.textContent = item.title;
-
-            // 标签部分
-            const tags = document.createElement('div');
-            tags.classList.add('portfolio-tags');
-            item.tags.slice(0, 5).forEach(tag => {
-                const tagSpan = document.createElement('span');
-                tagSpan.textContent = tag;
-                if (tag === '精选') {
-                    tagSpan.classList.add('highlighted-tag');
-                }
-                tags.appendChild(tagSpan);
-            });
-
-            const description = document.createElement('p');
-            description.textContent = item.description;
-            const date = document.createElement('div');
-            date.classList.add('portfolio-date');
-            date.textContent = item.date;
-
-            info.appendChild(title);
-            info.appendChild(tags);
-            info.appendChild(description);
-            info.appendChild(date);
-
-            // 将图片和文字介绍添加到卡片
-            card.appendChild(imageContainer);
-            card.appendChild(info);
-
-            // 将卡片添加到网格
-            portfolioGrid.appendChild(card);
-        });
-
-        // 初始化懒加载
-        lazyLoadImages();
-    } catch (error) {
-        console.error('Error loading portfolio data:', error);
-    }
+// 返回按钮逻辑
+const backButton = document.getElementById('back-button');
+if (backButton) {
+    backButton.addEventListener('click', () => {
+        window.history.back(); // 返回上一个页面
+    });
+} else {
+    console.error('返回按钮未找到');
 }
+
+// 页面加载时初始化
+document.addEventListener('DOMContentLoaded', () => {
+    loadImages();
+    loadPortfolio();
+});
  
 以下是文件: about.css 
  
@@ -3010,41 +3910,6 @@ async function loadPortfolio() {
 }
 
 /* 响应式设计 */
-@media (max-width: 1200px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-        
-    .portfolio-info h2 {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-    
-    .portfolio-info p {
-        font-size: 14px;
-        color: #666;
-        margin-bottom: 10px;
-    }    
-}
-
-@media (max-width: 991px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 767px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 575px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 @media (max-width: 768px) {
     /* 筛选栏优化 */
     .filter-sort-options {

@@ -1,0 +1,23 @@
+ 
+
+{
+    "src": "",
+    "captionLine1": "小民 Vendor",
+    "captionLine2": "湾仔，香港，中国",
+    "captionLine3": "Wan Chai, Hong Kong, China",
+    "link": "articles/photograph/vendor2/vendor.html"
+},
+{
+    "src": "",
+    "captionLine1": "上海 Shanghai",
+    "captionLine2": "黄浦区，上海，中国",
+    "captionLine3": "Huangpu District, Shanghai, China",
+    "link": "articles/photograph/sh1/sh1.html"
+},
+{
+    "src": "assets/screen-images/urbanStyle.jpg",
+    "captionLine1": "都市风格 Urban Style",
+    "captionLine2": "黄浦区，上海，中国",
+    "captionLine3": "Huangpu District, Shanghai, China",
+    "link": "articles/photograph/urbanStyle/urbanStyle.html"
+},
