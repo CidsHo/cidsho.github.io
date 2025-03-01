@@ -192,6 +192,47 @@ function setupFilterAndSort() {
     }
 }
 
+// 搜索功能逻辑
+function setupSearch() {
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    if (!searchInput || !searchButton || !portfolioItems) {
+        console.error('Search elements not found');
+        return;
+    }
+
+    // 搜索按钮点击事件
+    searchButton.addEventListener('click', () => {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        filterPortfolioItems(searchTerm);
+    });
+
+    // 输入框回车事件
+    searchInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            filterPortfolioItems(searchTerm);
+        }
+    });
+
+    // 筛选作品函数
+    function filterPortfolioItems(searchTerm) {
+        portfolioItems.forEach(item => {
+            const title = item.querySelector('h2').textContent.toLowerCase();
+            const tags = item.querySelector('.portfolio-tags').textContent.toLowerCase();
+            const description = item.querySelector('p').textContent.toLowerCase();
+
+            if (title.includes(searchTerm) || tags.includes(searchTerm) || description.includes(searchTerm)) {
+                item.style.display = 'block'; // 显示匹配的作品
+            } else {
+                item.style.display = 'none'; // 隐藏不匹配的作品
+            }
+        });
+    }
+}
+
 // 加载作品集数据并生成卡片
 async function loadPortfolio() {
     try {
@@ -217,7 +258,6 @@ async function loadPortfolio() {
             card.classList.add('portfolio-item');
             card.setAttribute('data-date', item.date);
             card.setAttribute('data-tags', item.tags.join(','));
-            card.setAttribute('data-category', item.category || 'all');
 
             const imageContainer = document.createElement('div');
             imageContainer.classList.add('image-container');
@@ -264,165 +304,17 @@ async function loadPortfolio() {
             portfolioGrid.appendChild(card);
         });
 
+        // 初始化搜索功能
+        setupSearch();
+
+        // 初始化筛选和排序功能
         setupFilterAndSort();
+
+        // 初始化懒加载
+        lazyLoadImages();
     } catch (error) {
         console.error('Error loading portfolio data:', error);
     }
-}
-
-// 页面加载时初始化
-document.addEventListener('DOMContentLoaded', () => {
-    loadImages();
-    loadPortfolio();
-
-    const languages = ['en', 'zh-Hans', 'zh-Hant'];
-    languages.forEach(lang => {
-        loadTranslations(lang);
-    });
-
-    const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
-    switchLanguage(preferredLanguage);
-});
-
-// 底部提示逻辑
-window.addEventListener('scroll', function () {
-    const bottomTip = document.getElementById('bottom-tip');
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-    const clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
-
-    // 判断是否滚动到底部
-    if (scrollTop + clientHeight >= scrollHeight - 50) { // 50 是容错范围
-        bottomTip.classList.add('show'); // 显示提示
-    } else {
-        bottomTip.classList.remove('show'); // 隐藏提示
-    }
-});
-
-// 复制文本函数
-function copyText(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        showNotification(); // 显示提示框
-    }).catch(() => {
-        showNotification('复制失败，请手动复制'); // 显示错误提示
-    });
-}
-
-// 显示提示框
-function showNotification(message = '已复制到剪贴板！') {
-    const notification = document.getElementById('copy-notification');
-    if (notification) {
-        notification.querySelector('p').textContent = message; // 更新提示内容
-        notification.classList.add('show'); // 显示提示框
-        setTimeout(() => {
-            notification.classList.remove('show'); // 3秒后隐藏提示框
-        }, 3000);
-    }
-}
-
-// 语言切换逻辑
-let translations = {};
-
-async function loadTranslations(lang) {
-    try {
-        const response = await fetch(`assets/translations/${lang}.json`);
-        if (!response.ok) {
-            throw new Error(`Failed to load ${lang}.json: ${response.statusText}`);
-        }
-        translations[lang] = await response.json();
-        console.log(`Loaded ${lang}.json:`, translations[lang]);
-        switchLanguage(lang);
-    } catch (error) {
-        console.error(error);
-    }
-}
-
-function switchLanguage(lang) {
-    document.documentElement.lang = lang;
-    if (!translations[lang]) {
-        loadTranslations(lang);
-        return;
-    }
-
-// 获取所有需要翻译的元素
-const elements = document.querySelectorAll('[data-key]');
-elements.forEach(el => {
-    const key = el.getAttribute('data-key');
-    if (translations[lang][key]) {
-        if (Array.isArray(translations[lang][key])) {
-            // 如果是数组，动态生成列表项
-            if (key === 'publicationsList') {
-                // 处理出版物列表
-                el.innerHTML = translations[lang][key].map(item => `
-                    <li>
-                        <strong>${item.title}</strong><br>
-                        <em>${item.author}</em><br>
-                        ${item.conference}<br>
-                        <a href="${item.doi}" target="_blank"><em>[DOI]</em></a>
-                    </li>
-                `).join('');
-            } else if (key === 'projectExperienceList') {
-                // 处理项目经验列表
-                el.innerHTML = translations[lang][key].map(item => `
-                    <li>
-                        <em>${item.period}</em>, ${item.title}<br>
-                        <span>${item.institution}</span><br>
-                        > ${item.role}
-                    </li>
-                `).join('');
-            } else if (key === 'awardsList') {
-                // 处理奖项列表
-                el.innerHTML = translations[lang][key].map(item => `<li>${item}</li>`).join('');
-            }
-        } else if (typeof translations[lang][key] === 'object') {
-            // 如果是对象，根据对象结构动态生成内容
-            if (key === 'skillsText') {
-                const skills = translations[lang][key];
-                el.innerHTML = `
-                    <div class="skill-category">
-                        <h3>${skills.designTools}</h3>
-                        <ul>${skills.designToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>${skills.multimediaTools}</h3>
-                        <ul>${skills.multimediaToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>${skills.languageProficiency}</h3>
-                        <ul>${skills.languageProficiencyList.map(item => `<li>${item}</li>`).join('')}</ul>
-                    </div>
-                `;
-            }
-        } else {
-            // 如果是普通文本，直接更新内容
-            el.innerHTML = translations[lang][key];
-        }
-    } else {
-        console.warn(`Translation not found for key: ${key} in language: ${lang}`);
-    }
-});
-
-// 更新语言切换按钮的状态
-const languageButtons = document.querySelectorAll('.language-switcher button');
-languageButtons.forEach(button => {
-    if (button.getAttribute('onclick').includes(lang)) {
-        button.classList.add('active');
-    } else {
-        button.classList.remove('active');
-    }
-});
-
-// 存储语言偏好
-localStorage.setItem('preferredLanguage', lang);}
-
-// 返回按钮逻辑
-const backButton = document.getElementById('back-button');
-if (backButton) {
-    backButton.addEventListener('click', () => {
-        window.history.back(); // 返回上一个页面
-    });
-} else {
-    console.error('返回按钮未找到');
 }
 
 // 懒加载逻辑
@@ -448,83 +340,8 @@ function lazyLoadImages() {
     });
 }
 
-// 在加载作品集数据后调用懒加载逻辑
-async function loadPortfolio() {
-    try {
-        const response = await fetch('assets/data/portfolio.json');
-        if (!response.ok) {
-            throw new Error('Failed to load portfolio data');
-        }
-        const portfolioData = await response.json();
-        console.log('Loaded portfolio data:', portfolioData);
-
-        portfolioData.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-        const portfolioGrid = document.querySelector('.portfolio-grid');
-        if (!portfolioGrid) {
-            console.error('Portfolio grid not found');
-            return;
-        }
-
-        portfolioGrid.innerHTML = '';
-
-        portfolioData.forEach(item => {
-            const card = document.createElement('div');
-            card.classList.add('portfolio-item');
-            card.setAttribute('data-date', item.date);
-            card.setAttribute('data-tags', item.tags.join(','));
-
-            const imageContainer = document.createElement('div');
-            imageContainer.classList.add('image-container');
-            const imageLink = document.createElement('a');
-            imageLink.href = item.link;
-            const image = document.createElement('img');
-            image.src = item.image; // 占位符图片
-            image.setAttribute('data-src', item['data-src']); // 实际图片 URL
-            image.alt = item.title;
-            image.classList.add('portfolio-image', 'lazy-load'); // 添加 lazy-load 类
-            imageLink.appendChild(image);
-            imageContainer.appendChild(imageLink);
-
-            const info = document.createElement('div');
-            info.classList.add('portfolio-info');
-            const title = document.createElement('h2');
-            title.textContent = item.title;
-
-            const tags = document.createElement('div');
-            tags.classList.add('portfolio-tags');
-            item.tags.slice(0, 5).forEach(tag => {
-                const tagSpan = document.createElement('span');
-                tagSpan.textContent = tag;
-                if (tag === '精选') {
-                    tagSpan.classList.add('highlighted-tag');
-                }
-                tags.appendChild(tagSpan);
-            });
-
-            const description = document.createElement('p');
-            description.textContent = item.description;
-            const date = document.createElement('div');
-            date.classList.add('portfolio-date');
-            date.textContent = item.date;
-
-            info.appendChild(title);
-            info.appendChild(tags);
-            info.appendChild(description);
-            info.appendChild(date);
-
-            card.appendChild(imageContainer);
-            card.appendChild(info);
-
-            portfolioGrid.appendChild(card);
-        });
-
-        // 调用懒加载函数
-        lazyLoadImages();
-
-        // 初始化筛选和排序功能
-        setupFilterAndSort();
-    } catch (error) {
-        console.error('Error loading portfolio data:', error);
-    }
-}
+// 页面加载时初始化
+document.addEventListener('DOMContentLoaded', () => {
+    loadImages();
+    loadPortfolio();
+});
