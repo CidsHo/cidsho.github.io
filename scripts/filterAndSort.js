@@ -1,5 +1,5 @@
 // filterAndSort.js
-function setupFilterAndSort() {
+export function setupFilterAndSort() {
     const portfolioGrid = document.querySelector('.portfolio-grid');
     const sortDateAsc = document.getElementById('sort-date-asc');
     const sortDateDesc = document.getElementById('sort-date-desc');
@@ -118,5 +118,3 @@ function setupFilterAndSort() {
         });
     }
 }
-
-document.addEventListener('DOMContentLoaded', setupFilterAndSort);

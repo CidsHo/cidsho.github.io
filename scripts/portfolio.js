@@ -1,5 +1,9 @@
 // portfolio.js
-async function loadPortfolio() {
+import { setupSearch } from './search.js';
+import { setupFilterAndSort } from './filterAndSort.js';
+import { lazyLoadImages } from './lazyLoad.js'; // 确保导入名称正确
+
+export async function loadPortfolio() {
     try {
         const response = await fetch('assets/data/portfolio.json');
         if (!response.ok) {
@@ -82,4 +86,5 @@ async function loadPortfolio() {
     }
 }
 
+// 在 DOM 加载完成后调用 loadPortfolio
 document.addEventListener('DOMContentLoaded', loadPortfolio);

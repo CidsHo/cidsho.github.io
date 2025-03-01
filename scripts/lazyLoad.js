@@ -1,5 +1,5 @@
 // lazyLoad.js
-function lazyLoadImages() {
+export function lazyLoadImages() {
     const lazyImages = document.querySelectorAll('.lazy-load');
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -20,5 +20,3 @@ function lazyLoadImages() {
         observer.observe(img); // 开始观察图片
     });
 }
-
-document.addEventListener('DOMContentLoaded', lazyLoadImages);

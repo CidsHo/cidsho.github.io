@@ -1,5 +1,5 @@
 // search.js
-function setupSearch() {
+export function setupSearch() {
     const searchInput = document.getElementById('search-input');
     const searchButton = document.getElementById('search-button');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
@@ -38,5 +38,3 @@ function setupSearch() {
         });
     }
 }
-
-document.addEventListener('DOMContentLoaded', setupSearch);

@@ -15,7 +15,8 @@ async function loadTranslations(lang) {
     }
 }
 
-function switchLanguage(lang) {
+// 将 switchLanguage 挂载到 window 对象
+window.switchLanguage = function (lang) {
     document.documentElement.lang = lang;
     if (!translations[lang]) {
         loadTranslations(lang);
@@ -89,7 +90,7 @@ function switchLanguage(lang) {
             button.classList.remove('active');
         }
     });
-}
+};
 
 // 默认显示英文
 document.addEventListener('DOMContentLoaded', () => {
