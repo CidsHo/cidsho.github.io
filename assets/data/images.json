@@ -55,14 +55,14 @@
         "link": "articles/design/sakana.html"
     },
     {
-        "src": "",
-        "captionLine1": "葡京酒店 Hotel Lisboa Macau",
-        "captionLine2": "澳门，中国",
-        "captionLine3": "Macao, China",
-        "link": "articles/photograph/hotelLisboaMacau/hotelLisboaMacau.html"
+        "src": "assets/screen-images/nightStall.JPG",
+        "captionLine1": "夜更 Night Stall",
+        "captionLine2": "上环，香港，中国",
+        "captionLine3": "Sheung Wan, Hong Kong, China",
+        "link": "articles/photograph/nightStall/nightStall.html"
     },
     {
-        "src": "",
+        "src": "assets/screen-images/westernMarket.JPG",
         "captionLine1": "西区街市 Western Market",
         "captionLine2": "西环，香港，中国",
         "captionLine3": "Sai Wan, Hong Kong, China",

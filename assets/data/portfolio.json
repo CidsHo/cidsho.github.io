@@ -133,5 +133,59 @@
         "tags": ["摄影"],
         "description": "",
         "date": "2022-11-16"
+    },
+    {
+        "title": "马鞍山码头 Dock",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/dock/dock.jpg",
+        "link": "articles/photograph/dock/dock.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2019-08-30"
+    },
+    {
+        "title": "淡出 Lead Out",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/leadOut/leadOut.jpg",
+        "link": "articles/photograph/leadOut/leadOut.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2022-10-07"
+    },
+    {
+        "title": "夜更 Night Stall",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/nightStall/nightStall.jpg",
+        "link": "articles/photograph/nightStall/nightStall.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2023-02-07"
+    },
+    {
+        "title": "商贩 Vendor",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/vendor/vendor.jpg",
+        "link": "articles/photograph/vendor/vendor.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2022-11-06"
+    },
+    {
+        "title": "Walk Pass SH",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/walkPasssh/walkPasssh.jpg",
+        "link": "articles/photograph/walkPasssh/walkPasssh.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2022-11-04"
+    },    
+    {
+        "title": "花贩 Flower Vendor",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/flowerVendor2/flowerVendor2.jpg",
+        "link": "articles/photograph/flowerVendor2/flowerVendor.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2023-02-04"
     }
 ]
