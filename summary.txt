@@ -1,3 +1,5 @@
+以下是架构：
+
 │  .gitattributes
 │  about.html
 │  index.html
@@ -145,9 +147,8 @@
 │  │
 │  └─research
 │      └─shadowplayvr
-│          │  shadowplayvr.html
-│          │
-│          └─assets
+│              shadowplayvr.html
+│
 ├─assets
 │  │  back-icon.png
 │  │  email-icon.png
@@ -178,8 +179,6 @@
 │  │      portfolio.json
 │  │
 │  ├─photos
-│  │  ├─photos
-│  │  │  └─your-photo.jpg
 │  │  └─selfies
 │  │          2020-7-11.JPG
 │  │
@@ -201,7 +200,15 @@
 │          zh-Hant.json
 │
 ├─scripts
+│      copyText.js
+│      filterAndSort.js
+│      languageSwitcher.js
+│      lazyLoad.js
+│      navigation.js
+│      portfolio.js
 │      script.js
+│      search.js
+│      slideshow.js
 │
 └─styles
     │  about.css
@@ -328,9 +335,9 @@
 
             <!-- 语言切换按钮 -->
             <div class="language-switcher">
-                <button onclick="switchLanguage('en')">EN</button>
-                <button onclick="switchLanguage('zh-Hans')">简</button>
-                <button onclick="switchLanguage('zh-Hant')">繁</button>
+                <button onclick="window.switchLanguage('en')">EN</button>
+                <button onclick="window.switchLanguage('zh-Hans')">简</button>
+                <button onclick="window.switchLanguage('zh-Hant')">繁</button>
             </div>
         </div>
 
@@ -411,7 +418,7 @@
     </div>
 
     <!-- 脚本 -->
-    <script src="scripts/script.js"></script>
+    <script type="module" src="scripts/script.js"></script>
 </body>
 </html>
  
@@ -490,7 +497,7 @@
 
 
     <!-- 脚本 -->
-    <script src="scripts/script.js"></script>
+    <script type="module" src="scripts/script.js"></script>
 </body>
 </html>
  
@@ -600,121 +607,48 @@
     </div>
 
     <!-- 脚本 -->
-    <script src="scripts/script.js"></script>
+    <script type="module" src="scripts/script.js"></script>
 </body>
 </html>
  
-以下是文件: script.js 
+以下是文件: copyText.js 
  
-// 导航栏逻辑
-const navToggle = document.getElementById('nav-toggle');
-const menuOverlay = document.getElementById('menu-overlay');
-
-if (navToggle && menuOverlay) {
-    navToggle.addEventListener('click', (event) => {
-        event.stopPropagation();
-        menuOverlay.classList.toggle('active');
+// copyText.js
+function copyText(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        showNotification(); // 显示提示框
+    }).catch(() => {
+        showNotification('复制失败，请手动复制'); // 显示错误提示
     });
-
-    document.addEventListener('click', (event) => {
-        if (!menuOverlay.contains(event.target) && !navToggle.contains(event.target)) {
-            menuOverlay.classList.remove('active');
-        }
-    });
-} else {
-    console.error('navToggle or menuOverlay not found');
 }
 
-// 图片幻灯片逻辑
-const screenMedia = document.querySelector('.screen-media');
-const captionLine1 = document.querySelector('.caption-line-1');
-const captionLine2 = document.querySelector('.caption-line-2');
-const captionLine3 = document.querySelector('.caption-line-3');
-const screenContainer = document.querySelector('.screen-container');
-
-let images = [];
-let currentImageIndex = 0;
-let playedIndices = [];
-
-async function loadImages() {
-    try {
-        const response = await fetch('assets/data/images.json');
-        if (!response.ok) {
-            throw new Error('Failed to load images');
-        }
-        images = await response.json();
-        console.log('Loaded images:', images);
-
-        // 预加载图片
-        images.forEach(image => {
-            const img = new Image();
-            img.src = image.src;
-        });
-
-        startSlideshow();
-    } catch (error) {
-        console.error('Error loading images:', error);
-    }
-}
-
-function showImage(index, skipAnimation = false) {
-    const image = images[index];
-    console.log('Showing image:', image);
-    if (screenMedia) {
-        if (!skipAnimation) {
-            screenMedia.classList.add('fade-out');
-        }
+// 显示提示框
+function showNotification(message = '已复制到剪贴板！') {
+    const notification = document.getElementById('copy-notification');
+    if (notification) {
+        notification.querySelector('p').textContent = message; // 更新提示内容
+        notification.classList.add('show'); // 显示提示框
         setTimeout(() => {
-            screenMedia.src = image.src;
-            if (!skipAnimation) {
-                screenMedia.classList.remove('fade-out');
+            notification.classList.remove('show'); // 3秒后隐藏提示框
+        }, 3000);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactInfo = document.querySelector('.contact-info');
+    if (contactInfo) {
+        contactInfo.addEventListener('click', (event) => {
+            if (event.target.tagName === 'P') {
+                copyText(event.target.textContent);
             }
-        }, skipAnimation ? 0 : 500);
+        });
     }
-    if (captionLine1) captionLine1.textContent = image.captionLine1;
-    if (captionLine2) captionLine2.textContent = image.captionLine2;
-    if (captionLine3) captionLine3.textContent = image.captionLine3;
-}
-
-function showRandomImage(skipAnimation = false) {
-    if (playedIndices.length === images.length) {
-        playedIndices = [];
-    }
-
-    let newIndex;
-    do {
-        newIndex = Math.floor(Math.random() * images.length);
-    } while (playedIndices.includes(newIndex));
-
-    playedIndices.push(newIndex);
-    currentImageIndex = newIndex;
-    showImage(currentImageIndex, skipAnimation);
-}
-
-function startSlideshow() {
-    if (images.length > 0) {
-        showRandomImage(true);
-        setInterval(showRandomImage, 10000);
-    } else {
-        console.error('No images loaded');
-    }
-}
-
-if (screenContainer) {
-    screenContainer.addEventListener('click', () => {
-        const currentImage = images[currentImageIndex];
-        if (currentImage && currentImage.link) {
-            window.location.href = currentImage.link;
-        } else {
-            console.error('Current image or link not found');
-        }
-    });
-} else {
-    console.error('screenContainer not found');
-}
-
-// 筛选和排序逻辑
-function setupFilterAndSort() {
+});
+ 
+以下是文件: filterAndSort.js 
+ 
+// filterAndSort.js
+export function setupFilterAndSort() {
     const portfolioGrid = document.querySelector('.portfolio-grid');
     const sortDateAsc = document.getElementById('sort-date-asc');
     const sortDateDesc = document.getElementById('sort-date-desc');
@@ -833,50 +767,162 @@ function setupFilterAndSort() {
         });
     }
 }
+ 
+以下是文件: languageSwitcher.js 
+ 
+// languageSwitcher.js
+let translations = {};
 
-// 搜索功能逻辑
-function setupSearch() {
-    const searchInput = document.getElementById('search-input');
-    const searchButton = document.getElementById('search-button');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-    if (!searchInput || !searchButton || !portfolioItems) {
-        console.error('Search elements not found');
-        return;
-    }
-
-    // 搜索按钮点击事件
-    searchButton.addEventListener('click', () => {
-        const searchTerm = searchInput.value.trim().toLowerCase();
-        filterPortfolioItems(searchTerm);
-    });
-
-    // 输入框回车事件
-    searchInput.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter') {
-            const searchTerm = searchInput.value.trim().toLowerCase();
-            filterPortfolioItems(searchTerm);
+async function loadTranslations(lang) {
+    try {
+        const response = await fetch(`assets/translations/${lang}.json`);
+        if (!response.ok) {
+            throw new Error(`Failed to load ${lang}.json: ${response.statusText}`);
         }
-    });
-
-    // 筛选作品函数
-    function filterPortfolioItems(searchTerm) {
-        portfolioItems.forEach(item => {
-            const title = item.querySelector('h2').textContent.toLowerCase();
-            const tags = item.querySelector('.portfolio-tags').textContent.toLowerCase();
-            const description = item.querySelector('p').textContent.toLowerCase();
-
-            if (title.includes(searchTerm) || tags.includes(searchTerm) || description.includes(searchTerm)) {
-                item.style.display = 'block'; // 显示匹配的作品
-            } else {
-                item.style.display = 'none'; // 隐藏不匹配的作品
-            }
-        });
+        translations[lang] = await response.json();
+        console.log(`Loaded ${lang}.json:`, translations[lang]);
+        switchLanguage(lang);
+    } catch (error) {
+        console.error(error);
     }
 }
 
-// 加载作品集数据并生成卡片
-async function loadPortfolio() {
+// 将 switchLanguage 挂载到 window 对象
+window.switchLanguage = function (lang) {
+    document.documentElement.lang = lang;
+    if (!translations[lang]) {
+        loadTranslations(lang);
+        return;
+    }
+
+    // 获取所有需要翻译的元素
+    const elements = document.querySelectorAll('[data-key]');
+    elements.forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang][key]) {
+            if (Array.isArray(translations[lang][key])) {
+                // 如果是数组，动态生成列表项
+                if (key === 'publicationsList') {
+                    // 处理出版物列表
+                    el.innerHTML = translations[lang][key].map(item => `
+                        <li>
+                            <strong>${item.title}</strong><br>
+                            <em>${item.author}</em><br>
+                            ${item.conference}<br>
+                            <a href="${item.doi}" target="_blank"><em>[DOI]</em></a>
+                        </li>
+                    `).join('');
+                } else if (key === 'projectExperienceList') {
+                    // 处理项目经验列表
+                    el.innerHTML = translations[lang][key].map(item => `
+                        <li>
+                            <em>${item.period}</em>, ${item.title}<br>
+                            <span>${item.institution}</span><br>
+                            > ${item.role}
+                        </li>
+                    `).join('');
+                } else if (key === 'awardsList') {
+                    // 处理奖项列表
+                    el.innerHTML = translations[lang][key].map(item => `<li>${item}</li>`).join('');
+                }
+            } else if (typeof translations[lang][key] === 'object') {
+                // 如果是对象，根据对象结构动态生成内容
+                if (key === 'skillsText') {
+                    const skills = translations[lang][key];
+                    el.innerHTML = `
+                        <div class="skill-category">
+                            <h3>${skills.designTools}</h3>
+                            <ul>${skills.designToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>${skills.multimediaTools}</h3>
+                            <ul>${skills.multimediaToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>${skills.languageProficiency}</h3>
+                            <ul>${skills.languageProficiencyList.map(item => `<li>${item}</li>`).join('')}</ul>
+                        </div>
+                    `;
+                }
+            } else {
+                // 如果是普通文本，直接更新内容
+                el.innerHTML = translations[lang][key];
+            }
+        } else {
+            console.warn(`Translation not found for key: ${key} in language: ${lang}`);
+        }
+    });
+
+    // 更新语言切换按钮的状态
+    const languageButtons = document.querySelectorAll('.language-switcher button');
+    languageButtons.forEach(button => {
+        if (button.getAttribute('onclick').includes(lang)) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+};
+
+// 默认显示英文
+document.addEventListener('DOMContentLoaded', () => {
+    switchLanguage('en');
+});
+ 
+以下是文件: lazyLoad.js 
+ 
+// lazyLoad.js
+export function lazyLoadImages() {
+    const lazyImages = document.querySelectorAll('.lazy-load');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.getAttribute('data-src'); // 加载实际图片
+                img.classList.remove('lazy-load'); // 移除 lazy-load 类
+                observer.unobserve(img); // 停止观察已加载的图片
+            }
+        });
+    }, {
+        rootMargin: '0px',
+        threshold: 0.1 // 当图片进入视口 10% 时触发加载
+    });
+
+    lazyImages.forEach(img => {
+        observer.observe(img); // 开始观察图片
+    });
+}
+ 
+以下是文件: navigation.js 
+ 
+// 导航栏逻辑
+const navToggle = document.getElementById('nav-toggle');
+const menuOverlay = document.getElementById('menu-overlay');
+
+if (navToggle && menuOverlay) {
+    navToggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+        menuOverlay.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!menuOverlay.contains(event.target) && !navToggle.contains(event.target)) {
+            menuOverlay.classList.remove('active');
+        }
+    });
+} else {
+    console.error('navToggle or menuOverlay not found');
+}
+ 
+以下是文件: portfolio.js 
+ 
+// portfolio.js
+import { setupSearch } from './search.js';
+import { setupFilterAndSort } from './filterAndSort.js';
+import { lazyLoadImages } from './lazyLoad.js'; // 确保导入名称正确
+
+export async function loadPortfolio() {
     try {
         const response = await fetch('assets/data/portfolio.json');
         if (!response.ok) {
@@ -959,179 +1005,154 @@ async function loadPortfolio() {
     }
 }
 
-// 懒加载逻辑
-function lazyLoadImages() {
-    const lazyImages = document.querySelectorAll('.lazy-load');
+// 在 DOM 加载完成后调用 loadPortfolio
+document.addEventListener('DOMContentLoaded', loadPortfolio);
+ 
+以下是文件: script.js 
+ 
+import './navigation.js';
+import './slideshow.js';
+import { loadPortfolio } from './portfolio.js';
+import './copyText.js';
+import './languageSwitcher.js';
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.getAttribute('data-src'); // 加载实际图片
-                img.classList.remove('lazy-load'); // 移除 lazy-load 类
-                observer.unobserve(img); // 停止观察已加载的图片
-            }
-        });
-    }, {
-        rootMargin: '0px',
-        threshold: 0.1 // 当图片进入视口 10% 时触发加载
-    });
+// 调用 loadPortfolio
+document.addEventListener('DOMContentLoaded', loadPortfolio);
+ 
+以下是文件: search.js 
+ 
+// search.js
+export function setupSearch() {
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-    lazyImages.forEach(img => {
-        observer.observe(img); // 开始观察图片
-    });
-}
-
-// 返回按钮逻辑
-const backButton = document.getElementById('back-button');
-if (backButton) {
-    backButton.addEventListener('click', () => {
-        window.history.back(); // 返回上一个页面
-    });
-} else {
-    console.error('返回按钮未找到');
-}
-
-// 页面加载时初始化
-document.addEventListener('DOMContentLoaded', () => {
-    loadImages();
-    loadPortfolio();
-});
-
-
-// 底部提示逻辑
-window.addEventListener('scroll', function() {
-    const bottomTip = document.getElementById('bottom-tip');
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-    const clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
-
-    // 判断是否滚动到底部
-    if (scrollTop + clientHeight >= scrollHeight - 50) { // 50 是容错范围
-        bottomTip.classList.add('show'); // 显示提示
-    } else {
-        bottomTip.classList.remove('show'); // 隐藏提示
-    }
-});
-
-// 复制文本函数
-function copyText(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        showNotification(); // 显示提示框
-    }).catch(() => {
-        showNotification('复制失败，请手动复制'); // 显示错误提示
-    });
-}
-
-// 显示提示框
-function showNotification(message = '已复制到剪贴板！') {
-    const notification = document.getElementById('copy-notification');
-    if (notification) {
-        notification.querySelector('p').textContent = message; // 更新提示内容
-        notification.classList.add('show'); // 显示提示框
-        setTimeout(() => {
-            notification.classList.remove('show'); // 3秒后隐藏提示框
-        }, 3000);
-    }
-}
-
-// 语言切换逻辑
-let translations = {};
-
-async function loadTranslations(lang) {
-    try {
-        const response = await fetch(`assets/translations/${lang}.json`);
-        if (!response.ok) {
-            throw new Error(`Failed to load ${lang}.json: ${response.statusText}`);
-        }
-        translations[lang] = await response.json();
-        console.log(`Loaded ${lang}.json:`, translations[lang]);
-        switchLanguage(lang);
-    } catch (error) {
-        console.error(error);
-    }
-}
-
-function switchLanguage(lang) {
-    document.documentElement.lang = lang;
-    if (!translations[lang]) {
-        loadTranslations(lang);
+    if (!searchInput || !searchButton || !portfolioItems) {
+        console.error('Search elements not found');
         return;
     }
 
-    // 获取所有需要翻译的元素
-    const elements = document.querySelectorAll('[data-key]');
-    elements.forEach(el => {
-        const key = el.getAttribute('data-key');
-        if (translations[lang][key]) {
-            if (Array.isArray(translations[lang][key])) {
-                // 如果是数组，动态生成列表项
-                if (key === 'publicationsList') {
-                    // 处理出版物列表
-                    el.innerHTML = translations[lang][key].map(item => `
-                        <li>
-                            <strong>${item.title}</strong><br>
-                            <em>${item.author}</em><br>
-                            ${item.conference}<br>
-                            <a href="${item.doi}" target="_blank"><em>[DOI]</em></a>
-                        </li>
-                    `).join('');
-                } else if (key === 'projectExperienceList') {
-                    // 处理项目经验列表
-                    el.innerHTML = translations[lang][key].map(item => `
-                        <li>
-                            <em>${item.period}</em>, ${item.title}<br>
-                            <span>${item.institution}</span><br>
-                            > ${item.role}
-                        </li>
-                    `).join('');
-                } else if (key === 'awardsList') {
-                    // 处理奖项列表
-                    el.innerHTML = translations[lang][key].map(item => `<li>${item}</li>`).join('');
-                }
-            } else if (typeof translations[lang][key] === 'object') {
-                // 如果是对象，根据对象结构动态生成内容
-                if (key === 'skillsText') {
-                    const skills = translations[lang][key];
-                    el.innerHTML = `
-                        <div class="skill-category">
-                            <h3>${skills.designTools}</h3>
-                            <ul>${skills.designToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
-                        </div>
-                        <div class="skill-category">
-                            <h3>${skills.multimediaTools}</h3>
-                            <ul>${skills.multimediaToolsList.map(item => `<li>${item}</li>`).join('')}</ul>
-                        </div>
-                        <div class="skill-category">
-                            <h3>${skills.languageProficiency}</h3>
-                            <ul>${skills.languageProficiencyList.map(item => `<li>${item}</li>`).join('')}</ul>
-                        </div>
-                    `;
-                }
-            } else {
-                // 如果是普通文本，直接更新内容
-                el.innerHTML = translations[lang][key];
-            }
-        } else {
-            console.warn(`Translation not found for key: ${key} in language: ${lang}`);
+    // 搜索按钮点击事件
+    searchButton.addEventListener('click', () => {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        filterPortfolioItems(searchTerm);
+    });
+
+    // 输入框回车事件
+    searchInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            filterPortfolioItems(searchTerm);
         }
     });
 
-    // 更新语言切换按钮的状态
-    const languageButtons = document.querySelectorAll('.language-switcher button');
-    languageButtons.forEach(button => {
-        if (button.getAttribute('onclick').includes(lang)) {
-            button.classList.add('active');
-        } else {
-            button.classList.remove('active');
+    // 筛选作品函数
+    function filterPortfolioItems(searchTerm) {
+        portfolioItems.forEach(item => {
+            const title = item.querySelector('h2').textContent.toLowerCase();
+            const tags = item.querySelector('.portfolio-tags').textContent.toLowerCase();
+            const description = item.querySelector('p').textContent.toLowerCase();
+
+            if (title.includes(searchTerm) || tags.includes(searchTerm) || description.includes(searchTerm)) {
+                item.style.display = 'block'; // 显示匹配的作品
+            } else {
+                item.style.display = 'none'; // 隐藏不匹配的作品
+            }
+        });
+    }
+}
+ 
+以下是文件: slideshow.js 
+ 
+// slideshow.js
+const screenMedia = document.querySelector('.screen-media');
+const captionLine1 = document.querySelector('.caption-line-1');
+const captionLine2 = document.querySelector('.caption-line-2');
+const captionLine3 = document.querySelector('.caption-line-3');
+const screenContainer = document.querySelector('.screen-container');
+
+let images = [];
+let currentImageIndex = 0;
+let playedIndices = [];
+
+async function loadImages() {
+    try {
+        const response = await fetch('assets/data/images.json');
+        if (!response.ok) {
+            throw new Error('Failed to load images');
         }
-    });
+        images = await response.json();
+        console.log('Loaded images:', images);
+
+        // 预加载图片
+        images.forEach(image => {
+            const img = new Image();
+            img.src = image.src;
+        });
+
+        startSlideshow();
+    } catch (error) {
+        console.error('Error loading images:', error);
+    }
 }
 
-// 默认显示英文
-document.addEventListener('DOMContentLoaded', () => {
-    switchLanguage('en');
-});
+function showImage(index, skipAnimation = false) {
+    const image = images[index];
+    console.log('Showing image:', image);
+    if (screenMedia) {
+        if (!skipAnimation) {
+            screenMedia.classList.add('fade-out');
+        }
+        setTimeout(() => {
+            screenMedia.src = image.src;
+            if (!skipAnimation) {
+                screenMedia.classList.remove('fade-out');
+            }
+        }, skipAnimation ? 0 : 500);
+    }
+    if (captionLine1) captionLine1.textContent = image.captionLine1;
+    if (captionLine2) captionLine2.textContent = image.captionLine2;
+    if (captionLine3) captionLine3.textContent = image.captionLine3;
+}
+
+function showRandomImage(skipAnimation = false) {
+    if (playedIndices.length === images.length) {
+        playedIndices = [];
+    }
+
+    let newIndex;
+    do {
+        newIndex = Math.floor(Math.random() * images.length);
+    } while (playedIndices.includes(newIndex));
+
+    playedIndices.push(newIndex);
+    currentImageIndex = newIndex;
+    showImage(currentImageIndex, skipAnimation);
+}
+
+function startSlideshow() {
+    if (images.length > 0) {
+        showRandomImage(true);
+        setInterval(showRandomImage, 10000);
+    } else {
+        console.error('No images loaded');
+    }
+}
+
+if (screenContainer) {
+    screenContainer.addEventListener('click', () => {
+        const currentImage = images[currentImageIndex];
+        if (currentImage && currentImage.link) {
+            window.location.href = currentImage.link;
+        } else {
+            console.error('Current image or link not found');
+        }
+    });
+} else {
+    console.error('screenContainer not found');
+}
+
+document.addEventListener('DOMContentLoaded', loadImages);
  
 以下是文件: about.css 
  

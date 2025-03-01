@@ -16,3 +16,13 @@ if (navToggle && menuOverlay) {
 } else {
     console.error('navToggle or menuOverlay not found');
 }
+
+// 返回按钮逻辑
+const backButton = document.getElementById('back-button');
+if (backButton) {
+    backButton.addEventListener('click', () => {
+        window.history.back(); // 返回上一个页面
+    });
+} else {
+    console.error('返回按钮未找到');
+}
