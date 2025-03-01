@@ -212,41 +212,6 @@
 }
 
 /* 响应式设计 */
-@media (max-width: 1200px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-        
-    .portfolio-info h2 {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-    
-    .portfolio-info p {
-        font-size: 14px;
-        color: #666;
-        margin-bottom: 10px;
-    }    
-}
-
-@media (max-width: 991px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 767px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 575px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 @media (max-width: 768px) {
     /* 筛选栏优化 */
     .filter-sort-options {

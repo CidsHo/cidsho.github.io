@@ -4,21 +4,21 @@
         "captionLine1": "空中 VOID",
         "captionLine2": "上海, 中國.",
         "captionLine3": "Shanghai, China.",
-        "link": "articles/photograph/void.html"
+        "link": "articles/photograph/void/void.html"
     },
     {
         "src": "assets/screen-images/jianghezhishou.jpg",
         "captionLine1": "江河守護 River Guardian",
         "captionLine2": "武漢, 湖北, 中國. ",
         "captionLine3": "Wuhan, Hubei, China",
-        "link": "articles/photograph/RiverGuardian.html"
+        "link": "articles/photograph/riverguardian/riverguardian.html"
     },
     {
         "src": "assets/screen-images/danxia.jpg",
         "captionLine1": "丹霞 Danxia",
         "captionLine2": "張掖, 甘肅, 中國",
         "captionLine3": "Zhangye, Gansu, China",
-        "link": "articles/photograph/danxia.html"
+        "link": "articles/photograph/danxia/danxia.html"
     },
     {
         "src": "assets/screen-images/sandroad.jpg",
@@ -34,6 +34,20 @@
         "captionLine3": "China.",
         "link": "articles/photograph/desk.html"
     },
+    {
+        "src": "assets/screen-images/shPolygrandtheatre.jpg",
+        "captionLine1": "上海保利大劇院 Shanghai Poly Grand Theatre",
+        "captionLine2": "嘉定區，上海，中國",
+        "captionLine3": "Jiading District, Shanghai, China",
+        "link": "articles/photograph/shPolygrandtheatre/shPolygrandtheatre.html"
+    },    
+    {
+        "src": "assets/screen-images/grid.jpg",
+        "captionLine1": "格子山道 Grid",
+        "captionLine2": "炮台山，北角，香港，中國",
+        "captionLine3": "Fortress Hill, North Point, Hong Kong, China",
+        "link": "articles/photograph/grid1/grid1.html"
+    },    
     {
         "src": "assets/screen-images/sakana.JPG",
         "captionLine1": "魚 Sakana",

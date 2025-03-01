@@ -1,0 +1,8 @@
+ 
+{
+    "src": "assets/screen-images/shPolygrandtheatre.jpg",
+    "captionLine1": "嘉定区，上海，中国",
+    "captionLine2": "Jiading District, Shanghai, China",
+    "captionLine3": "2022/11/6",
+    "link": "articles/photograph/shPolygrandtheatre/shPolygrandtheatre.html"
+},
