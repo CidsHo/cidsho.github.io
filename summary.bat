@@ -12,16 +12,23 @@ chcp 65001 >nul
 
 :: 遍历当前目录及其子目录中的所有文件
 for /r %%f in (*.css *.js *.html) do (
-    :: 获取文件名
-    set "filename=%%~nxf"
+    :: 获取文件路径
+    set "filepath=%%f"
 
-    :: 在输出文件中添加文件名和分隔符
-    echo. >> "%output_file%"
-    echo 以下是文件: !filename! >> "%output_file%"
-    echo. >> "%output_file%"
+    :: 检查文件路径是否包含 "/articles" 文件夹
+    echo !filepath! | findstr /i "\articles" >nul
+    if !errorlevel! equ 1 (
+        :: 获取文件名
+        set "filename=%%~nxf"
 
-    :: 使用 PowerShell 读取文件内容并追加到输出文件中（确保 UTF-8 编码）
-    powershell -Command "Get-Content -Path '%%f' -Encoding UTF8 | Out-File -FilePath '%output_file%' -Encoding UTF8 -Append"
+        :: 在输出文件中添加文件名和分隔符
+        echo. >> "%output_file%"
+        echo 以下是文件: !filename! >> "%output_file%"
+        echo. >> "%output_file%"
+
+        :: 使用 PowerShell 读取文件内容并追加到输出文件中（确保 UTF-8 编码）
+        powershell -Command "Get-Content -Path '%%f' -Encoding UTF8 | Out-File -FilePath '%output_file%' -Encoding UTF8 -Append"
+    )
 )
 
 :: 完成提示
