@@ -51,50 +51,54 @@
     </div>
 
     <!-- 作品集内容 -->
-    <section id="portfolio" class="portfolio-section">
-        <h1>Mass. Works</h1>
-        <h7>如您有意与我合作，请点击<button id="filter-star">⭐</button>查看精选项目<br><br></h7>
+    <section class="portfolio-banner">
+        <div class="banner-content">
+            <h1><br><br></h1>
+            <h7>如您有意与我合作，请点击<button id="filter-star">⭐</button>查看精选项目<br><br></h7>
 
-        <!-- 搜索框 -->
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="搜索作品或标签...">
-            <button id="search-button">Go!</button>
-        </div>
-
-        <!-- 排序和筛选按钮 -->
-        <div class="filter-sort-options">
-            <div class="sort-options">
-                <button id="sort-date-asc" class="sort-button">
-                    <img src="assets/sort-asc-icon.png" alt="Sort by Date (Ascending)" class="icon">
-                </button>
-                <button id="sort-date-desc" class="sort-button">
-                    <img src="assets/sort-desc-icon.png" alt="Sort by Date (Descending)" class="icon">
-                </button>
+            <!-- 搜索框 -->
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="搜索作品或标签...">
+                <button id="search-button">Go!</button>
             </div>
-            <div class="filter-options">
-                <button id="reset-filter" class="filter-button">
-                    <img src="assets/reset-icon.png" alt="Reset Filter" class="icon">
-                </button>
-                <button id="filter-photography" class="filter-button">
-                    <img src="assets/filter-photography-icon.png" alt="Photography" class="icon">
-                </button>
-                <button id="filter-design" class="filter-button">
-                    <img src="assets/filter-design-icon.png" alt="Design" class="icon">
-                </button>
-                <button id="filter-ideas" class="filter-button">
-                    <img src="assets/filter-ideas-icon.png" alt="Ideas" class="icon">
-                </button>
-                <button id="filter-star-icon" class="filter-button">
-                    <img src="assets/recommended-icon.png" alt="精选" class="icon">
-                </button>
-            </div>
-        </div>
 
-        <!-- 作品集网格 -->
-        <div class="portfolio-grid">
-            <!-- 卡片内容将通过 JavaScript 动态加载 -->
+            <!-- 排序和筛选按钮 -->
+            <div class="filter-sort-options">
+                <div class="sort-options">
+                    <button id="sort-date-asc" class="sort-button">
+                        <img src="assets/sort-asc-icon.png" alt="Sort by Date (Ascending)" class="icon">
+                    </button>
+                    <button id="sort-date-desc" class="sort-button">
+                        <img src="assets/sort-desc-icon.png" alt="Sort by Date (Descending)" class="icon">
+                    </button>
+                </div>
+                <div class="filter-options">
+                    <button id="reset-filter" class="filter-button">
+                        <img src="assets/reset-icon.png" alt="Reset Filter" class="icon">
+                    </button>
+                    <button id="filter-photography" class="filter-button">
+                        <img src="assets/filter-photography-icon.png" alt="Photography" class="icon">
+                    </button>
+                    <button id="filter-design" class="filter-button">
+                        <img src="assets/filter-design-icon.png" alt="Design" class="icon">
+                    </button>
+                    <button id="filter-ideas" class="filter-button">
+                        <img src="assets/filter-ideas-icon.png" alt="Ideas" class="icon">
+                    </button>
+                    <button id="filter-star-icon" class="filter-button">
+                        <img src="assets/recommended-icon.png" alt="精选" class="icon">
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
+
+        <!-- 作品集网格 -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="portfolio-grid">
+                <!-- 卡片内容将通过 JavaScript 动态加载 -->
+            </div>
+        </section>
 
     <!-- 底部提示 -->
     <div id="bottom-tip" class="bottom-tip">

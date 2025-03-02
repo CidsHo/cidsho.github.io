@@ -1,5 +1,46 @@
 /* 作品集页面样式 */
 
+/* Banner 部分 */
+.portfolio-banner {
+    background-image: url('../assets/banner-background.jpg'); /* 替换为你的 banner 图片 */
+    background-size: cover; /* 背景图片覆盖整个 banner */
+    background-position: center; /* 背景图片居中 */
+    width: 100%; /* 覆盖整个宽度 */
+    min-height: 400px; /* 设置最小高度 */
+    padding: 60px 20px; /* 内边距 */
+    text-align: center; /* 内容居中 */
+    color: #fff; /* 文字颜色 */
+    position: relative; /* 相对定位 */
+    z-index: 1; /* 确保 banner 在最上层 */
+    box-sizing: border-box; /* 确保内边距不会影响宽度 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    
+}
+
+/* Banner 内容 */
+.banner-content {
+    max-width: 1200px; /* 最大宽度 */
+    margin: 0 auto; /* 居中 */
+    position: relative; /* 相对定位 */
+    z-index: 2; /* 确保内容在 banner 上层 */
+}
+
+/* 标题样式 */
+.portfolio-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff; /* 白色文字 */
+}
+
+/* 副标题样式 */
+.portfolio-banner h7 {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8); /* 半透明白色 */
+    margin-bottom: 30px;
+}
+
 /* 页面背景 */
 .portfolio-page {
     background-color: #D9D9D9;
@@ -220,6 +261,18 @@
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+    .portfolio-banner {
+        padding: 40px 15px; /* 缩小内边距 */
+    }
+
+    .portfolio-banner h1 {
+        font-size: 36px; /* 缩小标题字体 */
+    }
+
+    .portfolio-banner h7 {
+        font-size: 16px; /* 缩小副标题字体 */
+    }
+
     /* 筛选栏优化 */
     .filter-sort-options {
         flex-direction: row; /* 保持按钮在同一排 */

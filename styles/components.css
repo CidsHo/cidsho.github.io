@@ -23,3 +23,12 @@
 
 /* 工具类 */
 @import url('components/utilities.css');
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* 防止水平滚动 */
+}
