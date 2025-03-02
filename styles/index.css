@@ -2,10 +2,12 @@
 
 /* 首页背景 */
 .home-page {
-    background-color: #000; /* 黑色背景 */
+    background-color: #000000ee; /* 黑色背景 */
     background-image: url('../assets/texture.png'); /* 材质背景 */
-    background-repeat: repeat; /* 平铺材质 */
     background-blend-mode: overlay; /* 混合模式 */
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    background-blend-mode: overlay;
     overflow: hidden; /* 隐藏溢出内容 */
     font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif; /* 默认字体 */
 }
@@ -55,7 +57,7 @@
     width: 90%; /* 左右各留白 5% */
     aspect-ratio: 21 / 9; /* 21:9 比例 */
     max-width: 1200px; /* 最大宽度 */
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    background-color: rgba(24, 29, 37, 0.5); /* 半透明背景 */
     margin-bottom: 40px; /* 与文字的间距 */
     overflow: hidden;
     cursor: pointer; /* 鼠标悬停时显示手型 */
@@ -192,7 +194,7 @@
     font-size: 14px;
     text-align: center;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.089);
     padding: 10px;
     border-radius: 5px;
 }
