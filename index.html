@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cids' Personal Website</title>
-    <link rel="stylesheet" href="styles/components.css"> <!-- 引用所有通用组件样式 -->
-    <link rel="stylesheet" href="styles/index.css"> <!-- 首页特有样式 -->
-    <!-- Favicon 配置 -->
+    <link rel="stylesheet" href="styles/components.css"> 
+    <link rel="stylesheet" href="styles/index.css"> 
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
     <link rel="manifest" href="assets/site.webmanifest">
@@ -14,63 +13,94 @@
     <meta name="msapplication-TileColor" content="#ffffff">
 </head>
 <body class="home-page">
-    <!-- 首页文字按钮 -->
-    <div class="home-buttons">
-        <a href="about.html" class="home-button">About Me&lt;</a>
-        <a href="portfolio.html" class="home-button">Mass. Works</a>
+
+    <header id="navbar-container" class="hidden">
+        <nav id="navbar">
+            <button id="nav-toggle">
+                <img src="assets/navigator.png" alt="Navigator" class="nav-icon">
+            </button>
+        </nav>
+            <!-- 菜单栏 -->
+            <div id="menu-overlay" class="menu-overlay">
+                <ul id="nav-menu">
+                    <li><a href="index.html" data-page="index">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                    <li><a href="portfolio.html" data-page="portfolio">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                    <li><a href="about.html" data-page="about">About Me&lt; &emsp;关于我</a></li>
+                </ul>
+
+                <!-- More 和图标 -->
+                <div class="more-frontpage">
+                    <div class="icon-row">
+                        <a href="mailto:hocids@tongji.edu.cn">
+                            <img src="assets/email-icon.png" alt="Email" class="icon">
+                        </a>
+                        <a href="https://github.com/CidsHo" target="_blank">
+                            <img src="assets/github-icon.png" alt="GitHub" class="icon">
+                        </a>
+                        <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                            <img src="assets/orcid-icon.png" alt="ORCID" class="icon">
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                            <img src="assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+    </header>
+
+    <div id="content-container" class="content-container">
+        <section id="welcome" class="welcome-section">
+
+            <div class="home-buttons">
+                <a href="#" class="home-button" data-page="about">About Me&lt;</a>
+                <a href="#" class="home-button" data-page="portfolio">Mass. Works</a>
+            </div>
+
+            <div class="screen-container">
+                <img class="screen-media" src="" alt="">
+                <div class="image-caption">
+                    <p class="caption-line-1"></p>
+                    <p class="caption-line-2"></p>
+                    <p class="caption-line-3"></p>
+                </div>
+            </div>
+
+            <div class="screen-text">
+                <p class="line-1">Wor/D Th/nk/ng</p>
+                <p class="line-2">&</p>
+                <p class="line-3">
+                    <a href="#" class="selected-works-link" data-page="portfolio">The Selected Works</a> of 
+                    <a href="#" class="cids-ho-link" data-page="about">&lt;Cids_Ho/&gt;</a>
+                </p>
+            </div>
+            
+            <div class="contact-section">
+                <div class="icon-buttons">
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            
+                <div class="contact-info">
+                    <p onclick="copyText('+852 5223 4424')">Contact: tel: +852 5223 4424</p>
+                    <p onclick="copyText('hocids@tongji.edu.cn')">Email: hocids@tongji.edu.cn</p>
+                </div>
+            </div>
+
+            <div id="copy-notification" class="copy-notification">
+                <p>已复制到剪贴板！</p>
+            </div>
+        </section>
     </div>
 
-    <!-- 欢迎部分 -->
-    <section id="welcome" class="welcome-section">
-        <!-- 21:9 银幕容器 -->
-        <div class="screen-container">
-            <!-- 图片 -->
-            <img class="screen-media" src="" alt="">
-
-            <!-- 图片介绍文字区 -->
-            <div class="image-caption">
-                <p class="caption-line-1"></p>
-                <p class="caption-line-2"></p>
-                <p class="caption-line-3"></p>
-            </div>
-        </div>
-
-        <!-- 银幕下方文字 -->
-        <div class="screen-text">
-            <p class="line-1">Wor/D Th/nk/ng</p>
-            <p class="line-2">&</p>
-            <p class="line-3"><a href="portfolio.html" class="selected-works-link">The Selected Works</a> of <a href="about.html" class="cids-ho-link">&lt;Cids_Ho/&gt;</a></p>
-        </div>
-        
-        <div class="contact-section">
-            <!-- Icon 按钮 -->
-            <div class="icon-buttons">
-                <a href="https://github.com/CidsHo" target="_blank">
-                    <img src="assets/github-icon.png" alt="GitHub" class="icon">
-                </a>
-                <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
-                    <img src="assets/orcid-icon.png" alt="ORCID" class="icon">
-                </a>
-                <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
-                    <img src="assets/scholar-icon.png" alt="Google Scholar" class="icon">
-                </a>
-            </div>
-        
-            <!-- 联系方式 -->
-            <div class="contact-info">
-                <p onclick="copyText('+852 5223 4424')">Contact: tel: +852 5223 4424</p>
-                <p onclick="copyText('hocids@tongji.edu.cn')">Email: hocids@tongji.edu.cn</p>
-            </div>
-        </div>
-
-        <!-- 复制成功提示框 -->
-        <div id="copy-notification" class="copy-notification">
-            <p>已复制到剪贴板！</p>
-        </div>
-    </section>
-
-
-    <!-- 脚本 -->
     <script type="module" src="scripts/script.js"></script>
+    <script type="module" src="scripts/spa.js"></script>
 </body>
 </html>

@@ -12,6 +12,26 @@
     font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif; /* 默认字体 */
 }
 
+.portfolio-page, .about-page {
+    overflow: auto; /* 允许滚动 */
+}
+
+/* 内容容器 */
+.content-container {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* 页面切换动画 */
+.content-container.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* 隐藏导航栏 */
+.hidden {
+    display: none;
+}
+
 /* 首页文字按钮 */
 .home-buttons {
     position: fixed;

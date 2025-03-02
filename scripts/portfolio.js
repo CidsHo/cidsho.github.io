@@ -1,8 +1,10 @@
-// portfolio.js
+// scripts/portfolio.js
+
 import { setupSearch } from './search.js';
 import { setupFilterAndSort } from './filterAndSort.js';
-import { lazyLoadImages } from './lazyLoad.js'; // 确保导入名称正确
+import { lazyLoadImages } from './lazyLoad.js';
 
+// 加载作品集数据
 export async function loadPortfolio() {
     try {
         const response = await fetch('assets/data/portfolio.json');

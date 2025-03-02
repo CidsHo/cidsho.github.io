@@ -1,4 +1,12 @@
 /* 导航栏容器 */
+
+#navbar-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
 #navbar {
     display: flex;
     justify-content: flex-end; /* 导航栏内容靠右 */

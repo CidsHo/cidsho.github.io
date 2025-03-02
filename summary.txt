@@ -1,260 +1,4 @@
-以下是架构：
-
-│  .gitattributes
-│  about.html
-│  index.html
-│  LICENSE
-│  portfolio.html
-│  README.md
-│  summary.bat
-│  summary.txt
-│  TBD
-│  _config.yml
-│
-├─1. tools
-│  └─generate-json
-│          entrydemo.txt
-│          generate-json.bat
-│          html.txt
-│          images.txt
-│          input.txt
-│          inputdemo.xlsx
-│          portfolio.txt
-│
-├─articles
-│  ├─blog
-│  │  ├─2-24-2025-prologue
-│  │  │  │  2-24-2025-prologue.html
-│  │  │  │
-│  │  │  └─assets
-│  │  │          1.jpg
-│  │  │          3.jpg
-│  │  │
-│  │  └─test-article
-│  │      │  test-article.html
-│  │      │
-│  │      └─assets
-│  │              1.jpg
-│  │
-│  ├─design
-│  │      sakana.html
-│  │
-│  ├─photograph
-│  │  ├─23th-birthday
-│  │  │      23th-birthday.html
-│  │  │      portrait.png
-│  │  │
-│  │  ├─24th-birthday
-│  │  │      24th-birthday.html
-│  │  │      portrait.png
-│  │  │
-│  │  ├─arch-wuhan
-│  │  │      arch.html
-│  │  │      arch.jpg
-│  │  │
-│  │  ├─beyondRadiance
-│  │  │      beyondRadiance.html
-│  │  │      beyondRadiance.jpg
-│  │  │
-│  │  ├─dancer
-│  │  │      dancer.html
-│  │  │      dancer.jpg
-│  │  │
-│  │  ├─danxia
-│  │  │      danxia.css
-│  │  │      danxia.html
-│  │  │      danxia.jpg
-│  │  │
-│  │  ├─dock
-│  │  │      dock.html
-│  │  │      dock.jpg
-│  │  │
-│  │  ├─fadingweddingdressing
-│  │  │      fadingweddingdressing.html
-│  │  │      fadingweddingdressing.jpg
-│  │  │
-│  │  ├─flowerVendor
-│  │  │      flowerVendor.html
-│  │  │      flowerVendor1.jpg
-│  │  │      flowerVendor2.jpg
-│  │  │
-│  │  ├─flowerVendor2
-│  │  │      flowerVendor.html
-│  │  │      flowerVendor1.jpg
-│  │  │      flowerVendor2.jpg
-│  │  │
-│  │  ├─grid1
-│  │  │      grid1.html
-│  │  │      grid1.jpg
-│  │  │      grid2.jpg
-│  │  │
-│  │  ├─hotelLisboaMacau
-│  │  │      hotelLisboaMacau.html
-│  │  │      hotelLisboaMacau.jpg
-│  │  │
-│  │  ├─leadOut
-│  │  │      leadOut.html
-│  │  │      leadOut.jpg
-│  │  │
-│  │  ├─models
-│  │  │      photo.html
-│  │  │
-│  │  ├─nightStall
-│  │  │      nightStall.html
-│  │  │      nightStall.jpg
-│  │  │      nightStall1.jpg
-│  │  │
-│  │  ├─riverguardian
-│  │  │      rg.jpg
-│  │  │      riverguardian.html
-│  │  │      riverguardian.jpg
-│  │  │
-│  │  ├─rust&blossom
-│  │  │      rust&blossom.html
-│  │  │      rust&blossom.jpg
-│  │  │
-│  │  ├─sh1
-│  │  │      sh1.html
-│  │  │      sh1.jpg
-│  │  │
-│  │  ├─shPolygrandtheatre
-│  │  │      shPolygrandtheatre.html
-│  │  │      shPolygrandtheatre.jpg
-│  │  │
-│  │  ├─urbanStyle
-│  │  │      urbanStyle.html
-│  │  │      urbanStyle.jpg
-│  │  │
-│  │  ├─vendor
-│  │  │      vendor.html
-│  │  │      vendor.jpg
-│  │  │
-│  │  ├─vendor2
-│  │  │      vendor.html
-│  │  │      vendor.jpg
-│  │  │
-│  │  ├─void
-│  │  │      void.html
-│  │  │      void.jpg
-│  │  │
-│  │  ├─walkPasssh
-│  │  │      walkPasssh.html
-│  │  │      walkPasssh.jpg
-│  │  │
-│  │  └─westernMarket
-│  │          westernMarket.html
-│  │          westernMarket.jpg
-│  │
-│  └─research
-│      └─shadowplayvr
-│              shadowplayvr.html
-│
-├─assets
-│  │  back-icon.png
-│  │  email-icon.png
-│  │  favicon.png
-│  │  filter-design-icon.png
-│  │  filter-ideas-icon.png
-│  │  filter-photography-icon.png
-│  │  github-icon.png
-│  │  navigator.png
-│  │  orcid-icon.png
-│  │  placeholder.jpg
-│  │  read-more-icon.png
-│  │  recommended-icon.png
-│  │  reset-icon.png
-│  │  scholar-icon.png
-│  │  screen-image.png
-│  │  site.webmanifest
-│  │  sort-asc-icon.png
-│  │  sort-desc-icon.png
-│  │  texture.png
-│  │
-│  ├─aboutme
-│  │      mobile-portrait.png
-│  │      portrait.png
-│  │
-│  ├─data
-│  │      images.json
-│  │      portfolio.json
-│  │
-│  ├─photos
-│  │  └─selfies
-│  │          2020-7-11.JPG
-│  │
-│  ├─screen-images
-│  │      danxia.jpg
-│  │      desk.JPG
-│  │      fadingweddingdressing.jpg
-│  │      grid.jpg
-│  │      jianghezhishou.jpg
-│  │      nightStall.jpg
-│  │      sakana.JPG
-│  │      sandroad.jpg
-│  │      shPolygrandtheatre.jpg
-│  │      void.jpg
-│  │
-│  └─translations
-│          en.json
-│          zh-Hans.json
-│          zh-Hant.json
-│
-├─scripts
-│      copyText.js
-│      filterAndSort.js
-│      languageSwitcher.js
-│      lazyLoad.js
-│      navigation.js
-│      portfolio.js
-│      script.js
-│      search.js
-│      slideshow.js
-│
-└─styles
-    │  about.css
-    │  components.css
-    │  index.css
-    │  photo.css
-    │  portfolio.css
-    │
-    ├─assets
-    │  │  current-page-icon.png
-    │  │
-    │  └─fonts
-    │      │  microsoft-yahei.ttf
-    │      │
-    │      ├─anek-latin
-    │      │      AnekLatin-Bold.ttf
-    │      │      AnekLatin-ExtraBold.ttf
-    │      │      AnekLatin-ExtraLight.ttf
-    │      │      AnekLatin-Light.ttf
-    │      │      AnekLatin-Medium.ttf
-    │      │      AnekLatin-Regular.ttf
-    │      │      AnekLatin-SemiBold.ttf
-    │      │      AnekLatin-Thin.ttf
-    │      │
-    │      ├─playfair-display
-    │      │      PlayfairDisplay-Black.ttf
-    │      │      PlayfairDisplay-BlackItalic.ttf
-    │      │      PlayfairDisplay-Bold.ttf
-    │      │      PlayfairDisplay-BoldItalic.ttf
-    │      │      PlayfairDisplay-Italic.ttf
-    │      │      PlayfairDisplay-Regular.ttf
-    │      │
-    │      └─SmileySans
-    │              SmileySans-Oblique.ttf
-    │
-    └─components
-            background.css
-            base.css
-            buttons.css
-            cards.css
-            fonts.css
-            grid.css
-            icons.css
-            navbar.css
-            typography.css
-            utilities.css 
+ 
  
 以下是文件: about.html 
  
@@ -430,9 +174,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cids' Personal Website</title>
-    <link rel="stylesheet" href="styles/components.css"> <!-- 引用所有通用组件样式 -->
-    <link rel="stylesheet" href="styles/index.css"> <!-- 首页特有样式 -->
-    <!-- Favicon 配置 -->
+    <link rel="stylesheet" href="styles/components.css"> 
+    <link rel="stylesheet" href="styles/index.css"> 
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
     <link rel="manifest" href="assets/site.webmanifest">
@@ -440,63 +183,54 @@
     <meta name="msapplication-TileColor" content="#ffffff">
 </head>
 <body class="home-page">
-    <!-- 首页文字按钮 -->
+
     <div class="home-buttons">
         <a href="about.html" class="home-button">About Me&lt;</a>
         <a href="portfolio.html" class="home-button">Mass. Works</a>
     </div>
 
-    <!-- 欢迎部分 -->
-    <section id="welcome" class="welcome-section">
-        <!-- 21:9 银幕容器 -->
-        <div class="screen-container">
-            <!-- 图片 -->
-            <img class="screen-media" src="" alt="">
-
-            <!-- 图片介绍文字区 -->
-            <div class="image-caption">
-                <p class="caption-line-1"></p>
-                <p class="caption-line-2"></p>
-                <p class="caption-line-3"></p>
+    <div id="content-container" class="content-container">
+        <section id="welcome" class="welcome-section">
+            <div class="screen-container">
+                <img class="screen-media" src="" alt="">
+                <div class="image-caption">
+                    <p class="caption-line-1"></p>
+                    <p class="caption-line-2"></p>
+                    <p class="caption-line-3"></p>
+                </div>
             </div>
-        </div>
 
-        <!-- 银幕下方文字 -->
-        <div class="screen-text">
-            <p class="line-1">Wor/D Th/nk/ng</p>
-            <p class="line-2">&</p>
-            <p class="line-3"><a href="portfolio.html" class="selected-works-link">The Selected Works</a> of <a href="about.html" class="cids-ho-link">&lt;Cids_Ho/&gt;</a></p>
-        </div>
-        
-        <div class="contact-section">
-            <!-- Icon 按钮 -->
-            <div class="icon-buttons">
-                <a href="https://github.com/CidsHo" target="_blank">
-                    <img src="assets/github-icon.png" alt="GitHub" class="icon">
-                </a>
-                <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
-                    <img src="assets/orcid-icon.png" alt="ORCID" class="icon">
-                </a>
-                <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
-                    <img src="assets/scholar-icon.png" alt="Google Scholar" class="icon">
-                </a>
+            <div class="screen-text">
+                <p class="line-1">Wor/D Th/nk/ng</p>
+                <p class="line-2">&</p>
+                <p class="line-3"><a href="portfolio.html" class="selected-works-link">The Selected Works</a> of <a href="about.html" class="cids-ho-link">&lt;Cids_Ho/&gt;</a></p>
             </div>
-        
-            <!-- 联系方式 -->
-            <div class="contact-info">
-                <p onclick="copyText('+852 5223 4424')">Contact: tel: +852 5223 4424</p>
-                <p onclick="copyText('hocids@tongji.edu.cn')">Email: hocids@tongji.edu.cn</p>
+            
+            <div class="contact-section">
+                <div class="icon-buttons">
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            
+                <div class="contact-info">
+                    <p onclick="copyText('+852 5223 4424')">Contact: tel: +852 5223 4424</p>
+                    <p onclick="copyText('hocids@tongji.edu.cn')">Email: hocids@tongji.edu.cn</p>
+                </div>
             </div>
-        </div>
 
-        <!-- 复制成功提示框 -->
-        <div id="copy-notification" class="copy-notification">
-            <p>已复制到剪贴板！</p>
-        </div>
-    </section>
+            <div id="copy-notification" class="copy-notification">
+                <p>已复制到剪贴板！</p>
+            </div>
+        </section>
+    </div>
 
-
-    <!-- 脚本 -->
     <script type="module" src="scripts/script.js"></script>
 </body>
 </html>
@@ -556,50 +290,54 @@
     </div>
 
     <!-- 作品集内容 -->
-    <section id="portfolio" class="portfolio-section">
-        <h1>Mass. Works</h1>
-        <h7>如您有意与我合作，请点击<button id="filter-star">⭐</button>查看精选项目<br><br></h7>
+    <section class="portfolio-banner">
+        <div class="banner-content">
+            <h1><br><br></h1>
+            <h7>如您有意与我合作，请点击<button id="filter-star">⭐</button>查看精选项目<br><br></h7>
 
-        <!-- 搜索框 -->
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="搜索作品或标签...">
-            <button id="search-button">Go!</button>
-        </div>
-
-        <!-- 排序和筛选按钮 -->
-        <div class="filter-sort-options">
-            <div class="sort-options">
-                <button id="sort-date-asc" class="sort-button">
-                    <img src="assets/sort-asc-icon.png" alt="Sort by Date (Ascending)" class="icon">
-                </button>
-                <button id="sort-date-desc" class="sort-button">
-                    <img src="assets/sort-desc-icon.png" alt="Sort by Date (Descending)" class="icon">
-                </button>
+            <!-- 搜索框 -->
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="搜索作品或标签...">
+                <button id="search-button">Go!</button>
             </div>
-            <div class="filter-options">
-                <button id="reset-filter" class="filter-button">
-                    <img src="assets/reset-icon.png" alt="Reset Filter" class="icon">
-                </button>
-                <button id="filter-photography" class="filter-button">
-                    <img src="assets/filter-photography-icon.png" alt="Photography" class="icon">
-                </button>
-                <button id="filter-design" class="filter-button">
-                    <img src="assets/filter-design-icon.png" alt="Design" class="icon">
-                </button>
-                <button id="filter-ideas" class="filter-button">
-                    <img src="assets/filter-ideas-icon.png" alt="Ideas" class="icon">
-                </button>
-                <button id="filter-star-icon" class="filter-button">
-                    <img src="assets/recommended-icon.png" alt="精选" class="icon">
-                </button>
-            </div>
-        </div>
 
-        <!-- 作品集网格 -->
-        <div class="portfolio-grid">
-            <!-- 卡片内容将通过 JavaScript 动态加载 -->
+            <!-- 排序和筛选按钮 -->
+            <div class="filter-sort-options">
+                <div class="sort-options">
+                    <button id="sort-date-asc" class="sort-button">
+                        <img src="assets/sort-asc-icon.png" alt="Sort by Date (Ascending)" class="icon">
+                    </button>
+                    <button id="sort-date-desc" class="sort-button">
+                        <img src="assets/sort-desc-icon.png" alt="Sort by Date (Descending)" class="icon">
+                    </button>
+                </div>
+                <div class="filter-options">
+                    <button id="reset-filter" class="filter-button">
+                        <img src="assets/reset-icon.png" alt="Reset Filter" class="icon">
+                    </button>
+                    <button id="filter-photography" class="filter-button">
+                        <img src="assets/filter-photography-icon.png" alt="Photography" class="icon">
+                    </button>
+                    <button id="filter-design" class="filter-button">
+                        <img src="assets/filter-design-icon.png" alt="Design" class="icon">
+                    </button>
+                    <button id="filter-ideas" class="filter-button">
+                        <img src="assets/filter-ideas-icon.png" alt="Ideas" class="icon">
+                    </button>
+                    <button id="filter-star-icon" class="filter-button">
+                        <img src="assets/recommended-icon.png" alt="精选" class="icon">
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
+
+        <!-- 作品集网格 -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="portfolio-grid">
+                <!-- 卡片内容将通过 JavaScript 动态加载 -->
+            </div>
+        </section>
 
     <!-- 底部提示 -->
     <div id="bottom-tip" class="bottom-tip">
@@ -914,6 +652,16 @@ if (navToggle && menuOverlay) {
 } else {
     console.error('navToggle or menuOverlay not found');
 }
+
+// 返回按钮逻辑
+const backButton = document.getElementById('back-button');
+if (backButton) {
+    backButton.addEventListener('click', () => {
+        window.history.back(); // 返回上一个页面
+    });
+} else {
+    console.error('返回按钮未找到');
+}
  
 以下是文件: portfolio.js 
  
@@ -1018,6 +766,11 @@ import './languageSwitcher.js';
 
 // 调用 loadPortfolio
 document.addEventListener('DOMContentLoaded', loadPortfolio);
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 其他初始化代码
+    setupNavigation(); // 假设你在 navigation.js 中定义了 setupNavigation 函数
+});
  
 以下是文件: search.js 
  
@@ -1153,6 +906,60 @@ if (screenContainer) {
 }
 
 document.addEventListener('DOMContentLoaded', loadImages);
+ 
+以下是文件: spa.js 
+ 
+// 内容容器
+const contentContainer = document.getElementById('content-container');
+
+// 首页按钮
+const homeButtons = document.querySelectorAll('.home-button');
+
+// 加载页面内容
+async function loadPage(url) {
+    try {
+        contentContainer.classList.add('fade-out'); // 添加淡出动画
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Failed to load page');
+        }
+        const html = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const newContent = doc.querySelector('.content-container').innerHTML;
+        setTimeout(() => {
+            contentContainer.innerHTML = newContent;
+            contentContainer.classList.remove('fade-out'); // 移除淡出动画
+        }, 500); // 等待动画完成
+    } catch (error) {
+        console.error('Error loading page:', error);
+        contentContainer.innerHTML = '<p>页面加载失败，请稍后重试。</p>';
+    }
+}
+
+// 处理首页按钮点击事件
+homeButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault(); // 阻止默认跳转行为
+        const page = button.getAttribute('data-page');
+        const url = `${page}.html`;
+        history.pushState({ page }, '', url); // 更新浏览器历史记录
+        loadPage(url); // 加载页面内容
+    });
+});
+
+// 处理浏览器前进/后退事件
+window.addEventListener('popstate', (event) => {
+    if (event.state) {
+        const url = `${event.state.page}.html`;
+        loadPage(url);
+    }
+});
+
+// 初始化加载首页
+document.addEventListener('DOMContentLoaded', () => {
+    history.replaceState({ page: 'index' }, '', 'index.html');
+});
  
 以下是文件: about.css 
  
@@ -1582,6 +1389,15 @@ document.addEventListener('DOMContentLoaded', loadImages);
 
 /* 工具类 */
 @import url('components/utilities.css');
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* 防止水平滚动 */
+}
  
 以下是文件: index.css 
  
@@ -1589,12 +1405,25 @@ document.addEventListener('DOMContentLoaded', loadImages);
 
 /* 首页背景 */
 .home-page {
-    background-color: #000; /* 黑色背景 */
+    background-color: #000000ee; /* 黑色背景 */
     background-image: url('../assets/texture.png'); /* 材质背景 */
-    background-repeat: repeat; /* 平铺材质 */
     background-blend-mode: overlay; /* 混合模式 */
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    background-blend-mode: overlay;
     overflow: hidden; /* 隐藏溢出内容 */
     font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif; /* 默认字体 */
+}
+
+/* 内容容器 */
+.content-container {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* 页面切换动画 */
+.content-container.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 /* 首页文字按钮 */
@@ -1642,7 +1471,7 @@ document.addEventListener('DOMContentLoaded', loadImages);
     width: 90%; /* 左右各留白 5% */
     aspect-ratio: 21 / 9; /* 21:9 比例 */
     max-width: 1200px; /* 最大宽度 */
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    background-color: rgba(24, 29, 37, 0.5); /* 半透明背景 */
     margin-bottom: 40px; /* 与文字的间距 */
     overflow: hidden;
     cursor: pointer; /* 鼠标悬停时显示手型 */
@@ -1779,7 +1608,7 @@ document.addEventListener('DOMContentLoaded', loadImages);
     font-size: 14px;
     text-align: center;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.089);
     padding: 10px;
     border-radius: 5px;
 }
@@ -1999,16 +1828,28 @@ document.addEventListener('DOMContentLoaded', loadImages);
 /* 照片标签 */
 .photo-tags {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap; /* 允许标签换行 */
+    gap: 10px; /* 标签之间的间距 */
+    margin-bottom: 20px; /* 与下方内容的间距 */
 }
 
 .photo-tags .tag {
     font-family: 'Anek Latin', sans-serif;
-    font-size: 14px;
+    font-size: 14px; /* 默认字体大小 */
     color: #333;
     background-color: #f0f0f0;
-    padding: 5px 10px;
+    padding: 6px 12px; /* 内边距 */
     border-radius: 5px;
+    white-space: nowrap; /* 防止标签内文字换行 */
+    min-width: 60px; /* 设置最小宽度 */
+    text-align: center; /* 文字居中 */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* 鼠标悬停效果 */
+.photo-tags .tag:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
 }
 
 /* 返回按钮样式 */
@@ -2052,8 +1893,26 @@ document.addEventListener('DOMContentLoaded', loadImages);
         font-size: 14px;
     }
 
+    .photo-tags {
+        gap: 8px; /* 缩小标签间距 */
+    }
+
     .photo-tags .tag {
-        font-size: 12px;
+        font-size: 12px; /* 缩小字体大小 */
+        padding: 4px 8px; /* 缩小内边距 */
+        min-width: 50px; /* 缩小最小宽度 */
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-tags {
+        gap: 6px; /* 进一步缩小标签间距 */
+    }
+
+    .photo-tags .tag {
+        font-size: 11px; /* 进一步缩小字体大小 */
+        padding: 3px 6px; /* 进一步缩小内边距 */
+        min-width: 40px; /* 进一步缩小最小宽度 */
     }
 }
  
@@ -2061,9 +1920,50 @@ document.addEventListener('DOMContentLoaded', loadImages);
  
 /* 作品集页面样式 */
 
+/* Banner 部分 */
+.portfolio-banner {
+    background-image: url('../assets/banner-background.jpg'); /* 替换为你的 banner 图片 */
+    background-size: cover; /* 背景图片覆盖整个 banner */
+    background-position: center; /* 背景图片居中 */
+    width: 100%; /* 覆盖整个宽度 */
+    min-height: 400px; /* 设置最小高度 */
+    padding: 60px 20px; /* 内边距 */
+    text-align: center; /* 内容居中 */
+    color: #fff; /* 文字颜色 */
+    position: relative; /* 相对定位 */
+    z-index: 1; /* 确保 banner 在最上层 */
+    box-sizing: border-box; /* 确保内边距不会影响宽度 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    
+}
+
+/* Banner 内容 */
+.banner-content {
+    max-width: 1200px; /* 最大宽度 */
+    margin: 0 auto; /* 居中 */
+    position: relative; /* 相对定位 */
+    z-index: 2; /* 确保内容在 banner 上层 */
+}
+
+/* 标题样式 */
+.portfolio-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff; /* 白色文字 */
+}
+
+/* 副标题样式 */
+.portfolio-banner h7 {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8); /* 半透明白色 */
+    margin-bottom: 30px;
+}
+
 /* 页面背景 */
 .portfolio-page {
-    background-color: #D9D9D9;
+    background-color: #181D25;
     background-image: url('../assets/texture.png');
     background-repeat: repeat;
     background-size: 500px 500px;
@@ -2281,6 +2181,18 @@ document.addEventListener('DOMContentLoaded', loadImages);
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+    .portfolio-banner {
+        padding: 40px 15px; /* 缩小内边距 */
+    }
+
+    .portfolio-banner h1 {
+        font-size: 36px; /* 缩小标题字体 */
+    }
+
+    .portfolio-banner h7 {
+        font-size: 16px; /* 缩小副标题字体 */
+    }
+
     /* 筛选栏优化 */
     .filter-sort-options {
         flex-direction: row; /* 保持按钮在同一排 */
@@ -2382,63 +2294,6 @@ document.addEventListener('DOMContentLoaded', loadImages);
     position: absolute;
     top: 1142px;
     left: 91px;
-}
- 
-以下是文件: base.css 
- 
-/* 全局样式 */
-body {
-    font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh; /* 最小高度为视口高度 */
-    background-color: #D9D9D9;
-    background-image: url('../assets/texture.png');
-    background-repeat: repeat;
-    background-size: 500px 500px;
-    background-blend-mode: overlay;
-    box-sizing: border-box;
-}
-
-/* 容器 */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-/* 标题 */
-h1 {
-    font-size: clamp(1.5rem, 5vw, 3rem);
-    margin-bottom: 1.5rem;
-}
-
-/* 段落 */
-p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    .container {
-        padding: 0.5rem;
-    }
-    h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0.25rem;
-    }
-    h1 {
-        font-size: 1.5rem;
-    }
 }
  
 以下是文件: buttons.css 
@@ -3097,169 +2952,6 @@ p {
         margin: 15px 0; /* 减少菜单项间距 */
         padding-left: 80px; /* 减少左侧留白 */
     }
-}
- 
-以下是文件: typography.css 
- 
-/* 字体和排版样式 */
-
-/* 全局字体设置 */
-body {
-    font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif; /* 默认字体 */
-    color: #333; /* 默认文字颜色 */
-    line-height: 1.6; /* 行高 */
-    margin: 0;
-    padding: 0;
-}
-
-/* 标题字体 */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', 'Microsoft YaHei', serif; /* 标题字体 */
-    font-weight: 700; /* 加粗 */
-    margin: 0; /* 去掉默认外边距 */
-}
-
-/* 一级标题 */
-h1 {
-    font-size: 48px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-/* 二级标题 */
-h2 {
-    font-size: 36px;
-    line-height: 1.3;
-    margin-bottom: 16px;
-}
-
-/* 三级标题 */
-h3 {
-    font-size: 28px;
-    line-height: 1.4;
-    margin-bottom: 12px;
-}
-
-/* 四级标题 */
-h4 {
-    font-size: 24px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
-/* 五级标题 */
-h5 {
-    font-size: 20px;
-    line-height: 1.5;
-    margin-bottom: 8px;
-}
-
-/* 六级标题 */
-h6 {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 6px;
-}
-
-/* 段落 */
-p {
-    font-size: 16px;
-    margin: 0 0 20px 0; /* 下边距 */
-    color: #666; /* 段落文字颜色 */
-}
-
-/* 链接 */
-a {
-    color: inherit; /* 继承父元素颜色 */
-    text-decoration: none; /* 去掉下划线 */
-    transition: color 0.3s ease; /* 添加颜色过渡效果 */
-}
-
-/* 鼠标悬停时改变链接颜色 */
-a:hover {
-    color: #ffcc00; /* 悬停颜色 */
-}
-
-/* 斜体文本 */
-.italic {
-    font-style: italic; /* 斜体 */
-}
-
-/* 粗体文本 */
-.bold {
-    font-weight: bold; /* 加粗 */
-}
-
-/* 文字居中 */
-.text-center {
-    text-align: center; /* 居中 */
-}
-
-/* 文字右对齐 */
-.text-right {
-    text-align: right; /* 右对齐 */
-}
-
-/* 文字左对齐 */
-.text-left {
-    text-align: left; /* 左对齐 */
-}
-
-/* 小号文字 */
-.small-text {
-    font-size: 14px;
-    color: #999; /* 浅灰色 */
-}
-
-/* 大号文字 */
-.large-text {
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-/* 文字阴影 */
-.text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 阴影效果 */
-}
-
-/* 文字大写 */
-.uppercase {
-    text-transform: uppercase; /* 大写字母 */
-}
-
-/* 文字小写 */
-.lowercase {
-    text-transform: lowercase; /* 小写字母 */
-}
-
-/* 文字首字母大写 */
-.capitalize {
-    text-transform: capitalize; /* 首字母大写 */
-}
-
-/* 文字颜色 */
-.text-primary {
-    color: #333; /* 主要文字颜色 */
-}
-
-.text-secondary {
-    color: #666; /* 次要文字颜色 */
-}
-
-.text-accent {
-    color: #ffcc00; /* 强调文字颜色 */
-}
-
-/* 文字选中样式 */
-::selection {
-    background-color: #ffcc00; /* 选中背景颜色 */
-    color: #000; /* 选中文字颜色 */
-}
-
-/* 兼容 Firefox */
-::-moz-selection {
-    background-color: #ffcc00; /* 选中背景颜色 */
-    color: #000; /* 选中文字颜色 */
 }
  
 以下是文件: utilities.css 

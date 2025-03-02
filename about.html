@@ -6,7 +6,6 @@
     <title>About Me - Cids' Personal Website</title>
     <link rel="stylesheet" href="styles/components.css">
     <link rel="stylesheet" href="styles/about.css">
-    <!-- Favicon 配置 -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
     <link rel="manifest" href="assets/site.webmanifest">
@@ -14,11 +13,11 @@
     <meta name="msapplication-TileColor" content="#ffffff">
 </head>
 <body class="about-page">
-    <!-- 导航栏 -->
+
     <header>
         <nav id="navbar">
             <button id="nav-toggle">
-                <img src="assets/navigator.png" alt="Navigator" class="nav-icon">
+                <img src="../../../assets/navigator.png" alt="Navigator" class="nav-icon">
             </button>
         </nav>
     </header>
@@ -26,137 +25,135 @@
     <!-- 菜单栏 -->
     <div id="menu-overlay" class="menu-overlay">
         <ul id="nav-menu">
-            <li><a href="index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
-            <li><a href="portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
-            <li class="current-page"><a href="about.html">About Me&lt; &emsp;关于我</a></li>
+            <li><a href="../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+            <li><a href="../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+            <li><a href="../../../about.html">About Me&lt; &emsp;关于我</a></li>
         </ul>
 
         <!-- More 和图标 -->
         <div class="more-frontpage">
             <div class="icon-row">
                 <a href="mailto:hocids@tongji.edu.cn">
-                    <img src="assets/email-icon.png" alt="Email" class="icon">
+                    <img src="../../../assets/email-icon.png" alt="Email" class="icon">
                 </a>
                 <a href="https://github.com/CidsHo" target="_blank">
-                    <img src="assets/github-icon.png" alt="GitHub" class="icon">
+                    <img src="../../../assets/github-icon.png" alt="GitHub" class="icon">
                 </a>
                 <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
-                    <img src="assets/orcid-icon.png" alt="ORCID" class="icon">
+                    <img src="../../../assets/orcid-icon.png" alt="ORCID" class="icon">
                 </a>
                 <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
-                    <img src="assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    <img src="../../../assets/scholar-icon.png" alt="Google Scholar" class="icon">
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- 自我介绍内容 -->
-    <div class="about-container">
-        <!-- 左侧：照片和姓名区 -->
-        <div class="about-left">
-            <!-- 桌面端头像 -->
-            <img src="assets/aboutme/portrait.png" alt="Profile Image" class="about-profile-image desktop-profile">
-            <!-- 移动端头像 -->
-            <img src="assets/aboutme/mobile-portrait.png" alt="Profile Image" class="about-profile-image mobile-profile">
-            
-            <!-- 姓名区 -->
-            <div class="name-section">
-                <h1>Jat-Hou Cids Ho</h1>
-                <h2>何逸豪 Yihao He</h2>
-                <p>Interactive Media Art Designer, HCI Researcher, VR Addict.</p>
-            </div>
-
-            <!-- 联系方式 -->
-            <div class="contact-section">
-                <h3>Contact Me</h3>
-                <p>Email: <a href="mailto:hocids@tongji.edu.cn">hocids@tongji.edu.cn</a></p>
-                <p>Tel: +852 5223 4424</p>
-            </div>
-
-            <!-- 语言切换按钮 -->
-            <div class="language-switcher">
-                <button onclick="window.switchLanguage('en')">EN</button>
-                <button onclick="window.switchLanguage('zh-Hans')">简</button>
-                <button onclick="window.switchLanguage('zh-Hant')">繁</button>
-            </div>
-        </div>
-
-        <!-- 右侧：文字内容 -->
-        <div class="about-right">
-
-            <!-- 关于我 -->
-            <div class="content-row">
-                <div class="content-title">
-                    <h2 data-key="aboutMe"></h2>
+    <div class="content-container">
+        <div class="about-container">
+            <!-- 左侧：照片和姓名区 -->
+            <div class="about-left">
+                <!-- 桌面端头像 -->
+                <img src="assets/aboutme/portrait.png" alt="Profile Image" class="about-profile-image desktop-profile">
+                <!-- 移动端头像 -->
+                <img src="assets/aboutme/mobile-portrait.png" alt="Profile Image" class="about-profile-image mobile-profile">
+                
+                <!-- 姓名区 -->
+                <div class="name-section">
+                    <h1>Jat-Hou Cids Ho</h1>
+                    <h2>何逸豪 Yihao He</h2>
+                    <p>Interactive Media Art Designer, HCI Researcher, VR Addict.</p>
                 </div>
-                <div class="content-text">
-                    <p data-key="aboutMeText"></p>
+    
+                <!-- 联系方式 -->
+                <div class="contact-section">
+                    <h3>Contact Me</h3>
+                    <p>Email: <a href="mailto:hocids@tongji.edu.cn">hocids@tongji.edu.cn</a></p>
+                    <p>Tel: +852 5223 4424</p>
+                </div>
+    
+                <!-- 语言切换按钮 -->
+                <div class="language-switcher">
+                    <button onclick="window.switchLanguage('en')">EN</button>
+                    <button onclick="window.switchLanguage('zh-Hans')">简</button>
+                    <button onclick="window.switchLanguage('zh-Hant')">繁</button>
                 </div>
             </div>
-
-            <!-- 研究兴趣 -->
-            <div class="content-row">
-                <div class="content-title">
-                    <h2 data-key="researchInterest"></h2>
+    
+            <!-- 右侧：文字内容 -->
+            <div class="about-right">
+                <!-- 关于我 -->
+                <div class="content-row">
+                    <div class="content-title">
+                        <h2 data-key="aboutMe"></h2>
+                    </div>
+                    <div class="content-text">
+                        <p data-key="aboutMeText"></p>
+                    </div>
                 </div>
-                <div class="content-text">
-                    <p data-key="researchInterestText"></p>
+    
+                <!-- 研究兴趣 -->
+                <div class="content-row">
+                    <div class="content-title">
+                        <h2 data-key="researchInterest"></h2>
+                    </div>
+                    <div class="content-text">
+                        <p data-key="researchInterestText"></p>
+                    </div>
                 </div>
-            </div>
-
-            <!-- 教育背景 -->
-            <div class="content-row">
-                <div class="content-title">
-                    <h2 data-key="educations"></h2>
+    
+                <!-- 教育背景 -->
+                <div class="content-row">
+                    <div class="content-title">
+                        <h2 data-key="educations"></h2>
+                    </div>
+                    <div class="content-text">
+                        <p data-key="educationsText"></p>
+                    </div>
                 </div>
-                <div class="content-text">
-                    <p data-key="educationsText"></p>
+    
+                <!-- 技能 -->
+                <div class="content-row">
+                    <div class="content-title">
+                        <h2 data-key="skills"></h2>
+                    </div>
+                    <div class="content-text">
+                        <div data-key="skillsText"></div>
+                    </div>
                 </div>
-            </div>
-
-            <!-- 技能 -->
-            <div class="content-row">
-                <div class="content-title">
-                    <h2 data-key="skills"></h2>
+    
+                <!-- 出版物 -->
+                <div class="content-row">
+                    <div class="content-title">
+                        <h2 data-key="publications"></h2>
+                    </div>
+                    <div class="content-text">
+                        <ul data-key="publicationsList"></ul>
+                    </div>
                 </div>
-                <div class="content-text">
-                    <div data-key="skillsText"></div>
+    
+                <!-- 项目经验 -->
+                <div class="content-row">
+                    <div class="content-title">
+                        <h2 data-key="projectExperience"></h2>
+                    </div>
+                    <div class="content-text">
+                        <ul data-key="projectExperienceList"></ul>
+                    </div>
                 </div>
-            </div>
-
-            <!-- 出版物 -->
-            <div class="content-row">
-                <div class="content-title">
-                    <h2 data-key="publications"></h2>
+    
+                <!-- 奖项 -->
+                <div class="content-row">
+                    <div class="content-title">
+                        <h2 data-key="awards"></h2>
+                    </div>
+                    <div class="content-text">
+                        <ul data-key="awardsList"></ul>
+                    </div>
                 </div>
-                <div class="content-text">
-                    <ul data-key="publicationsList"></ul>
-                </div>
-            </div>
-
-            <!-- 项目经验 -->
-            <div class="content-row">
-                <div class="content-title">
-                    <h2 data-key="projectExperience"></h2>
-                </div>
-                <div class="content-text">
-                    <ul data-key="projectExperienceList"></ul>
-                </div>
-            </div>
-
-            <!-- 奖项 -->
-            <div class="content-row">
-                <div class="content-title">
-                    <h2 data-key="awards"></h2>
-                </div>
-                <div class="content-text">
-                    <ul data-key="awardsList"></ul>
-                </div>
-                <br><br><br>
             </div>
         </div>
     </div>
-
     <!-- 脚本 -->
     <script type="module" src="scripts/script.js"></script>
 </body>
