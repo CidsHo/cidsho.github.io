@@ -2,7 +2,7 @@
 
 /* Banner 部分 */
 .portfolio-banner {
-    background-image: url('../assets/banner-background.jpg'); /* 替换为你的 banner 图片 */
+    background-image: url('../assets/banner-background.png'); /* 替换为你的 banner 图片 */
     background-size: cover; /* 背景图片覆盖整个 banner */
     background-position: center; /* 背景图片居中 */
     width: 100%; /* 覆盖整个宽度 */
