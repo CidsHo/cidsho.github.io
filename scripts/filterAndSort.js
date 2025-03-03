@@ -47,8 +47,8 @@ export function setupFilterAndSort() {
             // 移除移动动画
             setTimeout(() => {
                 portfolioItems.forEach(item => item.classList.remove('move'));
-            }, 10); // 稍微延迟以确保动画生效
-        }, 500); // 等待动画完成
+            }, 100); // 稍微延迟以确保动画生效
+        }, 700); // 等待动画完成
     }
 
     function filterItems(category, button) {

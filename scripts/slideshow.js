@@ -87,3 +87,11 @@ if (screenContainer) {
 }
 
 document.addEventListener('DOMContentLoaded', loadImages);
+
+export function loadImages() {
+    // 加载图片逻辑
+}
+
+export function startSlideshow() {
+    // 启动幻灯片逻辑
+}

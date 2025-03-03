@@ -156,5 +156,15 @@
     </div>
     <!-- 脚本 -->
     <script type="module" src="scripts/script.js"></script>
+    <script type="module">
+        import { loadTranslations, switchLanguage } from './scripts/languageSwitcher.js';
+        window.switchLanguage = switchLanguage; // 挂载到全局
+        window.loadTranslations = loadTranslations;
+    
+        // 默认加载英文
+        document.addEventListener('DOMContentLoaded', () => {
+            switchLanguage('en');
+        });
+    </script>
 </body>
 </html>

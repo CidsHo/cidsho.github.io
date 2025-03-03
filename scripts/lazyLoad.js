@@ -13,7 +13,7 @@ export function lazyLoadImages() {
         });
     }, {
         rootMargin: '0px',
-        threshold: 0.1 // 当图片进入视口 10% 时触发加载
+        threshold: 0.05 // 当图片进入视口 10% 时触发加载
     });
 
     lazyImages.forEach(img => {

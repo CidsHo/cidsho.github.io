@@ -7,7 +7,7 @@ async function loadTranslations(lang) {
         if (!response.ok) {
             throw new Error(`Failed to load ${lang}.json: ${response.statusText}`);
         }
-        translations[lang] = await response.json();
+        translations[lang] = await response.json(); // 更新全局翻译数据
         console.log(`Loaded ${lang}.json:`, translations[lang]);
         switchLanguage(lang);
     } catch (error) {
@@ -16,12 +16,13 @@ async function loadTranslations(lang) {
 }
 
 // 将 switchLanguage 挂载到 window 对象
-window.switchLanguage = function (lang) {
-    document.documentElement.lang = lang;
-    if (!translations[lang]) {
-        loadTranslations(lang);
-        return;
-    }
+export function loadTranslations(lang) {
+    window.switchLanguage = function (lang) {
+        document.documentElement.lang = lang;
+        if (!translations[lang]) {
+            loadTranslations(lang);
+            return;
+        }
 
     // 获取所有需要翻译的元素
     const elements = document.querySelectorAll('[data-key]');
@@ -81,6 +82,7 @@ window.switchLanguage = function (lang) {
         }
     });
 
+
     // 更新语言切换按钮的状态
     const languageButtons = document.querySelectorAll('.language-switcher button');
     languageButtons.forEach(button => {
@@ -96,3 +98,4 @@ window.switchLanguage = function (lang) {
 document.addEventListener('DOMContentLoaded', () => {
     switchLanguage('en');
 });
+}
