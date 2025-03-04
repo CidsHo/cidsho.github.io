@@ -227,9 +227,9 @@
     {
         "title": "构成 Composition",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/photograph/composition1/composition1.jpg",
+        "data-src": "articles/photograph/composition1/composition1.jpeg",
         "link": "articles/photograph/composition1/composition1.html",
-        "tags": ["摄影，抽象"],
+        "tags": ["摄影","抽象"],
         "description": "",
         "date": "2019-08-30"
     },
@@ -238,7 +238,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/siren/siren.jpg",
         "link": "articles/photograph/siren/siren.html",
-        "tags": ["摄影，人像"],
+        "tags": ["摄影","人像"],
         "description": "@Chinese Football",
         "date": "2021-12-17"
     },
@@ -247,7 +247,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/interval/interval.jpg",
         "link": "articles/photograph/interval/interval.html",
-        "tags": ["摄影，人像"],
+        "tags": ["摄影","人像"],
         "description": "",
         "date": "2022-01-31"
     },

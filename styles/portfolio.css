@@ -128,6 +128,11 @@
     justify-content: center; /* 内容居中 */
 }
 
+.portfolio-container {
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
 /* 卡片容器 */
 .portfolio-item {
     width: 100%;
@@ -259,8 +264,39 @@
     background-color: #e6b800;
 }
 
+#loading-more {
+    font-family: 'Anek Latin', sans-serif;
+    font-size: 16px;
+    color: #666;
+    padding: 20px;
+    text-align: center;
+}
+
 /* 响应式设计 */
+
+@media (min-width: 1800px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(5, 1fr); /* 每行 5 张卡片 */
+    }
+    .portfolio-container {
+        padding: 0 80px; /* 增加留白 */
+    }
+}
+
+@media (max-width: 1799px) and (min-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr); /* 每行 3 张卡片 */
+    }
+    .portfolio-container {
+        padding: 0 40px;
+    }
+}
+
 @media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* 每行 1 张卡片 */
+    }
+
     .portfolio-banner {
         padding: 40px 15px; /* 缩小内边距 */
     }
@@ -271,6 +307,10 @@
 
     .portfolio-banner h7 {
         font-size: 16px; /* 缩小副标题字体 */
+    }
+
+    .portfolio-container {
+        padding: 0 20px;
     }
 
     /* 筛选栏优化 */

@@ -3,6 +3,74 @@ import { setupSearch } from './search.js';
 import { setupFilterAndSort } from './filterAndSort.js';
 import { lazyLoadImages } from './lazyLoad.js'; // 确保导入名称正确
 
+let currentPage = 1;
+const pageSize = 10; // 每次加载的图片数量
+let isLoading = false; // 防止重复加载
+
+// 加载更多图片
+async function loadMoreItems() {
+    if (isLoading) return; // 如果正在加载，则退出
+    isLoading = true;
+
+    // 显示加载提示
+    const loadingMore = document.getElementById('loading-more');
+    loadingMore.style.display = 'block';
+
+    try {
+        // 模拟从服务器加载数据
+        const response = await fetch(`/api/portfolio?page=${currentPage}&size=${pageSize}`);
+        const data = await response.json();
+
+        if (data.length > 0) {
+            const portfolioGrid = document.getElementById('portfolio-grid');
+            data.forEach(item => {
+                const card = createPortfolioCard(item); // 创建卡片
+                portfolioGrid.appendChild(card);
+            });
+
+            currentPage++; // 加载下一页
+        } else {
+            // 如果没有更多数据，隐藏加载提示
+            loadingMore.style.display = 'none';
+        }
+    } catch (error) {
+        console.error('Error loading more items:', error);
+    } finally {
+        isLoading = false;
+    }
+}
+
+// 创建图片卡片
+function createPortfolioCard(item) {
+    const card = document.createElement('div');
+    card.classList.add('portfolio-item');
+    card.innerHTML = `
+        <div class="image-container">
+            <img class="lazy-load" data-src="${item.image}" alt="${item.title}">
+        </div>
+        <div class="portfolio-info">
+            <h2>${item.title}</h2>
+            <p>${item.description}</p>
+            <div class="portfolio-tags">
+                ${item.tags.map(tag => `<span>${tag}</span>`).join('')}
+            </div>
+            <div class="portfolio-date">${item.date}</div>
+        </div>
+    `;
+    return card;
+}
+
+// 监听滚动事件
+window.addEventListener('scroll', function () {
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    if (scrollTop + clientHeight >= scrollHeight - 100) { // 接近底部时加载更多
+        loadMoreItems();
+    }
+});
+
+// 初始化加载第一页
+loadMoreItems();
+
 export async function loadPortfolio() {
     try {
         const response = await fetch('assets/data/portfolio.json');

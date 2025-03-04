@@ -93,12 +93,16 @@
         </div>
     </section>
 
-        <!-- 作品集网格 -->
-        <section id="portfolio" class="portfolio-section">
-            <div class="portfolio-grid">
-                <!-- 卡片内容将通过 JavaScript 动态加载 -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="portfolio-container"> <!-- 新增外层容器 -->
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- 图片卡片将通过 JavaScript 动态加载 -->
             </div>
-        </section>
+            <div id="loading-more" style="display: none; text-align: center; padding: 20px;">
+                Loading more...
+            </div>
+        </div>
+    </section>>
 
     <!-- 底部提示 -->
     <div id="bottom-tip" class="bottom-tip">
