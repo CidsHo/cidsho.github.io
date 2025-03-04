@@ -1,4 +1,5 @@
 [
+
     {
         "title": "开始 Begins",
         "image": "assets/placeholder.jpg", 
@@ -304,5 +305,38 @@
         "tags": ["摄影"],
         "description": "",
         "date": "2023-02-04"
+    },
+
+
+
+
+
+    {
+        "title": "鱼 Sakana",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/sakana/sakana.JPG",
+        "link": "articles/design/sakana/sakana.html",
+        "tags": ["设计","绘画"],
+        "description": "明信片设计",
+        "date": "2020-08-17"
+    },
+    {
+        "title": "R&D",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/r&d/r&d.JPG",
+        "link": "articles/design/r&d/r&d.html",
+        "tags": ["设计","绘画"],
+        "description": "明信片设计",
+        "date": "2021-03-24"
+    },
+    {
+        "title": "Onsome",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/onsome/onsome.png",
+        "link": "articles/design/onsome/onsome.html",
+        "tags": ["设计","数字绘画"],
+        "description": "香港社会福利署海报设计",
+        "date": "2023-06-01"
     }
+    
 ]

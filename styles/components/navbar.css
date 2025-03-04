@@ -116,7 +116,7 @@
 /* 菜单项链接 */
 #nav-menu li a {
     text-decoration: none;
-    color: #333; /* 文字颜色 */
+    color: #ffffffc6; /* 文字颜色 */
     font-size: 18px;
     transition: color 0.3s ease, transform 0.3s ease; /* 添加颜色和缩放动画 */
     position: relative;

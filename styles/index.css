@@ -88,6 +88,56 @@
     overflow: hidden; /* 隐藏溢出内容 */
 }
 
+/*文字动画*/
+.line-1 {
+    display: flex;
+    justify-content: center;
+    gap: 2px; /* 字符间距 */
+}
+
+.char {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.line-1:hover .char {
+    transform: translateY(-5px) rotate(5deg); /* 散开效果 */
+    opacity: 1;
+}
+
+/* 为每个字符设置不同的偏移量 */
+.line-1:hover .char:nth-child(1) { transform: translateY(-5px) rotate(-5deg); }
+.line-1:hover .char:nth-child(2) { transform: translateY(-3px) rotate(3deg); }
+.line-1:hover .char:nth-child(3) { transform: translateY(-4px) rotate(-2deg); }
+.line-1:hover .char:nth-child(4) { transform: translateY(-6px) rotate(4deg); }
+.line-1:hover .char:nth-child(5) { transform: translateY(-2px) rotate(-3deg); }
+.line-1:hover .char:nth-child(6) { transform: translateY(-5px) rotate(2deg); }
+.line-1:hover .char:nth-child(7) { transform: translateY(-3px) rotate(-4deg); }
+.line-1:hover .char:nth-child(8) { transform: translateY(-4px) rotate(3deg); }
+.line-1:hover .char:nth-child(9) { transform: translateY(-6px) rotate(-2deg); }
+.line-1:hover .char:nth-child(10) { transform: translateY(-2px) rotate(4deg); }
+.line-1:hover .char:nth-child(11) { transform: translateY(-5px) rotate(-3deg); }
+.line-1:hover .char:nth-child(12) { transform: translateY(-3px) rotate(2deg); }
+.line-1:hover .char:nth-child(13) { transform: translateY(-4px) rotate(-4deg); }
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
+.shake-trigger {
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.shake-trigger:active {
+    animation: shake 0.3s ease; /* 点击时晃动 */
+}
+
 /* 21:9 银幕容器 */
 .screen-container {
     width: 90%; /* 左右各留白 5% */
