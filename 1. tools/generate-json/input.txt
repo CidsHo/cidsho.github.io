@@ -1,47 +1,95 @@
-Fading Wedding Dressing
-articles/photograph/fadingweddingdressing/fadingweddingdressing.jpg
-articles/photograph/fadingweddingdressing/fadingweddingdressing.html
+洪崖洞 Hongyadong
+articles/photograph/hongyadong/hongyadong.jpg
+articles/photograph/hongyadong/hongyadong.html
 摄影
+经典机位留念
+Classic tourist picture lol.
+2019-12-03
 /e
-/e
-2022-09-13
-assets/screen-images/fadingweddingdressing.jpg
-清远市，广东，中国
-Qingyuan, Guangdong, China
+渝中区，重庆，中国
+Yuzhong District, Chong Qing, China
 /end
 
-小民 Vendor
-articles/photograph/vendor2/vendor.jpg
-articles/photograph/vendor2/vendor.html
-摄影
+构成 Composition
+articles/photograph/composition1/composition1.jpg
+articles/photograph/composition1/composition1.html
+摄影，抽象
 /e
 /e
-2023-05-02
-/e
-湾仔，香港，中国
-Wan Chai, Hong Kong, China
-/end
-
-上海 Shanghai
-articles/photograph/sh1/sh1.jpg
-articles/photograph/sh1/sh1.html
-摄影
-/e
-/e
-2022-10-03
+2019-08-30
 /e
 黄浦区，上海，中国
 Huangpu District, Shanghai, China
 /end
 
-都市风格 Urban Style
-articles/photograph/urbanStyle/urbanStyle.jpg
-articles/photograph/urbanStyle/urbanStyle.html
+湎于歌声 Siren
+articles/photograph/siren/siren.jpg
+articles/photograph/siren/siren.html
+摄影，人像
+@Chinese Football
+/e
+2021-12-17
+/e
+虹口区，上海，中国
+Hongkou District, Shanghai, China
+/end
+
+戏外 Interval
+articles/photograph/interval/interval.jpg
+articles/photograph/interval/interval.html
+摄影，人像
+/e
+/e
+2022-01-31
+/e
+锦江区，成都，中国
+Jinjiang District, Chengdu, China
+/end
+
+红炉左右 Hotpot
+articles/photograph/hotpot/hotpot.webp
+articles/photograph/hotpot/hotpot.html
 摄影
 /e
 /e
-2022-09-30
-assets/screen-images/urbanStyle.jpg
+2022-01-26
+/e
+锦江区，成都，中国
+Jinjiang District, Chengdu, China
+/end
+
+月食 lunaEclipse
+articles/photograph/lunaEclipse/lunaEclipse.jpg
+articles/photograph/lunaEclipse/lunaEclipse.html
+摄影
+/e
+/e
+2023-10-28
+/e
+月球
+Sol-L01
+/end
+
+20岁 20th
+articles/photograph/20th-birthday/20th-birthday.jpg
+articles/photograph/20th-birthday/20th-birthday.html
+摄影
+/e
+/e
+2019-03-12
+/e
+武汉，湖北，中国
+Wuhan, Hubei, China
+/end
+
+自拍 Selfie
+articles/photograph/selfie/selfie.jpg
+articles/photograph/selfie/selfie.html
+摄影
+/e
+/e
+2021-06-02
+/e
 黄浦区，上海，中国
 Huangpu District, Shanghai, China
 /end

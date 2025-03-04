@@ -2,16 +2,8 @@
 
 
 
-<div class="photo-info">
-    <h1 class="photo-title">都市风格 Urban Style</h1>
-    <div class="photo-tags">
-        <span class="tag">黄浦区，上海，中国</span>
-        <span class="tag">Huangpu District, Shanghai, China</span>
-        <span class="tag">2022-09-30</span>
-    </div>
-    <p class="photo-description"></p>
-    <p class="photo-description"></p>
-    <div class="photo-tags">
-        <span class="tag">摄影</span>
-    </div>
-</div>
+
+
+
+
+

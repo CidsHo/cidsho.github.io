@@ -216,6 +216,87 @@
         "date": "2022-09-30"
     },
     {
+        "title": "洪崖洞 Hongyadong",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/hongyadong/hongyadong.jpg",
+        "link": "articles/photograph/hongyadong/hongyadong.html",
+        "tags": ["摄影"],
+        "description": "经典机位留念",
+        "date": "2019-12-03"
+    },
+    {
+        "title": "构成 Composition",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/composition1/composition1.jpg",
+        "link": "articles/photograph/composition1/composition1.html",
+        "tags": ["摄影，抽象"],
+        "description": "",
+        "date": "2019-08-30"
+    },
+    {
+        "title": "湎于歌声 Siren",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/siren/siren.jpg",
+        "link": "articles/photograph/siren/siren.html",
+        "tags": ["摄影，人像"],
+        "description": "@Chinese Football",
+        "date": "2021-12-17"
+    },
+    {
+        "title": "戏外 Interval",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/interval/interval.jpg",
+        "link": "articles/photograph/interval/interval.html",
+        "tags": ["摄影，人像"],
+        "description": "",
+        "date": "2022-01-31"
+    },
+    {
+        "title": "红炉左右 Hotpot",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/hotpot/hotpot.webp",
+        "link": "articles/photograph/hotpot/hotpot.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2022-01-26"
+    },
+    {
+        "title": "月食 lunaEclipse",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/lunaEclipse/lunaEclipse.jpg",
+        "link": "articles/photograph/lunaEclipse/lunaEclipse.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2023-10-28"
+    },
+    {
+        "title": "20岁 20th",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/20th-birthday/20th-birthday.jpg",
+        "link": "articles/photograph/20th-birthday/20th-birthday.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2019-03-12"
+    },
+    {
+        "title": "自拍 Selfie",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/selfie/selfie.jpg",
+        "link": "articles/photograph/selfie/selfie.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2021-06-02"
+    },
+    {
+        "title": "19岁 19th",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/19th-birthday/19th-birthday.jpg",
+        "link": "articles/photograph/19th-birthday/19th-birthday.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2018-03-12"
+    },
+    {
         "title": "花贩 Flower Vendor",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/flowerVendor2/flowerVendor2.jpg",
