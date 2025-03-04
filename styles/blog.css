@@ -1,5 +1,9 @@
-/* blog.css */
 /* 页面背景 */
+
+* {
+    box-sizing: border-box;
+}
+
 .blog-page {
     background-color: #D9D9D9;
     background-image: url('../../../assets/texture.png');
@@ -9,6 +13,7 @@
     min-height: 100vh;
     padding: 20px;
     font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif;
+    overflow-x: hidden; /* 防止横向滚动 */
 }
 
 /* 返回按钮 */
@@ -111,9 +116,9 @@
 .blog-banner {
     width: 100%;
     height: 200px;
-    overflow: hidden;
     margin-bottom: 20px;
     display: none; /* 默认隐藏 */
+    overflow: visible; /* 修改banner溢出设置 */
 }
 
 .blog-banner img {
@@ -125,12 +130,18 @@
 
 /* 博客内容容器 */
 .blog-container {
-    max-width: 800px;
+    max-width: 90%; /* 改为百分比响应式 */
+    width: calc(100% - 40px); /* 添加左右边距 */
     margin: 0 auto;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    overflow: hidden; /* 防止内容溢出 */
+}
+
+.blog-content {
+    overflow: visible; /* 确保内容可见 */
 }
 
 /* 标题区 */
@@ -153,6 +164,20 @@
     color: #666;
     margin-bottom: 10px;
     text-align: justify; /* 副标题两端对齐 */
+}
+
+.blog-image {
+    margin: 20px 0;
+    padding: 0 10px; /* 添加左右内边距 */
+}
+
+.blog-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain; /* 保持图片比例 */
+    display: block; /* 消除图片底部间隙 */
 }
 
 /* 分割线 */
@@ -254,5 +279,14 @@
 
     .blog-date {
         margin-bottom: 10px;
+    }
+
+    .blog-container {
+        width: calc(100% - 20px); /* 移动端减少边距 */
+        padding: 15px;
+    }
+
+    .blog-image {
+        padding: 0; /* 移动端取消图片内边距 */
     }
 }

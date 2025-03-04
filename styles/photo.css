@@ -25,8 +25,8 @@
     max-width: 800px;
     padding: 20px;
     margin: 0 auto; /* 水平居中 */
-    width: calc(100% - 40px); /* 新增 */
-    min-height: calc(100vh - 40px); /* 适配页面padding */
+    width: auto; /* 新增 */
+    min-height: auto; /* 适配页面padding */
     box-sizing: border-box; /* 防止padding影响尺寸 */
     overflow-y: auto;
     overflow: visible; /* 确保子元素可见 */
