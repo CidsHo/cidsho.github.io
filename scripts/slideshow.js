@@ -18,12 +18,16 @@ async function loadImages() {
         images = await response.json();
         console.log('Loaded images:', images);
 
-        // 预加载图片
-        images.forEach(image => {
-            const img = new Image();
-            img.src = image.src;
-        });
+        await Promise.all(images.map(image => {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.src = image.src;
+                img.onload = resolve;
+                img.onerror = reject;
+            });
+        }));
 
+        // 图片预加载完成后，隐藏加载页面并开始幻灯片
         startSlideshow();
     } catch (error) {
         console.error('Error loading images:', error);
@@ -32,21 +36,25 @@ async function loadImages() {
 
 function showImage(index, skipAnimation = false) {
     const image = images[index];
-    console.log('Showing image:', image);
-    if (screenMedia) {
-        if (!skipAnimation) {
-            screenMedia.classList.add('fade-out');
-        }
-        setTimeout(() => {
-            screenMedia.src = image.src;
+    const img = new Image();
+    img.src = image.src;
+
+    img.onload = () => {
+        if (screenMedia) {
             if (!skipAnimation) {
-                screenMedia.classList.remove('fade-out');
+                screenMedia.classList.add('fade-out');
             }
-        }, skipAnimation ? 0 : 500);
-    }
-    if (captionLine1) captionLine1.textContent = image.captionLine1;
-    if (captionLine2) captionLine2.textContent = image.captionLine2;
-    if (captionLine3) captionLine3.textContent = image.captionLine3;
+            setTimeout(() => {
+                screenMedia.src = image.src;
+                if (!skipAnimation) {
+                    screenMedia.classList.remove('fade-out');
+                }
+            }, skipAnimation ? 0 : 500);
+        }
+        if (captionLine1) captionLine1.textContent = image.captionLine1;
+        if (captionLine2) captionLine2.textContent = image.captionLine2;
+        if (captionLine3) captionLine3.textContent = image.captionLine3;
+    };
 }
 
 function showRandomImage(skipAnimation = false) {

@@ -1,264 +1,4 @@
-│  .gitattributes
-│  about.html
-│  index.html
-│  LICENSE
-│  portfolio.html
-│  README.md
-│  summary.bat
-│  summary.txt
-│  TBD
-│  _config.yml
-│
-├─1. tools
-│  └─generate-json
-│          entrydemo.txt
-│          generate-json.bat
-│          html.txt
-│          images.txt
-│          input.txt
-│          inputdemo.xlsx
-│          portfolio.txt
-│
-├─articles
-│  ├─blog
-│  │  ├─2-24-2025-prologue
-│  │  │  │  2-24-2025-prologue.html
-│  │  │  │
-│  │  │  └─assets
-│  │  │          1.jpg
-│  │  │          3.jpg
-│  │  │
-│  │  ├─model
-│  │  │      blog.css
-│  │  │      blog.html
-│  │  │      blog.js
-│  │  │
-│  │  └─test-article
-│  │      │  test-article.html
-│  │      │
-│  │      └─assets
-│  │              1.jpg
-│  │
-│  ├─design
-│  │      sakana.html
-│  │
-│  ├─photograph
-│  │  ├─23th-birthday
-│  │  │      23th-birthday.html
-│  │  │      portrait.png
-│  │  │
-│  │  ├─24th-birthday
-│  │  │      24th-birthday.html
-│  │  │      portrait.png
-│  │  │
-│  │  ├─arch-wuhan
-│  │  │      arch.html
-│  │  │      arch.jpg
-│  │  │
-│  │  ├─beyondRadiance
-│  │  │      beyondRadiance.html
-│  │  │      beyondRadiance.jpg
-│  │  │
-│  │  ├─dancer
-│  │  │      dancer.html
-│  │  │      dancer.jpg
-│  │  │
-│  │  ├─danxia
-│  │  │      danxia.css
-│  │  │      danxia.html
-│  │  │      danxia.jpg
-│  │  │
-│  │  ├─dock
-│  │  │      dock.html
-│  │  │      dock.jpg
-│  │  │
-│  │  ├─fadingweddingdressing
-│  │  │      fadingweddingdressing.html
-│  │  │      fadingweddingdressing.jpg
-│  │  │
-│  │  ├─flowerVendor
-│  │  │      flowerVendor.html
-│  │  │      flowerVendor1.jpg
-│  │  │      flowerVendor2.jpg
-│  │  │
-│  │  ├─flowerVendor2
-│  │  │      flowerVendor.html
-│  │  │      flowerVendor1.jpg
-│  │  │      flowerVendor2.jpg
-│  │  │
-│  │  ├─grid1
-│  │  │      grid1.html
-│  │  │      grid1.jpg
-│  │  │      grid2.jpg
-│  │  │
-│  │  ├─hotelLisboaMacau
-│  │  │      hotelLisboaMacau.html
-│  │  │      hotelLisboaMacau.jpg
-│  │  │
-│  │  ├─leadOut
-│  │  │      leadOut.html
-│  │  │      leadOut.jpg
-│  │  │
-│  │  ├─models
-│  │  │      photo.html
-│  │  │
-│  │  ├─nightStall
-│  │  │      nightStall.html
-│  │  │      nightStall.jpg
-│  │  │      nightStall1.jpg
-│  │  │
-│  │  ├─riverguardian
-│  │  │      rg.jpg
-│  │  │      riverguardian.html
-│  │  │      riverguardian.jpg
-│  │  │
-│  │  ├─rust&blossom
-│  │  │      rust&blossom.html
-│  │  │      rust&blossom.jpg
-│  │  │
-│  │  ├─sh1
-│  │  │      sh1.html
-│  │  │      sh1.jpg
-│  │  │
-│  │  ├─shPolygrandtheatre
-│  │  │      shPolygrandtheatre.html
-│  │  │      shPolygrandtheatre.jpg
-│  │  │
-│  │  ├─urbanStyle
-│  │  │      urbanStyle.html
-│  │  │      urbanStyle.jpg
-│  │  │
-│  │  ├─vendor
-│  │  │      vendor.html
-│  │  │      vendor.jpg
-│  │  │
-│  │  ├─vendor2
-│  │  │      vendor.html
-│  │  │      vendor.jpg
-│  │  │
-│  │  ├─void
-│  │  │      void.html
-│  │  │      void.jpg
-│  │  │
-│  │  ├─walkPasssh
-│  │  │      walkPasssh.html
-│  │  │      walkPasssh.jpg
-│  │  │
-│  │  └─westernMarket
-│  │          westernMarket.html
-│  │          westernMarket.jpg
-│  │
-│  └─research
-│      └─shadowplayvr
-│              shadowplayvr.html
-│
-├─assets
-│  │  back-icon.png
-│  │  banner-background.png
-│  │  email-icon.png
-│  │  favicon.png
-│  │  filter-design-icon.png
-│  │  filter-ideas-icon.png
-│  │  filter-photography-icon.png
-│  │  github-icon.png
-│  │  navigator.png
-│  │  orcid-icon.png
-│  │  placeholder.jpg
-│  │  read-more-icon.png
-│  │  recommended-icon.png
-│  │  reset-icon.png
-│  │  scholar-icon.png
-│  │  screen-image.png
-│  │  site.webmanifest
-│  │  sort-asc-icon.png
-│  │  sort-desc-icon.png
-│  │  texture.png
-│  │
-│  ├─aboutme
-│  │      mobile-portrait.png
-│  │      portrait.png
-│  │
-│  ├─data
-│  │      images.json
-│  │      portfolio.json
-│  │
-│  ├─photos
-│  │  └─selfies
-│  │          2020-7-11.JPG
-│  │
-│  ├─screen-images
-│  │      danxia.jpg
-│  │      desk.JPG
-│  │      fadingweddingdressing.jpg
-│  │      grid.jpg
-│  │      jianghezhishou.jpg
-│  │      nightStall.jpg
-│  │      sakana.JPG
-│  │      sandroad.jpg
-│  │      shPolygrandtheatre.jpg
-│  │      void.jpg
-│  │
-│  └─translations
-│          en.json
-│          zh-Hans.json
-│          zh-Hant.json
-│
-├─scripts
-│  │  copyText.js
-│  │  filterAndSort.js
-│  │  languageSwitcher.js
-│  │  lazyLoad.js
-│  │  navigation.js
-│  │  portfolio.js
-│  │  script.js
-│  │  search.js
-│  │  slideshow.js
-│  │
-│  ├─components
-│  └─views
-└─styles
-    │  about.css
-    │  components.css
-    │  index.css
-    │  photo.css
-    │  portfolio.css
-    │
-    ├─assets
-    │  │  current-page-icon.png
-    │  │
-    │  └─fonts
-    │      │  microsoft-yahei.ttf
-    │      │
-    │      ├─anek-latin
-    │      │      AnekLatin-Bold.ttf
-    │      │      AnekLatin-ExtraBold.ttf
-    │      │      AnekLatin-ExtraLight.ttf
-    │      │      AnekLatin-Light.ttf
-    │      │      AnekLatin-Medium.ttf
-    │      │      AnekLatin-Regular.ttf
-    │      │      AnekLatin-SemiBold.ttf
-    │      │      AnekLatin-Thin.ttf
-    │      │
-    │      ├─playfair-display
-    │      │      PlayfairDisplay-Black.ttf
-    │      │      PlayfairDisplay-BlackItalic.ttf
-    │      │      PlayfairDisplay-Bold.ttf
-    │      │      PlayfairDisplay-BoldItalic.ttf
-    │      │      PlayfairDisplay-Italic.ttf
-    │      │      PlayfairDisplay-Regular.ttf
-    │      │
-    │      └─SmileySans
-    │              SmileySans-Oblique.ttf
-    │
-    └─components
-            background.css
-            buttons.css
-            cards.css
-            fonts.css
-            grid.css
-            icons.css
-            navbar.css
-            utilities.css 
+ 
  
 以下是文件: about.html 
  
@@ -1600,9 +1340,6 @@ document.addEventListener('DOMContentLoaded', loadImages);
 /* 图标 */
 @import url('components/icons.css');
 
-/* 背景 */
-@import url('components/background.css');
-
 /* 工具类 */
 @import url('components/utilities.css');
 
@@ -1612,7 +1349,8 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow-x: hidden; /* 防止水平滚动 */
+    overflow-x: hidden; /* 防止横向溢出 */
+    position: relative; /* 建立定位上下文 */
 }
  
 以下是文件: index.css 
@@ -1973,16 +1711,19 @@ html, body {
 
 /* 页面背景 */
 .photo-page {
-    background-color: #D9D9D9;
+    background-color: #181D25;
     background-image: url('../assets/texture.png');
     background-repeat: repeat;
     background-size: 500px 500px;
     background-blend-mode: overlay;
     min-height: 100vh;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    width: 100%;
+    overflow-y: auto; /* 保留垂直滚动 */
+    box-sizing: border-box; /* 新增 */
 }
 
 /* 照片容器 */
@@ -1991,8 +1732,17 @@ html, body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 800px;
-    width: 100%;
     padding: 20px;
+    margin: 0 auto; /* 水平居中 */
+    width: calc(100% - 40px); /* 新增 */
+    min-height: calc(100vh - 40px); /* 适配页面padding */
+    box-sizing: border-box; /* 防止padding影响尺寸 */
+    overflow-y: auto;
+    overflow: visible; /* 确保子元素可见 */
+}
+
+.photo-wrapper + .photo-wrapper {
+    margin-top: 40px;
 }
 
 /* 照片包装 */
@@ -2006,6 +1756,7 @@ html, body {
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
+    display: block; /* 修复图片基线间隙 */
 }
 
 /* 照片信息 */
@@ -2107,6 +1858,17 @@ html, body {
         padding: 4px 8px; /* 缩小内边距 */
         min-width: 50px; /* 缩小最小宽度 */
     }
+
+    .photo-container {
+        width: calc(100% - 20px); /* 小屏幕减少边距 */
+        margin: 0 10px;
+    }
+
+    .photo-title, .photo-description, .photo-tags {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2119,6 +1881,17 @@ html, body {
         padding: 3px 6px; /* 进一步缩小内边距 */
         min-width: 40px; /* 进一步缩小最小宽度 */
     }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .photo-page {
+        scroll-behavior: smooth;
+    }
+}
+
+/* 移除子元素滚动条 */
+.photo-container {
+    overflow: visible; /* 确保默认值 */
 }
  
 以下是文件: portfolio.css 
@@ -2437,68 +2210,6 @@ html, body {
         width: 30%; /* 缩小按钮宽度 */
         max-width: 80px;
     }
-}
- 
-以下是文件: background.css 
- 
-/* 背景样式 */
-
-/* 页面背景 */
-.page-background {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #d9d9d9; /* 底色 */
-    background-image: url('../assets/texture.png'); /* 材质背景 */
-    background-repeat: repeat; /* 平铺材质 */
-    background-size: 500px 500px; /* 缩放材质图片 */
-    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
-}
-
-/* 首页背景 */
-.home-background {
-    background-color: #000; /* 黑色背景 */
-    background-image: url('../assets/texture.png'); /* 材质背景 */
-    background-repeat: repeat; /* 平铺材质 */
-    background-blend-mode: overlay; /* 混合模式 */
-}
-
-/* 作品集页面背景 */
-.portfolio-background {
-    background-color: #D9D9D9; /* 底色 */
-    background-image: url('../assets/texture.png'); /* 材质背景 */
-    background-repeat: repeat; /* 平铺材质 */
-    background-size: 500px 500px; /* 缩放材质图片 */
-    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
-}
-
-/* 自我介绍页面背景 */
-.about-background {
-    background-color: #D9D9D9; /* 底色 */
-    background-image: url('../assets/texture.png'); /* 材质背景 */
-    background-repeat: repeat; /* 平铺材质 */
-    background-size: 500px 500px; /* 缩放材质图片 */
-    background-blend-mode: overlay; /* 混合模式，使材质与底色融合 */
-}
-
-/* 分隔线 */
-.divider {
-    width: 100%;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.1); /* 浅灰色分隔线 */
-    margin: 20px 0; /* 上下边距 */
-}
-
-/* 箭头 */
-.arrow {
-    width: 26.5px;
-    height: 0;
-    border: 5px solid black; /* 黑色箭头 */
-    position: absolute;
-    top: 1142px;
-    left: 91px;
 }
  
 以下是文件: buttons.css 

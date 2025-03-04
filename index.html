@@ -14,61 +14,66 @@
     <meta name="msapplication-TileColor" content="#ffffff">
 </head>
 <body class="home-page">
-    <!-- 首页文字按钮 -->
-    <div class="home-buttons">
-        <a href="about.html" class="home-button">About Me&lt;</a>
-        <a href="portfolio.html" class="home-button">Mass. Works</a>
+    <div id="loading-screen">
+        <div class="loading-spinner"></div>
+        <p>Loading...</p>
     </div>
+    <div id="content" style="display: none;">
+        <!-- 首页文字按钮 -->
+        <div class="home-buttons">
+            <a href="about.html" class="home-button">About Me&lt;</a>
+            <a href="portfolio.html" class="home-button">Mass. Works</a>
+        </div>
 
-    <!-- 欢迎部分 -->
-    <section id="welcome" class="welcome-section">
-        <!-- 21:9 银幕容器 -->
-        <div class="screen-container">
-            <!-- 图片 -->
-            <img class="screen-media" src="" alt="">
+        <!-- 欢迎部分 -->
+        <section id="welcome" class="welcome-section">
+            <!-- 21:9 银幕容器 -->
+            <div class="screen-container">
+                <!-- 图片 -->
+                <img class="screen-media" src="" alt="">
 
-            <!-- 图片介绍文字区 -->
-            <div class="image-caption">
-                <p class="caption-line-1"></p>
-                <p class="caption-line-2"></p>
-                <p class="caption-line-3"></p>
+                <!-- 图片介绍文字区 -->
+                <div class="image-caption">
+                    <p class="caption-line-1"></p>
+                    <p class="caption-line-2"></p>
+                    <p class="caption-line-3"></p>
+                </div>
             </div>
-        </div>
 
-        <!-- 银幕下方文字 -->
-        <div class="screen-text">
-            <p class="line-1">Wor/D Th/nk/ng</p>
-            <p class="line-2">&</p>
-            <p class="line-3"><a href="portfolio.html" class="selected-works-link">The Selected Works</a> of <a href="about.html" class="cids-ho-link">&lt;Cids_Ho/&gt;</a></p>
-        </div>
-        
-        <div class="contact-section">
-            <!-- Icon 按钮 -->
-            <div class="icon-buttons">
-                <a href="https://github.com/CidsHo" target="_blank">
-                    <img src="assets/github-icon.png" alt="GitHub" class="icon">
-                </a>
-                <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
-                    <img src="assets/orcid-icon.png" alt="ORCID" class="icon">
-                </a>
-                <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
-                    <img src="assets/scholar-icon.png" alt="Google Scholar" class="icon">
-                </a>
+            <!-- 银幕下方文字 -->
+            <div class="screen-text">
+                <p class="line-1">Wor/D Th/nk/ng</p>
+                <p class="line-2">&</p>
+                <p class="line-3"><a href="portfolio.html" class="selected-works-link">The Selected Works</a> of <a href="about.html" class="cids-ho-link">&lt;Cids_Ho/&gt;</a></p>
             </div>
-        
-            <!-- 联系方式 -->
-            <div class="contact-info">
-                <p onclick="copyText('+852 5223 4424')">Contact: tel: +852 5223 4424</p>
-                <p onclick="copyText('hocids@tongji.edu.cn')">Email: hocids@tongji.edu.cn</p>
+            
+            <div class="contact-section">
+                <!-- Icon 按钮 -->
+                <div class="icon-buttons">
+                    <a href="https://github.com/CidsHo" target="_blank">
+                        <img src="assets/github-icon.png" alt="GitHub" class="icon">
+                    </a>
+                    <a href="https://orcid.org/0009-0001-3477-7817" target="_blank">
+                        <img src="assets/orcid-icon.png" alt="ORCID" class="icon">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=CidsHo" target="_blank">
+                        <img src="assets/scholar-icon.png" alt="Google Scholar" class="icon">
+                    </a>
+                </div>
+            
+                <!-- 联系方式 -->
+                <div class="contact-info">
+                    <p onclick="copyText('+852 5223 4424')">Contact: tel: +852 5223 4424</p>
+                    <p onclick="copyText('hocids@tongji.edu.cn')">Email: hocids@tongji.edu.cn</p>
+                </div>
             </div>
-        </div>
 
-        <!-- 复制成功提示框 -->
-        <div id="copy-notification" class="copy-notification">
-            <p>已复制到剪贴板！</p>
-        </div>
-    </section>
-
+            <!-- 复制成功提示框 -->
+            <div id="copy-notification" class="copy-notification">
+                <p>已复制到剪贴板！</p>
+            </div>
+        </section>
+    </div>
 
     <!-- 脚本 -->
     <script type="module" src="scripts/script.js"></script>
