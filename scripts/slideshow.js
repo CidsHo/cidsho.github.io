@@ -18,6 +18,7 @@ async function loadImages() {
         images = await response.json();
         console.log('Loaded images:', images);
 
+        // 预加载所有图片
         await Promise.all(images.map(image => {
             return new Promise((resolve, reject) => {
                 const img = new Image();
@@ -28,6 +29,10 @@ async function loadImages() {
         }));
 
         // 图片预加载完成后，隐藏加载页面并开始幻灯片
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+            loadingScreen.style.display = 'none';
+        }
         startSlideshow();
     } catch (error) {
         console.error('Error loading images:', error);
