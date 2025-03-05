@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客页模板</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button" onclick="window.history.back()">
+            <img src="../../../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../../articles/article-thumbnail/ls-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">About Face 
+                </h1>
+                <h4 class="blog-subtitle">第十七章 整合视觉设计</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">本章不适合在移动端查看</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+                  <ol>
+                    <li>命令模态
+                      <ul>
+                        <li>a. 命令模态是让用户将指令发给应用的特殊技术，直接操作柄（direct-manipulation handle)、下拉菜单和弹出菜单项、工具栏控件以及快捷键（keyboard accelerator) 等都是命令模态</li>
+                      </ul>
+                    </li>
+                    <li>特质模态行为：用户在用户界面习惯用法的效用问题上明确地分为两组或者更多组，那么称他们的偏好是特质模态的
+                      <ul>
+                        <li>a. 例⼦：windows 在菜单的实现中提供了如何迎合特质模态要求的绝佳例⼦。有些⼈希望点击菜单栏⽬，菜单就会出现，然后按着⿏标不放顺着菜单向下拖动，拖动到所需选项上松开⿏标按钮。⽽有些⼈不喜欢拖住⿏标按钮，也可不⽤拖住。这两种习惯⽤法适应了所有⼈，⼈们不论偏好如何，他都能正常⼯作。</li>
+                      </ul>
+                    </li>
+                    <li>有效功能工作集（working set)
+                      <ul>
+                        <li>a. 由于常做的事情总会学会（通过重复），中级用户最终会记住一部分命令和特性。这一组记下来的特性就是有效功能工作集</li>
+                      </ul>
+                    </li>
+                    <li>本地化（Localization）指按特定的语言和文化翻译某个应用软件</li>
+                    <li>全球化：指让应用软件尽可能地在多种语言和文化下通用</li>
+                    <li>无障碍设计：无障碍设计意味着设计应用时应考虑到，无论是因为年龄、事故或疾病而有认知、感官或移动障碍的人，还是没有此类障碍的人，都能够有效地使用所设计的应用
+                      <ul>
+                        <li>a. 无障碍设计的目标：
+                          <ul>
+                            <li>i. 用户能够感知和理解所有的指示、信息和反馈</li>
+                            <li>ii. 用户能够感知、理解并轻易地操控所有控件并进行输入</li>
+                            <li>iii. 用户能够轻易地导航，并且总能指导所处界面的位置及其导航结构
+                              <ul>
+                                <li>1) 这些条件不需要在所有的界面得到满足。典型的无障碍措施是设计一个单独的无障碍模式；或者一系列的无障碍选项，这些选项会改变屏幕对比度和颜色，改变文本字体的大小和粗细，或者打开屏幕阅读器和声音导航系统</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>b. 无障碍指导方针
+                          <ul>
+                            <li>i. 利用操作系统的无障碍工具和指南
+                              <ul>
+                                <li>1) 有些操作系统为视觉障碍者提供无障碍支持，如屏幕阅读器以及声音导航辅助、放大镜等工具</li>
+                              </ul>
+                            </li>
+                            <li>ii. 不能覆盖用户选择的系统设置
+                              <ul>
+                                <li>1) 这些设置包括一些支持界面属性的无障碍选项，如颜色方案、字体大小和字形等</li>
+                              </ul>
+                            </li>
+                            <li>iii. 启用标准的键盘访问方式
+                              <ul>
+                                <li>1) 桌面应用应该使用快捷键和热键以及合理的tab键引导机制。保证用户能够用tab键遍历整个用户界面控件和内容区域，回车键能够激活按钮和切换</li>
+                              </ul>
+                            </li>
+                            <li>iv. 为视觉不佳的人加入显示选项
+                              <ul>
+                                <li>1) 高对比度不低于80%显示选项卡，在白色背景下，用黑色显示</li>
+                                <li>2) 放大字体和加粗选项（最好能单独设置）</li>
+                                <li>3) 减少界面元素动作和动画的选项</li>
+                                <li>4) 此外，不能单靠颜色传达数据或功能的含义，还要运用其他属性，如大小、位置、亮度、形状或文本标签，来将意思表达清楚</li>
+                              </ul>
+                            </li>
+                            <li>v. 提供只有视觉和只有听觉的输出</li>
+                            <li>vi. 不要有闪动、闪烁等元素</li>
+                            <li>vii. 使用简单、明确、精炼的语言</li>
+                            <li>viii. 使用一致的布局和任务流程
+                              <ul>
+                                <li>1) 对于具有认识、运动神经或视觉障碍的人来说，如果只需要记住并使用一种导航和动作范式，而不是几种不同的甚至相互矛盾的范式，那就得到了最佳服务，让用户只用一个按键就可以完成界面导航，尝试保持导航方式在所有视图和面板中保持一致</li>
+                              </ul>
+                            </li>
+                            <li>ix. 给视觉元素添加文本释义</li>
+                          </ul>
+                        </li>
+                        <li>c. 优秀的无障碍设计，不仅能让残疾人用户正常地与产品交互；还会为普通人提供更好的使用体验</li>
+                        <li>d. 例如，住宅楼入口设置的坡道，本是方便使用轮椅的用户出入。但实际使用中，多数老人、推自行车的人，甚至正常人都更愿意走坡道而非楼梯，因为走坡道更省力</li>
+                        <li>e. 坡道的设计，不仅解决了残疾人出入的问题，也为正常人提供了更好的体验。因此，在日常设计中多考虑特殊人群或者特殊场景的人群来进行无障碍设计会给我们的设计增添创意和亮度</li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2020年12月22日</p>
+                    <div class="blog-tags">
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../../scripts/script.js"></script>
+</body>
+</html>

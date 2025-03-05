@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客页模板</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button" onclick="window.history.back()">
+            <img src="../../../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../../articles/article-thumbnail/ls-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">About Face 
+                </h1>
+                <h4 class="blog-subtitle">十二章 减轻工作负担</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">本章不适合在移动端查看</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+                    <ol>
+                        <ul>
+                            <li>1. 导言
+                              <ul>
+                                <li>a. 任何大型任务都包含很多较小的任务，这些任务中，有些可以直接实现目标，另外一些负担任务则不直接实现目标，代表了额外的工作，可以在我们尝试达到目标之际，满足工具或者外部主体的需求</li>
+                                <li>b. 4类工作
+                                  <ul>
+                                    <li>• 认知工作——理解产品的行为、文本以及组织结构。</li>
+                                    <li>• 记忆工作——回忆产品的行为、命令、密码、名称和数据对象与控件的位置，以及对象之间的其他关系。</li>
+                                    <li>• 视觉工作——弄清楚眼睛应该从屏幕的哪个位置开始，在其中找到一 个对象、解码布局、区分视觉编码的界面元素（如不同颜色的列表项）。</li>
+                                    <li>• 肢体工作——按键、移动鼠标、手势（点击、拖动、双击）、在不同输入模式之间切换、导航所需的点击</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                        
+                            <li>2. 负担的类型
+                              <ul>
+                                <li>a. 导航负担
+                                  <ul>
+                                    <li>i. 在数字产品的功能和特性之间导航基本上也是负担。网站和软件的用户被迫做的导航工作基本上与其需求、目标、期望不一致（不过，有些经过优秀设计的导航可以有效地告诉用户可以访问什么，就能更好地符合其目标。）</li>
+                                    <li>ii. 不必要或者困难的导航是让用户沮丧的一个主要原因</li>
+                                    <li>iii. 在软件中导航发生在多个层次：
+                                      <ul>
+                                        <li>□ 多个屏幕、视图或页面之间。</li>
+                                        <li>□ 窗口、视图或者网页中的多个窗格或者框架之间。</li>
+                                        <li>□ 工具、命令或者菜单之间。</li>
+                                        <li>□ 窗格或者框架中显示的信息之间（例如滚动、平移、放大缩小，以及跟踪链接等）</li>
+                                      </ul>
+                                    </li>
+                                    <li>iv. 以更广泛的定义来看待导航比较有用：将用户带到界面全新部分的所有动作， 或者要求用户在系统中定位对象、工具或数据的所有动作</li>
+                                  </ul>
+                                </li>
+                                
+                                <li>b. 拟物化负担
+                                  <ul>
+                                    <li>i. 人们自然而然地倾向于在新的数字环境中使用旧的表达，这可称为拟物化</li>
+                                    <li>ii. 拟物化隐喻，以让人们容易理解界面元素与行为的关系。但在用户学会基本用法之后，管理这些隐喻则成了负担中的负担</li>
+                                  </ul>
+                                </li>
+                                
+                                <li>c. 模态负担
+                                  <ul>
+                                    <li>i. 流是一种自然状态，人们无须敦促即可进入。某些中断不可避免，但毫无理由中断用户的流就是愚蠢地停止进程，是一种最具破坏性的负担</li>
+                                    <li>ii. 类型：
+                                      <ul>
+                                        <li>1) 错误、通知和确认信息</li>
+                                        <li>2) 让用户请求许可</li>
+                                        <li>3) 修改不能直接作用于显示（输入输出与用户心理模型冲突）</li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                        
+                            <li>3. 常见的负担陷阱
+                              <ul>
+                                <li>你应该警惕地发现并清除界面上任何小负担：
+                                  <ul>
+                                    <li>• 不要强迫用户到另外一个窗口去完成与本窗口相关的功能。</li>
+                                    <li>• 不要强迫用户记住事物在层级文件系统中的位置。</li>
+                                    <li>• 不要强迫用户调整窗口大小。当子窗口在屏幕上弹出时，程序应该为内容调整合适大小。</li>
+                                    <li>• 不要大而空，或者太小而需要不停地滚动。</li>
+                                    <li>• 不要强迫用户移动窗口。如果桌面上有空间，就应放在那里，而不是堆加在打开程序上。</li>
+                                    <li>• 不要强迫用户重新设置。如果用户已设置字符、颜色、缩进、声音，确保用户不需要重 做——除非需改变。</li>
+                                    <li>• 用户在填充字段时需能有任意完整度。如果用户想忽略一些细节，不要强迫用户输入, 假定用户有充足理由不输入。多数情况下，数据库的完整性不值得骚扰用户。</li>
+                                    <li>• 不要强迫用户请求许可，比如输出时不允许输入这一问题。</li>
+                                    <li>• 不要让用户确认其动作，这需要具有强大的撤销机制。</li>
+                                    <li>• 不要让用户的行为产生错误</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                    </ol>
+                </div>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2020年12月22日</p>
+                    <div class="blog-tags">
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../../scripts/script.js"></script>
+</body>
+</html>

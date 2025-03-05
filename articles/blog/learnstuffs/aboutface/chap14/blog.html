@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客页模板</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button" onclick="window.history.back()">
+            <img src="../../../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../../articles/article-thumbnail/ls-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">About Face 
+                </h1>
+                <h4 class="blog-subtitle">第十四章 重新思考数据输入、存储与检索</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">本章不适合在移动端查看</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+                  <ol>
+                    <li>自然语言处理（NLP），是研究计算机处理人类语言的一门技术，包括：
+                      <ul>
+                        <li>a. 句法语义分析：对于给定的句子，进行分词、词性标记、命名实体识别和链接、句法分析、语义角色识别和多义词消歧。</li>
+                        <li>b. 信息抽取：从给定文本中抽取重要的信息，比如，时间、地点、人物、事件、原因、结果、数字、日期、货币、专有名词等等。通俗说来，就是要了解谁在什么时候、什么原因、对谁、做了什么事、有什么结果。设计到实体识别、时间抽取、因果关系抽取等关键技术</li>
+                        <li>c. 文本挖掘（或者文本数据挖掘）：包括文本聚类、分类、信息抽取、摘要、情感分析以及对挖掘的信息和知识的可视化、交互式的表达界面。目前主流的技术都是基于统计机器学习的</li>
+                        <li>d. 机器翻译：把输入的源语言文本通过自动翻译获得另一种语言的文本。根据输入媒介不同，可以细分为文本翻译、语音翻译、手语翻译、图形翻译等。机器翻译从最早的基于规则的方法到二十年前的基于统计的方法，再到今天的基于神经网络（编码-解码）的方法，逐渐形成一套比较严谨的方法体系</li>
+                        <li>e. 信息检索：对大规模的文档进行索引。可简单对文档中的词汇，赋之以不同的权重来建立索引，也可利用1，2，3的技术来建立更加深层的索引。在查询的时候，对输入的查询表达式比如一个检索词或者一个句子进行分析，然后在索引里面查找匹配的候选文档，再根据一个排序机制把候选文档排序，最后输出排序得分最高的文档</li>
+                        <li>f. 问答系统：对一个自然语言表达的问题，由问答系统给出一个精确的答案。需要对自然语言查询语句进行某种程度的语义分析，包括实体链接、关系识别，形成逻辑表达式，然后到知识库种查找可能的候选答案并通过一个排序机制找出最佳的答案</li>
+                        <li>g. 对话系统：系统通过一系列的对话，跟用户进行聊天、回答、完成某一项任务。涉及到用户意图理解、通用聊天引擎、问答引擎、对话管理等技术。此外，为了体现上下文相关，要具备多轮对话能力。同时，为了体现个性化，要开发用户画像以及基于用户画像的个性化回复</li>
+                        <li>h. 案例：聊天机器人小冰</li>
+                      </ul>
+                    </li>
+                    <li>自然语言输出
+                      <ul>
+                        <li>a. 自然语言输出属于自然语言处理（NLP）的一环，是一种使得计算机能够表述和写作（即输出的具体形式）的功能，即能够根据一些关键信息及其在机器内部的表达形式，经过规划整理后，生成一段高质量的自然语言文本。</li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2020年12月22日</p>
+                    <div class="blog-tags">
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../../scripts/script.js"></script>
+</body>
+</html>

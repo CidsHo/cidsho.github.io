@@ -1,23 +1,4 @@
 [
-
-    {
-        "title": "开始 Begins",
-        "image": "assets/placeholder.jpg", 
-        "data-src": "articles/blog/test-article/assets/1.jpg", 
-        "link": "portfolio.html",
-        "tags": [],
-        "description": "事情需要一个开端，但这是一个虚假的开端",
-        "date": "1999-03-12"
-    },
-    {
-        "title": "Prologue",
-        "image": "assets/placeholder.jpg", 
-        "data-src": "articles/blog/2-24-2025-prologue/assets/1.jpg", 
-        "link": "articles/blog/2-24-2025-prologue/2-24-2025-prologue.html",
-        "tags": ["设计", "想法"],
-        "description": "Things should have a begin, so it begins here.",
-        "date": "2025-02-24"
-    },
     {
         "title": "23岁 23rd",
         "image": "assets/placeholder.jpg", 
@@ -346,6 +327,127 @@
         "tags": ["设计","数字绘画"],
         "description": "香港社会福利署海报设计",
         "date": "2023-06-01"
-    }
+    },
     
+
+
+
+
+    {
+        "title": "从接受美学的角度看当今新媒体创作环境的迭代变迁",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/wt.png",
+        "link": "articles/blog/worldthinking/jauss/blog.html",
+        "tags": ["想法","媒介分析"],
+        "description": "",
+        "date": "2022-06-18"
+    },
+    {
+        "title": "About Face Chap 14-15-16-17",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap14-15-16-17/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2021-01-18"
+    },
+    {
+        "title": "About Face Chap 13",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap13/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-12-25"
+    },
+    {
+        "title": "About Face Chap 12",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap12/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-12-22"
+    },
+    {
+        "title": "About Face Chap 11",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap11/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-12-22"
+    },
+    {
+        "title": "About Face Chap 10",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap10/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-12-22"
+    },
+    {
+        "title": "About Face Chap 9",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap9/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-12-22"
+    },
+    {
+        "title": "About Face Chap 6",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap6/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-05-31"
+    },
+    {
+        "title": "About Face Chap 5",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap5/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-05-30"
+    },
+    {
+        "title": "About Face Chap 4",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap4/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-05-29"
+    },
+    {
+        "title": "About Face Chap 3",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap3/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-05-28"
+    },
+    {
+        "title": "About Face Chap 2",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap2/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-05-27"
+    },
+    {
+        "title": "About Face Chap 1",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap1/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-05-21"
+    }
 ]

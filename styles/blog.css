@@ -79,7 +79,7 @@
 
 /* Banner 区 */
 .blog-banner {
-    max-width: 30%; /* 留出左右边距 */
+    max-width: 50%; /* 留出左右边距 */
     margin: 40px auto 30px; /* 上边距40px 下边距30px */
     border-radius: 12px;
     overflow: hidden;
@@ -297,9 +297,9 @@
 }
 
 /* 响应式设计 */
-@media (max-width: 1200px) {
+@media (max-width: 1800px) {
     .blog-banner {
-        max-width: calc(100% - 40px);
+        max-width: 80%;
         margin: 30px auto;
     }
 }
@@ -308,6 +308,7 @@
     .blog-banner {
         margin: 20px auto;
         border-radius: 8px;
+        max-width: 80%;
     }
         
     .caption-title {

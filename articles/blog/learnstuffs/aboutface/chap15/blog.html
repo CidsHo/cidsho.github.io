@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客页模板</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button" onclick="window.history.back()">
+            <img src="../../../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../../articles/article-thumbnail/ls-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">About Face 
+                </h1>
+                <h4 class="blog-subtitle">第十五章 防止错误 通知决定</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">本章不适合在移动端查看</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+                  <ol>
+                    <li>富视觉非模态反馈
+                      <ul>
+                        <li>a. 它是一种视觉信息，以非模态的方式显示在应用程序的主视图，目的是给用户反馈。是最重要的非模态反馈方式</li>
+                        <li>b. 它的富在于能够深入全面的信息，让人了解一个进程的状态或者属性，或当前应用程序的对象</li>
+                        <li>c. 它的视觉是指按习惯方式利用屏幕上的像素（通常是动态的）</li>
+                        <li>d. 它的非模态在于信息能够轻松地显现出来，即不需要用户做特殊动作或转换模式，就能看到和理解这些反馈</li>
+                        <li>e. 富视觉非模态反馈能够在不打断用户情况下，对用户进行不易察觉的、持续积极的反馈</li>
+                      </ul>
+                    </li>
+                    <li>听觉反馈
+                      <ul>
+                        <li>a. 听觉反馈是一种听觉信息，以非模态的方式通过播放一段声音，给予用户反馈，是非模态反馈中的一种</li>
+                        <li>b. 听觉反馈分为正面听觉反馈和负面听觉反馈</li>
+                        <li>c. 在发生错误或情况不妙时发出噪音即是负面听觉反馈
+                          <ul>
+                            <li>i. 负面听觉反馈会将用户置于尴尬的境地，而用户不会优先将问题归到自己的错误操作上，而会认为是界面设计的糟糕所引致的，从而对界面产生不好的感觉</li>
+                          </ul>
+                        </li>
+                        <li>d. 在成功时工具发出声音即为正面反馈
+                          <ul>
+                            <li>i. 正面反馈的重要价值在于其没有反馈的情况下就能告知使用者存在问题，正面听觉反馈的有效性来源于人的敏感度</li>
+                            <li>ii. 操作正确时，应用发出细微易辨的声响，会比噪音更加友好</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>撤销（假设分析功能）
+                      <ul>
+                        <li>a. 撤销是一种让用户退回到前一步，毫不费劲地改正错误的操作。</li>
+                        <li>b. 其抛弃用户会犯错的观念，以用户做任何事都是正确正当的姿态，避免暗示用户操作失败，协助用户完成目标，探索新功能，同时给予用户心理上的安心感</li>
+                        <li>c. 撤销类型可分为多类
+                          <ul>
+                            <li>i. 以用户是否修改了数据分，可以分为渐增动作和过程动作
+                              <ul>
+                                <li>1) 渐增动作既包含过程部分（用户做了什么），也包含了数据部分（哪些信息受到影响）</li>
+                                <li>2) 不含数据的转换，仅包含过程部分的称为过程动作</li>
+                              </ul>
+                            </li>
+                            <li>ii. 以是否告知用户撤销的具体操作内容可分为隐秘撤销和解释性撤销
+                              <ul>
+                                <li>1) 撤销工具没有迹象表明该操作会发生什么的情况就是隐蔽撤销</li>
+                                <li>2) 撤销工具中包含特定操作的文本和视觉描述的情况就是解释性撤销</li>
+                              </ul>
+                            </li>
+                            <li>iii. 以是否可以连续执行分为单次撤销和多次撤销
+                              <ul>
+                                <li>1) 单次撤销是最基本的撤销类型，不区分具体操作类型，只撤销最近那一次操作。执行两次单次撤销指挥恢复到第一次撤销掉的操作，回到先前的撤销状态
+                                  <ul>
+                                    <li>a) 局限性：随便一个简单操作都可能让单词撤销功能覆盖掉上一个有实际意义的操作</li>
+                                  </ul>
+                                </li>
+                                <li>2) 多次撤销能够连续重复执行，能够撤销多个先前的操作，按照后-先的逆向时间顺序执行。需要保存一系列的先前操作
+                                  <ul>
+                                    <li>a) 局限性，不能按照用户心理模型那样，只撤销某一特定步骤的操作行为，只能依次将所有介入的操作全部撤销，将问题复杂化（分组多次撤销-告知用户此种撤销方式的折衷方案）</li>
+                                    <li>b) 对比：不连续的多次撤销、分类撤销</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>d. 撤销同时也导致恢复功能的出现，本质上是取消所进行的撤销</li>
+                        <li>e. 案例：Adobe中PS的撤销（单次+多次，默认单次）和PR的撤销（多次）</li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2020年12月22日</p>
+                    <div class="blog-tags">
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../../scripts/script.js"></script>
+</body>
+</html>

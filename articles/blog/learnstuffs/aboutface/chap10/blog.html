@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客页模板</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button" onclick="window.history.back()">
+            <img src="../../../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../../articles/article-thumbnail/ls-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">About Face 
+                </h1>
+                <h4 class="blog-subtitle">第十章 为中层用户优化</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">本章不适合在移动端查看</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+                    <ol>
+                      <ul>
+                        <li><strong>新手需要什么</strong>
+                          <ul>
+                            <li>1. 用户想要学习如何操作，但不意味着他们需要学习其中的工作原理。</li>
+                            <li>2. 但理解了工作原理后，用户又能学习得更好。所以使用心理模型来弥补这种矛盾。如果界面符合用户的心理模型，则可以在不强迫用户了解实现模型得情况下为用户提供所需要的理解</li>
+                            <li>3. 提供新手欢迎的手段，让新手快速掌握程序的概念和范围，不然他可能会迅速放弃；所以要求设计师确保程序充分反映用户的心理模型</li>
+                            <li>4. 提供新手成长为中级用户的手段，这种帮助也会在用户成为中层用户时适时消失</li>
+                            <li>5. 在重要的导航点提供学习机会、解释性的文字说明、简单简洁的界面、随时使用的撤回按钮</li>
+                            <li>6. 适应不同平台用户的使用</li>
+                          </ul>
+                        </li>
+                    
+                        <li><strong>永远的中层用户需要什么</strong>
+                          <ul>
+                            <li>1. 快速进入最常用工具的捷径。他们已经掌握了这些程序的意图和范围，不再需要解释。对于中级用户来说，工具提示是最合适中层用户的习惯用法</li>
+                            <li>2. 在线帮助是永久中级用户的极佳工具，他们通过索引使用帮助，因此索引部分需要清楚设计</li>
+                            <li>3. 永久的中级用户会确定其经常使用或很少使用的功能，他们可能会遇到一些模糊的特性，但很快地识别出自己经常使用的功能。中级用户要求把这些常用功能中的工具放在用户界面的前段和中心位置，有助于寻找和记忆</li>
+                            <li>4. 永久的中层用户通常知道高级功能在哪里，即便他们用不到，也不知道如何使用</li>
+                          </ul>
+                        </li>
+                    
+                        <li><strong>专家想要什么</strong>
+                          <ul>
+                            <li>1. 专家同样也会听取其他专家的意见，但他们同样也会对其他潜在的顾客产生影响，为产品回顾和讨论定下基调。</li>
+                            <li>2. 专家可能会时不时寻找深奥的功能，并且会经常使用其中一些；而对经常使用的工具栏，他们则要求能够快速访问。专家甚至需要所有功能的快捷方式。</li>
+                            <li>3. 专家用户会持续而积极地学习更多内容，以更加了解其程序行动及程序之间的关系。专家欣赏更新且更强的功能，对程序的精通使他们感受不到复杂，比中级用户或初级用户更喜欢高密度信息。</li>
+                            <li>4. 应在专业产品上针对专家用户进行设计，尤其是具有专业职责的技术型人群主要依靠各项工具体现其精湛技艺。</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </ol>
+                </div>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2020年12月22日</p>
+                    <div class="blog-tags">
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../../scripts/script.js"></script>
+</body>
+</html>

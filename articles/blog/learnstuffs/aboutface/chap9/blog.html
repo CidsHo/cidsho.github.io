@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客页模板</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button" onclick="window.history.back()">
+            <img src="../../../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../../articles/article-thumbnail/ls-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">About Face 
+                </h1>
+                <h4 class="blog-subtitle">第九章 平台和姿态</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">本章不适合在移动端查看</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+                    <ol>
+                      <ul>
+                        <li>1. 产品的平台（platform）可以认为是使产品能运转起来的软件和硬件的共同作用体，包括用户交互和产品内部运转。</li>
+                        
+                        <li>2. 产品的姿态（posture）是指产品的行为立场，也就是产品对用户的展现方式。姿态讨论的是用户在与产品交互上投入多少精力；以及产品又如何回应这些精力投入。</li>
+                        
+                        <li>3. 关系：姿态与平台紧密相连，产品的平台会影响用户使用的方式，强烈地影响产品可用性；平台应该与姿态和谐一致</li>
+                        
+                        <li>4. 姿态分类
+                          <ul>
+                            <li>a. 独占姿态
+                              <ul>
+                                <li>i. 长期占用使用者的注意力，提供一大组相关得功能和特点，使用者需要为这些的功能特点的显示并持续运行</li>
+                                <li>ii. 用户在使用独占程序时，会进入工作流状态</li>
+                                <li>iii. 要求
+                                  <ul>
+                                    <li>1) 锁定中级用户</li>
+                                    <li>2) 慷慨使用屏幕空间</li>
+                                    <li>3) 使用保守的视觉风格</li>
+                                    <li>4) 丰富的视觉反馈</li>
+                                    <li>5) 支持丰富的输入方式</li>
+                                    <li>6) 以文档为中心</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            
+                            <li>b. 暂时姿态
+                              <ul>
+                                <li>i. 在打开短暂的时间后随即关闭，用一套有限的附加控件展现一些单一的功能。通常在某个独占应用程序的使用过程中暂时姿态应用程序在需要时被调用、出现并完成自身的工作，然后迅速离开，让用户继续正常地工作</li>
+                                <li>ii. 要求： 
+                                  <ul>
+                                    <li>1) 明亮而清晰</li>
+                                    <li>2) 保持简单</li>
+                                    <li>3) 记住用户的选择</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            
+                            <li>c. 后台姿态
+                              <ul>
+                                <li>i. 不与用户互动的程序，静静地隐形在后台服务，无需用户干预就能够完成很重要的任务。即便在与后台应用交互时，其交互也是临时的，同样适用于暂时姿态的办法</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                    
+                        <li>5. 移动设备姿态
+                          <ul>
+                            <li>a. 智能手机和手持设备姿态
+                              <ul>
+                                <li>i. 主义外形尺寸、显示清晰度、输入和控制的难易，对情境的敏感度等</li>
+                                <li>ii. 姿态
+                                  <ul>
+                                    <li>1) 卫星姿态
+                                      <ul>
+                                        <li>a) 强调信息的检索和浏览，必须充分利用设备上有限的屏幕控件，忠实地展示桌面上编辑或加载的信息。控件仅限于数据或文档的导航和浏览</li>
+                                        <li>b) 可能拥有软键盘，但通常很小，仅限于单一功能或偶尔使用</li>
+                                      </ul>
+                                    </li>
+                                    <li>2) 独立姿态
+                                      <ul>
+                                        <li>a) 独立姿态应用与独占和暂时应用有些相似之处。同独占式应用一样，独立姿态应用也通过屏幕上方或下方的菜单（通常通过手指左右滑动）和工具栏实现全屏和运动型功能，同时包含暂时的模式对话式屏幕或提示框，大多数用于设定或确定毁灭性动作</li>
+                                        <li>b) 与暂时式应用相似的是独立电脑应用较少用到大控件和大字号的文本，这一点源于易读性和多点触碰屏幕手指输入的限制</li>
+                                      </ul>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            
+                            <li>b. 平板电脑姿态
+                              <ul>
+                                <li>i. 避免这种平板电脑看起来像是特大号的手机屏幕</li>
+                                <li>ii. 平板电脑还注重应用程序的独占质量。通常的平板电脑操作系统只允许全屏式应用</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                    
+                        <li>6. 一些特别的姿态
+                          <ul>
+                            <li>a. 信息亭姿态
+                              <ul>
+                                <li>i. 信息亭是提供公众使用的位于特殊位置的交互系统
+                                  <ul>
+                                    <li>1) 使用者通常是初次使用者</li>
+                                    <li>2) 多数人不会在信息亭上花很多时间（暂时姿态）</li>
+                                    <li>3) 多数信息亭采用触摸屏或者在屏幕两侧设置按键（不适宜大量信息输入）</li>
+                                  </ul>
+                                </li>
+                                <li>ii. 要求：
+                                  <ul>
+                                    <li>1) 明确导航</li>
+                                    <li>2) 显眼的大屏幕、清晰的控件、吸引人的界面、硬件按键和软件功能对应</li>
+                                    <li>3) 明确的取消、退出和重新开始方法</li>
+                                    <li>4) 针对首次使用者优化</li>
+                                    <li>5) 部分的信息亭要求注重探索</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            
+                            <li>b. 汽车界面姿态
+                              <ul>
+                                <li>i. 汽车界面在姿态上与信息亭类似，二者通常都釆用触摸屏。但汽车界面屏幕周边通常设有硬件边框按钮，因此倾向于暂时交互。</li>
+                                <li>ii. 汽车界面采用的是我们期望的暂时姿态：大的控件和简单的屏幕。但是导航界面更像是独占姿态</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>                                
+                    </ol>
+                </div>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2020年12月21日</p>
+                    <div class="blog-tags">
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../../scripts/script.js"></script>
+</body>
+</html>
