@@ -13,24 +13,45 @@
     min-height: 100vh;
     padding: 20px;
     font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif;
-    overflow-x: hidden; /* 防止横向滚动 */
+    overflow-x: hidden;
+}
+
+.blog-container {
+    max-width: 1200px; /* 改为固定最大宽度 */
+    width: calc(100% - 40px); /* 保留响应式宽度 */
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px 0; /* 调整内边距 */
+    position: relative; /* 新增定位上下文 */
+    overflow: visible;
+}
+
+.blog-content-wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 40px 60px; /* 控制两侧留白 */
 }
 
 /* 返回按钮 */
 .back-button {
+    position: absolute; /* 改为绝对定位 */
+    left: 40px;
+    bottom: 30px;
     display: flex;
     align-items: center;
     gap: 8px;
     background-color: #ffcc00;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-family: 'Anek Latin', sans-serif;
     font-size: 16px;
     color: #000;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    z-index: 100;
 }
 
 .back-button:hover {
@@ -47,85 +68,57 @@
     height: 20px;
 }
 
-/* 右上角导航栏 */
-#navbar {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-#nav-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-.nav-icon {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
-}
-
-#nav-toggle:hover .nav-icon {
-    transform: scale(1.1);
-}
-
-/* 导航栏菜单 */
-.menu-overlay {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 280px;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    transition: right 0.3s ease;
-    z-index: 999;
-    padding: 20px;
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.menu-overlay.active {
-    right: 0;
-}
-
-#nav-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#nav-menu li {
-    margin: 15px 0;
-}
-
 #nav-menu li a {
     text-decoration: none;
-    color: #333;
+    color: #171717c6; /* 文字颜色 */
     font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-#nav-menu li a:hover {
-    color: #ffcc00;
+    transition: color 0.3s ease, transform 0.3s ease; /* 添加颜色和缩放动画 */
+    position: relative;
+    display: inline-block;
 }
 
 /* Banner 区 */
 .blog-banner {
-    width: 100%;
-    height: 200px;
-    margin-bottom: 20px;
-    display: none; /* 默认隐藏 */
-    overflow: visible; /* 修改banner溢出设置 */
+    max-width: 30%; /* 留出左右边距 */
+    margin: 40px auto 30px; /* 上边距40px 下边距30px */
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    background: #f0f0f0; /* 加载占位背景 */
 }
+
 
 .blog-banner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    object-position: center center;
+    transition: transform 0.3s ease;
+}
+
+/* 图片说明文字 */
+.banner-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 90%);
+    color: #fff;
+    font-family: 'Anek Latin', sans-serif;
+}
+
+.caption-title {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.caption-credit {
+    font-size: 0.6rem;
+    opacity: 0.8;
+    text-align: center;
 }
 
 /* 博客内容容器 */
@@ -146,24 +139,29 @@
 
 /* 标题区 */
 .blog-header {
-    text-align: justify; /* 标题两端对齐 */
-    margin-bottom: 20px;
+    text-align: center; /* 改为居中对齐 */
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
 }
 
-.blog-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 10px;
-    text-align: justify; /* 标题两端对齐 */
+.blog-title,
+.blog-subtitle {
+    text-align: center; /* 覆盖原justify设置 */
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .blog-subtitle {
-    font-family: 'Anek Latin', sans-serif;
-    font-size: 24px;
     color: #666;
-    margin-bottom: 10px;
-    text-align: justify; /* 副标题两端对齐 */
+}
+
+
+.blog-text p {
+    text-align: justify;
+    hyphens: auto;
+    margin: 1.8em 0;
 }
 
 .blog-image {
@@ -258,8 +256,68 @@
     background-color: #ffcc00;
 }
 
+.blog-references {
+    max-width: 760px;
+    margin: 3rem auto 0;
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+}
+
+.reference-list {
+    list-style: none;
+    padding-left: 2rem;
+    counter-reset: ref-counter;
+}
+
+.reference-item {
+    position: relative;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.reference-item:before {
+    counter-increment: ref-counter;
+    content: "[" counter(ref-counter) "] ";
+    position: absolute;
+    left: -2rem;
+    color: #888;
+}
+
+.reference-item a {
+    color: #1a0dab;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(26,13,171,0.3);
+    transition: border-color 0.3s ease;
+}
+
+.reference-item a:hover {
+    border-bottom-color: #1a0dab;
+}
+
 /* 响应式设计 */
+@media (max-width: 1200px) {
+    .blog-banner {
+        max-width: calc(100% - 40px);
+        margin: 30px auto;
+    }
+}
+
 @media (max-width: 768px) {
+    .blog-banner {
+        margin: 20px auto;
+        border-radius: 8px;
+    }
+        
+    .caption-title {
+        font-size: 1.4rem;
+    }
+
+    .blog-banner img {
+        border-radius: 0;
+        transform: none;
+    }
     .blog-title {
         font-size: 28px;
     }
@@ -288,5 +346,31 @@
 
     .blog-image {
         padding: 0; /* 移动端取消图片内边距 */
+    }
+    .blog-content-wrapper {
+        padding: 0 20px 50px;
+    }
+    
+    .back-button {
+        left: 20px;
+        bottom: 20px;
+        padding: 10px 20px;
+    }
+    
+    .reference-item {
+        font-size: 0.9rem;
+        padding-left: 1.5rem;
+    }
+}
+
+@media print {
+    .back-button {
+        display: none;
+    }
+    
+    .reference-item a:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
     }
 }
