@@ -1,13 +1,13 @@
 [
     {
-        "src": "assets/screen-images/void.jpg",
+        "src": "assets/screen-images/void.webp",
         "captionLine1": "空中 VOID",
         "captionLine2": "上海, 中國.",
         "captionLine3": "Shanghai, China.",
         "link": "articles/photograph/void/void.html"
     },
     {
-        "src": "assets/screen-images/jianghezhishou.jpg",
+        "src": "assets/screen-images/jianghezhishou.webp",
         "captionLine1": "江河守護 River Guardian",
         "captionLine2": "武漢, 湖北, 中國. ",
         "captionLine3": "Wuhan, Hubei, China",
@@ -21,7 +21,7 @@
         "link": "articles/photograph/danxia/danxia.html"
     },
     {
-        "src": "assets/screen-images/sandroad.jpg",
+        "src": "assets/screen-images/sandroad.webp",
         "captionLine1": "沙路 Road to the Sand",
         "captionLine2": "阿拉善左旗, 内蒙古自治區, 中國.",
         "captionLine3": "Alxa East Country, Inner Mongolia, China.",
@@ -35,7 +35,7 @@
         "link": "articles/photograph/desk.html"
     },
     {
-        "src": "assets/screen-images/shPolygrandtheatre.jpg",
+        "src": "assets/screen-images/shPolygrandtheatre.webp",
         "captionLine1": "上海保利大劇院 Shanghai Poly Grand Theatre",
         "captionLine2": "嘉定區，上海，中國",
         "captionLine3": "Jiading District, Shanghai, China",
@@ -49,7 +49,7 @@
         "link": "articles/photograph/composition1/composition1.html"
     },    
     {
-        "src": "assets/screen-images/grid.jpg",
+        "src": "assets/screen-images/grid.webp",
         "captionLine1": "格子山道 Grid",
         "captionLine2": "炮台山，北角，香港，中國",
         "captionLine3": "Fortress Hill, North Point, Hong Kong, China",
@@ -62,14 +62,14 @@
         "link": "articles/design/sakana/sakana.html"
     },
     {
-        "src": "assets/screen-images/nightStall.jpg",
+        "src": "assets/screen-images/nightStall.webp",
         "captionLine1": "夜更 Night Stall",
         "captionLine2": "上环，香港，中国",
         "captionLine3": "Sheung Wan, Hong Kong, China",
         "link": "articles/photograph/nightStall/nightStall.html"
     },
     {
-        "src": "assets/screen-images/fadingweddingdressing.jpg",
+        "src": "assets/screen-images/fadingweddingdressing.webp",
         "captionLine1": "Fading Wedding Dressing",
         "captionLine2": "清远市，广东，中国",
         "captionLine3": "Qingyuan, Guangdong, China",
