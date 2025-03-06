@@ -1,6 +1,6 @@
 /* 自我介绍页面样式 */
 .about-page {
-    background-color: #D9D9D9;
+    background-color: #181D25;
     background-image: url('../assets/texture.png');
     background-repeat: repeat;
     background-size: 500px 500px;
@@ -28,10 +28,27 @@
 }
 
 .about-profile-image {
-    width: 80%;
+    width: 100%;
     max-width: 400px;
     height: auto;
     margin-bottom: 20px;
+}
+
+.profile-card {
+    background-color: #fff; /* 白色背景 */
+    border-radius: 15px; /* 圆角 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    padding: 20px; /* 内边距 */
+    text-align: center; /* 内容居中 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+    max-width: 400px; /* 最大宽度 */
+    margin: 0 auto; /* 居中 */
+}
+
+/* 鼠标悬停时提升卡片 */
+.profile-card:hover {
+    transform: translateY(-5px); /* 向上移动 */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* 增强阴影 */
 }
 
 /* 姓名区 */
@@ -152,11 +169,31 @@
     padding-right: 20px;
     text-align: left;
     font-family: 'Playfair Display',  serif;
+    color:#dcdcdc;
 }
 
 /* 大标题字体 */
 .about-right .content-title h2 {
     font-family: 'Playfair Display', serif; /* 默认字体 */
+    color:#dcdcdc;
+}
+
+.content-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #dcdcdc;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.content-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    background-color: #ffcc00; /* 标题下划线 */
 }
 
 /* 中文情况下的大标题字体 */
@@ -169,7 +206,8 @@
 .content-text {
     width: 70%;
     text-align: justify;
-    text-justify: inter-ideograph
+    text-justify: inter-ideograph;
+    color: #dcdcdc;
 }
 
 .content-text ul {
@@ -184,7 +222,7 @@
 /* 项目经验中的 > 符号 */
 .content-text ul li > em {
     font-style: normal;
-    color: #333; /* 黑色 */
+    color: #dcdcdc; /* 黑色 */
     font-weight: bold;
 }
 
@@ -195,7 +233,7 @@
 
 .skill-category h3 {
     font-size: 20px;
-    color: #333;
+    color: #dcdcdc;
     margin: 0 0 5px 0;
 }
 
@@ -220,7 +258,7 @@
 .skill-category ul li {
     font-family: 'Anek Latin', sans-serif;
     font-size: 16px;
-    color: #666;
+    color: #929292;
     margin-bottom: 5px;
 }
 
@@ -252,11 +290,10 @@
 
 /* 移动端样式 */
 @media (max-width: 768px) {
-    /* 禁用左右滚动条 */
-    body {
-        overflow-x: hidden;
-        overflow-y: hidden;
+    .about-page {
+        overflow: auto;
     }
+
     /* 隐藏桌面端头像 */
     .desktop-profile {
         display: none !important; /* 强制隐藏 */
@@ -273,11 +310,13 @@
         width: 100%; /* 占满整个宽度 */
         height: auto; /* 高度自适应 */
         position: static; /* 取消固定定位 */
-        padding: 15px; /* 调整内边距 */
+        padding: 20px; /* 调整内边距 */
         text-align: center; /* 内容居中 */
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* 子元素居中 */
+    }
+
+    .profile-card {
+        max-width: 90%; /* 缩小卡片宽度 */
+        margin: 20px auto; /* 居中并增加上下边距 */
     }
 
     /* 头像 */
@@ -285,6 +324,14 @@
         width: 120px; /* 缩小头像尺寸 */
         height: 120px;
         border-radius: 50%; /* 圆形 */
+        object-fit: cover; /* 保持图片比例 */
+        margin: 0 auto 15px; /* 居中并调整间距 */
+    }
+
+    .about-profile-image {
+        width: 120px; /* 缩小头像尺寸 */
+        height: 120px;
+        border-radius: 50%; /* 圆形头像 */
         object-fit: cover; /* 保持图片比例 */
         margin: 0 auto 15px; /* 居中并调整间距 */
     }
@@ -346,8 +393,13 @@
     .about-right {
         width: 100%; /* 占满整个宽度 */
         margin-left: 0; /* 取消左侧留白 */
-        padding: 15px; /* 调整内边距 */
-        text-align: left; /* 内容居中 */
+        padding: 20px; /* 调整内边距 */
+        overflow-y: visible; /* 取消滚动 */
+        height: auto; /* 高度自适应 */
+    }
+
+    .about-right .content-row {
+        padding: 0 20px; /* 左右留空 */
     }
 
     /* 内容行 */
