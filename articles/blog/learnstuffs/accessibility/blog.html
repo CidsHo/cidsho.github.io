@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客页模板</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button" onclick="window.history.back()">
+            <img src="../../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../articles/article-thumbnail/ls-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">无障碍设计小记 
+                </h1>
+                <h4 class="blog-subtitle"></h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">本章不适合在移动端查看</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+                    <ol>
+                      <ul>
+                        <li>（含义）无障碍设计意味着设计应用时应考虑到，无论是因为年龄、事故或疾病而有认知、感官或移动障碍的人，还是没有此类障碍的人，都能够有效使用所设计的应用</li>
+                        <li>（背景）全世界有7.5亿人有某种残疾。但是，无障碍性是交互设计中常被忽视的一个领域，在用户体验中也常常被忽视。技术产品不能很好的服务于残疾用户。每个应用都需要无障碍性措施或者进行无障碍性设计，而面对身患严重或衰弱疾病的老人或者病人的应用，更需要无障碍界面。</li>
+                        <li>（目标）一个产品或服务无论是针对何种用户都应该满足以下目标：
+                          <ul>
+                            <li>用户能够感知和理解所有指示、信息和反馈</li>
+                            <li>用户能够感知、理解并轻易地操作所有控件并进行输入</li>
+                            <li>用户能够轻易的导航，并且总能知道所处界面的位置及其导航结构</li>
+                          </ul>
+                        </li>
+                        <li>设计师应该让用户有统一体验；用户也应该能用自己的方式去使用</li>
+                        <li>设计师应该告知软件建议的使用方式，同时不应该让用户感觉他们背负了设计软件的责任</li>
+                        <li>听力无障碍设计
+                          <ul>
+                            <li>字幕：
+                              <ul>
+                                <li>传统电视行业有现行的字母标准：字体够大、字体够清晰、分行明快，但新兴行业对字幕的制作肆意妄为，往往出现字号极小、字体潦草、断句奇葩，以及字体与背景无法区分开，句子过长以至于需要浏览整个屏幕以阅读完和缺乏对当前讲话者的指示。</li>
+                                <li>游戏行业中的字幕对清晰要求较高，因为其要求玩家在在兼顾字幕的过程中进行游戏</li>
+                              </ul>
+                            </li>
+                            <li>做法
+                              <ul>
+                                <li>字幕提示
+                                  <ul>
+                                    <li>字体应该够大：不应该为了整体风格和沉浸感而让字体变小——真正需要字幕的人不会把字幕是否具有沉浸感放在第一位、他们更在乎能否看清、完整阅读。或者为用户提供选择字号的权利，让不同需求的人有不同的体验</li>
+                                    <li>字体应简洁：提高可读性、干净整洁的无衬线字体是首选。同样不要为了品牌辨识度而去放弃清晰度</li>
+                                    <li>字幕应该与背景相区分：如典型的半透明字体在特定背景下几乎隐形的错误。文字通常选择白色加上黑边或黑色阴影、或者干脆加上黑框以与背景区分开来</li>
+                                    <li>字幕不应该过长，37-42个英文字符，最多显示两行，让字幕居中、聚拢。拆分长句，保证音效、语音与字幕同步</li>
+                                    <li>字幕滞留时间应足够长——通常应与人物语速一致，有时需延长。字幕切换时留白，利用闪现吸引用户注意，表示出现新对白</li>
+                                    <li>字幕应强调说话者：在句子前标注说话者，或者使用不同的颜色和字体风格</li>
+                                    <li>字幕应覆盖所有的声音</li>
+                                  </ul>
+                                </li>
+                                <li>声音提示
+                                  <ul>
+                                    <li>全套隐藏字幕：为有特殊需要的观众准备的字幕。</li>
+                                    <li>用文字描述声音，同时表示声音来源（视觉图标指示、左右箭头或声音环）</li>
+                                    <li>极端情况下，让人物角色使用手语（VR游戏：moss）来替代肢体动作</li>
+                                  </ul>
+                                </li>
+                                <li>声音谜题
+                                  <ul>
+                                    <li>避免将声音作为主要信息传达方式</li>
+                                  </ul>
+                                </li>
+                                <li>辅助设置
+                                  <ul>
+                                    <li>将各个设置部分都单独提供个性化选项</li>
+                                    <li>将无障碍设置的内容设为默认开启状态（或提前设置）</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>视觉无障碍设计
+                          <ul>
+                            <li>色盲（色觉障碍（Color vision Deficiency））
+                              <ul>
+                                <li>避免只使用颜色来传达重要信息，或区分不同元素。使用诸如符号、形状、底纹、阴影、动画等</li>
+                                <li>赋予颜色特殊符号，映射到按键的对应位置（红绿灯），采用符号组合来表示更多其他的原色</li>
+                                <li>提供自定义颜色方案并实时显示</li>
+                                <li>避免使用滤镜式的一刀切方案，滤镜会扭曲原有的色彩体验，不应该让颜色看起来与现实大相径庭，只需要满足玩家看清画面重要信息的需求即可</li>
+                                <li>减少颜色变化，固定颜色组合</li>
+                              </ul>
+                            </li>
+                            <li>低视力（小屏幕）
+                              <ul>
+                                <li>减少视觉削弱元素（画面内容量、锐度（清晰程度））</li>
+                                <li>重点：尺寸和对比度</li>
+                                <li>远近测试、多平台测试能迅速把握字体大小</li>
+                                <li>使用清晰可读的字体，不意味着完全放弃个性而去满足此方面需求，至少提供选项</li>
+                                <li>高对比度模式以减少眼花情况，可设置背景</li>
+                                <li>为重要信息提供声音反馈</li>
+                                <li>使用屏幕阅读器</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>运动无障碍设计
+                          <ul>
+                            <li>提供按键重映射</li>
+                            <li>减少对体感的依赖（泛滥使用的摇一摇功能和震动反馈）</li>
+                            <li>降低操作复杂性（如同时按多个按键），提供多种操作输入方式，减少频繁操作。但不应该因降低操作复杂性而让其他内容与正常使用者不一致</li>
+                          </ul>
+                        </li>
+                        <li>认知无障碍设计
+                          <ul>
+                            <li>癫痫、阅读障碍、学习障碍</li>
+                            <li>模拟器眩晕症（Simulator sickness）：眼睛感受到运动刺激，而内耳认为你静止不动，这种不协调性会让身体感到不适
+                              <ul>
+                                <li>减少画面镜头效果如：视觉晃动、起伏、震动、动态模糊等</li>
+                                <li>保证动画流畅且无大幅度晃动、跳跃和大幅度缩放</li>
+                              </ul>
+                            </li>
+                            <li>感官负载（Sensory load）
+                              <ul>
+                                <li>避免强光、持续闪光和事物密集涌现</li>
+                              </ul>
+                            </li>
+                            <li>阅读障碍
+                              <ul>
+                                <li>同字幕设计</li>
+                                <li>避免自动播放，将字幕控制权留给用户</li>
+                              </ul>
+                            </li>
+                            <li>执行功能（Executive function）
+                              <ul>
+                                <li>简化信息：强调关键信息，提供信息过滤</li>
+                                <li>导航帮助：提供足够指示</li>
+                                <li>教程练习：提供教程、随时回顾</li>
+                                <li>暂停与运行速度：提供用户评估环境，减少需要反应速度的设计或提供延长反应时间的选项</li>
+                                <li>手动保存</li>
+                                <li>难度选项</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                        </p>
+                </div>
+
+                <section class="blog-references">
+                  <h3 class="references-title">Ref.</h3>
+                  <ol class="reference-list">
+                      <li class="reference-item">
+                        Designing to Minimize Simulation Sickness in VR Games | GDC Vault
+                        https://www.gdcvault.com/play/1022772/Designing-to-Minimize-Simulation-Sickness
+                      </li>
+                      <li class="reference-item">
+                        VR & accessibility | Gamasutra
+					https://www.gamasutra.com/blogs/IanHamilton/20161031/284491/VR__accessibility.php
+                      </li>
+                  </ol>
+              </section>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2021年11月17日</p>
+                    <div class="blog-tags">
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../scripts/script.js"></script>
+</body>
+</html>

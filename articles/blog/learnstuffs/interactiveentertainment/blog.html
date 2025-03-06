@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客页模板</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button" onclick="window.history.back()">
+            <img src="../../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../articles/article-thumbnail/ls-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">格式塔心理学 
+                </h1>
+                <h4 class="blog-subtitle">Gestalt Psychology</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">本章不适合在移动端查看</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+                    <h2>1. 交互设计（Interaction Design）</h2>
+                    <p>Alan Cooper对交互设计作以下定义：交互设计是人工制品、环境和系统的行为，以及传达这种行为的外形元素的设计和定义。其不像传统的设计学科那样关注形式、内容和内涵，而交互设计首先旨在规划和描述事物的行为方式，然后描述传达这种行为的最有效形式。</p>
+                    <p>Helen Sharp认为交互设计是支持人们日常工作与生活的交互式产品。交互设计就是关于创建新的用户体验的问题，其目的是增强和扩充人们工作、通信及交互的方式。</p>
+                    <p>Don Norman通过比较工业设计（Industrial Design）的定义归纳出了交互设计的定义，首先其认为工业设计是一种专业的服务，为使用者和生产者双方利益而创造和开发产品与系统的概念和规范，旨在优化功能、价值和外观，主要注重产品的外形和材料。而交互设计重点关注人与技术的互动。目标是增强人们理解可以做什么、正在发生什么。交互设计借鉴了心理学、设计、艺术和情感等基本原则来保证用户得到积极的、愉悦的体验，更注重产品的易懂性和易用性。</p>
+                    <p>从用户的角度可以对交互设计作以下定义：交互设计是一种如何让产品易用、有效而让人愉悦的技术，致力于了解目标用户和他们的期望，了解用户在同产品交互时彼此的行为。了解“人”本身的心理和行为特点，还包括了解各种有效的交互方式，并对它们进行增强和扩充。交互设计的最终目的是通过对产品的界面和行为进行交互设计，让产品和它的使用者之间建立一种有机关系，从而可以有效达到使用者的目标。</p>
+                    
+                    <h2>2. 交互设计中的认知因素</h2>
+                    <p>交互设计中的认知因素是构成交互人意义赋予（Sense Making）的重要影响因素。其包含以下四种主要的活动：</p>
+                    <ul>
+                      <li><strong>感知</strong>：指对世界产生的最开始的、最基础的认识。其并不是对周围世界的真实描述，而是交互人所期望感知的内容，而交互人的预期又受到过去交互人所获得的经验、交互人交互过程中所处的环境（注：此处所指代的环境既指虚拟环境，同时也指代实体环境）、引导向目标的视觉因素的影响。其要求交互体验中的信息要易于察觉和识别。</li>
+                      <li><strong>视觉</strong></li>
+                      <li><strong>注意点</strong></li>
+                      <li><strong>记忆</strong>：既指用户过去的经验记忆，又指用户在交互过程中形成的短期记忆，其中短期记忆的容量和稳定性将显著影响交互的效果。</li>
+                      <li><strong>思维</strong>：分为感性思维和理性思维，对交互的影响主要来自于不同人对同一事物的思维方式存在差异和共性上。</li>
+                    </ul>
+                    <p>交互设计的认知因素划定了本研究开展过程中需要关注的用户认知行为。</p>
+                    
+                    <h2>3. 体验设计</h2>
+                    <p>体验设计可以被认为是交互设计体系下的一环。</p>
+                    <p>Don Norman对体验设计作以下定义：设计产品、流程、服务，以及事件和环境的实践。其重点关注整体体验的质量和愉悦感，注重情感在设计中的影响。其与交互设计的区别在于，其关注产品如何与外界联系并发挥作用，即人们如何接触和使用它，而不是产品本身如何工作。</p>
+                    <p>综上可见，开展环境叙事研究的目的与交互设计、体验设计的目的是高度重合的，都将信息传达（可供性）和情感激发的有效性作为研究目的，由此在本研究中，将引入交互设计、体验设计领域的设计、研究方法对本项目作指导。</p>
+                    
+                    <h2>4. 用户心理模型（Mental Model）、实现模型（Implementation Model）和表现模型（Presentation Model）</h2>
+                    <p>用户心理模型指用户根据经验认定的系统工作方式以及他们在使用交互产品时所关心和思考的内容，如目标、信心、情绪等。其意味着用户在交互过程中不需要理解实际运转的所有细节，而自主创造出一种认知上较为简洁的解释方式。这种解释虽不能反应交互产品的实际运作机制，但有助于交互行为的开展。</p>
+                    <p>实现模型指系统完成其功能的方式和方法。其描述了程序代码实现的细节，更多关注数据结构、算法等实现方面的问题。</p>
+                    <p>表现模型指设计师在设计过程中联结用户心理模型和实现模型的部分，其关注对象、表现以及交互过程。</p>
+                    <p>上述三个模型虽不对研究关注核心问题作太大影响，但探索原型创作和实现上有重要的指导意义。</p>
+                    
+                    <h2>5. 交互娱乐</h2>
+                    <p>交互娱乐是交互设计下的一种有代表性的产品类型，其注重用户体验，通过传达信息和叙事引导交互人情感的特征，使得其在开展环境叙事方面较为容易开展以及迅速恒定用户体验效果。</p>
+                    <p>交互娱乐划定了本研究的范围和实践方向。以下讨论的交互娱乐一词沿用G.Wood-Bradley的定义：交互娱乐（Interactive Entertainment）是指一种通过双向信息沟通系统来服务于娱乐性目的的技术。其核心在于交互人发起行为，系统根据行为作出反馈。（G.Wood-Bradley，2009）这个定义从系统与交互人的相互行为的角度表述了交互娱乐的核心，即交互性（Interactive）。据此定义下，包括互动影视作品，电子游戏，以娱乐为目的的交互装置等等都可以划归到这个定义下。可见交互娱乐的媒介形式极其多样且紧密地随着技术发展呈现越来越多的表现形式，从博物馆、戏剧到电子阅读领域都开始引入这种交互娱乐性（Celia Pearce，1994）。</p>
+                    
+                    <h2>6. 交互娱乐领域中的用户体验设计研究</h2>
+                    <p>Hassenzahl的研究指，设计者无法保证其设计的产品能够以预期的方式使用或体验，用户体验会受到特定的环境影响（既有外部亦有内部的环境因素）。其研究主要面向工业设计部门，将用户体验的核心构成分为功利性（Utilitarian value）和享乐性（Hedonic）两类。在交互娱乐产品的情况下，关于用户体验的研究则偏重于享乐性价值（但不可忽视可能存在的功利性因素（Lennart Nacke and Anders Drachen）。</p>
+                    <p>Jordan根据Maslow人类需求模型提出了一个梯级用户愉悦体验模型，其提出了四种不同类别的愉悦，分别是体感愉悦（Physio-pleasure）（如嗅觉、触觉舒适感反馈）、社会性愉悦（Socio-pleasure）（如身份暗示、关系暗示、社会及个人状态等）、精神愉悦（Psycho-pleasure）（如认知反馈、情绪反馈）、观念愉悦（Ideo-pleasure）（如美学价值、意识形态价值反馈）。交互娱乐作为以愉悦感为核心的产品，Jordan的体验模型提供了分层级的愉悦体验关注点。</p>
+                    <p>Malone的自主学习模型同样对用户体验设计有着参考意义，其研究学习行为的愉悦体验来源，提出了三个重要的影响因素，即挑战，想象和好奇心。根据Malone提出的假设，创造娱乐体验应针对用户无法预期反馈的心理设计挑战；为用户设计一个行为前后差异的想象空间；利用用户对环境和结构的不完全、不一致理解营造好奇心探索空间。Malone的研究针对学习产品的设计，但在交互娱乐产品方面同样具有参考意义，在实验中对挑战元素、想象空间、好奇心空间进行关注。</p>
+                </div>
+
+                <section class="blog-references">
+                    <h3 class="references-title">Ref.</h3>
+                    <ol class="reference-list">
+                        <li class="reference-item">
+                            Nacke L, Drachen A. Logged and Loaded: A Theory and Methodological Taxonomy of Gameplay Experience Measurement[C]. //Affective Ludology: Scientific Measurement of User Experience in Interactive Entertainment, Blekinge Institute of Technology, 2009.
+                        </li>
+                        <li class="reference-item">
+                            Nacke L. Models of Flow Experience in Gameplay: A Review and Suggestions for Measurement[C]. //Affective Ludology: Scientific Measurement of User Experience in Interactive Entertainment, Blekinge Institute of Technology, 2009.
+                        </li>
+                        <li class="reference-item">
+                            Nacke L, Lindley C A, Stellmach S. Log Who's Playing: Psychophysiological Game Analysis Made Easy Throuugh Event Logging[C]. //Affective Ludology: Scientific Measurement of User Experience in Interactive Entertainment, Blekinge Institute of Technology, 2009.
+                        </li>
+                        <li class="reference-item">
+                            Hassenzahl M. The Thing and I: Understanding the Relationship Between User and Product.[C]. //Funology: From Usability to Enjoyment, Kluwer Academic Publishers, 2004.
+                        </li>
+                        <li class="reference-item">
+                            Hassenzahl M, Tractinsky N. User Experience - A Research Agenda[J]. Behaviour & Information Technology, 2006(2).
+                        </li>
+                        <li class="reference-item">
+                            Jordan P W. Pleasure with Products: Human Factors for Body, Mind and Soul[C]. //Human Factors in Product Design: Current Practise and Future Trends, UK: Taylor & Francis., 1999.
+                        </li>
+                        <li class="reference-item">
+                            Malone. What Makes Things Fun to Learn? Heuristics for Designing Instructional Computer Games[C]. //Proceedings of the 3rd ACM SIGSMALL Symposium and the first SIGPC Symposium on Small Systems, Palo Alto, California, United States, 1980.
+                        </li>
+                        <li class="reference-item">
+                            Malone T. W . Toward a Theory of Intrinsically Motivating[J]. Cognitive Science, 1981(5).
+                        </li>
+                        <li class="reference-item">
+                            IJsselsteijn W, Poels K, Kort D. Game Experience Questionnaire:development of a self-report measure to assess the psychological impact of digital games[R]. , TU Eindhoven, Eindhoven, The Netherlands:FUGA technical report, 2008.
+                        </li>
+                        <li class="reference-item">
+                            Poels K, Kort Y D, Ijsselsteijn W A. "It is always a lot of fun!" Exploring dimensions of digital game experience using focus group methodology[C]. //Future Play '07 Proceedings of the 2007 conference on Future Play, Future Play 2007, 2007.
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2023年04月2日</p>
+                    <div class="blog-tags">
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../scripts/script.js"></script>
+</body>
+</html>

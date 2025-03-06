@@ -342,6 +342,47 @@
         "description": "",
         "date": "2022-06-18"
     },
+
+
+
+
+
+    {
+        "title": "交互娱乐​ Interactive Entertainment",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/interactiveentertainment/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2022-11-03"
+    },
+    {
+        "title": "非线性叙事​ Non-Linear Narrative",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/non-linearnarrative/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2022-11-03"
+    },
+    {
+        "title": "格式塔心理学​ Gestalt Psychology",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/gestalttheory/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2023-03-17"
+    },
+    {
+        "title": "无障碍设计小记 Accessibility",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/accessibility/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2021-11-17"
+    },
     {
         "title": "About Face Chap 17",
         "image": "assets/placeholder.jpg",

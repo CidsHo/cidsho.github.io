@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客页模板</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button" onclick="window.history.back()">
+            <img src="../../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../articles/article-thumbnail/ls-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">非线性叙事研究 
+                </h1>
+                <h4 class="blog-subtitle">Non-Linear Narrative Research Note</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">本章不适合在移动端查看</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+                    <h2>非线性叙事（Non-Linear Narrative）</h2>
+                    <p>Celia Pearce 提出了交互领域的非线性叙事定义。非线性叙事（Non-Linear Narrative）是相对于“线性叙事”（Linear Narrative）而言的。线性叙事指内容主体（如信息呈现）在每次浏览都呈现一致的次序。在虚构创作领域，电影、小说、电视都呈现这种线性的叙事方式。而非线性叙事则指内容主体在每一次浏览都会因为用户所选择的不同的浏览次序或方式而产出不同的结果走向。在交互中的非线性叙事体验中，Celia Pearce将非线性叙事中包含的这种读者与作者互动的行为称作是一种“游玩”，其根据这种互动性而将体验者称为“Player”（玩家）。</p>
+                    
+                    <h3>非线性叙事的媒介影响</h3>
+                    <p>非线性叙事受到媒介类型的影响较大，在传统创作领域，非线性叙事的应用受到较大的阻力。以写作领域为例，James Joyce尝试过非线性叙事创作，其写就了一本书，这本书没有明确的开头、过渡、结尾，但受限于书籍的形式，对于读者体验内容来说其仍然是线性的，未能脱离线性创作的范畴。同样地，在影视领域，关于线性叙事的讨论可以说是影视创作与生俱来的。但无论是插叙、闪回、视角变换等手法的使用，都无法改变影片最终是以一个序列呈现给观众的这一点，最终影片会以线性的方式呈现给观众。</p>
+                    
+                    <h3>非线性叙事与交互性</h3>
+                    <p>非线性叙事的实现与其所应用的媒体类型所具有的交互潜力有关，可以说非线性叙事是与交互性紧密地结合在一起的。如上文所提到的写作领域，在尝试将交互引入到写作领域后，诞生了文字冒险小说（Text Adventure Genre）这样的作品门类。文字冒险小说以将读者引入到与情节的互动中，实现非线性叙事实践。读者在每个章节的最后作出选择，而不同的选择会导向不同的剧情页，由此引导作品主角的行为，左右情节的走向。如果读者选择多次阅读小说，则可以以不同的方式浏览小说的内容主体，产出不同的结果，也即实现了Celia Pearce所定义的非线性叙事（每一次浏览都会因为用户所选择的不同的浏览次序或方式而产出不同的结果走向），为读者带了更加有趣和有沉浸感的叙事情节和体验。可以认为，交互的引入是实现非线性叙事实践的必然，而开展交互研究则必然会涉及非线性叙事的讨论。</p>
+                    
+                    <h3>非线性叙事的复杂性</h3>
+                    <p>非线性叙事是一个宏大的命题，而构成一个完整的叙事闭环受到诸如有角色曲线（Character Arc）、情节控制（Plot-Twist Control）、矛盾冲突（Conflict）、环境叙事（Environment Storytelling）等多方面的影响因素。</p>
+                    
+                    <h2>环境叙事（Environment Storytelling）</h2>
+                    
+                    <h3>1. 实体环境中的环境叙事</h3>
+                    <p>关于环境叙事的讨论最早源自于实体环境，Don Carson首先将环境叙事（Environmental Storytelling）的概念从主题公园的设计中借用到虚拟环境叙事当中。其认为主题公园的设计与虚拟环境叙事在服务目的上存在一致性。在主题公园设计中，要传达的信息内容（在主题公园中则是不同主题的氛围感）隐藏在物理环境中，而物理环境中的诸如颜色、光线、纹理等的要素在传达上发挥了大部分的作用，调动了观众的情绪，使其沉浸到活动和氛围当中。Don Carson将环境叙事的效果归功于对观众过往经历的模拟，通过呈现观众对现实世界相似的体验而将这种体验套用到主题公园所营造的环境中，从而控制观众的期望以产生沉浸感。</p>
+                    <p>Marling在对主题公园设计中的环境叙事研究中认为，相较于虚拟环境，主题公园设计偏重于对空间的引导（Navigation）上，提供一种地形层（Topographic）的、连续的空间感，由此实现对访客的体验构成和叙事构成。</p>
+                    <p>国内的策展业对环境叙事的利用可以作为一个比较典型的环境叙事研究参考。2021年上海西岸美术馆举办的抽象艺术画家康定斯基作品展览中，展方根据康定斯基的重要创作阶段划定了不同的环境风格，穿插有时间段内作者的一些物件，在一个小房间中将康定斯基的抽象画作品放大化，作为墙面纹理遍布整个房间。在这个展览中，访客通过不同的房间装潢风格、现场摆放的旧物件等完成了对康定斯基这个抽象艺术家的背景、艺术风格方面的认知搭建。展会中，有访客与同伴指着场景中的小物件和墙上的涂装评论：“他当时就是用这些东西（小物件）画出这个（墙面上的艺术作品）”，这个案例中，即便两者可能并没有什么严格关系，但这种环境搭建对访客交互过程中的认知产生了重要的影响。展方利用环境要素将画家风格与装饰效果联系起来，将介绍文本以抽象、非显著的方式传达给了观众。</p>
+                    
+                    <h3>2. 交互虚拟环境中的环境叙事</h3>
+                    <p>交互领域中的环境叙事讨论较为新颖。Smith和Worch提出了环境叙事的定义：用可以被合理诠释的环境陈设(Properties)建立的一个“人-空间”关系，并且对空间的叙事作延申的叙事环节。Smith和Worch的定义表明了环境叙事中环境与信息呈现的内在关系，其提出了环境叙事的四个重要属性：</p>
+                    <ul>
+                      <li>依赖交互人来将拆分开的叙事元素组合起来，并且将其以一种合理的方式完整诠释起来。</li>
+                      <li>能够帮助交互人整合其对环境的观点并激发起交互人遵循作者行为引导（如解决谜题等），即吸引交互人的注意力并使其沉浸其中。</li>
+                      <li>容许交互人根据其视角和过程经历对过程情况进行诠释和判断。</li>
+                      <li>能够以信号的方式帮助交互人在环境中进行导航和方向判断（Navigation）。</li>
+                    </ul>
+                    <p>属性1、3是环境叙事沉浸性和多元诠释宽容度的来源，属性2表明了环境叙事能够带来沉浸感并且能够作出引导，属性4代表了环境叙事要能正常发挥作用所需要的在供能性上的工作。Smith和Worch认为环境叙事就是未来在虚拟环境交互中产生沉浸感和兴趣的来源。Smith和Worch的研究强调交互人在虚拟空间中作为积极探索的代入角色（Active Agent）的身份，强调交互人在虚拟环境中的理解、诠释和信息推理能力。Smith和Worch同时将虚拟环境搭建和系统性环境叙事区分开，其认为环境叙事的指责是提供叙事背景和为交互人赋予角色身份，而将创造交互事件（Event Generation）的机会留给环境中探索的交互人本身。</p>
+                    <p>这一点与Tynan Sylvester的体验引擎理论有异曲同工之处，在Tynan Sylvester的理论中，体验的营造由三要素为基础构成，即机制（Core Mechanic）、事件（Event）、情感（Emotion）作为核心设计元素。由核心机制出发，交互人与核心机制的互动中产生事件，由事件激发交互人的情感，从而构成交互体验。</p>
+                    <p>Richard Rouse III 将环境叙事定义为“环境中的故事陈述不以其中参与的人是否存在而进行”。其认为环境叙事排布必须明确整体的世界氛围应该呈现何种想法以及虚拟环境中的每一个具体地点发生的具体事件。Richard的研究引入了相当多的影视领域内容，诸如镜头控制、伏笔揭示（Reveals）、光照控制等。其研究主要集中于对虚拟环境中交互人的注意力捕捉以及虚拟环境构建方面的内容。</p>
+                    <p>Jenkins提出了构成环境叙事的四个不同的环境叙事方面：</p>
+                    <ul>
+                      <li>激发叙事（Evoked Narrative）：通过深层级的虚拟空间设计加强既存叙事的效果。</li>
+                      <li>角色扮演叙事（Enacted Narrative）：提供角色相关的叙事元素促进角色融入。</li>
+                      <li>伏笔叙事（Embedded Narrative）：虚拟环境作为记忆储存空间，空间中的物件以及场景布置隐含了作者希望传达的信息线索以及能够帮助读者重构情节的内容。</li>
+                      <li>涌现叙事（Emergent Narrative）：虚拟环境要能提供一个容许读者根据遭遇的事件构建自己独特的叙事情节。</li>
+                    </ul>
+                    <p>Jenkins的定义明确了设计环境叙事的四个重要构成部分。</p>
+                    <p>在Bevensee等人的研究中提出了环境叙事的三个不同的层级的叙事理解。其认为环境叙事设计了一个静态的环境和时间地点，在叙事中没有特定的时间发展。读者首先从环境得到最直接、明显、表层的故事内容（如遭遇的事件），这一叙事理解层级对作者隐含的信息和故事传达没有影响，即层级1。读者随后会从作者在环境中提供的元素和暗示中作出自己的解释，理解作者传达的基本层级信息，即层级2。读者最后会将作者信息中的隐喻和终极含义推道出来，即层级3。环境叙事对非线性叙事的促成就在于叙事层级2和叙事层级3中，读者对于环境信息的不完全掌握和对作者信息呈现的不同解读，由此使得读者走向不同的结果。</p>
+                    <p>Nitsche认为，环境叙事元素的意义不在于构建一个线性故事，而在于为交互人提供一个激发意义理解（Evocative Means）的要素从而理解虚拟环境和环境中派生的事件，由此连结成完整的背景（Context）、意义（Significance）理解，最终使得虚拟空间和交互体验变得更有意义。</p>
+                    <p>以上的研究划定了环境叙事的构成和实现方法，以及环境叙事如何作为非线性叙事的一种促进交互人的沉浸感产生，同时框定了交互人在环境叙事中承担的职责。</p>
+                    <h3>3. 虚拟交互环境中的环境叙事研究典型案例</h3>
+                    <p>Bevensee等人针对环境叙事研究开展了一个名为“Aporia”的游戏项目。其选取了Jenkins四个环境叙事元素中的激发叙事和伏笔叙事作为主要的环境叙事构建元素。Aporia的目的是希望用户通过预设好的叙事信息元素理解到作者预设的故事情节。在Aporia项目中，其剔除了交互角色、对话和任何形式的文字，但结果上Aporia没能够借用上述的叙事元素完成故事传达的任务。在他们的采访中，每个参与者都根据其游玩过程的经历得出了不同的故事理解。Bevensee认为他们只完成了一个非线性叙事的项目，而没能够检验到环境叙事的有效性，但其认为其工作对未来的环境叙事研究仍有指导意义。</p>
+                    <p>Aporia项目有个明显的问题。其抽离了数个环境叙事元素而围绕这几个元素单独营造一个叙事环境，而人对环境的信息获取和判断是多个叙事元素共同组成的结果。作者希望尽可能剔除某一元素对其他的元素的影响，而从收集到的结果来看只是对故事的叙事完整性进行了破坏。</p>
+                    <p>本研究计划吸取Bevensee等人在环境叙事搭建上的经验，综合上述多个关键环境叙事影响因素，设计一个可交互原型，通过对参与者游玩过程的关注点记录，将游玩结束后参与者的信息陈述与设定的信息之间进行一致性比对，检查环境叙事对参与者的信息传递效果和情感激发效果。过程中引入人机交互研究方法对用户体验进行记录分析，得出研究结果。</p>
+                    <p>期望中，研究将能够抽离出多个核心的环境叙事影响因素，判断得出数个因素对参与者信息获取的影响程度，目的性地从体验设计角度为用户从环境中获取信息提效，为未来的虚拟环境搭建作指导。而这正是目前的环境叙事研究较少涉及的环节。本研究计划选取信息传递与感情激发作为有效性评估的原因是这两个方面的有效性最能够转化到其他的使用场景。</p>
+                    <p>类似地，研究将使用交互娱乐中的电子游戏作为用户体验信息采集的交互实验产品。</p>
+                </div>
+
+                <section class="blog-references">
+                    <h3 class="references-title">Ref.</h3>
+                    <ol class="reference-list">
+                        <li class="reference-item">
+                            Pearce C. The Ins & Outs of Non-Linear Storytelling [J]. Computer Graphic, 1994(28).
+                        </li>
+                        <li class="reference-item">
+                            Don Carson. Environmental Storytelling: Creating Immersive 3D Worlds Using Lessons Learned from the Theme Park Industry[EB/OL]. [2022-10-10]. https://www.gamedeveloper.com/design/environmental-storytelling-creating-immersive-3d-worlds-using-lessons-learned-from-the-theme-park-industry.
+                        </li>
+                        <li class="reference-item">
+                            Don Carson. Environmental Storytelling, Part II: Bringing Theme Park Environment Design Techniques to the Virtual World[EB/OL]. [2022-10-10]. https://www.gamedeveloper.com/design/environmental-storytelling-part-ii-bringing-theme-park-environment-design-techniques-to-the-virtual-world.
+                        </li>
+                        <li class="reference-item">
+                            Pescarin S, Pandiani D.S.M. Factors in the Cognitive-Emotional Impact of Educational Environmental Narrative Videogames[C]. //Extended Reality, Lecture Notes in Computer Science, 2022.
+                        </li>
+                        <li class="reference-item">
+                            Matthias Worch, Harvey Smith. What Happened Here? Environmental Storytelling.[EB/OL]. [2022-10-10]. http://www.worch.com/2010/03/11/gdc-2010/.
+                        </li>
+                        <li class="reference-item">
+                            Sylvester T. Designing Games: A Guide to Engineering Experiences[M]. 1. 电子工业出版社, 2015.
+                        </li>
+                        <li class="reference-item">
+                            Schechner R. Between Theater and Anthropology[M]. 1. University of Pennsylvania Press, 1995.
+                        </li>
+                        <li class="reference-item">
+                            Rouse III R. Environmental Narrtive: Your World is Your Story[R]. San Francisco Moscone Center:Game Developer's Conference 2010, 2010.
+                        </li>
+                        <li class="reference-item">
+                            Jenkins H. Game Design as Narrative Architecture[C]. //First Person：New Media as Story, Performance, and Game, MIT Press, 2004.
+                        </li>
+                        <li class="reference-item">
+                            Bevensee S H, Boisen K A D, Olsen M P, etal. Project Aporia – An Exploration of Narrative Understanding of Environmental Storytelling in an Open World Scenario[C]. //Interactive Storytelling, Lecture Notes in Computer Science, 2012.
+                        </li>
+                        <li class="reference-item">
+                            Bosser A, Cavazza M, Champagnat R. Linear Logic for Non-Linear Storytelling[C]. //ECAI 2010, IOS Press.
+                        </li>
+                        <li class="reference-item">
+                            Clara Fernández-Vara. Game Spaces Speak Volumes: Indexical Storytelling[C]. //Proceedings of DiGRA 2011 Conference: Think Design Play., DiGRA 2011, 2011.
+                        </li>
+                        <li class="reference-item">
+                            Laurillard D, Stratfold M, Luckin R, etal. Affordances for Learning in a Non-Linear Narrative Medium[J]. Journal of Interactive Media in Education, 2000(2).
+                        </li>
+                        <li class="reference-item">
+                            Habgood J, Moore D, Alapont S, etal. The REVEAL educational environmental narrative framework for PlayStation VR[C]. //Proceedings of the 12th European conference on games based learning, Academic Conferences and Publishing International Limited, 2018.
+                        </li>
+                    </ol>
+                </section>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2022年11月03日</p>
+                    <div class="blog-tags">
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../scripts/script.js"></script>
+</body>
+</html>

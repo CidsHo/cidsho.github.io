@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客页模板</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button" onclick="window.history.back()">
+            <img src="../../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../articles/article-thumbnail/ls-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">格式塔心理学 
+                </h1>
+                <h4 class="blog-subtitle">Gestalt Psychology</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">本章不适合在移动端查看</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+                  <h2>格式塔与格式塔心理学</h2>
+                  <p><strong>格式塔</strong>（Gestalt）源自德语，意为“形状”或“形式”，但它不仅仅指代物体的外观，更强调整体的结构和组织。<strong>格式塔心理学</strong>（Gestalt Psychology）是20世纪初兴起于德国的一种心理学流派，由马克斯·韦特海默（Max Wertheimer）、沃尔夫冈·克勒（Wolfgang Köhler）和库尔特·考夫卡（Kurt Koffka）等人创立。其核心观点是“整体大于部分之和”，即人类感知和理解世界时，倾向于将事物视为整体，而不是孤立的组成部分。</p>
+                  
+                  <h2>格式塔心理学的基本原则</h2>
+                  <p>格式塔心理学提出了几个基本原则，被称为<strong>格式塔原则</strong>（Gestalt Principles），这些原则解释了人类如何组织和感知视觉信息，包括：</p>
+                  <ul>
+                    <li><strong>接近性原则</strong>（Proximity）：彼此靠近的元素被视为一个整体。</li>
+                    <li><strong>相似性原则</strong>（Similarity）：相似的元素被视为一组。</li>
+                    <li><strong>连续性原则</strong>（Continuity）：视觉倾向于感知连续的形式，而不是断裂的部分。</li>
+                    <li><strong>闭合性原则</strong>（Closure）：人们倾向于将不完整的图形视为完整的整体。</li>
+                    <li><strong>对称性原则</strong>（Symmetry）：对称的元素被视为一个整体。</li>
+                    <li><strong>共同命运原则</strong>（Common Fate）：朝同一方向移动的元素被视为一组。</li>
+                  </ul>
+                  
+                  <h2>格式塔心理学在设计学中的应用</h2>
+                  <p>在设计学中，格式塔心理学为视觉传达、用户体验（UX）和界面设计（UI）提供了重要的理论基础。通过应用格式塔原则，设计师可以更有效地组织信息、引导用户注意力，并创造更直观和美观的设计。</p>
+                  
+                  <h3>1. 信息组织</h3>
+                  <ul>
+                    <li><strong>接近性原则</strong>：将相关的元素放在一起，帮助用户快速理解信息的关联性。例如，在网页设计中，标题和正文的间距应小于不同段落之间的间距。</li>
+                    <li><strong>相似性原则</strong>：使用相同的颜色、形状或字体来区分不同类型的信息。例如，在导航栏中，所有按钮的样式应保持一致。</li>
+                  </ul>
+                  
+                  <h3>2. 视觉层次</h3>
+                  <ul>
+                    <li><strong>闭合性原则</strong>：利用不完整的图形或元素，让用户通过想象补充完整。例如，在Logo设计中，可以通过部分图形让用户联想到完整的形状。</li>
+                    <li><strong>对称性原则</strong>：对称布局可以增强设计的平衡感和美感，常用于海报、网页和产品设计。</li>
+                  </ul>
+                  
+                  <h3>3. 用户体验优化</h3>
+                  <ul>
+                    <li><strong>连续性原则</strong>：在用户界面中，使用连续的线条或路径引导用户完成操作流程。例如，在表单设计中，将输入框和按钮排列在一条直线上，引导用户逐步完成填写。</li>
+                    <li><strong>共同命运原则</strong>：在动态设计中，确保相关元素以相同的方式移动或变化。例如，在轮播图中，所有图片的切换方式应一致。</li>
+                  </ul>
+                  
+                  <h3>4. 视觉吸引力</h3>
+                  <ul>
+                    <li><strong>闭合性原则</strong>和<strong>对称性原则</strong>常用于创造简洁而富有吸引力的设计。例如，在品牌设计中，通过简单的图形和对称布局传递品牌的稳定性和专业性。</li>
+                  </ul>
+                </div>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2023年03月17日</p>
+                    <div class="blog-tags">
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../scripts/script.js"></script>
+</body>
+</html>
