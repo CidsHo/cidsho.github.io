@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>长图展示页面</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/scroll.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 图片容器 -->
+        <div class="image-container">
+            <img src="demo.jpg" alt="长图" class="long-image">
+            <!-- 兴趣点 -->
+            <div class="interest-point" style="left: 20%; top: 30%;" data-note="这是第一个兴趣点"></div>
+            <div class="interest-point" style="left: 50%; top: 60%;" data-note="这是第二个兴趣点"></div>
+        </div>
+
+        <!-- 信息面板 -->
+        <div class="info-panel">
+            <h2>作品信息</h2>
+            <p><strong>作者:</strong> 张三</p>
+            <p><strong>创作时间:</strong> 2023年10月</p>
+            <p><strong>标签:</strong> 风景, 长图, 艺术</p>
+            <p><strong>备注:</strong> 这是一张展示自然风景的长图。</p>
+        </div>
+
+        <!-- 工具栏 -->
+        <div class="toolbar">
+            <button class="toolbar-btn" id="jump-to-start" title="跳转到图片开始">
+                <img src="placeholder-icon.png" alt="跳转">
+            </button>
+            <button class="toolbar-btn" id="toggle-points" title="显示/隐藏兴趣点">
+                <img src="placeholder-icon.png" alt="兴趣点">
+            </button>
+            <button class="toolbar-btn" id="go-back" title="返回上一页">
+                <img src="placeholder-icon.png" alt="返回">
+            </button>
+            <button class="toolbar-btn" id="toggle-fullscreen" title="全屏">
+                <img src="placeholder-icon.png" alt="全屏">
+            </button>
+        </div>
+    </div>
+
+    
+
+    <!-- 浮窗 -->
+    <div class="note-popup">
+        <div class="note-content"></div>
+        <button class="close-btn">×</button>
+    </div>
+
+
+    <script src="../../../scripts/script.js"></script>
+    <script src="../../../scripts/scroll.js"></script>
+</body>
+</html>

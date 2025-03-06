@@ -1,0 +1,207 @@
+/* 基础样式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif;
+    background-color: #D9D9D9;
+    background-image: url('texture.png');
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    background-blend-mode: overlay;
+}
+
+/* 横屏提示 */
+.orientation-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+@media (orientation: portrait) {
+    .orientation-message {
+        display: flex;
+    }
+}
+
+.container {
+    display: flex;
+    height: 80vh;
+    margin: 10vh 20px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 图片容器 */
+.image-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.long-image {
+    width: auto;
+    height: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* 兴趣点 */
+.interest-point {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: ripple 1.5s infinite;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 10px rgba(255, 204, 0, 0);
+    }
+}
+
+.interest-point:hover {
+    background-color: #e6b800;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* 信息面板 */
+.info-panel {
+    width: 25%;
+    height: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ddd;
+    box-sizing: border-box;
+    overflow-y: auto;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.info-panel.active {
+    opacity: 1;
+}
+
+.info-panel h2 {
+    margin-top: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #333;
+}
+
+.info-panel p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.info-panel strong {
+    color: #333;
+}
+
+/* 浮窗 */
+.note-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 300px;
+    width: 100%;
+}
+
+.note-popup.active {
+    display: block;
+}
+
+.note-content {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+/* 工具栏 */
+.toolbar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.toolbar-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar-btn img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.toolbar-btn:hover img {
+    transform: scale(1.2);
+}
+
+/* 全屏样式 */
+.fullscreen .container {
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+}
