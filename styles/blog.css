@@ -305,6 +305,12 @@
 }
 
 @media (max-width: 768px) {
+
+    .blog-page {
+        background-color: #00000000;
+        background-image: url('../../../assets/texture-bg.png');
+    }
+
     .blog-banner {
         margin: 20px auto;
         border-radius: 8px;

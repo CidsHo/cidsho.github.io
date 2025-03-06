@@ -132,6 +132,12 @@
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+
+    .photo-page {
+        background-color: #00000000;
+        background-image: url('../assets/texture-bg.png');
+    }
+
     .photo-title {
         font-size: 24px;
     }

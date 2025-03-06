@@ -386,6 +386,12 @@ h1 {
 }
 
 @media (max-width: 768px) {
+
+    .portfolio-page {
+        background-color: #00000000;
+        background-image: url('../assets/texture-bg.png');
+    }
+
     .portfolio-grid {
         grid-template-columns: 1fr; /* 每行 1 张卡片 */
     }

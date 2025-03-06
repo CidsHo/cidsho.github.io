@@ -290,8 +290,11 @@
 
 /* 移动端样式 */
 @media (max-width: 768px) {
+
     .about-page {
         overflow: auto;
+        background-color: #00000000;
+        background-image: url('../assets/texture-bg.png');
     }
 
     /* 隐藏桌面端头像 */
