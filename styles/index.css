@@ -3,13 +3,25 @@
 /* 首页背景 */
 .home-page {
     background-color: #000000ee; /* 黑色背景 */
-    background-image: url('../assets/texture.png'); /* 材质背景 */
-    background-blend-mode: overlay; /* 混合模式 */
-    background-repeat: repeat;
-    background-size: 500px 500px;
-    background-blend-mode: overlay;
     overflow: hidden; /* 隐藏溢出内容 */
     font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif; /* 默认字体 */
+    position: relative; /* 确保伪元素相对于此容器定位 */
+}
+
+.home-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/texture.png'); /* 纹理图片 */
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    opacity: 0.5; /* 调整纹理透明度 */
+    z-index: 0; /* 确保纹理在背景色上方 */
+    mix-blend-mode: overlay; /* 使用 mix-blend-mode 替代 background-blend-mode */
+    pointer-events: none;
 }
 
 /* 首页文字按钮 */

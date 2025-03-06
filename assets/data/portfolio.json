@@ -343,10 +343,37 @@
         "date": "2022-06-18"
     },
     {
-        "title": "About Face Chap 14-15-16-17",
+        "title": "About Face Chap 17",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ls.png",
-        "link": "articles/blog/learnstuffs/aboutface/chap14-15-16-17/blog.html",
+        "link": "articles/blog/learnstuffs/aboutface/chap17/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2021-01-18"
+    },
+    {
+        "title": "About Face Chap 16",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap16/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2021-01-18"
+    },
+    {
+        "title": "About Face Chap 15",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap15/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2021-01-18"
+    },
+    {
+        "title": "About Face Chap 14",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap14/blog.html",
         "tags": ["学习"],
         "description": "",
         "date": "2021-01-18"
