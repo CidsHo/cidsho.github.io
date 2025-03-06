@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客页模板</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button" onclick="window.history.back()">
+            <img src="../../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../articles/article-thumbnail/ls-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">绿野仙踪测试 
+                </h1>
+                <h4 class="blog-subtitle">Wizard of Oz</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">本章不适合在移动端查看</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+                  <h2>绿野仙踪测试（明确需求、设计阶段），以VUI（语音界面）为例</h2>
+                  <ul>
+                    <li><strong>绿野仙踪不仅是经典的电影，也是一种帮助你确认产品设计方向是否正确的工具。</strong>绿野仙踪测试是VUI测试工具中最常用的一个，适用于需求挖掘、设计、测试和分析阶段。经过项目的认证，绿野仙踪测试更适合于辅助功能策划VUI设计的需求。</li>
+                    <li><strong>绿野仙踪测试范式劣势在于缺乏计算机的速度和准确度，但也有明显优势：</strong>不需要投入开发资源，仅由一位“巫师”按脚本模拟系统的应答，就能够对程序的基本流程和框架进行评估，与原型测试非常类似。</li>
+                    <li><strong>主要进行三个主要维度的设计和优化：</strong>交互形式、响应速度、VUI的语言情感倾向。</li>
+                    <li><strong>大致流程</strong>
+                      <ul>
+                        <li><strong>用户在单向实验室中对电脑做出语音指令，单向镜后的主试者（Oz）人工返回响应结果；</strong>试验结束后，实验对象填写一份满意度问卷，并写出他们喜欢怎么样的回复。</li>
+                        <li><strong>组控制：</strong>大约有50人次进行同样的测试，在测试过程中，回复方式和回复时间作为组间区分变量，直接验证用户对回复方式、回复时间及回复语调的喜好倾向。</li>
+                      </ul>
+                    </li>
+                    <li><strong>尤其在面对诸如语音交互界面等不可见页面，GUI的概念原型测试在VUI中行不通，</strong>把线框图替换为用可操作的原型是一个不错的选择。</li>
+                    <li><strong>绿野仙踪测试为产品带来的好处如下：</strong>
+                      <ul>
+                        <li><strong>高效：</strong>快速验证概念可行性，保证功能策划阶段的快速迭代。</li>
+                        <li><strong>仿真：</strong>尽量还原真实产品的使用场景，能够通过用户行为数据获取有生态的数据，而不是用户凭空想象“我喜欢它、我不喜欢它”。</li>
+                        <li><strong>省力：</strong>研发资源投入低，几乎不需要研发资源的介入就可以通过产品和用研制作好概念原型。</li>
+                      </ul>
+                    </li>
+                    <li><strong>在验证的过程中使用此工具，会存在以下潜在风险，规避建议同时列出：</strong>
+                      <ul>
+                        <li><strong>变量控制：</strong>干扰变量不好控制。
+                          <ul>
+                            <li>如果既想验证产品定位又想验证功能形态，则需要减量将两者分离，否则由于VUI评价的主观性，功能形态会对产品定位影响很大。建议的做法是增加前后侧访谈和问卷。</li>
+                          </ul>
+                        </li>
+                        <li><strong>用户质量：</strong>对用户质量要求高。建议选择产品/功能的目标用户。</li>
+                        <li><strong>概念细节：</strong>对产品/功能形态细节要求较高。VUI更近似自然状态的交互，用户行为可控性相对弱。因此建议产品/功能概念在具备较为成熟的交互形态构思、产品定位想法时，再进行测试，否则可能出现由于产品人员或设计师还没考虑概念原型的细节，用户自由奔放的尝试方式会带来更多的负面体验。</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2022年01月09日</p>
+                    <div class="blog-tags">
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../scripts/script.js"></script>
+</body>
+</html>

@@ -348,13 +348,22 @@
 
 
     {
+        "title": "格式塔心理学​ Gestalt Psychology",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/gestalttheory/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2023-03-17"
+    },
+    {
         "title": "交互娱乐​ Interactive Entertainment",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ls.png",
         "link": "articles/blog/learnstuffs/interactiveentertainment/blog.html",
         "tags": ["学习"],
         "description": "",
-        "date": "2022-11-03"
+        "date": "2022-11-04"
     },
     {
         "title": "非线性叙事​ Non-Linear Narrative",
@@ -366,13 +375,31 @@
         "date": "2022-11-03"
     },
     {
-        "title": "格式塔心理学​ Gestalt Psychology",
+        "title": "KANO",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ls.png",
-        "link": "articles/blog/learnstuffs/gestalttheory/blog.html",
+        "link": "articles/blog/learnstuffs/KANO/blog.html",
         "tags": ["学习"],
         "description": "",
-        "date": "2023-03-17"
+        "date": "2022-02-13"
+    },
+    {
+        "title": "绿野仙踪测试​ Wizard of Oz",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/wizardofoz/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2022-01-09"
+    },
+    {
+        "title": "尼尔森原则​ Nelson Principles",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/nelson/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2021-12-03"
     },
     {
         "title": "无障碍设计小记 Accessibility",

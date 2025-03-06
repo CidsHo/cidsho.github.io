@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客页模板</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button" onclick="window.history.back()">
+            <img src="../../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../articles/article-thumbnail/ls-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">尼尔森十大交互原则 
+                </h1>
+                <h4 class="blog-subtitle">Nelson Principles</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">本章不适合在移动端查看</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+                    <h1>1. 状态可见原则</h1>
+                    <ul>
+                      <li><strong>系统状态的可见性</strong>指系统状态传达给用户的程度。针对用户的任何操作，系统都应该在合理时间内给予一定的反馈。在什么页面，做了什么，接下来需要做什么，怎么做，系统应该明确的告诉用户，让用户对自己的行为有所了解，有一定的心理预期，防止发生操作错误。</li>
+                      <li><strong>例子：下载进度显示。</strong>
+                        <ul>
+                          <li>实时对用户行为进行反馈，让用户无需多余的思考。</li>
+                        </ul>
+                      </li>
+                      <li><strong>例子：用户在进行操作后如果产品没有任何反应，用户会缺乏安全感，会认为是自己操作失误或是产品出现问题。</strong>
+                        <ul>
+                          <li>根据心理预期，产品要对用户每一步给出明确反馈，需要告知用户当前行为是否操作正确、正在进行中还是已经完成。</li>
+                        </ul>
+                      </li>
+                      <li><strong>例子：饿了么订单状态实时反馈</strong>
+                        <ul>
+                          <li>每一步都及时并清晰的进行反馈告知，不需要用户消耗多余的时间去猜测。</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    
+                    <h1>2. 环境贴切原则</h1>
+                    <ul>
+                      <li><strong>产品设计应该遵循现实世界中人们的使用习惯和思维方式，尽可能使用通俗易懂的词语和已习惯的交互方式，针对不同人群不同风俗应该指定不同的设计方案。</strong>
+                        <ul>
+                          <li><strong>例子：设计样式贴切现实生活。</strong>
+                            <ul>
+                              <li>iOS系统图表中，指南针、计算器、Watch、钱包、设置、时钟等工具类图标都与现实生活中常用工具样式极为相似。</li>
+                              <li>这样的设计非常容易接受并使用，降低了用户学习成本。</li>
+                            </ul>
+                          </li>
+                          <li><strong>例子：产品设计贴切现实环境</strong>
+                            <ul>
+                              <li>VIPKID针对家长与教师，提供不同的界面类型。</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    
+                    <h1>3. 用户可控原则</h1>
+                    <ul>
+                      <li><strong>产品交互中，允许用户有更多的自主操控权，如果用户误操作了一些功能，则应给用户提供一些解决方案，比如撤销/重做功能。</strong>
+                        <ul>
+                          <li><strong>案例：饿了么撤销兑换不想要的红包。</strong></li>
+                          <li><strong>案例：微信聊天界面，用户误操作发给朋友的信息可以撤回。</strong></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    
+                    <h1>4. 一致性原则</h1>
+                    <ul>
+                      <li><strong>产品的功能结构、排版样式、颜色搭配、交互操作、反馈术语需要保持一致，以防用户以为使用的不是同一款产品。一些交互方式和样式则需要遵循现有的规范，以便用户能够预期到将要发生什么和如何来操作页面。</strong>
+                        <ul>
+                          <li><strong>案例：视觉一致</strong>
+                            <ul>
+                              <li>以淘宝为例，页面中的标签、价格、提示、底部等颜色与淘宝Logo的主色一致，界面中较好地保持了一致性原则。</li>
+                            </ul>
+                          </li>
+                          <li><strong>案例：操作行为一致</strong>
+                            <ul>
+                              <li>比如页面的调准方式，点击功能入口，从右到左滑出页面，点击左上角的返回图标，由左到右滑回上一个页面。</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    
+                    <h1>5. 防错原则</h1>
+                    <ul>
+                      <li><strong>用户在操作过程中出现错误是不可避免的，而优秀的产品应该在用户出现错误之前通过页面细节的设计来避免发生，这样会比发生后再告知用户更友好，不会给用户增加心理负担。</strong>
+                        <ul>
+                          <li><strong>给用户一个约束</strong>
+                            <ul>
+                              <li><strong>案例：天猫商品选项中，无货的尺码不会显示。</strong></li>
+                            </ul>
+                          </li>
+                          <li><strong>为用户提供建议</strong>
+                            <ul>
+                              <li><strong>案例：百度搜索，输入文字后，下方会出现与文字相关的词语，而用户文字输入错误并搜索后，百度则不会给出结果，而通过大数据来判断用户想要搜索的内容，并给出搜索建议。</strong></li>
+                            </ul>
+                          </li>
+                          <li><strong>善意提醒</strong>
+                            <ul>
+                              <li><strong>案例：唯品会正在支付中，退出支付页面时，会弹出弹窗提示“放弃支付吗”，提醒订单会再30分钟后取消，再用户可能会出现错误或重要操作退出时给用户一个善意的弹窗提醒，防止用户因不当操作造成损失。</strong></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    
+                    <h1>6. 易取原则</h1>
+                    <ul>
+                      <li><strong>产品设计应该最大程度地减少用户的记忆负担，让信息、操作按钮、选项尽量清晰可见。不需要用户计住一页到另一页的路径或者信息，而且产品的使用指南应该清晰可见。</strong>
+                        <ul>
+                          <li><strong>案例：历史记录。</strong></li>
+                          <li><strong>案例：登录。</strong></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    
+                    <h1>7. 灵活高效原则</h1>
+                    <ul>
+                      <li><strong>一款产品服务的用户往往并不是单一的角色，例如有新手用户、付费用户、专家级用户、活跃用户、普通用户等，这也导致了用户诉求和需求的个性化，所以产品的内容设计上需要分层次去满足不同的用户，灵活高效去运营。</strong>
+                        <ul>
+                          <li><strong>案例：回顶部功能。</strong></li>
+                          <li><strong>案例：功能个性化定制。</strong></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    
+                    <h1>8. 优美且简约原则</h1>
+                    <ul>
+                      <li><strong>页面内容在于精而不在于多，由于手机屏幕的大小限制，产品应该突出重点，去除弱化不相关或不常用的信息，让用户更加专注于重要信息。</strong>
+                        <ul>
+                          <li><strong>案例：饿了么、美团外卖等回旋处最重要的五个功能设计成大图标放在第一排，而次要不常用的则缩小弱化，大小形状对比突出重要内容。</strong></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    
+                    <h1>9. 容错原则</h1>
+                    <ul>
+                      <li><strong>当用户出现错误时，能够为用户提供明确清晰的解决方案，把用户的损失降到最低。</strong>
+                        <ul>
+                          <li><strong>案例：网易邮箱，用户删掉邮件，会有Snackbar弹出，右侧有撤销选项，如果用户误删则可以点击撤销。</strong></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    
+                    <h1>10. 个性化帮助原则</h1>
+                    <ul>
+                      <li><strong>用户在初次使用一款产品时，有些功能通常不会清楚怎么使用，所以产品需要给用户提供一些文档帮助，并且容易被用户找到，文字要简短清晰，帮助用户快速去了解产品和如果去使用。</strong>
+                        <ul>
+                          <li><strong>案例：新手引导：初次下载后会有功能引导页面，通过提供文档说明来帮助用户快速了解如何使用产品。</strong></li>
+                          <li><strong>案例：表单填写中提示：在页面顶部会有展示说明，填写资料处会有备注文档，指导用户如何填写，都是人性化帮助的一种体现。</strong></li>
+                        </ul>
+                      </li>
+                    </ul>
+                </div>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2022年02月13日</p>
+                    <div class="blog-tags">
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../scripts/script.js"></script>
+</body>
+</html>

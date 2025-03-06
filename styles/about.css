@@ -292,7 +292,8 @@
 @media (max-width: 768px) {
 
     .about-page {
-        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
         background-color: #00000000;
         background-image: url('../assets/texture-bg.png');
     }
