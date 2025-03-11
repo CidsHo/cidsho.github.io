@@ -6,6 +6,10 @@
     overflow: hidden; /* 隐藏溢出内容 */
     font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif; /* 默认字体 */
     position: relative; /* 确保伪元素相对于此容器定位 */
+    min-height: 100vh; /* 确保至少占满整个视口高度 */
+    display: flex; /* 使用flex布局 */
+    flex-direction: column; /* 垂直方向排列 */
+    justify-content: center; /* 垂直居中 */
 }
 
 .home-page::before {
@@ -27,7 +31,7 @@
 /* 首页文字按钮 */
 .home-buttons {
     position: fixed;
-    top: 130px; /* 靠近银幕顶部 */
+    top: 40px; /* 调整顶部位置，与银幕保持距离 */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -88,7 +92,7 @@
 /* 欢迎部分 */
 .welcome-section {
     width: 100%; /* 占满整个页面宽度 */
-    height: 100vh; /* 占满整个页面高度 */
+    min-height: 100vh; /* 至少占满整个页面高度 */
     display: flex;
     flex-direction: column;
     justify-content: center; /* 垂直居中 */
@@ -98,6 +102,9 @@
     margin: 0;
     padding: 0;
     overflow: hidden; /* 隐藏溢出内容 */
+    position: relative; /* 添加相对定位 */
+    padding-top: 60px; /* 为顶部按钮留出空间 */
+    padding-bottom: 0; /* 移除底部内边距 */
 }
 
 /*文字动画*/
@@ -153,11 +160,12 @@
 
 /* 21:9 银幕容器 */
 .screen-container {
-    width: 90%; /* 左右各留白 5% */
+    width: 80%; /* 减小宽度，为顶部和底部按钮留出空间 */
     aspect-ratio: 21 / 9; /* 21:9 比例 */
     max-width: 1200px; /* 最大宽度 */
     background-color: rgba(24, 29, 37, 0.5); /* 半透明背景 */
     margin-bottom: 40px; /* 与文字的间距 */
+    margin-top: 60px; /* 与顶部按钮的间距 */
     overflow: hidden;
     cursor: pointer; /* 鼠标悬停时显示手型 */
     position: relative; /* 为文字区定位做准备 */
@@ -216,18 +224,22 @@
     text-transform: uppercase;
     text-align: center;
     color: #fff; /* 改为白色 */
+    margin-top: 20px; /* 增加与银幕的间距 */
+    margin-bottom: 80px; /* 恢复与底部联系方式的间距 */
+    position: relative; /* 添加相对定位 */
+    z-index: 5; /* 确保文字在适当的层级 */
 }
 
 .screen-text .line-1 {
     font-size: 1.5rem;
-    margin-bottom: 5px;
-    line-height: 0.6; /* 缩小行距 */
+    margin-bottom: 5px; /* 恢复原始行间距 */
+    line-height: 0.6; /* 恢复原始行高 */
 }
 
 .screen-text .line-2 {
     font-size: 2rem;
-    margin-bottom: 5px;
-    line-height: 0.4; /* 缩小行距 */
+    margin-bottom: 5px; /* 恢复原始行间距 */
+    line-height: 0.4; /* 恢复原始行高 */
 }
 
 .screen-text .line-3 {
@@ -259,15 +271,32 @@
 /*联系方式*/
 .contact-section {
     position: fixed;
-    bottom: 100px; /* 靠近银幕底部 */
+    bottom: 100px; /* 恢复原始位置 */
     left: 50%;
-    transform: translateX(-50%);
+    right: auto;
+    transform: translateX(-50%); /* 恢复水平居中 */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     width: 90%;
     max-width: 300px;
+    z-index: 10; /* 提高z-index确保联系方式在最上层 */
+    background-color: transparent; /* 保持背景透明 */
+}
+
+/* 联系方式内容 */
+.contact-content {
+    display: flex; /* 始终显示 */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    opacity: 1;
+    transform: none;
+    position: static;
+    background-color: transparent;
+    padding: 0;
 }
 
 .icon-buttons {
@@ -290,12 +319,13 @@
 .contact-info {
     color: #fff;
     font-family: 'Anek Latin', sans-serif;
-    font-size: 14px;
+    font-size: 14px; /* 恢复原来的字体大小 */
     text-align: center;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.089);
+    background-color: rgba(0, 0, 0, 0.1); /* 添加半透明背景 */
     padding: 10px;
     border-radius: 5px;
+    width: 100%; /* 确保宽度一致 */
 }
 
 .contact-info p {
@@ -323,121 +353,169 @@
     transition: opacity 0.3s ease; /* 淡入淡出效果 */
     pointer-events: none; /* 防止干扰点击 */
     white-space: nowrap; /* 防止文字换行 */
+    z-index: 20; /* 确保提示框在最上层 */
 }
 
 .copy-notification.show {
     opacity: 1;
 }
 
-/* 响应式设计 */
-
-@media (max-width: 768px) {
-    .image-caption {
-        top: 10px;
-        left: 10px;
-        font-size: 12px; /* 缩小字体 */
-    }
+/* 重写响应式设计部分 */
+/* 针对1080p分辨率的特定调整 */
+@media (min-width: 1080px) and (max-width: 1920px) {
     .screen-container {
-        width: 95%; /* 在小屏幕上增加留白 */
+        width: 75%; /* 减小宽度，保持比例的同时减小整体大小 */
+        max-width: 1000px; /* 限制最大宽度 */
+        margin-top: 50px; /* 与顶部按钮的间距 */
     }
-
-    .screen-text .line-1 {
-        font-size: 1.2rem;
-    }
-
-    .screen-text .line-2 {
-        font-size: 1.5rem;
-    }
-
-    .screen-text .line-3 {
-        font-size: 1.2rem;
-    }
-
+    
     .home-buttons {
-        top: 20px;
-        right: 20px;
+        top: 30px; /* 调整顶部按钮位置，与银幕保持距离 */
     }
-    .home-button {
-        font-size: 1.4rem; /* 缩小字体 */
-    }
+    
     .contact-section {
-        bottom: 20px;
-        right: 20px;
+        bottom: 80px; /* 调整底部位置 */
     }
-    .copy-notification {
-        bottom: 50px;
-        right: 10px;
-        font-size: 12px; /* 缩小字体 */
-        padding: 8px 16px;
+    
+    .screen-text {
+        margin-top: 15px; /* 调整文字与银幕的间距 */
+        margin-bottom: 80px; /* 与底部联系方式的间距 */
+    }
+    
+    .welcome-section {
+        padding-top: 0; /* 移除顶部内边距 */
+        padding-bottom: 0; /* 移除底部内边距 */
     }
 }
 
-@media (max-width: 480px) {
-    .image-caption {
-        top: 5px;
-        left: 5px;
-        font-size: 10px; /* 进一步缩小字体 */
-    }
+/* 平板设备 */
+@media (max-width: 1079px) {
     .screen-container {
-        aspect-ratio: 16 / 9; /* 在小屏幕上调整为 16:9 */
+        width: 85%;
+        margin-top: 40px; /* 与顶部按钮的间距 */
     }
-
-    .screen-text .line-1 {
-        font-size: 1rem;
-    }
-
-    .screen-text .line-2 {
-        font-size: 1.2rem;
-    }
-
-    .screen-text .line-3 {
-        font-size: 1rem;
-    }
-
+    
     .home-buttons {
-        top: 5px;
-        right: 5px;
-    }
-    .home-button {
-        font-size: 1.2rem; /* 进一步缩小字体 */
-    }
-    .copy-notification {
-        bottom: 40px;
-        right: 5px;
-        font-size: 10px; /* 进一步缩小字体 */
-        padding: 5px 10px;
-    }
-     /* 右上角按钮居中 */
-     .home-buttons {
         top: 20px;
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
     }
+    
     .contact-section {
-        bottom: 20px;
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
+        bottom: 60px;
+    }
+    
+    .screen-text .line-1 {
+        font-size: 1.3rem; /* 适当缩小字号 */
+    }
+    
+    .screen-text .line-2 {
+        font-size: 1.8rem; /* 适当缩小字号 */
+    }
+    
+    .screen-text .line-3 {
+        font-size: 1.3rem; /* 适当缩小字号 */
+    }
+}
+
+/* 手机设备 */
+@media (max-width: 767px) {
+    .screen-container {
         width: 90%;
-        max-width: 300px;
+        margin-top: 30px; /* 与顶部按钮的间距 */
     }
-    .icon-buttons {
-        gap: 10px;
+    
+    .home-buttons {
+        top: 15px;
     }
+    
+    .contact-section {
+        bottom: 50px;
+    }
+    
+    .screen-text .line-1 {
+        font-size: 1.2rem; /* 在移动端缩小字号 */
+        line-height: 0.8; /* 调整行高 */
+    }
+    
+    .screen-text .line-2 {
+        font-size: 1.6rem; /* 在移动端缩小字号 */
+        line-height: 0.6; /* 调整行高 */
+    }
+    
+    .screen-text .line-3 {
+        font-size: 1.2rem; /* 在移动端缩小字号 */
+    }
+    
+    .home-button {
+        font-size: 1.2rem; /* 缩小按钮字号 */
+    }
+    
+    .contact-info {
+        font-size: 12px; /* 缩小联系方式字号 */
+    }
+    
     .icon-buttons .icon {
-        width: 20px;
+        width: 20px; /* 缩小图标 */
         height: 20px;
     }
-    /* 复制提示框居中 */
-    .copy-notification {
-        bottom: 60px;
-        left: 50%;
-        right: auto;
-        transform: translateX(-50%);
+}
+
+/* 小型手机设备 */
+@media (max-width: 480px) {
+    .screen-container {
+        aspect-ratio: 16 / 9; /* 在小屏幕上调整为 16:9 */
+        margin-top: 25px; /* 与顶部按钮的间距 */
+    }
+    
+    .home-buttons {
+        top: 10px;
+        gap: 10px; /* 减小按钮间距 */
+    }
+    
+    .contact-section {
+        bottom: 40px;
+    }
+    
+    .screen-text .line-1 {
+        font-size: 1rem; /* 在小型移动端进一步缩小字号 */
+    }
+    
+    .screen-text .line-2 {
+        font-size: 1.4rem; /* 在小型移动端进一步缩小字号 */
+    }
+    
+    .screen-text .line-3 {
+        font-size: 1rem; /* 在小型移动端进一步缩小字号 */
+    }
+    
+    .home-button {
+        font-size: 1.1rem; /* 进一步缩小按钮字号 */
+    }
+    
+    .contact-info {
+        font-size: 11px; /* 进一步缩小联系方式字号 */
+    }
+}
+
+/* 极小屏幕设备 */
+@media (max-width: 360px) {
+    .screen-text .line-1 {
+        font-size: 0.9rem; /* 在极小屏幕上进一步缩小字号 */
+    }
+    
+    .screen-text .line-2 {
+        font-size: 1.2rem; /* 在极小屏幕上进一步缩小字号 */
+    }
+    
+    .screen-text .line-3 {
+        font-size: 0.9rem; /* 在极小屏幕上进一步缩小字号 */
+    }
+    
+    .home-button {
+        font-size: 1rem; /* 在极小屏幕上进一步缩小按钮字号 */
+    }
+    
+    .contact-info {
+        font-size: 10px; /* 在极小屏幕上进一步缩小联系方式字号 */
     }
 }
 
@@ -448,3 +526,5 @@
         color: #ffcc00; /* 点击时改变颜色 */
     }
 }
+
+/* 移除不需要的媒体查询 */

@@ -164,6 +164,73 @@
     margin: 1.8em 0;
 }
 
+/* 代码块样式 */
+.code-block {
+    margin: 2em 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d2d2d;
+    padding: 10px 15px;
+    color: #e6e6e6;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+.code-language {
+    font-weight: bold;
+}
+
+.copy-button {
+    background: none;
+    border: 1px solid #666;
+    border-radius: 4px;
+    color: #ccc;
+    padding: 4px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.copy-button:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+.code-content {
+    background-color: #1e1e1e;
+    padding: 15px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #e6e6e6;
+}
+
+.code-content pre {
+    margin: 0;
+    white-space: pre;
+}
+
+.code-content code {
+    display: block;
+}
+
+/* 语法高亮样式 */
+.code-keyword { color: #569cd6; }
+.code-string { color: #ce9178; }
+.code-comment { color: #6a9955; }
+.code-function { color: #dcdcaa; }
+.code-number { color: #b5cea8; }
+.code-operator { color: #d4d4d4; }
+.code-class { color: #4ec9b0; }
+
 .blog-image {
     margin: 20px 0;
     padding: 0 10px; /* 添加左右内边距 */
@@ -367,6 +434,21 @@
     .reference-item {
         font-size: 0.9rem;
         padding-left: 1.5rem;
+    }
+
+    .code-header {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .code-content {
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .copy-button {
+        padding: 3px 6px;
+        font-size: 10px;
     }
 }
 
