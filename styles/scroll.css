@@ -3,13 +3,32 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
     font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif;
     background-color: #D9D9D9;
     background-image: url('texture.png');
     background-repeat: repeat;
     background-size: 500px 500px;
     background-blend-mode: overlay;
+    user-select: none; /* 禁止文本选择 */
+}
+
+/* 滚动区域设置 */
+.scroll-area {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    scrollbar-width: none; /* 隐藏Firefox滚动条 */
+    -ms-overflow-style: none; /* 隐藏IE滚动条 */
+    touch-action: pan-y; /* 只允许垂直平移，禁用水平手势 */
+}
+
+.scroll-area::-webkit-scrollbar {
+    display: none; /* 隐藏Chrome/Safari滚动条 */
 }
 
 /* 横屏提示 */
@@ -20,46 +39,81 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     color: white;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
+.orientation-content {
+    padding: 20px;
+}
+
+.rotate-icon {
+    font-size: 50px;
+    animation: rotate 2s infinite linear;
+    margin-bottom: 20px;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 在竖屏模式下显示提示 */
 @media (orientation: portrait) {
     .orientation-message {
         display: flex;
     }
+    
+    /* 隐藏内容 */
+    .scroll-area {
+        visibility: hidden;
+    }
 }
 
+/* 在横屏模式下显示内容 */
+@media (orientation: landscape) {
+    .orientation-message {
+        display: none;
+    }
+    
+    .scroll-area {
+        visibility: visible;
+    }
+}
+
+/* 容器 */
 .container {
-    display: flex;
+    display: inline-block;
     height: 80vh;
-    margin: 10vh 20px;
+    margin: 10vh 20px 10vh 20px;
     box-sizing: border-box;
     position: relative;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    vertical-align: top;
+    transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 /* 图片容器 */
 .image-container {
-    flex: 1;
+    height: 100%;
     position: relative;
-    overflow: hidden;
     cursor: grab;
 }
 
 .long-image {
-    width: auto;
     height: 100%;
+    max-height: 80vh;
+    width: auto;
     display: block;
-    transition: transform 0.3s ease;
+    transition: max-height 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+    pointer-events: none; /* 防止图片被拖拽 */
 }
 
 /* 兴趣点 */
@@ -71,8 +125,9 @@ body, html {
     border-radius: 50%;
     cursor: pointer;
     transform: translate(-50%, -50%);
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
     animation: ripple 1.5s infinite;
+    z-index: 5; /* 确保在图片上方 */
 }
 
 @keyframes ripple {
@@ -89,47 +144,87 @@ body, html {
     transform: translate(-50%, -50%) scale(1.2);
 }
 
+/* 信息容器 */
+.info-container {
+    display: inline-block;
+    vertical-align: top;
+    height: 80vh;
+    width: 350px;
+    margin: 10vh 20px 10vh 0;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: normal;
+    transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
 /* 信息面板 */
 .info-panel {
-    width: 25%;
     height: 100%;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-left: 1px solid #ddd;
     box-sizing: border-box;
-    overflow-y: auto;
-    transition: opacity 0.3s ease;
-    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
 }
 
-.info-panel.active {
-    opacity: 1;
-}
-
-.info-panel h2 {
+/* 照片标题 */
+.photo-title {
     margin-top: 0;
+    margin-bottom: 16px;
     font-family: 'Playfair Display', serif;
     font-size: 24px;
     color: #333;
 }
 
-.info-panel p {
+/* 标签样式，从photo.html复制 */
+.photo-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #e0e0e0;
+}
+
+/* 作者信息 */
+.author-info {
+    margin: 15px 0;
+}
+
+/* 描述容器 */
+.description-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
+    margin-bottom: 15px;
+}
+
+/* 照片描述 */
+.photo-description {
     font-size: 16px;
     color: #666;
     line-height: 1.6;
-}
-
-.info-panel strong {
-    color: #333;
+    margin-bottom: 12px;
 }
 
 /* 浮窗 */
 .note-popup {
     display: none;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -137,10 +232,15 @@ body, html {
     z-index: 1000;
     max-width: 300px;
     width: 100%;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 .note-popup.active {
     display: block;
+    opacity: 1;
+    transform: scale(1);
 }
 
 .note-content {
@@ -165,28 +265,65 @@ body, html {
     color: #333;
 }
 
-/* 工具栏 */
+/* 工具栏 - 简化并确保在所有设备上显示 */
 .toolbar {
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: flex;
+    align-items: center;
     gap: 10px;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 2000; /* 确保足够高的z-index */
+    cursor: move;
+    user-select: none;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    touch-action: none; /* 禁用所有浏览器默认的触摸操作 */
+}
+
+.toolbar.dragging {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* 工具栏手柄 */
+.toolbar-handle {
+    width: 18px;
+    height: 4px;
+    background-color: #ccc;
+    border-radius: 2px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.toolbar:hover .toolbar-handle {
+    background-color: #999;
 }
 
 .toolbar-btn {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
+    padding: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.toolbar-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.toolbar-btn:active {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(0px) scale(0.95);
 }
 
 .toolbar-btn img {
@@ -196,12 +333,41 @@ body, html {
 }
 
 .toolbar-btn:hover img {
-    transform: scale(1.2);
+    transform: scale(1.1);
+}
+
+/* 移动端工具栏样式优化 */
+@media (max-width: 768px) {
+    .toolbar {
+        padding: 8px;
+        gap: 8px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .toolbar-btn {
+        padding: 6px;
+    }
+    
+    .toolbar-btn img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .toolbar-handle {
+        width: 15px;
+        height: 3px;
+        margin-right: 8px;
+    }
 }
 
 /* 全屏样式 */
-.fullscreen .container {
-    height: 100vh;
-    margin: 0;
-    border-radius: 0;
+.fullscreen {
+    height: 100vh !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+.fullscreen .long-image {
+    max-height: 100vh;
 }

@@ -6,52 +6,84 @@
     <title>长图展示页面</title>
     <link rel="stylesheet" href="../../../styles/components.css">
     <link rel="stylesheet" href="../../../styles/scroll.css">
+    
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../assets/favicon.png">
+    <link rel="manifest" href="../../../assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
 </head>
 <body>
-
-    <div class="container">
+    <!-- 横屏提示浮层 -->
+    <div class="orientation-message">
+        <div class="orientation-content">
+            <div class="rotate-icon">⟳</div>
+            <p>请旋转设备以横屏模式查看</p>
+        </div>
+    </div>
+    
+    <!-- 滚动区域 -->
+    <div class="scroll-area">
         <!-- 图片容器 -->
-        <div class="image-container">
-            <img src="demo.jpg" alt="长图" class="long-image">
-            <!-- 兴趣点 -->
-            <div class="interest-point" style="left: 20%; top: 30%;" data-note="这是第一个兴趣点"></div>
-            <div class="interest-point" style="left: 50%; top: 60%;" data-note="这是第二个兴趣点"></div>
+        <div class="container">
+            <div class="image-container">
+                <img src="demo.jpg" alt="长图" class="long-image">
+                <!-- 兴趣点 -->
+                <div class="interest-point" style="left: 20%; top: 30%;" data-note="这是第一个兴趣点"></div>
+                <div class="interest-point" style="left: 50%; top: 60%;" data-note="这是第二个兴趣点"></div>
+            </div>
         </div>
-
-        <!-- 信息面板 -->
-        <div class="info-panel">
-            <h2>作品信息</h2>
-            <p><strong>作者:</strong> 张三</p>
-            <p><strong>创作时间:</strong> 2023年10月</p>
-            <p><strong>标签:</strong> 风景, 长图, 艺术</p>
-            <p><strong>备注:</strong> 这是一张展示自然风景的长图。</p>
-        </div>
-
-        <!-- 工具栏 -->
-        <div class="toolbar">
-            <button class="toolbar-btn" id="jump-to-start" title="跳转到图片开始">
-                <img src="placeholder-icon.png" alt="跳转">
-            </button>
-            <button class="toolbar-btn" id="toggle-points" title="显示/隐藏兴趣点">
-                <img src="placeholder-icon.png" alt="兴趣点">
-            </button>
-            <button class="toolbar-btn" id="go-back" title="返回上一页">
-                <img src="placeholder-icon.png" alt="返回">
-            </button>
-            <button class="toolbar-btn" id="toggle-fullscreen" title="全屏">
-                <img src="placeholder-icon.png" alt="全屏">
-            </button>
+        
+        <!-- 信息面板容器(在容器外部) -->
+        <div class="info-container">
+            <div class="info-panel">
+                <h2 class="photo-title">长图作品标题</h2>
+                
+                <div class="author-info">
+                    <span class="tag">作者: 张三</span>
+                    <span class="tag">2023年10月</span>
+                </div>
+                
+                <div class="description-container">
+                    <p class="photo-description">这是一张展示自然风景的长图。这里可以放更多关于这张图片的详细介绍。</p>
+                    <p class="photo-description">可以描述创作背景、灵感来源、创作过程等内容。这部分可以垂直滚动查看更多内容。</p>
+                    <p class="photo-description">这里是更多的描述文字，足够长以测试垂直滚动功能。</p>
+                    <p class="photo-description">这里是更多的描述文字，足够长以测试垂直滚动功能。</p>
+                </div>
+                
+                <!-- 标签移到文字介绍下方 -->
+                <div class="photo-tags">
+                    <span class="tag">风景</span>
+                    <span class="tag">长图</span>
+                    <span class="tag">艺术</span>
+                </div>
+            </div>
         </div>
     </div>
 
-    
+    <!-- 工具栏 - 按钮顺序已调整 -->
+    <div class="toolbar" id="toolbar">
+        <div class="toolbar-handle"></div>
+        <button class="toolbar-btn" id="toggle-points" title="显示/隐藏兴趣点">
+            <img src="../../../assets/tag.png" alt="兴趣点">
+        </button>
+        <button class="toolbar-btn" id="toggle-fullscreen" title="全屏">
+            <img src="../../../assets/full-screen.png" alt="全屏">
+        </button>
+        <button class="toolbar-btn" id="jump-to-start" title="回到顶部">
+            <img src="../../../assets/jump-to-start.png" alt="回到顶部">
+        </button>
+        <button class="toolbar-btn" id="go-back" title="返回上一页">
+            <img src="../../../assets/back-icon.png" alt="返回">
+        </button>
+    </div>
 
     <!-- 浮窗 -->
     <div class="note-popup">
         <div class="note-content"></div>
         <button class="close-btn">×</button>
     </div>
-
 
     <script src="../../../scripts/script.js"></script>
     <script src="../../../scripts/scroll.js"></script>
