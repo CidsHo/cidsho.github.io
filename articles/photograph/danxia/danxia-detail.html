@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片展示 - Cids' Personal Website</title>
+    <link rel="stylesheet" href="../../../styles/components.css">
+    <link rel="stylesheet" href="../../../styles/scroll.css">
+    
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../assets/favicon.png">
+    <link rel="manifest" href="../../../assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body>
+    <!-- 横屏提示浮层 -->
+    <div class="orientation-message">
+        <div class="orientation-content">
+            <div class="rotate-icon">⟳</div>
+            <p>请旋转设备以横屏模式查看</p>
+        </div>
+    </div>
+    
+    <!-- 滚动区域 -->
+    <div class="scroll-area">
+        <!-- 图片容器 -->
+        <div class="container">
+            <div class="image-container">
+                <img src="danxia.jpg" alt="长图" class="long-image">
+            </div>
+        </div>
+        
+        <!-- 信息面板容器(在容器外部) -->
+        <div class="info-container">
+            <div class="info-panel">
+                <h2 class="photo-title">丹霞 Danxia</h2>
+                
+                <div class="author-info">
+                    <span class="tag">张掖，甘肃,中国</span>
+                    <span class="tag">Zhangye, Gansu, China</span>
+                    <span class="tag">2018-08-10</span>
+                </div>
+                
+                <div class="description-container">
+                    <p class="photo-description">*移动端下查看可能不能获得最佳效果。</p>
+                    <p class="photo-description">*For the best experience, we recommend viewing this content on a desktop or laptop, as the mobile version may not fully deliver the intended impact.</p>
+                </div>
+                
+                <!-- 标签移到文字介绍下方 -->
+                <div class="photo-tags">
+                    <span class="tag">风景</span>
+                    <span class="tag">拼接</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 工具栏 - 按钮顺序已调整 -->
+    <div class="toolbar" id="toolbar">
+        <div class="toolbar-handle"></div>
+        <button class="toolbar-btn" id="toggle-points" title="显示/隐藏兴趣点">
+            <img src="../../../assets/tag.png" alt="兴趣点">
+        </button>
+        <button class="toolbar-btn" id="toggle-fullscreen" title="全屏">
+            <img src="../../../assets/full-screen.png" alt="全屏">
+        </button>
+        <button class="toolbar-btn" id="jump-to-start" title="回到顶部">
+            <img src="../../../assets/jump-to-start.png" alt="回到顶部">
+        </button>
+        <button class="toolbar-btn" id="go-back" title="返回上一页">
+            <img src="../../../assets/back-icon.png" alt="返回">
+        </button>
+    </div>
+
+    <!-- 浮窗 -->
+    <div class="note-popup">
+        <div class="note-content"></div>
+        <button class="close-btn">×</button>
+    </div>
+
+    <script src="../../../scripts/script.js"></script>
+    <script src="../../../scripts/scroll.js"></script>
+</body>
+</html>
