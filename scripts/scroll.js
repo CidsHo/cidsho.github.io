@@ -1,8 +1,9 @@
 // 获取元素
 const scrollArea = document.querySelector('.scroll-area');
 const container = document.querySelector('.container');
-const imageContainer = document.querySelector('.image-container');
-const longImage = document.querySelector('.long-image');
+const multiImageContainer = document.querySelector('.multi-image-container');
+const imageWrappers = document.querySelectorAll('.image-wrapper');
+const longImages = document.querySelectorAll('.long-image');
 const interestPoints = document.querySelectorAll('.interest-point');
 const notePopup = document.querySelector('.note-popup');
 const noteContent = document.querySelector('.note-content');
@@ -12,6 +13,8 @@ const togglePointsBtn = document.getElementById('toggle-points');
 const goBackBtn = document.getElementById('go-back');
 const toggleFullscreenBtn = document.getElementById('toggle-fullscreen');
 const infoContainer = document.querySelector('.info-container');
+const toolbar = document.getElementById('toolbar');
+const jumpToEndBtn = document.getElementById('jump-to-end');
 
 // 拖动状态跟踪
 let isDragging = false;
@@ -82,7 +85,7 @@ scrollArea.addEventListener('mousemove', (e) => {
 // 拖动结束
 scrollArea.addEventListener('mouseup', () => {
     if (!isDragging) return;
-    
+
     isDragging = false;
     scrollArea.style.cursor = 'grab';
     
@@ -153,22 +156,48 @@ function initScrollHandling() {
     }, { passive: false });
 }
 
-// 平滑滚动函数
-function smoothScroll(element, targetPosition, duration = 600) {
+// 修复的平滑滚动函数
+function smoothScroll(element, target, duration = 600) {
+    // 确定目标是相对位置还是绝对位置
+    let targetPosition;
     const startPosition = element.scrollLeft;
+    
+    // 如果target是特定值(0或'max')，当作特殊指令处理
+    if (target === 0) {
+        // 滚动到最开始
+        targetPosition = 0;
+        console.log("滚动到最开始位置");
+    } else if (target === 'max') {
+        // 滚动到最末尾
+        targetPosition = element.scrollWidth - element.clientWidth;
+        console.log("滚动到最末尾位置:", targetPosition);
+    } else if (Math.abs(target) > 1000) {
+        // 当作绝对位置处理
+        targetPosition = target;
+        console.log("滚动到绝对位置:", targetPosition);
+    } else {
+        // 当作相对滚动量处理
+        targetPosition = startPosition + target;
+        console.log("相对滚动量:", target, "目标位置:", targetPosition);
+    }
+    
+    // 确保位置在有效范围内
+    const maxScroll = element.scrollWidth - element.clientWidth;
+    targetPosition = Math.max(0, Math.min(targetPosition, maxScroll));
+    
     const distance = targetPosition - startPosition;
     let startTime = null;
     
     function animation(currentTime) {
         if (!startTime) startTime = currentTime;
-        const elapsedTime = currentTime - startTime;
-        const progress = Math.min(elapsedTime / duration, 1);
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
         
-        // 缓动函数
-        const easeOutQuad = progress => 1 - (1 - progress) * (1 - progress);
-        element.scrollLeft = startPosition + distance * easeOutQuad(progress);
+        // 使用缓动函数
+        const easeOutQuint = t => 1 - Math.pow(1 - t, 5);
+        element.scrollLeft = startPosition + (distance * easeOutQuint(progress));
         
-        if (elapsedTime < duration) {
+        if (timeElapsed < duration) {
             requestAnimationFrame(animation);
         }
     }
@@ -179,7 +208,7 @@ function smoothScroll(element, targetPosition, duration = 600) {
 // 关闭浮窗函数
 function closeNotePopup() {
     if (notePopup.classList.contains('active')) {
-        notePopup.classList.remove('active');
+    notePopup.classList.remove('active');
     }
 }
 
@@ -191,17 +220,30 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// 跳转到开始按钮
-jumpToStartBtn.addEventListener('click', () => {
-    smoothScroll(scrollArea, 0);
-    closeNotePopup();
+// 重新实现跳转到开始功能
+jumpToStartBtn.addEventListener('click', function() {
+    // 明确传入0表示滚动到最左侧
+    smoothScroll(scrollArea, 0, 800);
+    
+    // 关闭任何打开的浮窗
+    if (typeof closeNotePopup === 'function') {
+        closeNotePopup();
+    }
+    
+    console.log("点击了跳转到开始按钮");
 });
 
 // 显示/隐藏兴趣点按钮
 togglePointsBtn.addEventListener('click', () => {
     togglePointsBtn.classList.toggle('active');
+    
+    // 检查第一个兴趣点的可见性来决定所有点的状态
+    const firstPoint = interestPoints[0];
+    const shouldShow = firstPoint.style.display === 'none';
+    
+    // 分组显示/隐藏兴趣点
     interestPoints.forEach(point => {
-        point.style.display = point.style.display === 'none' ? 'block' : 'none';
+        point.style.display = shouldShow ? 'block' : 'none';
     });
 });
 
@@ -212,24 +254,86 @@ goBackBtn.addEventListener('click', () => {
 
 // 全屏切换按钮
 toggleFullscreenBtn.addEventListener('click', () => {
+    // 切换按钮激活状态
     toggleFullscreenBtn.classList.toggle('active');
     
-    // 切换container的全屏类
+    // 获取当前滚动位置以便切换后保持
+    const currentScrollLeft = scrollArea.scrollLeft;
+    
+    // 切换容器的全屏类
     container.classList.toggle('fullscreen');
     
-    // 同时为infoContainer应用相同的类
+    // 同时为信息容器应用相同的类
     infoContainer.classList.toggle('fullscreen');
     
-    // 全屏切换后确保滚动位置一致
-    requestAnimationFrame(() => {
-        // 这里不需要额外代码，因为滚动区域不变
-    });
+    // 检查是否进入了全屏模式
+    const isFullscreen = container.classList.contains('fullscreen');
+    
+    // 根据全屏状态调整样式
+    if (isFullscreen) {
+        // 进入全屏
+        container.style.margin = '0';
+        container.style.height = '100vh';
+        container.style.borderRadius = '0';
+        infoContainer.style.margin = '0';
+        infoContainer.style.height = '100vh';
+        infoContainer.style.borderRadius = '0';
+        
+        // 调整多图容器高度
+        multiImageContainer.style.height = '100vh';
+        
+        // 更新所有图片包装器的高度
+        imageWrappers.forEach(wrapper => {
+            wrapper.style.height = '100vh';
+        });
+        
+        // 调整长图的最大高度
+        longImages.forEach(img => {
+            img.style.maxHeight = '100vh';
+        });
+    } else {
+        // 退出全屏
+        container.style.margin = '10vh 20px';
+        container.style.height = '80vh';
+        container.style.borderRadius = '10px';
+        infoContainer.style.margin = '10vh 20px 10vh 0';
+        infoContainer.style.height = '80vh';
+        infoContainer.style.borderRadius = '10px';
+        
+        // 恢复多图容器高度
+        multiImageContainer.style.height = '80vh';
+        
+        // 更新所有图片包装器的高度
+        imageWrappers.forEach(wrapper => {
+            wrapper.style.height = '80vh';
+        });
+        
+        // 恢复长图的最大高度
+        longImages.forEach(img => {
+            img.style.maxHeight = '80vh';
+        });
+    }
+    
+    // 添加延迟以确保全屏切换后的布局计算
+    setTimeout(() => {
+        // 恢复滚动位置
+        scrollArea.scrollLeft = currentScrollLeft;
+        
+        // 重新计算图片位置和兴趣点位置
+        calculateImagePositions();
+        if (typeof updateInterestPointPositions === 'function') {
+            updateInterestPointPositions();
+        }
+        
+        console.log("全屏切换完成，布局已重新计算");
+    }, 100);
 });
 
 // 兴趣点点击
 interestPoints.forEach(point => {
     point.addEventListener('click', (e) => {
-        noteContent.textContent = point.getAttribute('data-note');
+        const note = point.getAttribute('data-note');
+        noteContent.textContent = note;
         
         // 计算弹出位置
         const pointRect = point.getBoundingClientRect();
@@ -264,6 +368,10 @@ interestPoints.forEach(point => {
 closeBtn.addEventListener('click', () => {
     closeNotePopup();
 });
+    
+// 添加滚轮支持初始化
+initScrollWheelSupport();
+
 
 // 移动端触摸支持
 scrollArea.addEventListener('touchstart', (e) => {
@@ -317,10 +425,9 @@ scrollArea.addEventListener('touchend', () => {
 });
 
 // 禁用图片拖拽
-longImage.addEventListener('dragstart', (e) => e.preventDefault());
+longImages.forEach(img => img.addEventListener('dragstart', (e) => e.preventDefault()));
 
 // 工具栏拖拽功能 - 完全重写，确保可靠性
-const toolbar = document.getElementById('toolbar');
 let isDraggingToolbar = false;
 let toolbarOffsetX = 0;
 let toolbarOffsetY = 0;
@@ -344,6 +451,8 @@ function initToolbar() {
     
     // 添加拖拽事件
     initToolbarDrag();
+    
+    console.log("工具栏已初始化");
 }
 
 // 重置工具栏到默认位置
@@ -490,29 +599,66 @@ function saveToolbarPosition() {
     localStorage.setItem('toolbarPosition', JSON.stringify(position));
 }
 
-// 强制横屏检测和屏幕方向处理
-function checkOrientation() {
-    // 处理屏幕方向变化
-    if (window.innerHeight > window.innerWidth) {
-        // 竖屏模式
-        document.querySelector('.orientation-message').style.display = 'flex';
-        document.querySelector('.scroll-area').style.visibility = 'hidden';
-    } else {
-        // 横屏模式
-        document.querySelector('.orientation-message').style.display = 'none';
-        document.querySelector('.scroll-area').style.visibility = 'visible';
-    }
+// 更新多图初始化函数
+function initMultiImageLayout() {
+    // 获取当前容器高度
+    const containerHeight = container.classList.contains('fullscreen') ? '100vh' : '80vh';
+    
+    // 设置多图容器高度
+    multiImageContainer.style.height = containerHeight;
+    
+    // 设置所有图片包装器高度
+    imageWrappers.forEach(wrapper => {
+        wrapper.style.height = containerHeight;
+        
+        // 获取图片并监听加载完成事件
+        const img = wrapper.querySelector('.long-image');
+        if (img) {
+            if (img.complete) {
+                // 图片已加载，直接计算位置
+                calculateImagePositions();
+            } else {
+                // 图片未加载，等待加载完成
+                img.onload = () => {
+                    calculateImagePositions();
+                };
+            }
+        }
+    });
+    
+    // 初始计算图片位置
+    calculateImagePositions();
+    console.log("多图布局初始化完成");
 }
 
-// 监听屏幕方向变化
-window.addEventListener('resize', checkOrientation);
-window.addEventListener('orientationchange', checkOrientation);
+// 计算所有图片的位置和间距
+function calculateImagePositions() {
+    // 每个图片包装器的位置信息，用于定位兴趣点
+    const wrapperPositions = {};
+    
+    imageWrappers.forEach(wrapper => {
+        const imageId = wrapper.getAttribute('data-image-id');
+        const rect = wrapper.getBoundingClientRect();
+        
+        wrapperPositions[imageId] = {
+            left: rect.left,
+            top: rect.top,
+            width: rect.width,
+            height: rect.height
+        };
+    });
+    
+    // 存储位置信息，供兴趣点使用
+    window.wrapperPositions = wrapperPositions;
+}
 
-// 页面加载时初始化
+// 窗口大小改变时重新计算
+window.addEventListener('resize', calculateImagePositions);
+
+// 页面加载时初始化多图布局
 window.addEventListener('DOMContentLoaded', () => {
+    initMultiImageLayout();
     initToolbar();
-    initScrollHandling();
-    checkOrientation();
 });
 
 // 移动端工具栏初始化
@@ -581,3 +727,126 @@ setTimeout(() => {
         ensureToolbarVisibility();
     }
 }, 5000);
+
+// 更新兴趣点位置，确保它们正确对应各自的图片位置
+function updateInterestPointPositions() {
+    // 需要在图片加载完成后和窗口大小改变时调用
+    if (!window.wrapperPositions) return;
+    
+    interestPoints.forEach(point => {
+        const imageId = point.getAttribute('data-image-id');
+        const wrapper = document.querySelector(`.image-wrapper[data-image-id="${imageId}"]`);
+        
+        if (wrapper) {
+            // 获取兴趣点的相对位置（百分比）
+            const leftPercent = parseFloat(point.style.left) || 50;
+            const topPercent = parseFloat(point.style.top) || 50;
+            
+            // 计算绝对位置
+            const wrapperRect = wrapper.getBoundingClientRect();
+            const absoluteLeft = wrapperRect.left + (wrapperRect.width * leftPercent / 100);
+            const absoluteTop = wrapperRect.top + (wrapperRect.height * topPercent / 100);
+            
+            // 如果需要，可以在这里进行位置调整
+        }
+    });
+}
+
+// 在滚动区域滚动时更新兴趣点位置
+scrollArea.addEventListener('scroll', () => {
+    // 延迟一点以提高性能
+    if (!window.interestPointUpdateScheduled) {
+        window.interestPointUpdateScheduled = true;
+        requestAnimationFrame(() => {
+            calculateImagePositions();
+            updateInterestPointPositions();
+            window.interestPointUpdateScheduled = false;
+        });
+    }
+    
+    // 关闭任何打开的浮窗
+    closeNotePopup();
+});
+
+// 改进窗口大小变化事件处理
+window.addEventListener('resize', () => {
+    // 使用节流避免过多计算
+    if (window.resizeTimer) clearTimeout(window.resizeTimer);
+    
+    window.resizeTimer = setTimeout(() => {
+        calculateImagePositions();
+        updateInterestPointPositions();
+    }, 100);
+});
+
+// 修复滚轮功能
+
+// 重新绑定滚轮事件到scrollArea
+function initScrollWheelSupport() {
+    // 先移除可能存在的旧监听器
+    scrollArea.removeEventListener('wheel', wheelHandler);
+    
+    // 添加新的滚轮事件处理
+    scrollArea.addEventListener('wheel', wheelHandler, { passive: false });
+    
+    console.log("滚轮支持已初始化");
+}
+
+// 滚轮事件处理函数
+function wheelHandler(e) {
+    // 如果在描述容器内滚动，不拦截其默认行为
+    if (e.target.closest('.description-container')) {
+        return;
+    }
+    
+    // 阻止默认的垂直滚动
+    e.preventDefault();
+    
+    // 计算滚动量
+    const scrollAmount = e.deltaY;
+    
+    // 使用平滑滚动效果，这里使用相对滚动量
+    smoothScroll(scrollArea, scrollAmount, 200);
+    
+    // 滚动时关闭浮窗
+    if (typeof closeNotePopup === 'function') {
+        closeNotePopup();
+    }
+}
+
+// 平滑滚动函数
+function smoothScrollBy(element, amount) {
+    const startPosition = element.scrollLeft;
+    const targetPosition = startPosition + amount;
+    const duration = 200; // 较短的时间使滚动更响应
+    let startTime = null;
+    
+    function animation(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        
+        // 使用简单的缓动函数
+        const easing = t => t * (2 - t);
+        element.scrollLeft = startPosition + (amount * easing(progress));
+        
+        if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+        }
+    }
+    
+    requestAnimationFrame(animation);
+}
+
+// 实现跳转到末尾功能
+jumpToEndBtn.addEventListener('click', function() {
+    // 使用'max'特殊值表示滚动到最右侧
+    smoothScroll(scrollArea, 'max', 800);
+    
+    // 关闭任何打开的浮窗
+    if (typeof closeNotePopup === 'function') {
+        closeNotePopup();
+    }
+    
+    console.log("点击了跳转到末尾按钮");
+});

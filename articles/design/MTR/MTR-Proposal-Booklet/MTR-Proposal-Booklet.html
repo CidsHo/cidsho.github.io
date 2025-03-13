@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTR-Proposal</title>
+    <link rel="stylesheet" href="../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../styles/scroll.css">
+    
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body>
+    <!-- 横屏提示浮层 -->
+    
+    <!-- 滚动区域 -->
+    <div class="scroll-area">
+        <div class="container">
+            <div class="multi-image-container">
+                <div class="image-wrapper" data-image-id="1">
+                    <img src="assets/1.png" alt="长图1" class="long-image">
+                </div>
+                <div class="image-wrapper" data-image-id="2">
+                    <img src="assets/2.png" alt="长图2" class="long-image">
+                </div>
+                <div class="image-wrapper" data-image-id="3">
+                    <img src="assets/3.png" alt="长图3" class="long-image">
+                </div>
+            </div>
+        </div>
+        
+        <!-- 信息面板容器(在容器外部) - 只需一个 -->
+        <div class="info-container">
+            <div class="info-panel">
+                <h2 class="photo-title">MTR-Proposal-Part 2 </h2>
+                <div class="author-info">
+                    <span class="tag">2024年11月</span>
+                </div>
+                
+                <div class="description-container">
+                    <p class="photo-description"><strong>港铁 XR 互动体验设计企划：通过无接触 XR 技术增强乘客互动</strong></p>
+                    </p>
+                    <p class="photo-description"><a href="../MTR-Proposal-PPT/MTR-Proposal-PPT.html">前续：第一部分：MTR-Proposal-Part 1 </a>
+                    </p>
+                    <p class="photo-description">这部分的内容是以Booklet的形式在会议中传阅的，因此我尝试了多种方式来让内容更易于阅读。最终敲定的方案是使用大型宽版卡纸来呈现内容，以符合围桌讨论的场景。</p>
+                    <p class="photo-description">这部分单独抽离出来，因为我是设计项目中该部分的<strong>核心贡献者</strong>。Technical Plan部分主要负责将现有的技术实现方法与之前AI生成的场景图结合，明确各功能的实现方式和预期可选择方案；BMC部分则从商业运营角度出发，分析了当前项目的各种条件、切入点、资源需求等内容；项目时间轴是我对整个设计落地的初步构想情况（并非最终版本）。</p>
+                    <p class="photo-description"><strong>仅作展示</strong></p>
+                </div>
+                
+                <!-- 标签在文字介绍下方 -->
+                <div class="photo-tags">
+                    <span class="tag">设计企划</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 工具栏 -->
+    <div class="toolbar" id="toolbar">
+        <div class="toolbar-handle"></div>
+        <button class="toolbar-btn" id="toggle-points" title="显示/隐藏兴趣点">
+            <img src="../../../../assets/tag.png" alt="兴趣点">
+        </button>
+        <button class="toolbar-btn" id="toggle-fullscreen" title="全屏">
+            <img src="../../../../assets/full-screen.png" alt="全屏">
+        </button>
+        <button class="toolbar-btn" id="jump-to-start" title="回到顶部">
+            <img src="../../../../assets/jump-to-start.png" alt="回到顶部">
+        </button>
+        <button class="toolbar-btn" id="jump-to-end" title="跳转到末尾">
+            <img src="../../../../assets/jump-to-end.png" alt="跳转到末尾">
+        </button>
+        <button class="toolbar-btn" id="go-back" title="返回上一页">
+            <img src="../../../../assets/back-icon.png" alt="返回">
+        </button>
+    </div>
+
+    <!-- 浮窗 -->
+    <div class="note-popup">
+        <div class="note-content"></div>
+        <button class="close-btn">×</button>
+    </div>
+
+    <script src="../../../../scripts/script.js"></script>
+    <script src="../../../../scripts/scroll.js"></script>
+</body>
+</html>

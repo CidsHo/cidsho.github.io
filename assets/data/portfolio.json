@@ -328,7 +328,24 @@
         "description": "香港社会福利署海报设计",
         "date": "2023-06-01"
     },
-    
+    {
+        "title": "港铁 XR 互动体验企划 MTR XR-Proposal Part 1",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/MTR/MTR-Proposal-PPT/MTR-Proposal-PPT.png",
+        "link": "articles/design/MTR/MTR-Proposal-PPT/MTR-Proposal-PPT.html",
+        "tags": ["设计","设计研究","想法"],
+        "description": "在研商业项目企划 Part 1",
+        "date": "2024-11-01"
+    },
+    {
+        "title": "港铁 XR 互动体验企划 MTR XR-Proposal Part 2",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/MTR/MTR-Proposal-Booklet/MTR-Proposal-Booklet.png",
+        "link": "articles/design/MTR/MTR-Proposal-Booklet/MTR-Proposal-Booklet.html",
+        "tags": ["设计","设计研究","想法"],
+        "description": "在研商业项目企划 Part 2",
+        "date": "2024-11-02"
+    },
 
 
 
