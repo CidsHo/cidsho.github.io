@@ -22,7 +22,7 @@
         "image": "assets/placeholder.jpg", 
         "data-src": "articles/photograph/rust&blossom/rust&blossom.webp", 
         "link": "articles/photograph/rust&blossom/rust&blossom.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","抽象"],
         "description": "",
         "date": "2022-06-03"
     },
@@ -31,7 +31,7 @@
         "image": "assets/placeholder.jpg", 
         "data-src": "articles/photograph/void/void.webp", 
         "link": "articles/photograph/void/void.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","抽象"],
         "description": "",
         "date": "2019-05-08"
     },
@@ -40,7 +40,7 @@
         "image": "assets/placeholder.jpg", 
         "data-src": "articles/photograph/riverguardian/rg.webp", 
         "link": "articles/photograph/riverguardian/riverguardian.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","人像"],
         "description": "",
         "date": "2019-05-08"
     },
@@ -49,7 +49,7 @@
         "image": "assets/placeholder.jpg", 
         "data-src": "articles/photograph/danxia/danxia.webp", 
         "link": "articles/photograph/danxia/danxia.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","风光"],
         "description": "",
         "date": "2018-08-10"
     },
@@ -67,7 +67,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/grid1/grid1.webp",
         "link": "articles/photograph/grid1/grid1.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","街景"],
         "description": "原本只想留一张，但最后都留下了",
         "date": "2023/02/25"
     },
@@ -76,7 +76,7 @@
         "image": "assets/placeholder.jpg", 
         "data-src": "articles/photograph/dancer/dancer.webp", 
         "link": "articles/photograph/dancer/dancer.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","抽象"],
         "description": "某些夜晚，再进一步，振翅欲飞。",
         "date": "2022-11-19"
     },
@@ -103,7 +103,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/hotelLisboaMacau/hotelLisboaMacau.webp",
         "link": "articles/photograph/hotelLisboaMacau/hotelLisboaMacau.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","建筑"],
         "description": "",
         "date": "2023-02-19"
     },
@@ -112,7 +112,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/flowerVendor/flowerVendor2.webp",
         "link": "articles/photograph/flowerVendor/flowerVendor.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","人像"],
         "description": "",
         "date": "2022-11-16"
     },
@@ -121,7 +121,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/dock/dock.webp",
         "link": "articles/photograph/dock/dock.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","风光"],
         "description": "",
         "date": "2019-08-30"
     },
@@ -130,7 +130,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/leadOut/leadOut.webp",
         "link": "articles/photograph/leadOut/leadOut.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","抽象"],
         "description": "",
         "date": "2022-10-07"
     },
@@ -139,7 +139,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/nightStall/nightStall1.webp",
         "link": "articles/photograph/nightStall/nightStall.html",
-        "tags": ["精选","摄影"],
+        "tags": ["精选","摄影","人像"],
         "description": "",
         "date": "2023-02-07"
     },
@@ -148,7 +148,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/vendor/vendor.webp",
         "link": "articles/photograph/vendor/vendor.html",
-        "tags": ["摄影"],
+        "tags": ["摄影", "人像"],
         "description": "",
         "date": "2022-11-06"
     },
@@ -157,7 +157,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/walkPasssh/walkPasssh.webp",
         "link": "articles/photograph/walkPasssh/walkPasssh.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","建筑"],
         "description": "",
         "date": "2022-11-04"
     },
@@ -166,7 +166,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/fadingweddingdressing/fadingweddingdressing.webp",
         "link": "articles/photograph/fadingweddingdressing/fadingweddingdressing.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","建筑"],
         "description": "",
         "date": "2022-09-13"
     },
@@ -175,7 +175,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/vendor2/vendor.webp",
         "link": "articles/photograph/vendor2/vendor.html",
-        "tags": ["摄影"],
+        "tags": ["摄影", "人像"],
         "description": "",
         "date": "2023-05-02"
     },
@@ -184,7 +184,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/sh1/sh1.webp",
         "link": "articles/photograph/sh1/sh1.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","建筑"],
         "description": "",
         "date": "2022-10-03"
     },    
@@ -193,7 +193,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/urbanStyle/urbanStyle.webp",
         "link": "articles/photograph/urbanStyle/urbanStyle.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","建筑"],
         "description": "",
         "date": "2022-09-30"
     },
@@ -202,9 +202,45 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/hongyadong/hongyadong.webp",
         "link": "articles/photograph/hongyadong/hongyadong.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","建筑"],
         "description": "经典机位留念",
         "date": "2019-12-03"
+    },
+    {
+        "title": "构成 Composition",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/composition3/composition3.jpg",
+        "link": "articles/photograph/composition3/composition.html",
+        "tags": ["摄影","抽象"],
+        "description": "",
+        "date": "2024-04-28"
+    },
+    {
+        "title": "穿梭 Portal",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/portal/portal.jpg",
+        "link": "articles/photograph/portal/portal.html",
+        "tags": ["摄影","人像"],
+        "description": "",
+        "date": "2023-05-02"
+    },
+    {
+        "title": "格 Lyra",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/ge1/ge.jpg",
+        "link": "articles/photograph/ge1/ge.html",
+        "tags": ["摄影","人像"],
+        "description": "",
+        "date": "2023-07-31"
+    },
+    {
+        "title": "构成 Composition",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/composition2/composition.JPG",
+        "link": "articles/photograph/composition2/composition2.html",
+        "tags": ["摄影","抽象"],
+        "description": "",
+        "date": "2017-11-09"
     },
     {
         "title": "构成 Composition",
@@ -220,7 +256,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/arch-wuhan/arch.webp",
         "link": "articles/photograph/arch-wuhan/arch.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","建筑"],
         "description": "",
         "date": "2021-10-25"
     },
@@ -247,7 +283,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/hotpot/hotpot1.webp",
         "link": "articles/photograph/hotpot/hotpot.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","人像"],
         "description": "",
         "date": "2022-01-26"
     },
@@ -256,7 +292,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/lunaEclipse/lunaEclipse.jpg",
         "link": "articles/photograph/lunaEclipse/lunaEclipse.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","抽象"],
         "description": "",
         "date": "2023-10-28"
     },
@@ -265,7 +301,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/20th-birthday/20th-birthday.webp",
         "link": "articles/photograph/20th-birthday/20th-birthday.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","人像"],
         "description": "",
         "date": "2019-03-12"
     },
@@ -274,7 +310,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/selfie/selfie.jpg",
         "link": "articles/photograph/selfie/selfie.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","人像"],
         "description": "",
         "date": "2021-06-02"
     },
@@ -283,16 +319,61 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/19th-birthday/19th-birthday.webp",
         "link": "articles/photograph/19th-birthday/19th-birthday.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","人像"],
         "description": "",
         "date": "2018-03-12"
+    },
+    {
+        "title": "糖果店 Candy Shop",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/candyshop/candyshop.jpg",
+        "link": "articles/photograph/candyshop/candyshop.html",
+        "tags": ["摄影","街拍"],
+        "description": "",
+        "date": "2023-04-09"
+    },
+    {
+        "title": "杏黄 Apricot",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/Apricot/Apricot.png",
+        "link": "articles/photograph/Apricot/Apricot.html",
+        "tags": ["摄影","植物"],
+        "description": "",
+        "date": "2017-10-28"
+    },
+    {
+        "title": "Birdie",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/birdie1/birdie.jpg",
+        "link": "articles/photograph/birdie1/birdie.html",
+        "tags": ["摄影","动物"],
+        "description": "",
+        "date": "2022-02-24"
+    },
+    {
+        "title": "人像 Portrait",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/portrait1/portrait.jpg",
+        "link": "articles/photograph/portrait1/portrait.html",
+        "tags": ["摄影","人像"],
+        "description": "商业摄影，请勿使用",
+        "date": "2019-06-05"
+    },
+    {
+        "title": "皇后镇 Queenstown",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/newzealand/1.jpg",
+        "link": "articles/photograph/newzealand/newzealand.html",
+        "tags": ["摄影","风光"],
+        "description": "VRST 2023 会后小游",
+        "date": "2023-10-15"
     },
     {
         "title": "花贩 Flower Vendor",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/flowerVendor2/flowerVendor2.webp",
         "link": "articles/photograph/flowerVendor2/flowerVendor.html",
-        "tags": ["摄影"],
+        "tags": ["摄影","人像"],
         "description": "",
         "date": "2023-02-04"
     },
@@ -391,6 +472,15 @@
         "date": "2023-09-07"
     },
     {
+        "title": "逗猫棒 Cat-Teaser",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/cat-teaser/1.png",
+        "link": "articles/design/cat-teaser/cat-teaser.html",
+        "tags": ["设计","交互设计"],
+        "description": "一个交互装置设计想法",
+        "date": "2023-01-18"
+    },
+    {
         "title": "黄昏 Dusk",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/dusk/dusk.png",
@@ -420,7 +510,15 @@
 
 
 
-
+    {
+        "title": "虚拟空间中的行动方式及引导浅探",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/wt.png",
+        "link": "articles/blog/aboutinteraction/vrnavigation/blog.html",
+        "tags": ["想法","交互研究"],
+        "description": "",
+        "date": "2022-01-02"
+    },
     {
         "title": "从接受美学的角度看当今新媒体创作环境的迭代变迁",
         "image": "assets/placeholder.jpg",
@@ -430,6 +528,7 @@
         "description": "",
         "date": "2022-06-18"
     },
+
 
 
 
