@@ -298,9 +298,17 @@
     },
 
 
+    
 
-
-
+    {
+        "title": "练习 - 海报底图 Practice",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/practice1/Practice.png",
+        "link": "articles/design/practice1/practice1.html",
+        "tags": ["设计","数字绘画"],
+        "description": "练习 - 海报底图",
+        "date": "2020-06-01"
+    },
     {
         "title": "鱼 Sakana",
         "image": "assets/placeholder.jpg",
@@ -320,6 +328,42 @@
         "date": "2021-03-24"
     },
     {
+        "title": "练习 - 鸟 Practice",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/practice4/Practice.png",
+        "link": "articles/design/practice4/practice4.html",
+        "tags": ["设计","数字绘画"],
+        "description": "练习",
+        "date": "2022-04-05"
+    },
+    {
+        "title": "与“生”对谈 - Birdie",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/birdie/cover.png",
+        "link": "articles/design/birdie/birdie.html",
+        "tags": ["设计","课堂作业"],
+        "description": "新媒体艺术创作课堂作业，项目受到新冠肺炎疫情影响最终没有落地，仅供参考",
+        "date": "2022-06-18"
+    },
+    {
+        "title": "练习 Practice",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/practice5/Practice.png",
+        "link": "articles/design/practice5/practice5.html",
+        "tags": ["设计","数字绘画"],
+        "description": "练习",
+        "date": "2022-12-25"
+    },
+    {
+        "title": "心 Heart",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/heart/heart.png",
+        "link": "articles/design/heart/heart.html",
+        "tags": ["设计","数字绘画"],
+        "description": "以撒玩疯了",
+        "date": "2023-02-25"
+    },  
+    {
         "title": "Onsome",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/onsome/onsome.png",
@@ -327,6 +371,33 @@
         "tags": ["设计","数字绘画"],
         "description": "香港社会福利署海报设计",
         "date": "2023-06-01"
+    },
+    {
+        "title": "练习 Practice",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/practice3/Practice.png",
+        "link": "articles/design/practice3/practice3.html",
+        "tags": ["设计","数字绘画"],
+        "description": "练习",
+        "date": "2023-06-05"
+    },
+    {
+        "title": "练习 - 结晶 Practice",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/practice2/Practice.png",
+        "link": "articles/design/practice2/practice2.html",
+        "tags": ["设计","数字绘画"],
+        "description": "练习 - 结晶",
+        "date": "2023-09-07"
+    },
+    {
+        "title": "黄昏 Dusk",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/dusk/dusk.png",
+        "link": "articles/design/dusk/dusk.html",
+        "tags": ["设计","数字绘画"],
+        "description": "宿舍门口，恰到好处的光线",
+        "date": "2024-4-17"
     },
     {
         "title": "港铁 XR 互动体验企划 MTR XR-Proposal Part 1",
