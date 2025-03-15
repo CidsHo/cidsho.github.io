@@ -509,6 +509,27 @@
     },
 
 
+    {
+        "title": "Snap!",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ai.png",
+        "link": "articles/blog/aboutinteraction/snap!/blog.html",
+        "tags": ["设计","交互开发","虚拟现实"],
+        "description": "一种基于截图功能的伪Quest3摄像头识别方案",
+        "date": "2024-07-28"
+    },
+    {
+        "title": "关闭应用安全边界 Boundless Setting",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ai.png",
+        "link": "articles/blog/aboutinteraction/boundlesssetting/blog.html",
+        "tags": ["设计","交互开发","虚拟现实"],
+        "description": "关闭Quest应用安全边界",
+        "date": "2024-08-01"
+    },
+
+
+
 
     {
         "title": "虚拟空间中的行动方式及引导浅探",

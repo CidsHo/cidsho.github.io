@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snap!</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button" onclick="window.history.back()">
+            <img src="../../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../articles/article-thumbnail/ai-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">Snap! Capture the Camera Screenshots in Quest3 and Review Them Immediately
+                <h4 class="blog-subtitle">First release at <a href="https://github.com/CidsHo/CaptureScreen">https://github.com/CidsHo/CaptureScreen</a></h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">Since Meta won't let developers gain access to the camera in Quest3, I made this tool.</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+
+                    <p><h3>2025-03-15 updated: This post is outdated due to the latest released  <a href="https://github.com/oculus-samples/Unity-PassthroughCameraApiSamples">Oculus Sample.</a></h3></p>
+
+                    <p><h4>2025-03-15更新：该方案已弃用，Oculus官方时隔数年终于开放了摄像头权限：<a href="https://github.com/oculus-samples/Unity-PassthroughCameraApiSamples">官方示例</a></h4></p>
+
+                    <p><i>Tested on developing Meta Quest applications in Unity only. Last Available in 2024-7-18.</i></p>
+
+                    <p>Use the ScreenShotLoader plugin in Unity to capture camera images and export the screenshots taken by the device.</p>
+
+                    <p>Since Quest3 currently does not have camera access permissions, it is not possible to use real-time video streams for recognition operations. Hence, this workaround is used to achieve some functionalities.</p>
+                                        
+                    <p>使用Unity中的ScreenShotLoader插件捕获设备相机画面，并导出设备拍摄的截图。</p>
+
+                    <p>由于当前Quest3未开放摄像头访问权限，无法直接通过实时视频流进行识别操作，因此通过此临时方案实现部分功能。</p>
+                        
+                    <p>Unity project source file: <a href="https://github.com/CidsHo/CaptureScreen/blob/main/Snap!.rar">Snap!</a></p>
+
+                    <p><h2>Configuration</h2></p>
+
+                    <ol>1. Install <a href="https://github.com/CidsHo/CaptureScreen/tree/main/ScreenShotLoader">ScreenShotLoader</a> in the project Assets and also load the Meta XR All-in-one SDK.</ol>
+
+                    <ol>2. In Unity, go to <Strong>Edit > Project Settings > Player > Android > Publishing Settings > Build</Strong>, check Custom <Strong>Main Manifest, Custom Main Gradle Template, Custom Gradle Properties Template</Strong>. This will enable the use of <Strong>AndroidManifest.xml, mainTemplate.gradle, and gradleTemplate.properties</Strong> in <Strong>Assets/Plugins/Android.</Strong></ol>
+
+                    <ol>3. Replace the mainTemplate.gradle and gradleTemplate.properties in Assets/Plugins/Android with those in ScreenShotLoader/Plugins/Android.</ol>
+
+                    <ol>4. Edit AndroidManifest.xml in Assets/Plugins/Android and add the following configuration before the segment:</ol>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">AndroidManifest.xml</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code>&lt;uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+    android:maxSdkVersion="32" /&gt;
+&lt;uses-permission android:name="com.oculus.permission.SET_VR_DEVICE_PARAMS" /&gt;
+&lt;uses-permission android:name="com.oculus.permission.READ_VR_DEVICE_PARAMS" /&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <p>This will allow the application to read the screenshot storaged in the Quest3 headset. (Further authorization is required in Horizon OS)</p>
+
+                    <p>Click here for the apk version of <a href="Snap!.apk" download="Snap!.apk">Snap!</a> and <a href="CaptureScreen-main.zip" download="CaptureScreen.zip">Source Code</a></p>
+
+                    <p><h2>Explaination</h2></p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">ScreenshotLoader.cs</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code>#nullable enable
+
+using System.Collections;
+using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ScreenshotLoader : MonoBehaviour
+{
+    private const int MAX_CHECK_PERMISSION_COUNT = 100;
+
+    [SerializeField] private Button requestPermissionButton = default!;  //Serialized fields to assign UI elements from the Unity Editor.
+    [SerializeField] private Button loadScreenShotButton = default!; //Function as discription.
+    [SerializeField] private RawImage rawImage = default!; //Where screenshot display.
+    [SerializeField] private float checkPermissionInterval = 1.0f; //Interval time in seconds between each permission check.
+
+    private Texture2D texture = default!;
+    private bool permissionGranted = false;
+
+    public void ReceiveHasReadStoragePermissionCallback(string message) // Call by the Android plugin to notify whether the read storage permission is granted.
+    {
+        if (message.Equals("true"))
+        {
+            permissionGranted = true;
+            requestPermissionButton.gameObject.SetActive(false);
+            loadScreenShotButton.gameObject.SetActive(true);
+        }
+    }
+
+    private void Awake() //Add listener to buttons, initialize textures and check for permission.
+    {
+        requestPermissionButton.onClick.AddListener(RequestPermission);
+        loadScreenShotButton.onClick.AddListener(loadScreenShot);
+
+        loadScreenShotButton.gameObject.SetActive(false);
+
+        texture = new Texture2D(1, 1);
+        rawImage.texture = texture;
+        
+        RequestCheckPermission();
+    }
+
+    private void OnDestroy() //Removes listeners from the buttons.
+    {
+        if (requestPermissionButton != null)
+        {
+            requestPermissionButton.onClick.RemoveListener(RequestPermission);
+        }
+        if (loadScreenShotButton != null)
+        {
+            loadScreenShotButton.onClick.RemoveListener(loadScreenShot);
+        }
+    }
+
+    private void RequestCheckPermission() //Requests the current storage permission status from the Android plugin.
+    {
+        if (permissionGranted)
+        {
+            return;
+        }
+
+        using (var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+        {
+            using (var currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity"))
+            {
+                using (var loaderClass = new AndroidJavaClass("com.example.screenshotloader.ScreenshotLoader"))
+                {
+                    loaderClass.CallStatic("requestHasReadStoragePermissionCallback", currentActivity, name, "ReceiveHasReadStoragePermissionCallback");
+                }
+            }
+        }
+    }
+
+    public void RequestPermission() //requests the storage permission from the Android plugin.
+    {
+        using (var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+        {
+            using (var currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity"))
+            {
+                using (var loaderClass = new AndroidJavaClass("com.example.screenshotloader.ScreenshotLoader"))
+                {
+                    loaderClass.CallStatic("requestPermissionIfNeeded", currentActivity);
+                    StartCoroutine(CheckPermissionCoroutine());
+                }
+            }
+        }
+    }
+
+    public void loadScreenShot() //Retrieves the latest screenshot bytes and loads them into the texture, which is then displayed in the rawImage.
+    {
+        using (var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+        {
+            using (var currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity"))
+            {
+                using (var loaderClass = new AndroidJavaClass("com.example.screenshotloader.ScreenshotLoader"))
+                {
+                    using(var loader = loaderClass.CallStatic<AndroidJavaObject>("getInstance"))
+                    {
+                        var succeeded = loader.Call<bool>("getLatestScreenshot");
+                        if (succeeded)
+                        {
+                            var screenshotBytes = loader.Call<byte[]>("getLatestScreenshotBytes");
+                            Debug.Log($"Load latest screenshot: size={screenshotBytes.Length}");
+                            texture.LoadImage(screenshotBytes);
+                            texture.Apply();
+                            rawImage.texture = texture;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private IEnumerator CheckPermissionCoroutine() //Repeatedly check for permission status until granted or the maximum check count is reached.
+    {
+        foreach (var i in Enumerable.Range(0, MAX_CHECK_PERMISSION_COUNT))
+        {
+            if (permissionGranted)
+            {
+                yield break;
+            }
+            RequestCheckPermission();
+
+            yield return new WaitForSeconds(checkPermissionInterval);
+        }
+    }
+}
+                                </code></pre>
+                        </div>
+                    </div>   
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">ScreenShotLoader.java</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code>
+package com.example.screenshotloader;
+
+import com.unity3d.player.UnityPlayer;
+
+import android.Manifest;
+import android.app.Activity;
+import android.content.pm.PackageManager;
+import android.util.Log;
+
+import androidx.core.app.ActivityCompat;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class ScreenshotLoader {
+    private static final int REQUEST_PERMISSION_CODE = 222;
+    private static final String SCREENSHOT_DIRECTORY_PATH = "/sdcard/Oculus/Screenshots/";
+
+    private byte[] latestScreenshotBytes = new byte[0];
+
+//Finds and loads the latest screenshot.
+
+    public boolean getLatestScreenshot() {
+        String latestScreenshotPath = getLatestImageFilePath(SCREENSHOT_DIRECTORY_PATH);
+        Log.d("ScreenshotLoader", "Latest screenshot path: " + latestScreenshotPath);
+        if (latestScreenshotPath != null) {
+            try {
+                latestScreenshotBytes = loadImageData(latestScreenshotPath);
+                return true;
+            } catch (IOException e) {
+                return false;
+            }
+        }
+        return false;
+    }
+
+    public byte[] getLatestScreenshotBytes() {
+        return latestScreenshotBytes;
+    }
+
+    public static ScreenshotLoader getInstance() {
+        return new ScreenshotLoader();
+    }
+
+//Checks if the app has read storage permission and sends a message back to Unity with the result.
+
+    public static void requestHasReadStoragePermissionCallback(Activity activity, String gameObjectName, String callbackMethodName) {
+        if (hasReadStoragePermission(activity)) {
+            UnityPlayer.UnitySendMessage(gameObjectName, callbackMethodName, "true");
+        }
+        else {
+            UnityPlayer.UnitySendMessage(gameObjectName, callbackMethodName, "false");
+        }
+    }
+    public static void requestPermissionIfNeeded(Activity activity) {
+        activity.runOnUiThread(() -> {
+                    if (!hasReadStoragePermission(activity)) {
+                        ActivityCompat.requestPermissions(activity,
+                                new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                                REQUEST_PERMISSION_CODE);
+                    }
+                }
+        );
+    }
+
+    private static Boolean hasReadStoragePermission(Activity activity) {
+        return activity.checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+    }
+
+// Gets the path of the latest screenshot file in the specified directory.
+
+    private static String getLatestImageFilePath(String directoryPath) {
+        File directory = new File(directoryPath);
+        File[] files = directory.listFiles((dir, name) -> name.toLowerCase().endsWith(".jpg"));
+
+        if (files != null && files.length > 0) {
+            Arrays.sort(files, Comparator.comparingLong(File::lastModified).reversed());
+            return files[0].getAbsolutePath();
+        } else {
+            return null;
+        }
+    }
+
+//Loads image data from the specified file path.
+
+    private static byte[] loadImageData(String imagePath) throws IOException {
+        File imageFile = new File(imagePath);
+        byte[] imageData = new byte[(int) imageFile.length()];
+
+        try (FileInputStream fileInputStream = new FileInputStream(imageFile)) {
+            if (fileInputStream.read(imageData) == -1) {
+                throw new IOException("Failed to read image data.");
+            }
+        }
+
+        return imageData;
+    }
+}
+                                </code></pre>
+</div>                 
+                </div>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2024年07月18日</p>
+                    <div class="blog-tags">
+                        <span class="tag">Unity开发</span>
+                        <span class="tag">Quest3应用</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../scripts/script.js"></script>
+</body>
+</html>
