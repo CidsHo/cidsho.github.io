@@ -92,6 +92,7 @@
                     <div class="code-block">
                         <div class="code-header">
                             <span class="code-language">AndroidManifest.xml</span>
+                            <button class="copy-button">复制</button>
                         </div>
                         <div class="code-content">
                             <pre><code>&lt;uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
@@ -105,14 +106,22 @@
 
                     <p>Click here for the apk version of <a href="Snap!.apk" download="Snap!.apk">Snap!</a> and <a href="CaptureScreen-main.zip" download="CaptureScreen.zip">Source Code</a></p>
 
-                    <p><h2>Explaination</h2></p>
 
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-language">ScreenshotLoader.cs</span>
+
+                    <div class="collapsible-container">
+                        <div class="collapsible-header">
+                            <p><strong>Explaination</strong></p>
+                            <span class="collapse-icon">+</span>
                         </div>
-                        <div class="code-content">
-                            <pre><code>#nullable enable
+                        <div class="collapsible-content">
+                            
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span class="code-language">ScreenshotLoader.cs</span>
+                                    <button class="copy-button">复制</button>
+                                </div>
+                                <div class="code-content">
+                                    <pre><code>#nullable enable
 
 using System.Collections;
 using System.Linq;
@@ -239,15 +248,16 @@ public class ScreenshotLoader : MonoBehaviour
         }
     }
 }
-                                </code></pre>
-                        </div>
-                    </div>   
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-language">ScreenShotLoader.java</span>
-                        </div>
-                        <div class="code-content">
-                            <pre><code>
+                                    </code></pre>
+                                </div>
+                            </div>   
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span class="code-language">ScreenShotLoader.java</span>
+                                    <button class="copy-button">复制</button>
+                                </div>
+                                <div class="code-content">
+                                    <pre><code>
 package com.example.screenshotloader;
 
 import com.unity3d.player.UnityPlayer;
@@ -349,9 +359,12 @@ public class ScreenshotLoader {
         return imageData;
     }
 }
-                                </code></pre>
-</div>                 
-                </div>
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
 
                 <!-- 日期和标签区 -->
                 <div class="blog-footer">
@@ -367,5 +380,6 @@ public class ScreenshotLoader {
     
     <!-- 脚本 -->
     <script type="module" src="../../../../scripts/script.js"></script>
+    <script type="module" src="../../../../scripts/blog.js"></script>
 </body>
 </html>

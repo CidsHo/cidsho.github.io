@@ -527,6 +527,33 @@
         "description": "关闭Quest应用安全边界",
         "date": "2024-08-01"
     },
+    {
+        "title": "利用Quest3头显实现物体识别功能（YOLO v8框架）",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ai.png",
+        "link": "articles/blog/aboutinteraction/quest3-item-detection/blog.html",
+        "tags": ["设计","应用开发","虚拟现实"],
+        "description": "将串流的视频当作数据源，然后进行AI检测，最后将检测结果显示在Quest的屏幕上",
+        "date": "2024-11-17"
+    },
+    {
+        "title": "ShadowCostar-Legacy: A Rule-Driven UX Guidance System with Action Detection",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ai.png",
+        "link": "articles/blog/aboutinteraction/hai23/hai23.html",
+        "tags": ["精选","设计","交互开发","人工智能"],
+        "description": "一个基于动作检测规则的简易用户体验引导人工智能模型",
+        "date": "2023-12-04"
+    },
+    {
+        "title": "Architecting Social VR: Exploring Encounter and Serendipitous Interactions in Virtual Public Spaces",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ai.png",
+        "link": "articles/blog/aboutinteraction/hcii24/hcii24.html",
+        "tags": ["精选","设计","用户体验研究","虚拟现实"],
+        "description": "虚拟公共空间用户陌生偶遇行为研究",
+        "date": "2024-06-29"
+    },
 
 
 

@@ -463,3 +463,91 @@
         color: #666;
     }
 }
+
+/* 可折叠内容模块样式 - 改进按钮高度自适应 */
+.collapsible-container {
+    margin: 2em 0;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7em 15px; /* 使用em单位适应文本大小 */
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-height: unset; /* 移除最小高度限制 */
+    height: auto; /* 让高度自动适应内容 */
+}
+
+.collapsible-header:hover {
+    background-color: #f0f0f0;
+}
+
+.collapsible-header h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    flex: 1;
+    line-height: 1.4; /* 增加行高，提高可读性 */
+    padding: 0.3em 0; /* 为文本添加适当的上下内边距 */
+}
+
+.collapse-icon {
+    font-size: 18px; /* 稍微减小图标尺寸 */
+    font-weight: bold;
+    color: #666;
+    margin-left: 15px; /* 确保与文字有一定间距 */
+    transition: transform 0.3s ease;
+    flex-shrink: 0; /* 防止图标被挤压 */
+}
+
+.collapsible-container.active .collapse-icon {
+    transform: rotate(45deg);
+}
+
+/* 修改折叠内容的样式，移除max-height限制 */
+.collapsible-content {
+    overflow: hidden;
+    height: 0; /* 默认为0高度 */
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    padding: 0 20px;
+}
+
+.collapsible-container.active .collapsible-content {
+    padding: 20px;
+    opacity: 1;
+    /* 高度将通过JavaScript动态设置 */
+}
+
+.collapsible-image {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.collapsible-image img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .collapsible-header {
+        padding: 12px 15px;
+    }
+    
+    .collapsible-header h4 {
+        font-size: 16px;
+    }
+    
+    .collapsible-container.active .collapsible-content {
+        padding: 15px;
+    }
+}
