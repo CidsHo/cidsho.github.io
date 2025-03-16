@@ -86,7 +86,7 @@ function setupCollapsibleSections() {
     });
 }
 
-// 修复返回按钮功能
+// 修复返回按钮功能 - 使用正确的根目录路径
 function setupBackButton() {
     const backButton = document.querySelector('.back-button');
     
@@ -101,18 +101,47 @@ function setupBackButton() {
             // 阻止默认行为
             event.preventDefault();
             
-            // 确保只返回一次
-            console.log('返回按钮被点击');
-            
-            // 检查是否来自portfolio页面
+            // 当前页面URL
+            const currentUrl = window.location.href;
+            // 获取referrer（来源页面）
             const referrer = document.referrer;
+            
+            console.log('当前页面:', currentUrl);
             console.log('上一页地址:', referrer);
             
-            if (window.history.length > 1) {
+            // 1. 检查是否有浏览历史且来源不为空
+            if (window.history.length > 1 && referrer) {
+                // 正常情况：有历史记录，直接返回
                 window.history.back();
             } else {
-                // 如果没有历史记录，跳转到首页
-                window.location.href = '../../../index.html';
+                // 2. 没有历史记录（可能是新标签页打开）：尝试智能返回
+                
+                // 分析当前URL，尝试确定合适的返回页面
+                let returnUrl = '/index.html'; // 默认返回首页
+                
+                // 检查当前路径是否包含博客文章路径
+                const isArticlePage = currentUrl.includes('/articles/blog/');
+                
+                if (isArticlePage) {
+                    // 如果是文章页面，默认返回作品集页面
+                    returnUrl = '/portfolio.html';
+                    
+                    // 如果URL中包含特定分类，可以进一步细化返回目标
+                    if (currentUrl.includes('/tech/')) {
+                        // 技术类文章
+                        returnUrl = '/portfolio.html#tech';
+                    } else if (currentUrl.includes('/design/')) {
+                        // 设计类文章
+                        returnUrl = '/portfolio.html#design';
+                    } else if (currentUrl.includes('/other/')) {
+                        // 其他类别
+                        returnUrl = '/portfolio.html#other';
+                    }
+                }
+                
+                // 跳转到确定的返回页面
+                console.log('智能返回到:', returnUrl);
+                window.location.href = returnUrl;
             }
         });
     }

@@ -247,10 +247,30 @@ togglePointsBtn.addEventListener('click', () => {
     });
 });
 
-// 返回按钮
-goBackBtn.addEventListener('click', () => {
-    window.history.back();
-});
+// 返回按钮 - 修复版
+if (goBackBtn) {
+    // 移除可能存在的旧事件监听器
+    goBackBtn.replaceWith(goBackBtn.cloneNode(true));
+    
+    // 重新获取按钮引用
+    const newGoBackBtn = document.getElementById('go-back');
+    
+    // 添加新的事件监听器
+    newGoBackBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        console.log('滚动页面返回按钮被点击');
+        
+        // 返回上一页
+        if (window.history.length > 1) {
+            window.history.back();
+        } else {
+            // 如果没有历史记录，返回首页
+            window.location.href = '/portfolio.html';
+        }
+    });
+}
 
 // 全屏切换按钮
 toggleFullscreenBtn.addEventListener('click', () => {
