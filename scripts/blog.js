@@ -86,6 +86,38 @@ function setupCollapsibleSections() {
     });
 }
 
+// 修复返回按钮功能
+function setupBackButton() {
+    const backButton = document.querySelector('.back-button');
+    
+    if (backButton) {
+        // 移除任何可能已存在的点击事件
+        backButton.replaceWith(backButton.cloneNode(true));
+        
+        // 重新获取按钮引用并添加新的事件监听
+        const newBackButton = document.querySelector('.back-button');
+        
+        newBackButton.addEventListener('click', (event) => {
+            // 阻止默认行为
+            event.preventDefault();
+            
+            // 确保只返回一次
+            console.log('返回按钮被点击');
+            
+            // 检查是否来自portfolio页面
+            const referrer = document.referrer;
+            console.log('上一页地址:', referrer);
+            
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                // 如果没有历史记录，跳转到首页
+                window.location.href = '../../../index.html';
+            }
+        });
+    }
+}
+
 // 初始化博客页功能
 export function setupBlog() {
     console.log('Setting up blog page...'); // 调试信息
@@ -95,17 +127,8 @@ export function setupBlog() {
         setupBanner();
     }
 
-    // 返回按钮功能
-    if (document.querySelector('.back-button')) {
-        const backButton = document.querySelector('.back-button');
-        backButton.addEventListener('click', () => {
-            if (window.history.length > 1) {
-                window.history.back();
-            } else {
-                window.location.href = '../../../index.html'; // 如果没有历史记录，跳转到首页
-            }
-        });
-    }
+    // 初始化返回按钮
+    setupBackButton();
 
     // 图片懒加载功能
     if (document.querySelectorAll('.lazy-load').length > 0) {
