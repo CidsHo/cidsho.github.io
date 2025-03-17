@@ -828,7 +828,7 @@
         "title": "Ludic-hri: Designing playful experiences with robots.",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ls.png",
-        "link": "articles/blog/learnstuffs/ludicrhi/blog.html",
+        "link": "articles/blog/learnstuffs/ludichri/blog.html",
         "tags": ["学习","交互研究","互动机器人"],
         "description": "玩乐设计与机器人交互",
         "date": "2022-03-16"
@@ -850,5 +850,42 @@
         "tags": ["学习","交互研究","公共空间"],
         "description": "公共空间中的异形显示屏以及身体交互实例",
         "date": "2022-04-07"
+    },
+    {
+        "title": "Rayuela: A Hopscotch Playground for Plastic Awareness",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/rayuela/blog.html",
+        "tags": ["学习","交互研究","公共空间"],
+        "description": "跳房子：通过玩乐互动装置传递严肃信息",
+        "date": "2022-05-12"
+    },
+    {
+        "title": "A Survey of Socially Interactive Robots:  Concepts, Design, and Applications",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/sir101/blog.html",
+        "tags": ["学习","交互研究","机器人"],
+        "description": "社交互动机器人：概念，设计和应用",
+        "date": "2022-09-17"
+    },
+    {
+        "title": "布尔迪厄",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/bedr/blog.html",
+        "tags": ["学习","社会学"],
+        "description": "",
+        "date": "2023-01-02"
+    },
+    {
+        "title": "Sounds of Infinity: Playful Illusions with Performative Interaction",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/soundofinfinity/blog.html",
+        "tags": ["学习","交互研究","表演性交互"],
+        "description": "无限之声：玩乐幻像与述行性（表演性）交互",
+        "date": "2022-05-05"
     }
+    
 ]
