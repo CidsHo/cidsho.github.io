@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design for serendipitous interaction: Bubblebot-bringing people together with bubbles.</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button">
+            <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../articles/article-thumbnail/ls-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">Design for serendipitous interaction: Bubblebot-bringing people together with bubbles. 
+                </h1>
+                <h4 class="blog-subtitle">邂逅交互：泡泡机器人</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">Robotics学习笔记</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+                    <h3>本期文章：Lee, W. Y., Hou, Y. T. Y., Zaga, C., & Jung, M. (2019, March). Design for serendipitous interaction: Bubblebot-bringing people together with bubbles. In 2019 14th ACM/IEEE international conference on human-robot interaction (HRI) (pp. 759-760). IEEE. <a href = "lee_hri2019.pdf" >原文</a></h3>                
+                  
+                    <h4>Introduction</h4>
+
+                    <p>当下的城市生活非常快节奏：我们在一次次碰面中穿行，努力在环境中快速穿梭。
+                    当下的公共领域及个人交流技术的设计空间似乎没能高效地承载人与人之间的社交，尤其是日常的、能够引起邂逅的社会交互。</p>
+                    
+                    <p>邂逅交互、与陌生人闲聊，长期以来都被认定为对群体互动具有积极社交影响。</p>
+                    
+                    <p>本项目中，作者探索了公共空间中邂逅交互的探索空间，籍由一个周边机器人叫bubblebot</p>
+                    
+                    <p>公共领域中的机器人技术应用设计空间主要围绕提高空间的应用效率和维护个人空间。个人移动设备的设计目的就是为了在公共领域内更容易地搭建一个个人隐私区域。这个现象使得公共领域的性质拗转为更少互动性的空间。学者也正不断努力将机器人技术应用到另一个方向，即将其作为挽回公共领域交互的促进要因。</p>
+                    
+                    <p>作者提出了将机器人作为放慢快节奏城市生活和营造邂逅交互的媒介。</p>
+                    
+                    <p>机器人已经证实了其有着影响人际交往行为的能力，也有着创造邂逅交互的能力。</p>
+                    
+                    <p>机器人的物理形态和社会示能使其能够作为公共空间中的社交锚点。</p>
+                    
+                    <p>领域内有很多学者探索了公共空间社交机器人的设计，但是都没有涉足邂逅交互。作者探索了公共空间中的社交交互和邂逅交互籍由一个融合了充满想象力和玩乐心得思考方式与现存得交互设计方法的、特别的设计方法，以及含蓄/模糊交互，以及embodied 设计方法。</p>
+                    
+                    <p>通过观察公共空间中的肥皂泡如何将大家聚到一起，作者尝试去复现这个过程籍由一个周边机器人（也就是一个不作为关注焦点的机器人）。这个机器人向路人喷泡泡来激发邂逅互动。</p>
+                    
+                    <p>在这篇文章中，作者展现了他们的概念、设计过程和机器人设计。</p>
+                    
+                    <p>作者期望完成根据田野调查开展的设计，在北美和欧洲部署两个原型，为下一次设计迭代提供依据。</p>
+                    
+                    <p>项目的目的不在于创造一个产品而在于产生一个想法、讨论以及为社交邂逅交互机器人设计奠基</p>
+                    
+                    <h4>Design context</h4>
+                    <p>在本项目当中，作者旨在引入公共空间中人们的简短聊天并籍此降低快节奏生活同时享受这个过程。</p>
+                    
+                    <p>作者希望借这个设计，人们得以重新得到邂逅交互的体验。然后服务于这个目的，作者建立了三个设计总则以作为设计过程的目的。</p>
+                    
+                    <ul>
+                        <li><strong>边缘化（周边）</strong>：机器人被作为人人交互的旁带设备存在，作者的目的是增加行人的邂逅交互</li>
+                        
+                        <li><strong>Joint-attention 多主体关注</strong>：机器人应能够吸引多个主体关注，同时降低行人的快捷奏生活，进一步创造邂逅交互。</li>
+                        
+                        <li><strong>有影响力</strong>：机器人应能够激起行人与其他人交互的意愿，稍微促进人们的邂逅交互行为</li>
+                    </ul>
+                    
+                    <h4>设计过程</h4>
+                    
+                    <p>作者在很多个公共空间中开展观察以捕获邂逅交互事件。
+                    而其中，吹泡泡这一行为吸引了作者的注意。泡泡可以把人们聚在一起的同时激发起多主体关注，另外也能激起一些如戳泡泡，指点泡泡之类的小动作。
+                    由此作者想出了做一个移动泡泡机器人来利用这个泡泡能影响人类行为的特性。</p>
+                    
+                    <p>为了深挖这个想法，作者建立了一个工坊，邀请人们分享与泡泡相关的照片。有人提到，照片里的人们在被泡泡环绕的时候看起来非常放松、愉悦。泡泡会给人一种回归童年的感觉。</p>
+                    
+                    <p>另一个有趣的说法是，当人们看见泡泡的时候，会不自觉地去戳它们。</p>
+                    
+                    <p>作者希望通过bubblebot复现这些图片中人们与泡泡度过的美好时光</p>
+                    
+                    <p>另一个工坊中开展了一个即兴设计实体化（赋型embodiment design）工作，设计师和研究员为bubblebot制作外观和交互原型。</p>
+                    
+                    <p>从一个小型化、边缘化层面出发，同时制定交互行为的模式。</p>
+                    
+                    <p>作者计划对未来机器人投放的时候开展一些田野调查，观察人们的反应以开展进一步迭代。</p>
+                    
+                    <h4>情境及行为</h4>
+                    
+                    <p>为bubblebot预设的情境是让其在公共空间里面游荡，向路人喷泡泡，创造让人们互动的机会。</p>
+                    
+                    <p>作者希望以一种构建愉悦环境的方式，让人们对泡泡的印象和感觉在bubblebot的行为上重现。</p>
+                    
+                    <p>作者为bubblebot设计了四个次序行为来激发交互。</p>
+                    
+                    <ol>
+                        <li><strong>移动</strong>：向有意愿交互的人移动</li>
+                        <li><strong>吹泡泡</strong>：吸引多主体关注</li>
+                        <li><strong>玩泡泡</strong>：吹更多泡泡来激起戳和指点泡泡这样的行为</li>
+                        <li><strong>用泡泡领路</strong>：通过泡泡将人们带到其他人身边籍此激发交互</li>
+                    </ol>
+                    
+                    <h4>机器人设计</h4>
+                    
+                    <p>作者希望将好玩、友好等特性赋给机器人的外形。将其小型化，使用多种不同颜色，让其看起来没那么吓人，更容易让人接近。</p>
+                    
+                    
+                    <h4>未来工作</h4>
+                    
+                    <p>未来将尝试将bubblebot投放到不同的公共空间，注重文化差异带来的影响。</p>
+                    
+                    <p>增加更多特性，比如投出信息，增加bubblebot的社会示能，延长邂逅交互的持续时间。</p>
+                    
+                    <p>开展一些迭代工作。</p>
+
+                </div>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2022年04月25日</p>
+                    <div class="blog-tags">
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../scripts/script.js"></script>
+    <script type="module" src="../../../../scripts/blog.js"></script>
+</body>
+</html>

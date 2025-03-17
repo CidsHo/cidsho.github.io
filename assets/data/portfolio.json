@@ -577,6 +577,15 @@
         "date": "2022-06-18"
     },
     {
+        "title": "平台策略指引下艺术科普自媒体运营与内容创作的反思与选择",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/wt.png",
+        "link": "articles/blog/worldthinking/arthistory/blog.html",
+        "tags": ["想法","媒介分析"],
+        "description": "",
+        "date": "2022-06-21"
+    },
+    {
         "title": "VRST'23 Presentation",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ai.png",
@@ -787,5 +796,59 @@
         "tags": ["学习"],
         "description": "",
         "date": "2020-05-21"
+    },
+    {
+        "title": "Collection of metaphors for human-robot interaction.",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/metaphor/blog.html",
+        "tags": ["学习","交互研究","互动机器人"],
+        "description": "人-机器人交互之间的隐喻",
+        "date": "2022-02-21"
+    },
+    {
+        "title": "Bubblebot: Designing playful encounters with robots.",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/bubblebot/blog.html",
+        "tags": ["学习","交互研究","互动机器人"],
+        "description": "泡泡机器人",
+        "date": "2022-04-25"
+    },
+    {
+        "title": "Interfacing & Embodiment: \"Baby Tango\" Dancing Robot Attempts to Communicate",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/baby-tango/blog.html",
+        "tags": ["学习","交互研究","互动机器人"],
+        "description": "界面化，具身化，舞蹈机器人的沟通方式",
+        "date": "2022-03-17"
+    },
+    {
+        "title": "Ludic-hri: Designing playful experiences with robots.",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/ludicrhi/blog.html",
+        "tags": ["学习","交互研究","互动机器人"],
+        "description": "玩乐设计与机器人交互",
+        "date": "2022-03-16"
+    },
+    {
+        "title": "(Not) Interacting with a Robot Photographer",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/notinteract/blog.html",
+        "tags": ["学习","交互研究","互动机器人"],
+        "description": "不互动的互动",
+        "date": "2022-03-24"
+    },
+    {
+        "title": "Movable, kick-/flickable light fragments eliciting ad-hoc interaction in public space.",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/kickflickable/blog.html",
+        "tags": ["学习","交互研究","公共空间"],
+        "description": "公共空间中的异形显示屏以及身体交互实例",
+        "date": "2022-04-07"
     }
 ]

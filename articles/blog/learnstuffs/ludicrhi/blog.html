@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludic-hri: Designing playful experiences with robots.</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button">
+            <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../articles/article-thumbnail/ls-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">Ludic-hri: Designing playful experiences with robots. 
+                </h1>
+                <h4 class="blog-subtitle">玩乐设计与机器人交互</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">Robotics学习笔记</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+                    <h3>本期文章：Lee, W. Y., & Jung, M. (2020, March). Ludic-hri: Designing playful experiences with robots. In Companion of the 2020 ACM/IEEE international conference on human-robot interaction (pp. 582-584). <a href = "lee_hri2020.pdf" >原文</a></h3>                
+                  
+                    <h4>Introduction</h4>
+
+                    <p>文章在开头就抛出了一个假设，即：人都是爱玩的。玩乐之心不仅仅存于实际的玩乐过程中，也存在于其他各种行为之中，无论是不是和工作相关。</p>
+
+                    <p>基于这个假设，文中引述称：Gaver在人机交互领域中引入了玩乐设计，以作为一种强化交互中玩乐体验的方法</p>
+
+                    <p>文中对所谓的玩乐设计 Ludic design做了一个解释，即在设计中考虑人类爱玩的天性，同时也将这一点融入到设计当中，这一观点是建立在将享受与快感等设计目标囊括在设计过程中的基础上建立的。</p>
+
+                    <p>研究表明创造这样一种玩乐体验也可以促进学习，激发创造性和引发激励，甚至可以强化社会知觉（social Perception，即人观察并理解各种社会性的人事物并能够形成的印象和结论的能力，强调知觉，cognitive）</p>
+
+                    <p>表明，玩乐设计有助于在人机交互创造积极的设计体验（裨益设计）</p>
+
+                    <p>同时HRI领域也在尝试强化设计中的这些factors（见上），作者提出能否将玩乐设计中的想法和方法引入到人与机器人交互当中。</p>
+
+                    <p>另一方面，HRI研究领域也逐步关注交互设计中，机器人的情绪、社会可供性（示能）（我理解的这个情绪可供性和社会可供性，就是人能够通过观察机器人，或者机器人的行为能够传达某种人能够理解的情绪，人也能将机器人的行为与某种社会行为联系起来）</p>
+
+                    <p>受启发于玩乐设计的法则同时聚焦于籍由关注其中的美学及社会价值来扩大交互范围的玩乐行为，作者提出将HCI中玩乐设计的理论与实践与HRI结合，用玩乐HRI设计经验去阐发新理解，帮助设计机器人的情绪、社会可供性</p>
+
+                    <p>研究也表明了玩乐设计有拓宽创造更丰富情绪及社会体验的设计空间。结合HCI领域的玩乐设计研究成果，以及将玩乐设计与HRI领域耦合，也许能够提供关于机器人如何融入我们的日常生活的全新视角，同时帮助探索未来设计的更多可能。</p>
+
+                    <h4>Research questions and motivation</h4>
+
+                    <p>受启发自将玩乐设计融入HCI领域。笔者的工作将聚焦于探索人与机器人之间可能存在的玩乐行为，为行为设计并改进机器人，从之前设计并投放的机器人中研究并拓宽对HRI领域中玩乐设计的理解。</p>
+
+                    <p>为此，笔者考虑了几个问题：</p>
+                    <ol>
+                        <li>什么样的行为能够应用在机器人上以提供玩乐体验</li>
+                        <li>该期望或假设人在与机器人玩乐时会作出什么行为</li>
+                        <li>此行为中，机器人扮演何种角色</li>
+                        <li>我们可以从机器人的投放中得到什么信息</li>
+                    </ol>
+
+                    <p>文章接下来的部分呈现了两个计划，分别是bubblebot（泡泡机器人）以及sketching robot（绘图机器人）以作为机器人的玩乐行为设计案例。从设计机器人的过程以及观察人们感知机器人、与机器人互动的过程中的所见所得方面进行汇报。</p>
+
+                    <h4>Completed work bubblebot</h4>
+
+                    <p>bubblebot灵感来自与对公共空间中的肥皂泡泡的观察，肥皂泡激起了人们的玩乐心同时也将人们聚集起来玩耍。由此作者看到了制作一个移动喷泡泡机器人来提供这种玩乐体验的机会。</p>
+
+                    <p>bubblebot设计来就是为了通过向行人喷泡泡，在公共空间创造这种偶然性的交互，从而在为人们创造一个美好的时刻。</p>
+
+                    <p>bubblebot的设计假设包括有：</p>
+                    <ol>
+                        <li>肥皂泡泡有能够将人们聚集起来的能力</li>
+                        <li>能够作为人们回想起与泡泡之间的美好回忆的媒介出现</li>
+                        <li>能够提供一个机会给人们去享受短暂的快乐时光</li>
+                    </ol>
+
+                    <p>作者也提到说制作bubblebot的目的也是为了引发关于"玩乐设计于HRI领域的应用"与"公共空间中，机器人未来的角色与交互范式"这两方面的讨论</p>
+
+                    <p>经过迭代设计后，笔者也借由绿野仙踪测试方法对bubblebot进行了一个田野调查。由此获得了三个重要的观察结果：</p>
+                    <ol>
+                        <li>人们愿意停下手头的工作来与bubblebot交互</li>
+                        <li>bubblebot成功地将人们聚在一起——人们愿意围在bubblebot身边，玩弄肥皂泡泡的同时与其他人进行互动</li>
+                        <li>bubblebot的出现招人喜欢——人们在与bubblebot交互的时候都是面带笑容的样子</li>
+                    </ol>
+
+                    <p>由此得出在HRI领域应用玩乐设计的优点，在这个项目中我们可以看到，玩乐活动可以帮助打磨设计决策，作为交互的出发点，获得对未来设计玩乐参与行为的见解</p>
+
+                    <p>也由此结果引申出两个问题：</p>
+                    <ol>
+                        <li>玩乐体验在任务驱动背景下仍然适用吗？——在与bubblebot交互的过程中，很难在前期判断得知交互对象先前集中于的任务是什么。笔者想要更深入地探索玩乐设计在工作情境下的适用性情况。</li>
+                        <li>有可能将在机器人上创造玩乐体验的工作向更主动的方面转变吗，比如主动地去塑造人的玩乐体验。这个项目高度依赖人在此过程当中自行创造他们的玩乐体验，毕竟bubblebot的唯一功能就只是吹泡泡。在享受这段交互以及产生他们对泡泡的理解这件事情上完全取决于他们个人。</li>
+                    </ol>
+
+                    <p>为了解答这个问题，作者开展了第二个项目——sketching robot来尝试在工作环境中设计玩乐行为</p>
+
+                    <h4>Ongoing work ——sketching robot</h4>
+
+                    <p>画图长久以来就作为一种很有用的工具来促进思考以及创意，同时在交流想法方面有着极高的价值。
+                    在这个项目当中，笔者将画图与机器人结合起来，计划将他们应用在团队讨论中作为一种通过画图的方式促进头脑风暴的工具。
+                    这个项目仍在进行中，期望内会有一份关于玩乐设计在工作情形，即机器人带有更主动的创造玩乐体验目的情况下，于HRI领域适用性的阐述</p>
+
+                    <p>sketching robot尝试了三个不同的设计</p>
+
+                    <p>第一个设计是一个可携带版本，可以在团队讨论的过程中放在桌子上，适合小规模画图的设计。前期测试中也应用了绿野仙踪测试法来观察人们的反应。通过观察，笔者注意到，sketching robot单独分开的那张独立的纸张被认为是机器人的"独立领域"，导致参与者不是非常愿意在上面画图。另一方面，因为可画图的面积非常优先，机器人实际上也很难和参与者一起画图。</p>
+
+                    <p>从前一个版本的设计中吸取经验后，笔者扩大了机器人的规模，为sketching robot增加了两个新的设定。第二个版本的设计是一个装在玻璃墙上的XY-plotter（双轴绘图机）。这种设计使得机器人能够与人一起在玻璃墙两个不同的面同时画图，分享同一面绘图区域。</p>
+
+                    <p>然而，测试表明其系统运行之低速使其在维持交互流上困难重重。</p>
+
+                    <p>由此也引致了第三个版本的设计：是一个工业机械臂带有一个专门设计来握持马克笔的部分。这种设计弥补了先前设计的问题，也使得笔者能够继续这个项目以探索sketching robot与人之间可能的玩乐行为</p>
+
+                    <h4>Future work：</h4>
+
+                    <p>笔者仍在进行sketching robot的项目并在不断地收集数据。另外，笔者也计划创造更多的有玩乐设计的机器人去阐述其如何裨益HRI研究领域。通过设计方法在研究中的应用，笔者的工作展示了玩乐设计如何为未来探索富感情和高社会性的HRI设计拓宽了边界，也带来了对玩乐设计本身的全新理解。</p>
+
+                    <p>笔者也希望他的工作能够帮助带来更多对玩乐设计的关注，引起HRI领域更多深入讨论和发展，为的是玩乐设计所能带来的新价值以及将机器人引入人们生活这一终极目标。</p>
+
+                </div>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2022年03月16日</p>
+                    <div class="blog-tags">
+                        <span class="tag">学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../scripts/script.js"></script>
+    <script type="module" src="../../../../scripts/blog.js"></script>
+</body>
+</html>
