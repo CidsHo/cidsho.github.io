@@ -879,6 +879,24 @@
         "date": "2023-01-02"
     },
     {
+        "title": "媒体融合",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/mediaconvergence/blog.html",
+        "tags": ["学习","传播学"],
+        "description": "",
+        "date": "2023-01-14"
+    },
+    {
+        "title": "先锋艺术",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/pioneerart/blog.html",
+        "tags": ["学习","艺术"],
+        "description": "",
+        "date": "2023-04-02"
+    },
+    {
         "title": "Sounds of Infinity: Playful Illusions with Performative Interaction",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ls.png",
