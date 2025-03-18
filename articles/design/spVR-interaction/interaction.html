@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor用Figma MCP直出设计图</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button">
+            <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../articles/article-thumbnail/ai-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">ShadowPlayVR-交互方式设计</h1>
+                <h4 class="blog-subtitle">ShadowPlayVR-Interaction</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">旧版的控制方式，依据手柄、头显返回的坐标之间计算距离，然后根据距离关系来判断是否交互效果。</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+
+                    <h1>ShadowPlayVR-交互方式设计</h1>
+                    <h2>ShadowPlayVR-Interaction</h2>
+
+                    <p><strong>ShadowPlayVR</strong> 利用VR控制器模拟操控皮影戏杆，实现类似传统皮影戏表演艺术的效果。ShadowPlayVR系统提供了独特的视角，将用户置于真实世界中幕后操作的皮影艺人角色，控制木偶进行表演。</p>
+                    <p><strong>ShadowPlayVR</strong> uses VR controllers to simulate the manipulation of shadow puppet rods, achieving similar effects to traditional shadow puppetry performance art. The ShadowPlayVR system offers a unique perspective by positioning users in the role of a real-world puppeteer operating behind the scenes, controlling puppets to perform.</p>
+                    
+                    <p>为了准确捕捉皮影戏的精髓，ShadowPlayVR融合了真实木偶舞台的结构元素，研究了木偶制作工艺，并采用了该艺术形式典型的艺术风格。至关重要的是，它通过专门设计的具身交互将传统木偶技术与VR控制功能相结合，模拟真实木偶的触觉体验。在ShadowPlayVR体验中，用户使用有限的输入设备控制虚拟木偶，采用类似传统皮影戏中使用的手势和全身动作，从而在虚拟环境中提供沉浸式表演体验。</p>
+                    <p>To accurately capture the essence of shadow puppetry, ShadowPlayVR incorporates the structural elements of real puppetry stages, studies the craftsmanship of puppet making, and adopts the artistic styles typical of the art form. Crucially, it integrates traditional puppetry techniques with VR control features through specially designed embodied interactions that simulate the tactile experience of real puppetry. In the ShadowPlayVR experience, users control virtual puppets using limited input devices, adopting gestures and full-body movements akin to those used in traditional shadow puppetry, thereby offering an immersive performance experience within the virtual environment.</p>
+                    
+                    <h2>关于皮影戏 About Shadow Play</h2>
+                    
+                    <p>皮影戏依赖于木偶操控和视觉讲故事，是VR如何将传统艺术实践扩展到数字领域的典范案例。该艺术形式对操控的强调与VR的一般输入方法（控制器）非常相似，使其成为通过交互设计研究VR重现真实生活中传统技能的潜力，并在其中支持艺术实践，吸引多元观众的理想主题。</p>
+                    <p>Shadow play, with its reliance on puppet manipulation and visual storytelling, presents an exemplary case of how VR can extend traditional artistic practices into the digital realm. The art form's emphasis on manipulation closely mirrors the general input method (controllers) to VR, making it an ideal subject for investigating the potential of VR to recreate real life hand-on traditional skills through interaction design and support artistic practice within, engage diverse audiences.</p>
+                    
+                    <h2>交互设计 Interaction Design</h2>
+                    
+                    <p>将皮影戏艺术适应虚拟现实系统需要在交互方面进行调整。基于皮影戏工艺的ShadowPlayVR具有两个主要控制特点：多点协调和间接操控。</p>
+                    <p>Adapting the art of shadow puppetry to virtual reality systems requires adjustments in interaction. ShadowPlayVR, based on the craft of shadow puppetry, features two main control characteristics: multi-point coordination and indirect manipulation.</p>
+                    
+                    <ul>
+                        <li>多点协调要求皮影艺人同时用杆控制木偶的多个关节，以实现完整的动作。</li>
+                        <li>间接操控意味着皮影艺人的手部动作与木偶的动作不直接对应；相反，动作通过控制杆传递以操控木偶。</li>
+                    </ul>
+                    <ul>
+                        <li>Multi-point coordination requires puppeteers to control multiple joints of the puppet simultaneously with rods to achieve complete movements.</li>
+                        <li>Indirect manipulation means the puppeteer's hand movements do not directly correspond to the puppet's movements; instead, movements are translated through the control rods to manipulate the puppet.</li>
+                    </ul>
+                    
+                    <p>传统皮影木偶的标准控制方法涉及六个关节部分：头部（颈部）控制关节，两个手臂（手腕）控制关节，腰部控制关节，以及两个腿部（脚踝）控制关节。在一些简化的木偶模型中，腰部和腿部控制被省略，由上半身动作驱动下半身。为了使木偶控制更加兼容VR设备架构，VR环境采用了简化的木偶控制方法并进行了调整。它保留了核心的头部和手臂（手腕）控制关节，将腰部和头部关节责任合并为新的身体控制关节，并通过上半身部分的移动实现相对的腿部动作。</p>
+                    <p>The standard control method for traditional shadow puppets involves six joint parts: the head (neck) control joint, two arm (wrist) control joints, a waist control joint, and two leg (ankle) control joints. In some simplified puppet models, the waist and leg controls are omitted, with upper body movements driving the lower body. To make puppet control more compatible with VR device architecture, the VR environment adopts a simplified puppet control approach with adjustments. It retains the core head and arm (wrist) control joints, combines the waist and head joint responsibilities into a new body control joint, and achieves relative leg movements through the movement of the upper body parts.</p>
+                    
+                    <p>基于对皮影木偶控制方法的调整，ShadowPlayVR开发了多种专注于关键控制关节的控制方法。通过以下四个关键控制，建立了一种基本的、渐进的控制方法，允许进行皮影木偶表演（按难度和直观性列出）：</p>
+                    <p>Based on the adjustments to the shadow puppet control methods, ShadowPlayVR has developed multiple control methods focused on key control joints. Through the following four key controls, a basic, gradient control method is established that allows for shadow puppet performance (listed by difficulty and intuitiveness):</p>
+                    
+                    <ol>
+                        <li><a href="https://github.com/CidsHo/ShadowPlayVR-Interaction/blob/main/InteractionDesignMix/MoveWithElevation.cs"><strong>头部控制 Head Control</strong></a>（简单，直观，直接控制）：木偶的头部角度由用户的视角决定。</li>
+                        <li><a href="https://github.com/CidsHo/ShadowPlayVR-Interaction/blob/main/InteractionDesignMix/ObjectPositionBasedOnCameraMovement.cs"><strong>身体移动控制 Body Movement Control</strong></a>（简单，直观，直接控制）：当面对木偶时，木偶与控制器向左右移动的方向相同。</li>
+                        <li><a href="https://github.com/CidsHo/ShadowPlayVR-Interaction/blob/main/InteractionDesignMix/FollowControllerXY.cs"><strong>手部控制 Hand Control</strong></a>（高级，间接控制）：控制器面向屏幕，控制器在屏幕上指向的点是木偶的相应控制点。</li>
+                    </ol>
+                    <ol>
+                        <li><a href="https://github.com/CidsHo/ShadowPlayVR-Interaction/blob/main/InteractionDesignMix/MoveWithElevation.cs"><strong>Head Control</strong></a> (Simple, intuitive, direct control): The puppet's head angle is determined by the user's viewing angle.</li>
+                        <li><a href="https://github.com/CidsHo/ShadowPlayVR-Interaction/blob/main/InteractionDesignMix/ObjectPositionBasedOnCameraMovement.cs"><strong>Body Movement Control</strong></a> (Simple, intuitive, direct control): When facing the puppet, the puppet moves in the same left and right direction as the controller.</li>
+                        <li><a href="https://github.com/CidsHo/ShadowPlayVR-Interaction/blob/main/InteractionDesignMix/FollowControllerXY.cs"><strong>Hand Control</strong></a> (Advanced, indirect control): The controller faces the screen, and the point where the controller faces on the screen is the corresponding control point for the puppet.</li>
+                    </ol>
+                    
+                    <details>
+                    <summary>演示-手部控制 Demo-HandControl</summary>
+                    <pre><code>
+                    
+                        <div class="blog-image">
+                            <img src="assets/Pic-TopL.png" alt="blog-image" class="lazy-load">
+                        </div>
+                        <div class="blog-image">
+                            <img src="assets/Pic-MidL.png" alt="blog-image" class="lazy-load">
+                        </div>
+                        <div class="blog-image">
+                            <img src="assets/Pic-BottomL.png" alt="blog-image" class="lazy-load">
+                        </div>
+                        <div class="blog-image">
+                            <img src="assets/Pic-Left.png" alt="blog-image" class="lazy-load">
+                        </div>
+                        <div class="blog-image">
+                            <img src="assets/Pic-Right.png" alt="blog-image" class="lazy-load">
+                        </div>
+                    
+                    </code></pre>
+                    </details>
+                    
+                    <ol start="4">
+                        <li><a href="https://github.com/CidsHo/ShadowPlayVR-Interaction/blob/main/InteractionDesignMix/FlipOnControllerSwitch.cs"><strong>身体翻转控制 Body Flipping Control</strong></a>（高级，间接控制）：控制器必须交叉手，导致手中两个控制器之间的距离超过一定值，之后木偶执行镜像翻转</li>
+                    </ol>
+                    <ol start="4">
+                        <li><a href="https://github.com/CidsHo/ShadowPlayVR-Interaction/blob/main/InteractionDesignMix/FlipOnControllerSwitch.cs"><strong>Body Flipping Control</strong></a> (Advanced, indirect control): The controller must cross hands, causing the distance between the two controllers in hand to exceed a certain value, after which the puppet performs a mirrored flip</li>
+                    </ol>
+                    
+                    <details>
+                    <summary>演示-绑定 Demo-Rigging</summary>
+                    <pre><code>
+                    
+                        <div class="blog-image">
+                            <img src="assets/Pic-Demo.png" alt="blog-image" class="lazy-load">
+                        </div>
+                    
+                    </code></pre>
+                    </details>
+                    
+                    <p>侧面控制设置（为设计增添便利）</p>
+                    <ol>
+                        <li><a href="https://github.com/CidsHo/ShadowPlayVR-Interaction/blob/main/InteractionDesignMix/ForcePlayerForward.cs">强制玩家前进 Force Player Foward</a> 实验设置的标准姿势。</li>
+                        <li><a href="https://github.com/CidsHo/ShadowPlayVR-Interaction/blob/main/InteractionDesignMix/MoveObjectWithController.cs">远程控制（物品）Tele-control (Item)</a> 通过控制器控制物品（已适配）。</li>
+                    </ol>
+                    <p>Side Control Settings(Adding favor to Design XD)</p>
+                    <ol>
+                        <li><a href="https://github.com/CidsHo/ShadowPlayVR-Interaction/blob/main/InteractionDesignMix/ForcePlayerForward.cs">Force Player Foward</a> Standard pose for experiment setting.</li>
+                        <li><a href="https://github.com/CidsHo/ShadowPlayVR-Interaction/blob/main/InteractionDesignMix/MoveObjectWithController.cs">Tele-control (Item)</a> Item control via controller (Adapted).</li>
+                    </ol>                    
+
+                </div>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2024年07月12日</p>
+                    <div class="blog-tags">
+                        <span class="tag">Unity开发</span>
+                        <span class="tag">VR开发</span>
+                        <span class="tag">交互设计</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../scripts/script.js"></script>
+    <script type="module" src="../../../../scripts/blog.js"></script>
+</body>
+</html>

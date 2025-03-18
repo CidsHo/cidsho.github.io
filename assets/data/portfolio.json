@@ -564,6 +564,15 @@
         "date": "2023-12-04"
     },
     {
+        "title": "ShadowPlayVR-Interaction 交互设计脚本",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ai.png",
+        "link": "articles/design/spVR-interaction/interaction.html",
+        "tags": ["精选","设计","交互设计","虚拟现实"],
+        "description": "依据手柄、头显返回的坐标的距离关系来判断呈现互动效果。",
+        "date": "2023-10-09"
+    },
+    {
         "title": "Architecting Social VR: Exploring Encounter and Serendipitous Interactions in Virtual Public Spaces",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ai.png",
