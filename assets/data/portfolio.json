@@ -209,7 +209,7 @@
     {
         "title": "构成 Composition",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/photograph/composition3/composition3.jpg",
+        "data-src": "articles/photograph/composition3/composition3.webp",
         "link": "articles/photograph/composition3/composition.html",
         "tags": ["摄影","抽象"],
         "description": "",
@@ -218,7 +218,7 @@
     {
         "title": "穿梭 Portal",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/photograph/portal/portal.jpg",
+        "data-src": "articles/photograph/portal/portal.webp",
         "link": "articles/photograph/portal/portal.html",
         "tags": ["摄影","人像"],
         "description": "",
@@ -227,7 +227,7 @@
     {
         "title": "格 Lyra",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/photograph/ge1/ge.jpg",
+        "data-src": "articles/photograph/ge1/ge.webp",
         "link": "articles/photograph/ge1/ge.html",
         "tags": ["摄影","人像"],
         "description": "",
@@ -236,7 +236,7 @@
     {
         "title": "构成 Composition",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/photograph/composition2/composition.JPG",
+        "data-src": "articles/photograph/composition2/composition.webp",
         "link": "articles/photograph/composition2/composition2.html",
         "tags": ["摄影","抽象"],
         "description": "",
@@ -326,7 +326,7 @@
     {
         "title": "糖果店 Candy Shop",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/photograph/candyshop/candyshop.jpg",
+        "data-src": "articles/photograph/candyshop/candyshop.webp",
         "link": "articles/photograph/candyshop/candyshop.html",
         "tags": ["摄影","街拍"],
         "description": "",
@@ -335,7 +335,7 @@
     {
         "title": "杏黄 Apricot",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/photograph/Apricot/Apricot.png",
+        "data-src": "articles/photograph/Apricot/Apricot.webp",
         "link": "articles/photograph/Apricot/Apricot.html",
         "tags": ["摄影","植物"],
         "description": "",
@@ -344,7 +344,7 @@
     {
         "title": "Birdie",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/photograph/birdie1/birdie.jpg",
+        "data-src": "articles/photograph/birdie1/birdie.webp",
         "link": "articles/photograph/birdie1/birdie.html",
         "tags": ["摄影","动物"],
         "description": "",
@@ -353,7 +353,7 @@
     {
         "title": "人像 Portrait",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/photograph/portrait1/portrait.jpg",
+        "data-src": "articles/photograph/portrait1/portrait.webp",
         "link": "articles/photograph/portrait1/portrait.html",
         "tags": ["摄影","人像"],
         "description": "商业摄影，请勿使用",
@@ -362,7 +362,7 @@
     {
         "title": "皇后镇 Queenstown",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/photograph/newzealand/1.jpg",
+        "data-src": "articles/photograph/newzealand/1.webp",
         "link": "articles/photograph/newzealand/newzealand.html",
         "tags": ["摄影","风光"],
         "description": "VRST 2023 会后小游",
@@ -377,6 +377,15 @@
         "description": "",
         "date": "2023-02-04"
     },
+    {
+        "title": "沙路 Sand Road",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/sandroad/sandroad.webp",
+        "link": "articles/photograph/sandroad/sandroad.html",
+        "tags": ["摄影","风光"],
+        "description": "",
+        "date": "2018-08-11"
+    },
 
 
     
@@ -384,7 +393,7 @@
     {
         "title": "练习 - 海报底图 Practice",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/design/practice1/Practice.png",
+        "data-src": "articles/design/practice1/Practice.webp",
         "link": "articles/design/practice1/practice1.html",
         "tags": ["设计","数字绘画"],
         "description": "练习 - 海报底图",
@@ -483,7 +492,7 @@
     {
         "title": "黄昏 Dusk",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/design/dusk/dusk.png",
+        "data-src": "articles/design/dusk/dusk.webp",
         "link": "articles/design/dusk/dusk.html",
         "tags": ["设计","数字绘画"],
         "description": "宿舍门口，恰到好处的光线",
