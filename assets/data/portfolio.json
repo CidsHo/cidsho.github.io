@@ -546,6 +546,15 @@
         "date": "2024-11-17"
     },
     {
+        "title": "Cursor用Figma MCP直出设计图",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ai.png",
+        "link": "articles/blog/aboutinteraction/cursormcp/blog.html",
+        "tags": ["设计","AIGC","界面设计"],
+        "description": "图一乐阶段的AIGC工具",
+        "date": "2025-03-19"
+    },
+    {
         "title": "ShadowCostar-Legacy: A Rule-Driven UX Guidance System with Action Detection",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ai.png",

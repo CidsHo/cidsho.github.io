@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor用Figma MCP直出设计图</title>
+    <!-- 引入 favicon -->
+    <link rel="stylesheet" href="../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../styles/blog.css">
+    <link rel="icon" type="image/png" href="../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../assets/site.webmanifest">
+</head>
+<body class="blog-page">
+    <div class="blog-container">
+        <button class="back-button">
+            <img src="../../../assets/back-icon.png" alt="返回" class="back-icon">
+            返回
+        </button>
+
+        <!-- 右上角导航栏 -->
+        <header>
+            <nav id="navbar">
+                <button id="nav-toggle">
+                    <img src="../../../../assets/navigator.png" alt="导航栏" class="nav-icon">
+                </button>
+            </nav>
+        </header>
+
+        <!-- 导航栏菜单 -->
+        <div id="menu-overlay" class="menu-overlay">
+            <ul id="nav-menu">
+                <li><a href="../../../../index.html">Prologue &emsp;&thinsp;&thinsp;序幕</a></li>
+                <li><a href="../../../../portfolio.html">Mass. Works &emsp;&thinsp;&thinsp;作品</a></li>
+                <li><a href="../../../../about.html">About Me&lt; &emsp;关于我</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Banner 区 -->
+        <div class="blog-banner">
+            <img src="../../../../articles/article-thumbnail/ai-banner.png" alt="Banner 图片">
+            <div class="banner-caption">
+            </div>
+        </div>
+
+        <!-- 博客内容容器 -->
+        <div class="blog-content-wrapper">
+            <div class="blog-header">
+                <h1 class="blog-title">Cursor用Figma MCP直出设计图</h1>
+                <h4 class="blog-subtitle">来自这个 <a href="https://github.com/GLips/Figma-Context-MCP">PO</a>的方法</h4>
+            </div>
+
+            <!-- 作者信息 -->
+            <div class="blog-author">
+                <img src="../../../../assets/favicon.png" alt="作者头像" class="author-avatar">
+                <div class="author-info">
+                    <p class="author-name">Cids Ho</p>
+                    <p class="author-bio">效果完全不行，甚至不如figma原生的figma to html，但迭代一下估计能用。</p>
+                </div>
+            </div>
+
+            <div class="blog-content">
+                <div class="blog-text">
+
+                    <p>在Github上看到一个能够把通过Cursor MCP Server 读取Figma文件的方法，然后通过agent模式完成设计图到开发的过程。尝试了一下生成出来的内容布局完全不符合需求，但迭代一下或者给予更多提示估计能用。</p>
+
+                    <p>原版内容对于最新版的Cursor配置上有差异，提供一下我的经验。另外以下内容部分内容转自原帖，仅作翻译。</p>
+
+                    <h3>流程：</h3>
+                    <ol>在Cursor中打开composer并切换到agent模式。</ol>
+                    <ol>粘贴Figma文件、画板或组的链接。</ol>
+                    <ol>要求Cursor对Figma文件进行操作——例如实现设计。</ol>
+                    <ol>Cursor将从Figma获取相关元数据并用它来编写代码。</ol>
+
+                    <h3>安装</h3>
+
+                    <ol>1. 拿到你的Figma API Key。</ol>
+                    <ol>2. 快速部署。</ol>
+
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">快速部署</span>
+                            <button class="copy-button">复制</button>
+                        </div>
+                        <div class="code-content">
+                            <pre><code>npx figma-developer-mcp --figma-api-key=YOUR_FIGMA_API_KEY
+
+# or
+pnpx figma-developer-mcp --figma-api-key=YOUR_FIGMA_API_KEY
+
+# or
+yarn dlx figma-developer-mcp --figma-api-key=YOUR_FIGMA_API_KEY
+
+# or
+bunx figma-developer-mcp --figma-api-key=YOUR_FIGMA_API_KEY</code></pre>
+                        </div>
+                    </div>
+
+                    <ol>部署成功后，终端会显示如下信息：</ol>
+
+                    <div class="code-block">
+                        <div class="code-content">
+                            <pre><code>Initializing Figma MCP Server in HTTP mode on port 3333...
+HTTP server listening on port 3333
+SSE endpoint available at http://localhost:3333/sse
+Message endpoint available at http://localhost:3333/messages</code></pre>
+                        </div>
+                    </div>
+
+                    <ol>3. 配置Cursor</ol>
+                    
+                    <p>原帖提供的方案与我的Cursor版本（0.47.8）的MCP配置有差异，以下是我的方法。</p>
+
+                    <ol>1. 打开Cursor的MCP配置文件，位于：./cursor/mcp.json</ol>
+
+                    <ol>2. 添加以下内容</ol>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">mcp.json</span>
+                            <button class="copy-button">复制</button>
+                        </div>
+                        <div class="code-content">
+                            <pre><code>  {
+    "mcpServers": {
+      "figma-developer-mcp": {
+        "url": "http://localhost:3333/sse",
+        "env": {
+          "FIGMA_API_KEY": "&lt;your-figma-api-key&gt;"
+        }
+      }
+    }
+  }</code></pre>
+                        </div>
+                    </div>
+
+                    <ol>3. 在Cursor Setting/MCP/MCP Servers中检查。如无意外，会多出一个figma-developer-mcp的卡片，正确连接后会显示绿灯。</ol>
+
+                    <ol>4. 在figma中将对应元件的链接复制过来喂给Cursor Agent。</ol>
+
+                    <ol>5. 开工。</ol>
+
+                </div>
+
+                <!-- 日期和标签区 -->
+                <div class="blog-footer">
+                    <p class="blog-date">发布日期：2025年03月19日</p>
+                    <div class="blog-tags">
+                        <span class="tag">AIGC</span>
+                        <span class="tag">界面设计</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    
+    <!-- 脚本 -->
+    <script type="module" src="../../../../scripts/script.js"></script>
+    <script type="module" src="../../../../scripts/blog.js"></script>
+</body>
+</html>
