@@ -242,28 +242,30 @@ togglePointsBtn.addEventListener('click', () => {
     });
 });
 
-// 返回按钮 - 修复版
-if (goBackBtn) {
-    // 移除可能存在的旧事件监听器
-    goBackBtn.replaceWith(goBackBtn.cloneNode(true));
+// 修复返回按钮功能
+function fixBackButton() {
+  const goBackBtn = document.getElementById('go-back');
+  if (!goBackBtn) {
+    console.warn('无法找到返回按钮');
+    return;
+  }
+  
+  // 移除可能存在的旧事件监听器
+  const newGoBackBtn = goBackBtn.cloneNode(true);
+  goBackBtn.parentNode.replaceChild(newGoBackBtn, goBackBtn);
+  
+  // 添加新的事件处理
+  newGoBackBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
     
-    // 重新获取按钮引用
-    const newGoBackBtn = document.getElementById('go-back');
+    // 直接返回到根目录的portfolio.html
+    window.location.href = '/portfolio.html';
     
-    // 添加新的事件监听器
-    newGoBackBtn.addEventListener('click', (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        
-        // 返回上一页
-        if (window.history.length > 1) {
-            window.history.back();
-        } else {
-            // 如果没有历史记录，返回首页
-            // 使用绝对路径指向根目录
-            window.location.href = '/portfolio.html';
-        }
-    });
+    console.log('返回到portfolio.html');
+  });
+  
+  console.log('返回按钮功能已修复');
 }
 
 // 全屏切换按钮
@@ -708,6 +710,9 @@ window.addEventListener('DOMContentLoaded', () => {
     applyContainerResponsiveness();
     
     setTimeout(ensureToolbarVisibility, 500);
+    
+    // 修复返回按钮
+    setTimeout(fixBackButton, 100);
 });
 
 // 页面完全加载后再次检查工具栏可见性
@@ -953,183 +958,358 @@ function restructureDOM() {
   console.log('DOM重构完成');
 }
 
-// 修复容器包含问题的最终方案
+// 完全重写的自适应布局解决方案
 function fixPageLayout() {
-  // 获取主容器和页面
-  const mainContainer = document.querySelector('.container');
-  const pageContainers = document.querySelectorAll('.container > .page-container');
+  console.log('开始修复页面布局...');
   
-  if (!mainContainer || pageContainers.length < 2) {
-    console.error('找不到必要的元素');
+  // 1. 获取关键元素
+  const mainContainer = document.querySelector('.container');
+  const scrollArea = document.querySelector('.scroll-area');
+  const pageContainers = document.querySelectorAll('.page-container');
+  
+  if (!mainContainer) {
+    console.error('无法找到主容器');
     return;
   }
   
-  // 清除可能存在的包装器
-  const existingWrapper = mainContainer.querySelector('.pages-wrapper');
-  if (existingWrapper) {
-    mainContainer.removeChild(existingWrapper);
+  if (pageContainers.length < 2) {
+    console.error('找不到足够的页面容器，当前数量:', pageContainers.length);
+    return;
   }
   
-  // 获取所有页面
-  const firstPage = pageContainers[0];
-  const secondPage = pageContainers[1];
+  // 2. 保存当前滚动位置
+  const scrollLeft = scrollArea ? scrollArea.scrollLeft : 0;
+  const scrollRatio = scrollArea && scrollArea.scrollWidth > 0 ? 
+                     scrollLeft / scrollArea.scrollWidth : 0;
   
-  // 从DOM中移除页面
-  if (firstPage.parentNode) {
-    firstPage.parentNode.removeChild(firstPage);
+  // 3. 移除之前的包装器
+  const oldWrapper = document.querySelector('.pages-wrapper');
+  if (oldWrapper) {
+    // 获取页面元素并从包装器中移除
+    Array.from(oldWrapper.querySelectorAll('.page-container')).forEach(page => {
+      oldWrapper.removeChild(page);
+    });
+    mainContainer.removeChild(oldWrapper);
   }
-  if (secondPage.parentNode) {
-    secondPage.parentNode.removeChild(secondPage);
-  }
   
-  // 获取容器的实际高度
-  const containerHeight = mainContainer.offsetHeight;
-  console.log('容器高度:', containerHeight);
+  // 4. 容器样式设置
+  // 强制设置样式确保容器行为一致
+  mainContainer.style.cssText += `
+    position: relative !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+  `;
   
-  // 确保container有明确的样式
-  mainContainer.style.position = 'relative';
-  mainContainer.style.overflow = 'hidden';
-  mainContainer.style.whiteSpace = 'normal'; // 防止flex布局问题
-  
-  // 从内联样式获取原始尺寸
-  const firstPageOriginalWidth = extractDimension(firstPage, 'width', 3840);
-  const firstPageOriginalHeight = extractDimension(firstPage, 'height', 2400);
-  const secondPageOriginalWidth = extractDimension(secondPage, 'width', 7680);
-  const secondPageOriginalHeight = extractDimension(secondPage, 'height', 2400);
-  
-  // 计算缩放比例
-  const scale = containerHeight / firstPageOriginalHeight;
-  
-  // 创建flex包装器
+  // 5. 创建新的flex包装器
   const wrapper = document.createElement('div');
   wrapper.className = 'pages-wrapper';
   wrapper.style.cssText = `
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+    overflow: hidden !important;
   `;
   
-  // 添加包装器到主容器
+  // 6. 将包装器添加到容器
   mainContainer.appendChild(wrapper);
   
-  // 为每个页面创建容器
-  const firstPageContainer = document.createElement('div');
-  firstPageContainer.className = 'page-container-wrapper first';
-  firstPageContainer.style.cssText = `
-    flex: 0 0 auto;
-    width: ${firstPageOriginalWidth * scale}px;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-  `;
+  // 7. 处理每个页面
+  const containerHeight = mainContainer.offsetHeight;
+  let totalScaledWidth = 0;
   
-  const secondPageContainer = document.createElement('div');
-  secondPageContainer.className = 'page-container-wrapper second';
-  secondPageContainer.style.cssText = `
-    flex: 0 0 auto;
-    width: ${secondPageOriginalWidth * scale}px;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-  `;
+  console.log('容器高度:', containerHeight);
   
-  // 添加页面包装器到flex容器
-  wrapper.appendChild(firstPageContainer);
-  wrapper.appendChild(secondPageContainer);
+  // 收集所有页面并排列
+  for (let i = 0; i < pageContainers.length; i++) {
+    const page = pageContainers[i];
+    
+    // 分离页面元素
+    if (page.parentNode) {
+      page.parentNode.removeChild(page);
+    }
+    
+    // 获取原始尺寸
+    let originalWidth = parseInt(page.dataset.originalWidth) || 0;
+    let originalHeight = parseInt(page.dataset.originalHeight) || 0;
+    
+    // 如果没有存储的原始尺寸，从样式中提取
+    if (!originalWidth || !originalHeight) {
+      originalWidth = extractDimension(page, 'width', i === 0 ? 3840 : 7680);
+      originalHeight = extractDimension(page, 'height', 2400);
+      
+      // 存储原始尺寸用于未来计算
+      page.dataset.originalWidth = originalWidth;
+      page.dataset.originalHeight = originalHeight;
+    }
+    
+    // 计算缩放比例
+    const scale = containerHeight / originalHeight;
+    
+    // 创建页面容器包装
+    const pageWrapper = document.createElement('div');
+    pageWrapper.className = `page-container-wrapper page-${i+1}`;
+    
+    // 计算缩放后的宽度
+    const scaledWidth = Math.ceil(originalWidth * scale);
+    totalScaledWidth += scaledWidth;
+    
+    // 设置包装器样式
+    pageWrapper.style.cssText = `
+      flex: 0 0 auto !important;
+      width: ${scaledWidth}px !important;
+      height: 100% !important;
+      position: relative !important;
+      overflow: hidden !important;
+    `;
+    
+    // 设置页面样式
+    page.style.cssText += `
+      position: absolute !important;
+      left: 0 !important;
+      top: 0 !important;
+      transform-origin: top left !important;
+      transform: scale(${scale}) !important;
+      width: ${originalWidth}px !important;
+      height: ${originalHeight}px !important;
+    `;
+    
+    // 存储缩放比例
+    page.dataset.scaleRatio = scale;
+    
+    // 添加页面到包装器
+    pageWrapper.appendChild(page);
+    
+    // 添加页面包装器到主包装器
+    wrapper.appendChild(pageWrapper);
+    
+    console.log(`页面 ${i+1} 缩放: ${scale.toFixed(4)}, 原始尺寸: ${originalWidth}x${originalHeight}, 缩放后宽度: ${scaledWidth}`);
+  }
   
-  // 设置页面样式
-  firstPage.style.position = 'absolute';
-  firstPage.style.left = '0';
-  firstPage.style.top = '0';
-  firstPage.style.transformOrigin = 'top left';
-  firstPage.style.transform = `scale(${scale})`;
-  firstPageContainer.appendChild(firstPage);
+  // 8. 设置主容器的总宽度
+  // 如果不是全屏模式，明确设置宽度
+  if (!mainContainer.classList.contains('fullscreen')) {
+    mainContainer.style.width = `${totalScaledWidth}px`;
+  }
   
-  secondPage.style.position = 'absolute';
-  secondPage.style.left = '0';
-  secondPage.style.top = '0';
-  secondPage.style.transformOrigin = 'top left';
-  secondPage.style.transform = `scale(${scale})`;
-  secondPageContainer.appendChild(secondPage);
+  console.log('总缩放宽度:', totalScaledWidth);
   
-  // 存储缩放比例
-  firstPage.dataset.scaleRatio = scale;
-  secondPage.dataset.scaleRatio = scale;
+  // 9. 更新兴趣点位置
+  setTimeout(() => {
+    updateInterestPoints();
+  }, 10);
   
-  // 计算容器总宽度
-  const firstPageScaledWidth = Math.ceil(firstPageOriginalWidth * scale);
-  const secondPageScaledWidth = Math.ceil(secondPageOriginalWidth * scale);
-  const totalWidth = firstPageScaledWidth + secondPageScaledWidth;
-  
-  // 设置容器宽度
-  mainContainer.style.width = `${totalWidth}px`;
-  
-  console.log('布局已应用:');
-  console.log('- 缩放比例:', scale);
-  console.log('- 第一页缩放后宽度:', firstPageScaledWidth);
-  console.log('- 第二页缩放后宽度:', secondPageScaledWidth);
-  console.log('- 总宽度:', totalWidth);
-  
-  // 更新兴趣点位置
-  updateInterestPoints();
+  // 10. 恢复滚动位置
+  if (scrollArea && scrollArea.scrollWidth > 0) {
+    setTimeout(() => {
+      // 使用比例计算新的滚动位置
+      const newScrollPosition = scrollRatio * scrollArea.scrollWidth;
+      scrollArea.scrollLeft = newScrollPosition;
+      console.log('恢复滚动位置:', newScrollPosition);
+    }, 50);
+  }
 }
 
-// 辅助函数：从元素样式中提取尺寸
+// 改进的提取元素尺寸函数
 function extractDimension(element, dimension, defaultValue) {
+  // 首先检查内联样式
+  const inlineStyle = element.style[dimension];
+  if (inlineStyle && inlineStyle.includes('px')) {
+    const value = parseFloat(inlineStyle);
+    if (!isNaN(value)) return value;
+  }
+  
+  // 其次检查style属性
   const style = element.getAttribute('style');
-  const match = style ? style.match(new RegExp(`${dimension}:\\s*(\\d+)px`)) : null;
-  return match ? parseInt(match[1]) : defaultValue;
+  if (style) {
+    const match = style.match(new RegExp(`${dimension}:\\s*(\\d+)px`));
+    if (match) return parseInt(match[1]);
+  }
+  
+  // 最后检查计算样式
+  const computedStyle = window.getComputedStyle(element);
+  const computed = computedStyle[dimension];
+  if (computed && computed.includes('px')) {
+    const value = parseFloat(computed);
+    if (!isNaN(value)) return value;
+  }
+  
+  // 如果都找不到，返回默认值
+  console.warn(`无法确定元素的${dimension}，使用默认值:`, defaultValue);
+  return defaultValue;
 }
 
-// 更新兴趣点位置函数
+// 更新兴趣点位置
 function updateInterestPoints() {
   const interestPoints = document.querySelectorAll('.interest-point');
-  if (!interestPoints.length) return;
+  if (interestPoints.length === 0) return;
   
-  // 获取第一个页面容器
-  const firstPage = document.querySelector('.page-container');
-  if (!firstPage) return;
+  console.log(`更新${interestPoints.length}个兴趣点位置`);
   
-  // 获取缩放比例
-  const scaleRatio = parseFloat(firstPage.dataset.scaleRatio || 1);
+  // 获取所有页面容器的缩放比例
+  const pageScales = {};
+  const pagePositions = {};
   
-  // 应用到所有兴趣点
+  document.querySelectorAll('.page-container').forEach((page, index) => {
+    const scale = parseFloat(page.dataset.scaleRatio || 1);
+    pageScales[index] = scale;
+    
+    // 获取页面在页面内的位置
+    const rect = page.getBoundingClientRect();
+    pagePositions[index] = {
+      left: rect.left,
+      top: rect.top
+    };
+  });
+  
+  // 更新每个兴趣点的位置
   interestPoints.forEach(point => {
+    // 获取原始坐标
     const originalX = parseFloat(point.getAttribute('data-original-x') || 0);
     const originalY = parseFloat(point.getAttribute('data-original-y') || 0);
     
-    if (originalX && originalY) {
-      // 直接设置位置
-      point.style.left = `${originalX * scaleRatio}px`;
-      point.style.top = `${originalY * scaleRatio}px`;
+    // 如果没有原始数据，先存储当前位置作为原始位置
+    if (!originalX && !originalY) {
+      const left = parseFloat(point.style.left) || 0;
+      const top = parseFloat(point.style.top) || 0;
+      
+      point.setAttribute('data-original-x', left);
+      point.setAttribute('data-original-y', top);
+      
+      console.log(`设置兴趣点原始位置: (${left}, ${top})`);
+    }
+    
+    // 确定这个点属于哪个页面 (简化版 - 使用页面索引)
+    // 这里可以根据项目具体情况改进判断逻辑
+    const pageIndex = parseInt(point.getAttribute('data-page-index') || 0);
+    const scale = pageScales[pageIndex] || 1;
+    
+    if (scale !== 1) {
+      // 应用缩放
+      point.style.left = `${originalX * scale}px`;
+      point.style.top = `${originalY * scale}px`;
+      
+      console.log(`调整兴趣点: 原始(${originalX}, ${originalY}) -> 缩放后(${originalX * scale}, ${originalY * scale})`);
     }
   });
 }
 
-// 替换原有函数
-window.fixPageLayout = fixPageLayout;
-window.applyContainerResponsiveness = fixPageLayout;
-window.applyPageLayout = fixPageLayout;
+// 使用ResizeObserver监听容器大小变化
+function setupResizeObserver() {
+  if (typeof ResizeObserver !== 'undefined') {
+    console.log('设置ResizeObserver监听容器大小变化');
+    
+    const container = document.querySelector('.container');
+    if (!container) return;
+    
+    const resizeObserver = new ResizeObserver(entries => {
+      console.log('检测到容器大小变化');
+      fixPageLayout();
+    });
+    
+    resizeObserver.observe(container);
+  } else {
+    console.warn('浏览器不支持ResizeObserver，回退到window resize事件');
+  }
+}
 
-// 全屏切换逻辑
+// 防抖函数
+function debounce(func, wait) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
+
+// 窗口大小变化时重新布局 - 使用防抖避免频繁触发
+const debouncedFixLayout = debounce(fixPageLayout, 100);
+window.addEventListener('resize', debouncedFixLayout);
+
+// 初始化
+document.addEventListener('DOMContentLoaded', () => {
+  // 添加必要的CSS样式
+  addLayoutStyles();
+  
+  // 首次应用布局
+  setTimeout(fixPageLayout, 10);
+  
+  // 设置ResizeObserver
+  setTimeout(setupResizeObserver, 100);
+});
+
+// 页面加载完成后再次尝试应用布局
+window.addEventListener('load', () => {
+  fixPageLayout();
+});
+
+// 添加必要的CSS样式
+function addLayoutStyles() {
+  // 检查是否已添加样式
+  if (document.getElementById('layout-fix-styles')) return;
+  
+  const styleEl = document.createElement('style');
+  styleEl.id = 'layout-fix-styles';
+  styleEl.textContent = `
+    .container {
+      position: relative !important;
+      overflow: hidden !important;
+    }
+    
+    .pages-wrapper {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      width: 100% !important;
+      height: 100% !important;
+      position: relative !important;
+      overflow: hidden !important;
+    }
+    
+    .page-container-wrapper {
+      flex: 0 0 auto !important;
+      position: relative !important;
+      overflow: hidden !important;
+      height: 100% !important;
+    }
+    
+    .page-container {
+      position: absolute !important;
+      transform-origin: top left !important;
+    }
+    
+    .scroll-area {
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      width: 100% !important;
+      height: 100vh !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+    }
+  `;
+  
+  document.head.appendChild(styleEl);
+  console.log('添加布局修复CSS样式');
+}
+
+// 全屏切换事件处理
 toggleFullscreenBtn.addEventListener('click', () => {
   // 切换按钮激活状态
   toggleFullscreenBtn.classList.toggle('active');
   
-  // 获取当前滚动位置以便切换后保持
-  const currentScrollLeft = scrollArea.scrollLeft;
+  // 将当前滚动位置保存为百分比
+  const scrollArea = document.querySelector('.scroll-area');
+  let scrollRatio = 0;
+  if (scrollArea && scrollArea.scrollWidth > scrollArea.clientWidth) {
+    scrollRatio = scrollArea.scrollLeft / (scrollArea.scrollWidth - scrollArea.clientWidth);
+  }
   
   // 切换容器的全屏类
   container.classList.toggle('fullscreen');
-  
-  // 同时为信息容器应用相同的类
-  if (infoContainer) {
-    infoContainer.classList.toggle('fullscreen');
-  }
   
   // 检查是否进入了全屏模式
   const isFullscreen = container.classList.contains('fullscreen');
@@ -1151,52 +1331,493 @@ toggleFullscreenBtn.addEventListener('click', () => {
     container.style.borderRadius = '12px';
   }
   
-  // 切换后更新
+  // 切换后更新布局
   setTimeout(() => {
     fixPageLayout();
-    scrollArea.scrollLeft = currentScrollLeft;
-  }, 300);
+    
+    // 恢复滚动位置
+    if (scrollArea && scrollArea.scrollWidth > scrollArea.clientWidth) {
+      const newScrollPosition = scrollRatio * (scrollArea.scrollWidth - scrollArea.clientWidth);
+      scrollArea.scrollLeft = newScrollPosition;
+    }
+  }, 50);
 });
 
-// 在DOM加载后执行
+// 设置实时响应的ResizeObserver
+function setupRealTimeResizeObserver() {
+  if (typeof ResizeObserver !== 'undefined') {
+    console.log('设置实时响应ResizeObserver');
+    
+    const container = document.querySelector('.container');
+    const scrollArea = document.querySelector('.scroll-area');
+    if (!container) return;
+    
+    // 创建新的ResizeObserver实例
+    const resizeObserver = new ResizeObserver(entries => {
+      for (let entry of entries) {
+        if (entry.target === container) {
+          // 获取当前滚动比例以便后续恢复
+          let scrollRatio = 0;
+          if (scrollArea && scrollArea.scrollWidth > scrollArea.clientWidth) {
+            scrollRatio = scrollArea.scrollLeft / (scrollArea.scrollWidth - scrollArea.clientWidth);
+          }
+          
+          // 立即应用新布局
+          requestAnimationFrame(() => {
+            applyRealTimeLayout(scrollRatio);
+          });
+          break;
+        }
+      }
+    });
+    
+    // 开始观察容器
+    resizeObserver.observe(container);
+    console.log('实时布局观察器已启动');
+    
+    // 保存observer引用以便可能的清理
+    window._layoutResizeObserver = resizeObserver;
+  } else {
+    console.warn('浏览器不支持ResizeObserver，回退到实时window resize事件');
+    
+    // 使用resize事件作为备选
+    window.addEventListener('resize', () => {
+      requestAnimationFrame(() => {
+        const scrollArea = document.querySelector('.scroll-area');
+        let scrollRatio = 0;
+        if (scrollArea && scrollArea.scrollWidth > scrollArea.clientWidth) {
+          scrollRatio = scrollArea.scrollLeft / (scrollArea.scrollWidth - scrollArea.clientWidth);
+        }
+        applyRealTimeLayout(scrollRatio);
+      });
+    });
+  }
+}
+
+// 优化的实时布局应用函数
+function applyRealTimeLayout(scrollRatio = 0) {
+  // 1. 获取关键元素
+  const mainContainer = document.querySelector('.container');
+  const scrollArea = document.querySelector('.scroll-area');
+  const pageContainers = document.querySelectorAll('.page-container');
+  
+  if (!mainContainer || pageContainers.length < 2) {
+    return; // 静默退出以避免控制台错误
+  }
+  
+  // 2. 获取容器尺寸
+  const containerHeight = mainContainer.offsetHeight;
+  const isFullscreen = mainContainer.classList.contains('fullscreen');
+  
+  // 3. 确保wrapper存在
+  let wrapper = mainContainer.querySelector('.pages-wrapper');
+  if (!wrapper) {
+    // 创建新wrapper并移动页面
+    wrapper = document.createElement('div');
+    wrapper.className = 'pages-wrapper';
+    wrapper.style.cssText = `
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      width: 100% !important;
+      height: 100% !important;
+      position: relative !important;
+      overflow: hidden !important;
+    `;
+    
+    // 从DOM中移除页面并保存
+    const pagesToMove = [];
+    pageContainers.forEach(page => {
+      if (page.parentNode) {
+        page.parentNode.removeChild(page);
+      }
+      pagesToMove.push(page);
+    });
+    
+    // 添加wrapper到容器
+    mainContainer.appendChild(wrapper);
+    
+    // 为每个页面创建wrapper
+    pagesToMove.forEach((page, index) => {
+      const pageWrapper = document.createElement('div');
+      pageWrapper.className = `page-container-wrapper page-${index+1}`;
+      wrapper.appendChild(pageWrapper);
+      pageWrapper.appendChild(page);
+    });
+  }
+  
+  // 4. 实时调整每个页面和其wrapper
+  let totalScaledWidth = 0;
+  const pageWrappers = wrapper.querySelectorAll('.page-container-wrapper');
+  
+  pageWrappers.forEach((pageWrapper, index) => {
+    const page = pageWrapper.querySelector('.page-container');
+    if (!page) return;
+    
+    // 获取或设置原始尺寸
+    let originalWidth = parseInt(page.dataset.originalWidth) || 0;
+    let originalHeight = parseInt(page.dataset.originalHeight) || 0;
+    
+    if (!originalWidth || !originalHeight) {
+      originalWidth = extractDimension(page, 'width', index === 0 ? 3840 : 7680);
+      originalHeight = extractDimension(page, 'height', 2400);
+      page.dataset.originalWidth = originalWidth;
+      page.dataset.originalHeight = originalHeight;
+    }
+    
+    // 计算新的缩放比例
+    const scale = containerHeight / originalHeight;
+    const scaledWidth = Math.ceil(originalWidth * scale);
+    totalScaledWidth += scaledWidth;
+    
+    // 更新页面wrapper尺寸
+    pageWrapper.style.width = `${scaledWidth}px`;
+    
+    // 更新页面缩放
+    page.style.transformOrigin = 'top left';
+    page.style.transform = `scale(${scale})`;
+    page.dataset.scaleRatio = scale;
+  });
+  
+  // 5. 更新容器总宽度 (非全屏模式)
+  if (!isFullscreen) {
+    mainContainer.style.width = `${totalScaledWidth}px`;
+  }
+  
+  // 6. 实时更新兴趣点位置
+  updateInterestPointsRealTime();
+  
+  // 7. 恢复滚动位置
+  if (scrollArea && scrollArea.scrollWidth > scrollArea.clientWidth && scrollRatio > 0) {
+    const newScrollPosition = scrollRatio * (scrollArea.scrollWidth - scrollArea.clientWidth);
+    scrollArea.scrollLeft = newScrollPosition;
+  }
+}
+
+// 实时更新兴趣点位置 - 优化版
+function updateInterestPointsRealTime() {
+  const interestPoints = document.querySelectorAll('.interest-point');
+  if (interestPoints.length === 0) return;
+  
+  // 获取页面和缩放比例
+  const pages = document.querySelectorAll('.page-container');
+  if (pages.length === 0) return;
+  
+  // 对每个兴趣点应用缩放
+  interestPoints.forEach(point => {
+    // 获取原始坐标
+    const originalX = parseFloat(point.getAttribute('data-original-x') || 0);
+    const originalY = parseFloat(point.getAttribute('data-original-y') || 0);
+    
+    // 如果没有原始数据，保存当前位置
+    if (!originalX && !originalY) {
+      const left = parseFloat(point.style.left) || 0;
+      const top = parseFloat(point.style.top) || 0;
+      point.setAttribute('data-original-x', left);
+      point.setAttribute('data-original-y', top);
+      return;
+    }
+    
+    // 确定点属于哪个页面 (可根据项目具体逻辑调整)
+    const pageIndex = parseInt(point.getAttribute('data-page-index') || 0);
+    if (pageIndex >= 0 && pageIndex < pages.length) {
+      const page = pages[pageIndex];
+      const scale = parseFloat(page.dataset.scaleRatio || 1);
+      
+      // 应用缩放
+      point.style.left = `${originalX * scale}px`;
+      point.style.top = `${originalY * scale}px`;
+    }
+  });
+}
+
+// 添加必要的CSS样式 - 实时版本使用更高优先级
+function addRealTimeLayoutStyles() {
+  // 检查是否已添加样式
+  if (document.getElementById('realtime-layout-styles')) return;
+  
+  const styleEl = document.createElement('style');
+  styleEl.id = 'realtime-layout-styles';
+  styleEl.textContent = `
+    /* 高优先级的容器样式 */
+    .container {
+      position: relative !important;
+      overflow: hidden !important;
+      box-sizing: border-box !important;
+      transform: translateZ(0) !important; /* 触发硬件加速 */
+    }
+    
+    /* 实时flex包装器 */
+    .pages-wrapper {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      width: 100% !important;
+      height: 100% !important;
+      position: relative !important;
+      overflow: hidden !important;
+      will-change: contents !important; /* 提升性能 */
+    }
+    
+    /* 页面包装器 */
+    .page-container-wrapper {
+      flex: 0 0 auto !important;
+      position: relative !important;
+      overflow: hidden !important;
+      height: 100% !important;
+      will-change: width !important;
+      transition: width 0.05s linear !important; /* 平滑过渡 */
+    }
+    
+    /* 页面元素 */
+    .page-container {
+      position: absolute !important;
+      transform-origin: top left !important;
+      will-change: transform !important; /* 提升缩放性能 */
+      transition: transform 0.05s linear !important; /* 平滑缩放 */
+    }
+    
+    /* 确保滚动区域可见且正确工作 */
+    .scroll-area {
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      width: 100% !important;
+      height: 100vh !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      will-change: scroll-position !important;
+      -webkit-overflow-scrolling: touch !important; /* iOS平滑滚动 */
+    }
+  `;
+  
+  document.head.appendChild(styleEl);
+}
+
+// 初始化实时布局系统
+function initRealTimeLayout() {
+  // 添加优化的CSS样式
+  addRealTimeLayoutStyles();
+  
+  // 首次应用布局
+  const scrollArea = document.querySelector('.scroll-area');
+  let scrollRatio = 0;
+  if (scrollArea && scrollArea.scrollWidth > scrollArea.clientWidth) {
+    scrollRatio = scrollArea.scrollLeft / (scrollArea.scrollWidth - scrollArea.clientWidth);
+  }
+  
+ // 立即应用一次布局
+  applyRealTimeLayout(scrollRatio);
+  
+  // 设置实时响应观察器
+  setupRealTimeResizeObserver();
+  
+  console.log('实时布局系统已初始化');
+}
+
+// 全屏切换优化版 - 支持实时布局
+toggleFullscreenBtn.addEventListener('click', () => {
+  // 切换按钮激活状态
+  toggleFullscreenBtn.classList.toggle('active');
+  
+  // 保存当前滚动比例
+  const scrollArea = document.querySelector('.scroll-area');
+  let scrollRatio = 0;
+  if (scrollArea && scrollArea.scrollWidth > scrollArea.clientWidth) {
+    scrollRatio = scrollArea.scrollLeft / (scrollArea.scrollWidth - scrollArea.clientWidth);
+  }
+  
+  // 切换容器的全屏类
+  container.classList.toggle('fullscreen');
+  
+  // 检查是否进入了全屏模式
+  const isFullscreen = container.classList.contains('fullscreen');
+  
+  // 根据全屏状态调整样式
+  if (isFullscreen) {
+    // 进入全屏
+    document.body.style.overflow = 'hidden';
+    container.style.margin = '0';
+    container.style.height = '100vh';
+    container.style.width = '100%';
+    container.style.borderRadius = '0';
+  } else {
+    // 退出全屏
+    document.body.style.overflow = '';
+    container.style.margin = '10vh 20px';
+    container.style.height = '80vh';
+    container.style.width = '';
+    container.style.borderRadius = '12px';
+  }
+  
+  // 立即应用新布局
+  requestAnimationFrame(() => {
+    applyRealTimeLayout(scrollRatio);
+  });
+});
+
+// 替换原有初始化代码
 document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(fixPageLayout, 100);
+  // 使用实时布局系统替代原有系统
+  setTimeout(initRealTimeLayout, 10);
 });
 
-// 窗口大小变化时重新应用布局
-window.addEventListener('resize', () => {
-  if (window.resizeTimer) clearTimeout(window.resizeTimer);
-  window.resizeTimer = setTimeout(fixPageLayout, 200);
+// 页面加载完成后确保布局正确
+window.addEventListener('load', () => {
+  // 再次应用实时布局
+  setTimeout(() => {
+    applyRealTimeLayout();
+  }, 100);
 });
 
-// 添加必要的样式
-const styleElem = document.createElement('style');
-styleElem.textContent = `
-  .container {
-    overflow: hidden !important;
-    position: relative !important;
-  }
+// 阻止所有图片的拖拽行为
+function preventImageDragging() {
+  // 获取容器内所有图片
+  const allImages = document.querySelectorAll('.container img');
   
-  .pages-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-  }
+  // 对每个图片应用防拖拽设置
+  allImages.forEach(img => {
+    // 1. 添加样式防止拖拽
+    img.style.pointerEvents = 'none';
+    img.style.userSelect = 'none';
+    img.style.webkitUserSelect = 'none';
+    img.style.userDrag = 'none';
+    img.style.webkitUserDrag = 'none';
+    
+    // 2. 添加draggable属性
+    img.setAttribute('draggable', 'false');
+    
+    // 3. 添加事件监听器阻止默认行为
+    img.addEventListener('dragstart', (e) => {
+      e.preventDefault();
+      return false;
+    });
+    
+    // 4. 阻止鼠标按下行为
+    img.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      return false;
+    });
+  });
   
-  .page-container-wrapper {
-    flex: 0 0 auto;
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-  }
+  console.log(`已阻止${allImages.length}个图片的拖拽行为`);
   
-  .page-container {
-    position: absolute !important;
-    transform-origin: top left !important;
+  // 为容器添加CSS规则以阻止所有子元素的选择和拖拽
+  const styleEl = document.createElement('style');
+  styleEl.textContent = `
+    .container * {
+      user-select: none !important;
+      -webkit-user-drag: none !important;
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+    }
+    
+    .container img {
+      pointer-events: none !important;
+    }
+    
+    /* 确保滚动区域的拖拽行为不受影响 */
+    .scroll-area {
+      cursor: grab !important;
+    }
+    
+    .scroll-area:active {
+      cursor: grabbing !important;
+    }
+  `;
+  document.head.appendChild(styleEl);
+}
+
+// 使用MutationObserver监视DOM变化，为新添加的图片应用防拖拽设置
+function setupImageDragPreventionObserver() {
+  // 创建一个MutationObserver实例
+  const observer = new MutationObserver((mutations) => {
+    let newImagesFound = false;
+    
+    // 检查每个变化
+    mutations.forEach(mutation => {
+      // 如果有节点添加
+      if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+        // 遍历添加的节点
+        mutation.addedNodes.forEach(node => {
+          // 如果是图片元素
+          if (node.nodeName === 'IMG') {
+            // 应用防拖拽设置
+            node.style.pointerEvents = 'none';
+            node.style.userSelect = 'none';
+            node.setAttribute('draggable', 'false');
+            newImagesFound = true;
+            
+            // 添加事件监听器
+            node.addEventListener('dragstart', (e) => {
+              e.preventDefault();
+              return false;
+            });
+            
+            node.addEventListener('mousedown', (e) => {
+              e.preventDefault();
+              return false;
+            });
+          }
+          // 如果是包含其他节点的元素，检查其中的图片
+          else if (node.querySelectorAll) {
+            const nestedImages = node.querySelectorAll('img');
+            if (nestedImages.length > 0) {
+              nestedImages.forEach(img => {
+                img.style.pointerEvents = 'none';
+                img.style.userSelect = 'none';
+                img.setAttribute('draggable', 'false');
+                newImagesFound = true;
+                
+                img.addEventListener('dragstart', (e) => {
+                  e.preventDefault();
+                  return false;
+                });
+                
+                img.addEventListener('mousedown', (e) => {
+                  e.preventDefault();
+                  return false;
+                });
+              });
+            }
+          }
+        });
+      }
+    });
+    
+    if (newImagesFound) {
+      console.log('为新添加的图片应用了防拖拽设置');
+    }
+  });
+  
+  // 开始观察整个容器的变化
+  const container = document.querySelector('.container');
+  if (container) {
+    observer.observe(container, {
+      childList: true,  // 观察子节点添加/删除
+      subtree: true     // 观察所有后代节点
+    });
+    console.log('已启动图片防拖拽观察器');
   }
-`;
-document.head.appendChild(styleElem);
+}
+
+// 在文档加载完成后应用防拖拽措施
+document.addEventListener('DOMContentLoaded', () => {
+  // 其他初始化代码...
+  
+  // 应用防拖拽措施
+  setTimeout(preventImageDragging, 100);
+  
+  // 设置观察器处理动态添加的图片
+  setTimeout(setupImageDragPreventionObserver, 200);
+});
+
+// 如果有任何布局重建的函数，在它们之后再次运行防拖拽措施
+const originalFixPageLayout = window.fixPageLayout || function(){};
+window.fixPageLayout = function() {
+  originalFixPageLayout.apply(this, arguments);
+  
+  // 布局更新后重新应用防拖拽设置
+  setTimeout(preventImageDragging, 50);
+};
