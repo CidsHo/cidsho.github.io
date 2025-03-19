@@ -25,24 +25,26 @@ body, html {
     -ms-overflow-style: none; /* 隐藏IE滚动条 */
     touch-action: pan-y; /* 只允许垂直平移，禁用水平手势 */
     visibility: visible !important; /* 确保滚动区域始终可见 */
+    z-index: 1; /* 确保层级正确 */
 }
 
 .scroll-area::-webkit-scrollbar {
     display: none; /* 隐藏Chrome/Safari滚动条 */
 }
 
-/* 容器 */
+/* 容器样式 */
 .container {
     display: inline-block;
     height: 80vh;
-    margin: 10vh 20px 10vh 20px;
+    margin: 10vh 20px;
     box-sizing: border-box;
     position: relative;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden !important; /* 确保内容不溢出 */
     vertical-align: top;
+    white-space: nowrap; /* 确保页面水平排列 */
     transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
@@ -138,7 +140,7 @@ body, html {
     color: #333;
 }
 
-/* 标签样式，从photo.html复制 */
+/* 标签样式 */
 .photo-tags {
     display: flex;
     flex-wrap: wrap;
@@ -226,7 +228,7 @@ body, html {
     color: #333;
 }
 
-/* 工具栏 - 简化并确保在所有设备上显示 */
+/* 工具栏 */
 .toolbar {
     position: fixed;
     bottom: 20px;
@@ -238,11 +240,11 @@ body, html {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 2000; /* 确保足够高的z-index */
+    z-index: 2000;
     cursor: move;
     user-select: none;
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
-    touch-action: none; /* 禁用所有浏览器默认的触摸操作 */
+    touch-action: none;
 }
 
 .toolbar.dragging {
@@ -322,11 +324,16 @@ body, html {
     }
 }
 
-/* 全屏样式 */
+/* 全屏样式优化 */
 .fullscreen {
     margin: 0 !important;
     height: 100vh !important;
+    width: 100% !important; /* 新增：确保全屏宽度 */
     border-radius: 0 !important;
+    position: absolute !important; /* 新增：确保全屏覆盖 */
+    left: 0 !important; /* 新增：确保全屏位置 */
+    top: 0 !important; /* 新增：确保全屏位置 */
+    z-index: 1000 !important; /* 新增：确保全屏层级 */
 }
 
 .fullscreen .long-image {
@@ -341,53 +348,18 @@ body, html {
     height: 100vh !important;
 }
 
-/* 设计内容容器 */
-.design-content-container {
-    position: relative;
-    height: 100%;
-    transform-origin: top left;
-    white-space: nowrap;
+/* 页面容器样式 */
+.page-container {
+    display: inline-block !important;
+    position: relative !important;
+    vertical-align: top !important;
+    transform-origin: top left !important;
+    margin: 0;
 }
 
-/* Figma设计内容 */
-.design-content-container > div {
-    transform-origin: top left;
-}
-
-/* 设计框架 */
-.design-frame {
-    height: 100%;
-    position: relative;
-    flex-shrink: 0; /* 防止内容被压缩 */
-    margin-right: 2px; /* 框架之间的间隔 */
-    width: auto;
-    min-width: 100%;
-}
-
-/* iframe样式 */
-.design-frame iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-}
-
-/* 如果使用图片展示Figma设计 */
-.design-image {
-    height: 100%;
-    max-height: 80vh;
-    width: auto;
-    display: block;
-    pointer-events: none; /* 防止图片被拖拽 */
-}
-
-/* 全屏模式下的样式调整 */
-.fullscreen .design-content-container {
-    height: 100vh !important;
-}
-
-.fullscreen .design-frame {
-    height: 100vh !important;
+/* 第二个页面容器定位 */
+.container > .page-container:nth-child(2) {
+    left: auto !important; /* 覆盖可能的fixed值 */
 }
 
 /* 修复文本换行问题 */
@@ -397,22 +369,6 @@ body, html {
     word-wrap: break-word !important;
     box-sizing: border-box !important;
     max-width: 100% !important;
-}
-
-/* 确保文本容器保持宽度限制并正确换行 */
-.text-container, [style*="text-align: justify"] {
-    position: absolute;
-    white-space: normal !important;
-    overflow-wrap: break-word !important;
-    word-wrap: break-word !important;
-    box-sizing: border-box !important;
-}
-
-/* 设计容器中的文本样式 */
-.design-content-container [style*="width"] {
-    white-space: normal !important;
-    overflow-wrap: break-word !important;
-    word-wrap: break-word !important;
 }
 
 /* 层叠顺序调整 */
@@ -440,9 +396,38 @@ h1, h2, h3, h4, h5, h6,
     position: relative;
 }
 
-/* 更精确的纹理图片选择器 - 确保仅应用于30-33行提到的图片 */
+/* 更精确的纹理图片选择器 */
 img[style*="width: 2400px"], 
 img[style*="width: 481px"], 
 img[style*="width: 2398px"] {
     z-index: 1;
+}
+
+/* 全屏模式下页面容器的调整 */
+.fullscreen .page-container {
+    height: 100vh !important;
+}
+
+/* Flex布局容器 */
+.pages-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* 页面容器包装器 */
+.page-container-wrapper {
+    flex: 0 0 auto;
+    position: relative;
+    overflow: visible;
+    height: 100%;
+}
+
+/* 确保容器可以容纳页面 */
+.container {
+    overflow: hidden !important;
+    position: relative !important;
 }
