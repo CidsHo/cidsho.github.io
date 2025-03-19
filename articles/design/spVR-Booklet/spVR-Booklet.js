@@ -1,6 +1,8 @@
 // 获取元素
 const scrollArea = document.querySelector('.scroll-area');
 const container = document.querySelector('.container');
+const designContentContainer = document.querySelector('.design-content-container');
+const designFrames = document.querySelectorAll('.design-frame');
 const multiImageContainer = document.querySelector('.multi-image-container');
 const imageWrappers = document.querySelectorAll('.image-wrapper');
 const longImages = document.querySelectorAll('.long-image');
@@ -166,19 +168,15 @@ function smoothScroll(element, target, duration = 600) {
     if (target === 0) {
         // 滚动到最开始
         targetPosition = 0;
-        console.log("滚动到最开始位置");
     } else if (target === 'max') {
         // 滚动到最末尾
         targetPosition = element.scrollWidth - element.clientWidth;
-        console.log("滚动到最末尾位置:", targetPosition);
     } else if (Math.abs(target) > 1000) {
         // 当作绝对位置处理
         targetPosition = target;
-        console.log("滚动到绝对位置:", targetPosition);
     } else {
         // 当作相对滚动量处理
         targetPosition = startPosition + target;
-        console.log("相对滚动量:", target, "目标位置:", targetPosition);
     }
     
     // 确保位置在有效范围内
@@ -229,8 +227,6 @@ jumpToStartBtn.addEventListener('click', function() {
     if (typeof closeNotePopup === 'function') {
         closeNotePopup();
     }
-    
-    console.log("点击了跳转到开始按钮");
 });
 
 // 显示/隐藏兴趣点按钮
@@ -260,13 +256,12 @@ if (goBackBtn) {
         event.preventDefault();
         event.stopPropagation();
         
-        console.log('滚动页面返回按钮被点击');
-        
         // 返回上一页
         if (window.history.length > 1) {
             window.history.back();
         } else {
             // 如果没有历史记录，返回首页
+            // 使用绝对路径指向根目录
             window.location.href = '/portfolio.html';
         }
     });
@@ -311,6 +306,14 @@ toggleFullscreenBtn.addEventListener('click', () => {
         longImages.forEach(img => {
             img.style.maxHeight = '100vh';
         });
+        
+        // 调整设计容器高度
+        designContentContainer.style.height = '100vh';
+        
+        // 更新所有设计框架的高度
+        designFrames.forEach(frame => {
+            frame.style.height = '100vh';
+        });
     } else {
         // 退出全屏
         container.style.margin = '10vh 20px';
@@ -332,21 +335,30 @@ toggleFullscreenBtn.addEventListener('click', () => {
         longImages.forEach(img => {
             img.style.maxHeight = '80vh';
         });
+        
+        // 恢复设计容器高度
+        designContentContainer.style.height = '80vh';
+        
+        // 更新所有设计框架的高度
+        designFrames.forEach(frame => {
+            frame.style.height = '80vh';
+        });
     }
     
-    // 添加延迟以确保全屏切换后的布局计算
+    // 在全屏切换完成后重新计算缩放
     setTimeout(() => {
         // 恢复滚动位置
         scrollArea.scrollLeft = currentScrollLeft;
         
-        // 重新计算图片位置和兴趣点位置
-        calculateImagePositions();
+        // 重新应用缩放
+        scaleFigmaContent();
+        
+        // 重新计算其他元素
+        calculateDesignFramePositions();
         if (typeof updateInterestPointPositions === 'function') {
             updateInterestPointPositions();
         }
-        
-        console.log("全屏切换完成，布局已重新计算");
-    }, 100);
+    }, 200);
 });
 
 // 兴趣点点击
@@ -480,8 +492,6 @@ function initToolbar() {
     
     // 调整工具栏位置适应当前设备
     adjustToolbarForDevice();
-    
-    console.log("工具栏已初始化");
 }
 
 // 重置工具栏到默认位置
@@ -522,8 +532,6 @@ function ensureToolbarVisibility() {
         computedStyle.visibility === 'hidden' || 
         computedStyle.opacity === '0' ||
         parseFloat(computedStyle.opacity) < 0.1) {
-        
-        console.log('检测到工具栏不可见，正在恢复...');
         
         // 强制设置可见性
         toolbar.style.display = 'flex';
@@ -672,48 +680,81 @@ function saveToolbarPosition() {
     localStorage.setItem('toolbarPosition', JSON.stringify(position));
 }
 
-// 更新多图初始化函数
-function initMultiImageLayout() {
-    // 获取当前容器高度
-    const containerHeight = container.classList.contains('fullscreen') ? '100vh' : '80vh';
+// 缩放Figma设计内容以适应容器高度
+function scaleFigmaContent() {
+    const designContentContainer = document.querySelector('.design-content-container');
+    const figmaDesignContainer = document.querySelector('.figma-design-container');
     
-    // 设置多图容器高度
-    multiImageContainer.style.height = containerHeight;
+    if (!designContentContainer || !figmaDesignContainer) {
+        return;
+    }
     
-    // 设置所有图片包装器高度
-    imageWrappers.forEach(wrapper => {
-        wrapper.style.height = containerHeight;
-        
-        // 获取图片并监听加载完成事件
-        const img = wrapper.querySelector('.long-image');
-        if (img) {
-            if (img.complete) {
-                // 图片已加载，直接计算位置
-                calculateImagePositions();
-            } else {
-                // 图片未加载，等待加载完成
-                img.onload = () => {
-                    calculateImagePositions();
-                };
-            }
+    // 获取容器当前高度
+    const containerHeight = container.classList.contains('fullscreen') ? 
+        window.innerHeight : // 全屏模式使用窗口高度
+        container.clientHeight; // 非全屏使用容器高度
+    
+    // 获取内容原始尺寸
+    const originalHeight = 2400; // Figma设计的原始高度
+    const originalWidth = 7680;  // Figma设计的原始宽度
+    
+    // 计算需要的缩放比例以适应高度
+    const scaleRatio = containerHeight / originalHeight;
+    
+    // 应用缩放
+    figmaDesignContainer.style.transform = `scale(${scaleRatio})`;
+    
+    // 设置容器尺寸以适应缩放后的内容
+    designContentContainer.style.width = `${originalWidth * scaleRatio}px`;
+    designContentContainer.style.height = `${containerHeight}px`;
+    
+    // 确保文本容器宽度限制不会因为缩放而丢失
+    const textContainers = document.querySelectorAll('.text-container');
+    textContainers.forEach(container => {
+        // 确保容器宽度在缩放后仍然保持固定宽度
+        if (!container.dataset.originalWidth) {
+            // 存储原始宽度信息
+            container.dataset.originalWidth = container.offsetWidth;
         }
     });
     
-    // 初始计算图片位置
-    calculateImagePositions();
-    console.log("多图布局初始化完成");
+    // 提供缩放信息给其他函数使用
+    window.figmaScaleInfo = {
+        scaleRatio: scaleRatio,
+        originalWidth: originalWidth,
+        originalHeight: originalHeight,
+        scaledWidth: originalWidth * scaleRatio,
+        scaledHeight: containerHeight
+    };
 }
 
-// 计算所有图片的位置和间距
-function calculateImagePositions() {
-    // 每个图片包装器的位置信息，用于定位兴趣点
-    const wrapperPositions = {};
+// 初始化设计内容布局，包含缩放
+function initDesignContentLayout() {
+    // 获取当前容器高度
+    const containerHeight = container.classList.contains('fullscreen') ? '100vh' : '80vh';
     
-    imageWrappers.forEach(wrapper => {
-        const imageId = wrapper.getAttribute('data-image-id');
-        const rect = wrapper.getBoundingClientRect();
+    // 设置设计内容容器高度
+    if (designContentContainer) {
+        designContentContainer.style.height = containerHeight;
         
-        wrapperPositions[imageId] = {
+        // 添加一个类以标识容器已初始化
+        designContentContainer.classList.add('initialized');
+        
+        // 应用缩放
+        setTimeout(scaleFigmaContent, 100);
+    }
+}
+
+// 计算所有设计框架的位置和间距
+function calculateDesignFramePositions() {
+    // 每个设计框架的位置信息，用于定位兴趣点
+    const framePositions = {};
+    
+    designFrames.forEach(frame => {
+        const designId = frame.getAttribute('data-design-id');
+        const rect = frame.getBoundingClientRect();
+        
+        framePositions[designId] = {
             left: rect.left,
             top: rect.top,
             width: rect.width,
@@ -722,16 +763,16 @@ function calculateImagePositions() {
     });
     
     // 存储位置信息，供兴趣点使用
-    window.wrapperPositions = wrapperPositions;
+    window.framePositions = framePositions;
 }
 
 // 窗口大小改变时重新计算
-window.addEventListener('resize', calculateImagePositions);
+window.addEventListener('resize', calculateDesignFramePositions);
 
-// 页面加载时初始化多图布局
+// 页面加载时初始化设计内容布局
 window.addEventListener('DOMContentLoaded', () => {
-    initMultiImageLayout();
     initToolbar();
+    initDesignContentLayout();
     
     // 设置定时器，定期检查工具栏可见性
     setTimeout(ensureToolbarVisibility, 500);
@@ -759,33 +800,36 @@ window.addEventListener('resize', () => {
     if (window.resizeTimer) clearTimeout(window.resizeTimer);
     
     window.resizeTimer = setTimeout(() => {
-        calculateImagePositions();
+        scaleFigmaContent();
+        calculateDesignFramePositions();
         updateInterestPointPositions();
-        adjustToolbarForDevice(); // 添加这一行
-        ensureToolbarVisibility(); // 确保工具栏可见
-    }, 100);
+        adjustToolbarForDevice();
+        ensureToolbarVisibility();
+    }, 200);
 });
 
-// 更新兴趣点位置
+// 更新兴趣点位置计算函数
 function updateInterestPointPositions() {
-    // 需要在图片加载完成后和窗口大小改变时调用
-    if (!window.wrapperPositions) return;
+    if (!window.figmaScaleInfo) return;
+    
+    const scaleRatio = window.figmaScaleInfo.scaleRatio;
     
     interestPoints.forEach(point => {
-        const imageId = point.getAttribute('data-image-id');
-        const wrapper = document.querySelector(`.image-wrapper[data-image-id="${imageId}"]`);
-        
-        if (wrapper) {
-            // 获取兴趣点的相对位置（百分比）
-            const leftPercent = parseFloat(point.style.left) || 50;
-            const topPercent = parseFloat(point.style.top) || 50;
+        const designId = point.getAttribute('data-design-id');
+        if (designId) {
+            // 获取兴趣点的原始坐标（基于原始Figma尺寸）
+            const originalX = parseFloat(point.getAttribute('data-original-x') || 0);
+            const originalY = parseFloat(point.getAttribute('data-original-y') || 0);
             
-            // 计算绝对位置
-            const wrapperRect = wrapper.getBoundingClientRect();
-            const absoluteLeft = wrapperRect.left + (wrapperRect.width * leftPercent / 100);
-            const absoluteTop = wrapperRect.top + (wrapperRect.height * topPercent / 100);
-            
-            // 如果需要，可以在这里进行位置调整
+            if (originalX && originalY) {
+                // 应用缩放
+                const scaledX = originalX * scaleRatio;
+                const scaledY = originalY * scaleRatio;
+                
+                // 设置位置
+                point.style.left = `${scaledX}px`;
+                point.style.top = `${scaledY}px`;
+            }
         }
     });
 }
@@ -796,7 +840,7 @@ scrollArea.addEventListener('scroll', () => {
     if (!window.interestPointUpdateScheduled) {
         window.interestPointUpdateScheduled = true;
         requestAnimationFrame(() => {
-            calculateImagePositions();
+            calculateDesignFramePositions();
             updateInterestPointPositions();
             window.interestPointUpdateScheduled = false;
         });
@@ -813,8 +857,6 @@ function initScrollWheelSupport() {
     
     // 添加新的滚轮事件处理
     scrollArea.addEventListener('wheel', wheelHandler, { passive: false });
-    
-    console.log("滚轮支持已初始化");
 }
 
 // 滚轮事件处理函数
@@ -872,6 +914,4 @@ jumpToEndBtn.addEventListener('click', function() {
     if (typeof closeNotePopup === 'function') {
         closeNotePopup();
     }
-    
-    console.log("点击了跳转到末尾按钮");
 });

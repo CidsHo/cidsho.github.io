@@ -1,0 +1,448 @@
+/* 基础样式 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Anek Latin', 'Microsoft YaHei', sans-serif;
+    background-image: url('../../../assets/texture-bg.png');
+    background-repeat: repeat;
+    background-size: 500px 500px;
+    background-blend-mode: overlay;
+    user-select: none; /* 禁止文本选择 */
+}
+
+/* 滚动区域设置 */
+.scroll-area {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    scrollbar-width: none; /* 隐藏Firefox滚动条 */
+    -ms-overflow-style: none; /* 隐藏IE滚动条 */
+    touch-action: pan-y; /* 只允许垂直平移，禁用水平手势 */
+    visibility: visible !important; /* 确保滚动区域始终可见 */
+}
+
+.scroll-area::-webkit-scrollbar {
+    display: none; /* 隐藏Chrome/Safari滚动条 */
+}
+
+/* 容器 */
+.container {
+    display: inline-block;
+    height: 80vh;
+    margin: 10vh 20px 10vh 20px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    vertical-align: top;
+    transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+/* 多图容器样式 */
+.multi-image-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    position: relative;
+}
+
+/* 图片包装器 */
+.image-wrapper {
+    height: 100%;
+    position: relative;
+    flex-shrink: 0; /* 防止图片被压缩 */
+    margin-right: 2px; /* 图片之间的间隔 */
+}
+
+/* 最后一张图片不需要右边距 */
+.image-wrapper:last-child {
+    margin-right: 0;
+}
+
+/* 长图样式 */
+.long-image {
+    height: 100%;
+    max-height: 80vh;
+    width: auto;
+    display: block;
+    pointer-events: none; /* 防止图片被拖拽 */
+}
+
+/* 兴趣点 */
+.interest-point {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    animation: ripple 1.5s infinite;
+    z-index: 5; /* 确保在图片上方 */
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 0 15px rgba(255, 204, 0, 0);
+    }
+}
+
+.interest-point:hover {
+    background-color: #e6b800;
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+/* 信息容器 */
+.info-container {
+    display: inline-block;
+    vertical-align: top;
+    height: 80vh;
+    width: 350px;
+    margin: 10vh 20px 10vh 0;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: normal;
+    transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+/* 信息面板 */
+.info-panel {
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+/* 照片标题 */
+.photo-title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #333;
+}
+
+/* 标签样式，从photo.html复制 */
+.photo-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #e0e0e0;
+}
+
+/* 作者信息 */
+.author-info {
+    margin: 15px 0;
+}
+
+/* 描述容器 */
+.description-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
+    margin-bottom: 15px;
+}
+
+/* 照片描述 */
+.photo-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* 浮窗 */
+.note-popup {
+    display: none;
+    position: fixed;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 300px;
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.note-popup.active {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.note-content {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+/* 工具栏 - 简化并确保在所有设备上显示 */
+.toolbar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2000; /* 确保足够高的z-index */
+    cursor: move;
+    user-select: none;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    touch-action: none; /* 禁用所有浏览器默认的触摸操作 */
+}
+
+.toolbar.dragging {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* 工具栏手柄 */
+.toolbar-handle {
+    width: 18px;
+    height: 4px;
+    background-color: #ccc;
+    border-radius: 2px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.toolbar:hover .toolbar-handle {
+    background-color: #999;
+}
+
+.toolbar-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.toolbar-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+}
+
+.toolbar-btn:active {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(0px) scale(0.95);
+}
+
+.toolbar-btn img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.toolbar-btn:hover img {
+    transform: scale(1.1);
+}
+
+/* 移动端工具栏样式优化 */
+@media (max-width: 768px) {
+    .toolbar {
+        padding: 8px;
+        gap: 8px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .toolbar-btn {
+        padding: 6px;
+    }
+    
+    .toolbar-btn img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .toolbar-handle {
+        width: 15px;
+        height: 3px;
+        margin-right: 8px;
+    }
+}
+
+/* 全屏样式 */
+.fullscreen {
+    margin: 0 !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+}
+
+.fullscreen .long-image {
+    max-height: 100vh !important;
+}
+
+.fullscreen .multi-image-container {
+    height: 100vh !important;
+}
+
+.fullscreen .image-wrapper {
+    height: 100vh !important;
+}
+
+/* 设计内容容器 */
+.design-content-container {
+    position: relative;
+    height: 100%;
+    transform-origin: top left;
+    white-space: nowrap;
+}
+
+/* Figma设计内容 */
+.design-content-container > div {
+    transform-origin: top left;
+}
+
+/* 设计框架 */
+.design-frame {
+    height: 100%;
+    position: relative;
+    flex-shrink: 0; /* 防止内容被压缩 */
+    margin-right: 2px; /* 框架之间的间隔 */
+    width: auto;
+    min-width: 100%;
+}
+
+/* iframe样式 */
+.design-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* 如果使用图片展示Figma设计 */
+.design-image {
+    height: 100%;
+    max-height: 80vh;
+    width: auto;
+    display: block;
+    pointer-events: none; /* 防止图片被拖拽 */
+}
+
+/* 全屏模式下的样式调整 */
+.fullscreen .design-content-container {
+    height: 100vh !important;
+}
+
+.fullscreen .design-frame {
+    height: 100vh !important;
+}
+
+/* 修复文本换行问题 */
+[style*="position: absolute"][style*="width"] {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+}
+
+/* 确保文本容器保持宽度限制并正确换行 */
+.text-container, [style*="text-align: justify"] {
+    position: absolute;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    box-sizing: border-box !important;
+}
+
+/* 设计容器中的文本样式 */
+.design-content-container [style*="width"] {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+}
+
+/* 层叠顺序调整 */
+/* 纹理元素 - 最低层 */
+img[style*="position: absolute"] {
+    z-index: 1;
+}
+
+/* 背景元素 - 中间层 */
+.bg-panel, [style*="background"], [style*="background-color"] {
+    z-index: 2;
+}
+
+/* 标题、标头和信息部分 - 最高层 */
+h1, h2, h3, h4, h5, h6, 
+.heading, 
+[style*="font-size"], 
+[style*="text-align"], 
+.photo-title, 
+.photo-description, 
+.author-info, 
+.description-container, 
+[style*="font-family"] {
+    z-index: 3;
+    position: relative;
+}
+
+/* 更精确的纹理图片选择器 - 确保仅应用于30-33行提到的图片 */
+img[style*="width: 2400px"], 
+img[style*="width: 481px"], 
+img[style*="width: 2398px"] {
+    z-index: 1;
+}

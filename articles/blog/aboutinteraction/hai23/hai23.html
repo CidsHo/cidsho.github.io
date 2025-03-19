@@ -64,32 +64,44 @@
                 <div class="blog-text">
 
                     <p><strong><i>A small scale test for implementing script-based agent to assist players in ShadowPlayVR-Legacy.</i></strong></p>
+                    <p><strong><i>一个小规模的测试，用于实现基于脚本的代理来辅助ShadowPlayVR-Legacy中的玩家。</i></strong></p>
 
                     <i> Last Available in 7.13.2024</i>
+                    <i> 最后更新于2024年7月13日</i>
 
                     <p><strong>ShadowCostar? What for?</strong></p>
+                    <p><strong>ShadowCostar是什么？有什么用途？</strong></p>
 
                     <p>ShadowCostar (SC) is an agent designed to control shadow puppetry. While it takes on the role of a puppeteer, it more closely resembles an animated character that collaborates with the player for a performance. Instead of communicating through language, SC uses bodily gestures to simply communicate with players. During performances, SC harmonizes with the player's movements, reacting appropriately. Depending on the player's actions in relation to the script, SC will respond accordingly. When the player struggles or pauses, SC encourages a continuation of the performance or guides them toward suitable interactions.</p>
+                    <p>ShadowCostar (SC)是一个设计用于控制皮影戏的代理。虽然它扮演着操偶师的角色，但它更像是一个与玩家合作表演的动画角色。SC不通过语言交流，而是使用身体姿势与玩家进行简单的沟通。在表演过程中，SC与玩家的动作协调一致，做出适当的反应。根据玩家与剧本相关的动作，SC会做出相应的回应。当玩家遇到困难或停顿时，SC会鼓励继续表演或引导他们进行适当的互动。</p>
 
                     <p>In previous iterations, the development of ShadowPlayVR was more focused on a single-person experience, focusing on reproducing the control methods of shadow puppetry performance techniques, which lays the foundation for this research.</p>
+                    <p>在之前的版本中，ShadowPlayVR的开发更注重单人体验，专注于复制皮影戏表演技术的控制方法，这为本研究奠定了基础。</p>
 
-                    <p>Historically, an actual puppetry performing experience usually involves two or more characters to be a complete story. In order to expand its functionality and playability, we seize to introduce multiplayer mode to build complete shadow play performance experiences. During the exploration of collaborative performing experience, we found that every nuance in puppet movement, emotion, and character is directly attributed to the puppeteer's skill, while ShadowPlayVR targets students and Chinese culture hobbyists, the skill is not always promising, leading to dissatisfied result, thus we turn our head to introduce agent as a virtual guidance and co-performer, we name the agent “Shadow Costar”.</p> 
+                    <p>Historically, an actual puppetry performing experience usually involves two or more characters to be a complete story. In order to expand its functionality and playability, we seize to introduce multiplayer mode to build complete shadow play performance experiences. During the exploration of collaborative performing experience, we found that every nuance in puppet movement, emotion, and character is directly attributed to the puppeteer's skill, while ShadowPlayVR targets students and Chinese culture hobbyists, the skill is not always promising, leading to dissatisfied result, thus we turn our head to introduce agent as a virtual guidance and co-performer, we name the agent "Shadow Costar".</p> 
+                    <p>从历史上看，真正的皮影戏表演体验通常需要两个或更多角色才能构成完整的故事。为了扩展其功能性和可玩性，我们引入多人模式来构建完整的皮影戏表演体验。在探索协作表演体验的过程中，我们发现木偶动作、情感和角色的每一个细微差别都直接归因于操偶师的技巧，而ShadowPlayVR的目标用户是学生和中国文化爱好者，他们的技巧并不总是令人满意，导致结果不尽如人意，因此我们转而引入代理作为虚拟指导和共同表演者，我们将这个代理命名为"Shadow Costar"。</p>
 
                     <p>Similarly, we have also seen the fun that human agent collaboration can bring in the field of performance activities, and borrowed human-agent interaction to enhance ShadowPlayVR's narrative performance ability and depth of expansion.</p>
+                    <p>同样，我们也看到了人类与代理协作在表演活动领域中带来的乐趣，并借鉴了人机交互来增强ShadowPlayVR的叙事表演能力和扩展深度。</p>
                     
                     <p><strong>Towards a Believable Co-Perform Agent</strong></p>
+                    <p><strong>构建一个可信的协同表演代理</strong></p>
 
                     <div class="blog-image">
                         <img src="Demo.jpg" alt="blog-image" class="lazy-load">
                     </div>
 
                     <p style="text-align: center;">Figure: Demonstration of Shadow Costar Logic.</p>
+                    <p style="text-align: center;">图：Shadow Costar逻辑演示。</p>
 
                     <p>To make SC livelier and more comprehensible, we implemented two logic modes:</p>
+                    <p>为了使SC更加生动和易于理解，我们实现了两种逻辑模式：</p>
 
                     <ol>1. <strong>Script Mode</strong>: In this setting, SC adheres to a predefined script, responding to the player based on their ongoing actions. When a player's actions sync with the script, SC acts in kind. However, when a notable divergence from the script occurs or a player becomes inactive, SC employs subtle gestures to gently redirect the player, ensuring the continuity of the performance.</ol>
+                    <ol>1. <strong>脚本模式</strong>：在这种设置中，SC遵循预定义的脚本，根据玩家正在进行的动作做出响应。当玩家的动作与脚本同步时，SC会做出相应的动作。然而，当出现明显偏离脚本的情况或玩家变得不活跃时，SC会使用微妙的手势轻轻地引导玩家，确保表演的连续性。</ol>
 
                     <ol>2. <strong>Improvisation Mode</strong>: We incorporated fuzzy logic to endow the agent with rudimentary improvisational skills. Recognizing that our target audience may lack uniform expertise in puppetry, script interpretation, or human-agent collaboration the experiences are often inexact and can vary. Fuzzy logic equips SC with the flexibility to exhibit a spectrum of responses in diverse situations, transcending mere binary reactions. For example, if a player introduces an unexpected dramatic element, SC might react with surprise or bewilderment. Or in the case when the player does some movement that is similar to the prescript behavior mode, SC responds to the player with similar and derived actions.</ol>
+                    <ol>2. <strong>即兴模式</strong>：我们引入了模糊逻辑，赋予代理基本的即兴创作技能。认识到我们的目标受众可能在木偶操作、脚本解释或人机协作方面缺乏统一的专业知识，这些体验往往不精确且多变。模糊逻辑使SC具有灵活性，能够在不同情况下展示一系列反应，超越简单的二元反应。例如，如果玩家引入了意想不到的戏剧元素，SC可能会表现出惊讶或困惑。或者当玩家做出一些与预设行为模式相似的动作时，SC会以类似和衍生的动作回应玩家。</ol>
 
                 </div>
 
