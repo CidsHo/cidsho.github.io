@@ -1,0 +1,20 @@
+{
+  "title": "項目介紹",
+  "projectName": "VSD",
+  "pageType": "登入頁面",
+  "author": "項目名稱",
+  "category": "網站設計",
+  "nav": {
+    "home": "首頁",
+    "about": "關於",
+    "features": "作品",
+    "showcase": "資源",
+    "contact": "聯絡"
+  },
+  "buttons": {
+    "home": "返回主頁",
+    "backToTop": "回到頂部",
+    "goToBottom": "到頁底",
+    "changeLanguage": "切換語言"
+  }
+}

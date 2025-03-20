@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHADOWPLAY VR</title>
+    <link rel="stylesheet" href="spVR-mp.css">
+    <!-- 从本地导入字体而非Google Fonts -->
+    <link rel="stylesheet" href="../../../styles/components/fonts.css">
+    <!-- 添加图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 浮动工具栏 -->
+    <div class="floating-toolbar" id="floatingToolbar">
+        <div class="toolbar-handle">
+            <i class="fas fa-grip-lines"></i>
+        </div>
+        <div class="toolbar-items">
+            <!-- 主页按钮 -->
+            <button id="goToHome" title="Home">
+                <i class="fas fa-home"></i>
+            </button>
+            <!-- 回到顶部按钮 -->
+            <button id="backToTop" title="Back to Top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            <!-- 到底部按钮 -->
+            <button id="goToBottom" title="Go to Bottom">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- 首页模块 - 基于test.html设计 -->
+    <section id="home">
+        <div class="fixed-layout">
+            <!-- 背景 -->
+            <div class="bg-layer"></div>
+            
+            <!-- 顶部Logo和项目类别 -->
+            <img class="top-left-logo" src="./assets/pics/Logo.png" alt="Logo" draggable="false">
+            <div class="top-right-categories">
+                Creativity Support Virtual Reality<br/>
+                Interaction Design<br/>
+                Digitalized Heritage
+            </div>
+            
+            <!-- 中央图片 -->
+            <div class="center-image-container">
+                <img class="center-image" src="./assets/pics/header.png" alt="SHADOWPLAY Header" draggable="false">
+            </div>
+            
+            <!-- 艺术字母标题 - 保持翻转效果 -->
+            <div class="letters-row artistic-title">
+                <div class="letter-container"><div class="flip-letter"><div class="front">S</div><div class="back">V</div></div></div>
+                <div class="letter-container"><div class="flip-letter"><div class="front">H</div><div class="back">R</div></div></div>
+                <div class="letter-container"><div class="flip-letter"><div class="front">A</div><div class="back">I</div></div></div>
+                <div class="letter-container"><div class="flip-letter"><div class="front">D</div><div class="back">N</div></div></div>
+                <div class="letter-container"><div class="flip-letter"><div class="front">O</div><div class="back">T</div></div></div>
+                <div class="letter-container"><div class="flip-letter"><div class="front">W</div><div class="back">E</div></div></div>
+                <div class="letter-container"><div class="flip-letter"><div class="front">P</div><div class="back">R</div></div></div>
+                <div class="letter-container"><div class="flip-letter"><div class="front">L</div><div class="back">A</div></div></div>
+                <div class="letter-container"><div class="flip-letter"><div class="front">A</div><div class="back">C</div></div></div>
+                <div class="letter-container"><div class="flip-letter"><div class="front">Y</div><div class="back">T</div></div></div>
+            </div>
+            
+            <!-- 底部Logo和设计师信息 -->
+            <img class="bottom-left-logo" src="./assets/pics/logo2.png" alt="Logo 2" draggable="false">
+            <img class="bottom-right-logo" src="./assets/pics/logo3.png" alt="Logo 3" draggable="false">
+            <div class="designer-name">Cids Ho</div>
+            <div class="copyright">©2025</div>
+        </div>
+    </section>
+
+    <!-- 关于模块 -->
+    <section id="about" class="module">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">About the Project</h2>
+            <div class="content-wrapper">
+                <div class="text-content animate-on-scroll">
+                    <p>Introduce your project background, goals, and vision here. Add some impressive facts and data.</p>
+                </div>
+                <div class="image-content animate-on-scroll">
+                    <div class="placeholder-image">Project Image</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特点模块 -->
+    <section id="features" class="module">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon"><i class="fas fa-star"></i></div>
+                    <h3>Feature One</h3>
+                    <p>Describe how this feature makes your project unique.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Feature Two</h3>
+                    <p>Describe how this feature makes your project unique.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Feature Three</h3>
+                    <p>Describe how this feature makes your project unique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示模块 -->
+    <section id="showcase" class="module">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Project Showcase</h2>
+            <div class="showcase-slider">
+                <div class="showcase-item animate-on-scroll">
+                    <div class="placeholder-image">Showcase Image 1</div>
+                    <h3>Showcase Title 1</h3>
+                    <p>Showcase description content</p>
+                </div>
+                <div class="showcase-item animate-on-scroll">
+                    <div class="placeholder-image">Showcase Image 2</div>
+                    <h3>Showcase Title 2</h3>
+                    <p>Showcase description content</p>
+                </div>
+                <div class="showcase-item animate-on-scroll">
+                    <div class="placeholder-image">Showcase Image 3</div>
+                    <h3>Showcase Title 3</h3>
+                    <p>Showcase description content</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们模块 -->
+    <section id="contact" class="module">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Contact Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Contact Information</h3>
+                    <p>Email: example@example.com</p>
+                    <p>Phone: +123 456 7890</p>
+                    <p>Address: Some Street, Some District, Some City</p>
+                </div>
+                <form class="contact-form animate-on-scroll">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SHADOWPLAYVR. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="spVR-mp.js"></script>
+</body>
+</html>

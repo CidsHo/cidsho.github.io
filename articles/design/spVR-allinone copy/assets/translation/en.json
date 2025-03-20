@@ -1,0 +1,69 @@
+{
+    "home": {
+      "title": "SHADOWPLAY",
+      "subtitle": "An innovative solution bringing you a whole new experience",
+      "cta": "Learn More",
+      "titleLine1": "CARE HUB",
+      "titleLine2": "WEBSITE",
+      "visualElement": "IMAGE PLACEHOLDER",
+      "projectNameDesc": "PROJECT",
+      "description": "PROJECT IS A BRAND THAT VALUES precision and elegance. WHEN IT COMES TO the human experience, THEY SPECIALIZE IN PROVIDING SUPPORT AND REFINED GUIDANCE TO HELP INDIVIDUALS improve their quality of life.",
+      "exploreButton": "EXPLORE THE PROJECT"
+    },
+    "about": {
+      "title": "About the Project",
+      "description": "Our project introduces a revolutionary approach to virtual reality. We focus on creating immersive experiences that are both intuitive and engaging. Founded in 2023, we have been pushing the boundaries of what's possible in VR.",
+      "image": "Project Image"
+    },
+    "features": {
+      "title": "Key Features",
+      "feature1": {
+        "title": "Immersive Experience",
+        "description": "Our technology creates truly immersive environments that respond naturally to user interactions."
+      },
+      "feature2": {
+        "title": "High Performance",
+        "description": "State-of-the-art optimization ensures smooth performance even on modest hardware."
+      },
+      "feature3": {
+        "title": "User-Friendly",
+        "description": "Intuitive controls and interface design make our solution accessible to everyone."
+      }
+    },
+    "showcase": {
+      "title": "Project Showcase",
+      "item1": {
+        "image": "Showcase Image 1",
+        "title": "Interactive Environments",
+        "description": "Dynamic worlds that evolve based on user choices and actions."
+      },
+      "item2": {
+        "image": "Showcase Image 2",
+        "title": "Multi-user Collaboration",
+        "description": "Connect with others in virtual spaces for unprecedented collaboration."
+      },
+      "item3": {
+        "image": "Showcase Image 3",
+        "title": "Custom Solutions",
+        "description": "Tailored experiences designed for specific industry needs and applications."
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "info": {
+        "title": "Contact Information",
+        "email": "Email: contact@example.com",
+        "phone": "Phone: +1 (555) 123-4567",
+        "address": "Address: 123 Innovation Drive, Tech City, TC 98765"
+      },
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "submit": "Send"
+      }
+    },
+    "footer": {
+      "copyright": "© 2024 Project Name. All Rights Reserved."
+    }
+  }

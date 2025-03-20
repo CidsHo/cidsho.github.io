@@ -1,0 +1,69 @@
+{
+  "home": {
+    "title": "SHADOWPLAY",
+    "subtitle": "一个创新性的解决方案，为您带来全新体验",
+    "cta": "了解更多",
+    "titleLine1": "关怀中心",
+    "titleLine2": "网站设计",
+    "visualElement": "图片占位符",
+    "projectNameDesc": "该项目",
+    "description": "该项目是一个注重精确与优雅的品牌。当涉及到人类体验时，他们专注于提供支持和精细指导，帮助个人提升生活品质。",
+    "exploreButton": "探索项目"
+  },
+  "about": {
+    "title": "关于项目",
+    "description": "本项目旨在彻底改变我们与虚拟现实的交互方式。通过将尖端技术与以用户为中心的设计相结合，我们创造了一个解决方案，既解决了常见痛点，又为沉浸式体验开辟了新的可能性。",
+    "image": "项目图片"
+  },
+  "features": {
+    "title": "主要特点",
+    "feature1": {
+      "title": "直观设计",
+      "description": "我们的用户界面设计直观易懂，减少学习曲线，让用户能够专注于内容而非控制。"
+    },
+    "feature2": {
+      "title": "高性能",
+      "description": "秉承优化理念构建，我们的解决方案即使在标准硬件上也能提供流畅体验，使虚拟现实对更多用户触手可及。"
+    },
+    "feature3": {
+      "title": "可扩展平台",
+      "description": "我们的模块化架构允许无缝集成新功能，并与未来技术和标准兼容。"
+    }
+  },
+  "showcase": {
+    "title": "项目展示",
+    "item1": {
+      "image": "界面演示",
+      "title": "用户界面",
+      "description": "我们简洁、极简的界面将内容放在首位，同时在需要时使控制随手可得。"
+    },
+    "item2": {
+      "image": "应用示例",
+      "title": "实际应用",
+      "description": "了解我们的解决方案如何在教育、医疗和娱乐领域中被使用。"
+    },
+    "item3": {
+      "image": "开发时间线",
+      "title": "开发历程",
+      "description": "通过我们的里程碑成就，追踪我们从概念到现实的进展。"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "info": {
+      "title": "联系信息",
+      "email": "邮箱：contact@projectname.com",
+      "phone": "电话：+86 (555) 123-4567",
+      "address": "地址：中国北京市海淀区创新路123号"
+    },
+    "form": {
+      "name": "姓名",
+      "email": "邮箱",
+      "message": "留言",
+      "submit": "发送"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 项目名称。保留所有权利。"
+  }
+}

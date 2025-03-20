@@ -1,0 +1,681 @@
+/* 基本重置和全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Microsoft YaHei', 'Anek Latin', sans-serif;
+    line-height: 1.6;
+    color: #ffffff; /* 白色文字在灰色背景上 */
+    background-color: #333333; /* 灰色主题 */
+    overflow-x: hidden;
+    -webkit-user-select: none;  /* Chrome, Safari, Opera */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* IE/Edge */
+    user-select: none;          /* 标准语法 */
+}
+
+/* 容器样式 */
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 浮动工具栏样式 */
+.floating-toolbar {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(217, 217, 217, 0.9); /* #D9D9D9 */
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: move;
+    transition: box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.floating-toolbar:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.toolbar-handle {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    color: #333;
+    cursor: grab;
+}
+
+.toolbar-handle:active {
+    cursor: grabbing;
+}
+
+.toolbar-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.floating-toolbar button {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #c0c0c0;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.floating-toolbar button:hover {
+    background-color: #ffffff;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* 语言指示器样式 */
+.lang-indicator {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    font-size: 9px;
+    background-color: #333;
+    color: white;
+    padding: 1px 3px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* 首页模块 - 基于test.html的固定布局设计 */
+#home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    overflow: hidden;
+}
+
+.fixed-layout {
+    width: 100vw;
+    height: 100vh;
+    max-width: 1920px;
+    max-height: 1080px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 背景层 */
+.bg-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #D9D9D9;
+}
+
+/* Logo定位 */
+.top-left-logo {
+    width: 213px;
+    height: auto;
+    position: absolute;
+    left: 5%;
+    top: 6.4%;
+    z-index: 10;
+}
+
+.bottom-left-logo {
+    width: 213px;
+    height: auto;
+    position: absolute;
+    left: 5%;
+    bottom: 6.4%;
+    z-index: 10;
+}
+
+.bottom-right-logo {
+    width: 320px;
+    height: auto;
+    position: absolute;
+    right: 5%;
+    bottom: 6.4%;
+    z-index: 10;
+}
+
+/* 项目类别 */
+.top-right-categories {
+    position: absolute;
+    right: 5%;
+    top: 6.4%;
+    text-align: right;
+    color: black;
+    font-size: 20px;
+    font-family: 'Microsoft YaHei', 'Anek Latin', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    z-index: 10;
+}
+
+/* 中央图片 */
+.center-image-container {
+    position: absolute;
+    width: 25%;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.center-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 设计师信息 - 整体往下移，两行间更紧凑 */
+.designer-name {
+    position: absolute !important;
+    right: 5% !important;
+    left: auto !important;
+    bottom: 18% !important; /* 往下移动一点 */
+    text-align: right !important;
+    color: black !important;
+    font-size: 20px !important;
+    font-family: 'Microsoft YaHei', 'Anek Latin', sans-serif !important;
+    font-weight: 400 !important;
+    z-index: 10 !important;
+    margin-bottom: 0 !important; /* 取消底部边距 */
+    line-height: 1.1 !important; /* 减小行高使两行更紧凑 */
+}
+
+.copyright {
+    position: absolute !important;
+    right: 5% !important;
+    left: auto !important;
+    bottom: 16% !important; /* 往下移动，与上一行更紧凑 */
+    text-align: right !important;
+    color: black !important;
+    font-size: 20px !important;
+    font-family: 'Microsoft YaHei', 'Anek Latin', sans-serif !important;
+    font-weight: 400 !important;
+    z-index: 10 !important;
+    line-height: 1 !important; /* 减小行高 */
+}
+
+/* 艺术字母定位 */
+.letter-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 220px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    margin: 0 -0.05em;
+}
+
+/* 字母行容器 */
+.letters-row {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 33.7%;
+    width: 100%;
+    z-index: 6;
+    letter-spacing: -0.08em;
+}
+
+/* 保留原有的翻转效果 */
+.flip-letter {
+    position: relative;
+    width: 0.9em;
+    height: 1.2em;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-origin: center center;
+}
+
+.flip-letter .front,
+.flip-letter .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.flip-letter .back {
+    transform: rotateX(180deg);
+}
+
+.flip-letter.flipped {
+    transform: rotateX(180deg);
+}
+
+/* 模块样式 */
+.module {
+    padding: 120px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 70px;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif; /* 更新为Playfair Display */
+    font-weight: normal;
+    letter-spacing: 3px;
+    color: #ffffff;
+}
+
+/* 关于模块 */
+#about {
+    background-color: #2A2A2A; /* 深灰色 */
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.text-content, .image-content {
+    flex: 1 1 300px;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e0e0e0; /* 更亮的文字颜色 */
+}
+
+.image-content .placeholder-image {
+    background-color: #4A4A4A; /* 中灰色 */
+    height: 300px;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 特点模块 */
+#features {
+    background-color: #3A3A3A; /* 另一种灰色 */
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+}
+
+/* 项目展示模块 */
+#showcase {
+    background-color: #f0f4f8;
+}
+
+.showcase-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.showcase-item {
+    min-width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.showcase-item .placeholder-image {
+    height: 200px;
+}
+
+.showcase-item h3, .showcase-item p {
+    padding: 15px;
+}
+
+/* 联系我们模块 */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contact-info, .contact-form {
+    flex: 1 1 300px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* 页脚样式 */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* 动画类 */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .floating-toolbar {
+        right: 10px;
+        padding: 8px;
+    }
+    
+    .floating-toolbar button {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .lang-indicator {
+        font-size: 8px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    #home h1 {
+        font-size: 2.5rem;
+    }
+    
+    .designer-name {
+        bottom: 18% !important;
+        font-size: 16px !important;
+    }
+    
+    .copyright {
+        bottom: 16% !important;
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .image-container {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .image-container {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        max-width: 250px;
+    }
+    
+    .flip-letters {
+        margin-top: -30%;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        max-width: 200px;
+    }
+    
+    .flip-letters {
+        margin-top: -30%;
+    }
+}
+
+/* 调整顶部信息栏布局 */
+.header-info-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* 左右两端对齐 */
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding: 0 10px;
+}
+
+/* 左侧Logo */
+.header-logo-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header-logo {
+    max-height: 40px;
+    width: auto;
+}
+
+/* 右侧项目类别占更多空间 */
+.header-project-categories {
+    flex: 1;
+    text-align: right;
+    color: #ffffff;
+    font-family: 'Microsoft YaHei', 'Anek Latin', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-left: auto; /* 推到右侧 */
+}
+
+.header-category-line {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+    .header-info-container {
+        margin-bottom: 5px;
+    }
+    
+    .header-logo {
+        max-height: 30px;
+    }
+    
+    .header-category-line {
+        font-size: 0.7rem;
+    }
+    
+    #home {
+        padding-top: 10px;
+    }
+    
+    .image-container {
+        margin-top: 30px;
+    }
+    
+    .header-info-container {
+        top: 10px;
+    }
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 1366px) {
+    .letter-container {
+        font-size: 160px;
+        margin: 0 -0.12em;
+    }
+    
+    .letters-row {
+        letter-spacing: -0.12em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .letter-container {
+        font-size: 100px;
+        margin: 0 -0.1em;
+    }
+    
+    .letters-row {
+        letter-spacing: -0.1em;
+    }
+    
+    .top-right-categories,
+    .designer-name,
+    .copyright {
+        font-size: 16px;
+    }
+    
+    .top-left-logo,
+    .bottom-left-logo {
+        width: 160px;
+    }
+    
+    .bottom-right-logo {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .letter-container {
+        font-size: 60px;
+        margin: 0 -0.08em;
+    }
+    
+    .letters-row {
+        letter-spacing: -0.08em;
+    }
+    
+    .top-right-categories,
+    .designer-name,
+    .copyright {
+        font-size: 12px;
+    }
+    
+    .top-left-logo,
+    .bottom-left-logo {
+        width: 120px;
+    }
+    
+    .bottom-right-logo {
+        width: 180px;
+    }
+}
+
+/* 本地图标样式 */
+.local-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* 工具栏中的图标可能需要特殊调整 */
+.floating-toolbar .local-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* 更新特定元素的字体设置 */
+.designer-name, .copyright, .top-right-categories {
+    font-family: 'Microsoft YaHei', 'Anek Latin', sans-serif !important;
+}
+
+/* 其他使用中文的元素 */
+.content-text, .project-description, .quote-text {
+    font-family: 'Microsoft YaHei', 'Anek Latin', sans-serif;
+}
+
+/* 保留字母艺术标题的原始字体 */
+.flip-letter .front,
+.flip-letter .back {
+    font-family: 'Playfair Display', serif;
+    /* 这里不需要修改，因为艺术标题是英文字母 */
+}

@@ -1,0 +1,439 @@
+// Research: IMA and Their Embedded Culture Theme
+color: white;
+ font-size: 128px;
+ font-family: Playfair Display;
+ font-weight: 400;
+ word-wrap: break-word
+---
+// Towards a More Sustainable IMA Solution for Practitioners
+color: #D4D4D4;
+ font-size: 64px;
+ font-family: Anek Latin;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// The results indicate that the influence between IMA and traditional art is 
+color: black;
+ font-size: 64px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// minimal
+color: black;
+ font-size: 64px;
+ font-family: Playfair Display;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// . 
+color: black;
+ font-size: 64px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// IMA outputs are 
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// frequently disconnected from their cultural roots
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// , a misalignment often attributed to differing priorities between practitioners and designers. 
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// Designers typically prioritize how traditional art is received by a broader audience, which often leads to the sacrifice of traditional art’s core essence during adaptation to new media formats, such as in the design of interaction methods, to cater to wider user preferences. Consequently, traditional art’s visual concepts are conveyed, but its core essence is significantly compromised. 
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// <br/>For traditional artist communities, many IMA projects aim to address the 
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// lack of attention
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 700;
+ word-wrap: break-word
+---
+//  toward traditional art. However, this is only one aspect of the decline of cultural heritage art. The 
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// disappearance of the practitioner communities
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 700;
+ word-wrap: break-word
+---
+//  and the 
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// long-term stagnation of techniques
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// , which are the root sustainability issues threatening traditional art forms, are rarely addressed by researchers. 
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// Moreover, projects that barely touch the surface of influencing the original theme quickly decay due to 
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// shifting designer interests and a lack of long-term support
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// , leaving behind an “untouchable new media mess” for practitioners to manage.
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// Takeaways
+color: black;
+ font-size: 96px;
+ font-family: Playfair Display;
+ font-weight: 400;
+ word-wrap: break-word;
+ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+---
+// Maintenance > Exposure 
+color: #EC562D;
+ font-size: 48px;
+ font-family: Anek Latin;
+ font-weight: 700;
+ word-wrap: break-word
+---
+//  Visual preserved, essence compromised
+color: #EC562D;
+ font-size: 48px;
+ font-family: Anek Latin;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// Differing priorities between 
+color: #EC562D;
+ font-size: 48px;
+ font-family: Anek Latin;
+ font-weight: 400;
+ word-wrap: break-word
+---
+// Designers and Practitioners
+color: #EC562D;
+ font-size: 48px;
+ font-family: Anek Latin;
+ font-weight: 700;
+ word-wrap: break-word
+---
+//  lead to superficial adaptations
+color: #EC562D;
+ font-size: 48px;
+ font-family: Anek Latin;
+ font-weight: 400;
+ word-wrap: break-word
+---
+// The Neglect Practitioners in IMA Design
+color: black;
+ font-size: 50px;
+ font-family: Linux Libertine;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// Research: Shadow Play Design Workflow
+color: white;
+ font-size: 128px;
+ font-family: Playfair Display;
+ font-weight: 400;
+ word-wrap: break-word
+---
+// Towards a More Suitable IMA Solution for Practitioners
+color: #D4D4D4;
+ font-size: 64px;
+ font-family: Anek Latin;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// We began by exploring shadow puppetry, a theme often integrated into Interactive Media Art (IMA), and examined the creative experiences of shadow puppet artists. 
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// We interviewed three distinct groups of artists, totaling
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+//  
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// 14 
+color: black;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// individuals
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// , all of whom had previously collaborated with new media art design teams. 
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// Without delving into specific design details, we focused on the roles these artists played, their level of involvement, and their experiences in these new media projects. From a sustainability perspective, we explored the impact of new media art on their practices and sought their views on its influence and application to traditional art forms.
+color: black;
+ font-size: 40px;
+ font-family: Playfair Display;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// x14
+color: black;
+ font-size: 64px;
+ font-family: Anek Latin;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// Figure Design / Making
+color: black;
+ font-size: 50px;
+ font-family: Linux Libertine;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// Joint Design
+color: black;
+ font-size: 50px;
+ font-family: Linux Libertine;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// Performance
+color: black;
+ font-size: 50px;
+ font-family: Linux Libertine;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// Choreographing
+color: black;
+ font-size: 50px;
+ font-family: Linux Libertine;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// Preparation
+color: white;
+ font-size: 80px;
+ font-family: Playfair Display;
+ font-weight: 400;
+ word-wrap: break-word;
+ text-shadow: 20px 20px 4px rgba(0, 0, 0, 0.25)
+---
+// Execution & Iteration
+color: white;
+ font-size: 80px;
+ font-family: Playfair Display;
+ font-weight: 400;
+ word-wrap: break-word;
+ text-shadow: 20px 20px 4px rgba(0, 0, 0, 0.25)
+---
+// Presentation
+color: white;
+ font-size: 80px;
+ font-family: Playfair Display;
+ font-weight: 400;
+ word-wrap: break-word;
+ text-shadow: 20px 20px 4px rgba(0, 0, 0, 0.25)
+---
+// Shadow Play Performance Design Process (Simplified)
+color: white;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 400;
+ word-wrap: break-word;
+ text-shadow: 20px 20px 4px rgba(0, 0, 0, 0.25)
+---
+// > 5 Days
+color: white;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 400;
+ word-wrap: break-word
+---
+// > 3 Days
+color: white;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 400;
+ word-wrap: break-word
+---
+// > 9 Days
+color: white;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 400;
+ word-wrap: break-word
+---
+// > 20 Days
+color: white;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 400;
+ word-wrap: break-word
+---
+// Based on the design challenges identified from our interviews, we re-evaluated the creative practices and design approaches of IMA within the context of traditional art. 
+color: white;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// Our goal was to develop IMA that better align with the needs of the artist community.
+color: white;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// We aimed to use the complete shadow puppet design process as the foundation for the IMA experience, to showcase how the art form is created from ideas to finalization, offering a comprehensive experience of the entire workflow.
+color: white;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// We summarized a simplified shadow puppetry design process through on-site observations and interviews with artist groups.<br/><br/>Starting from the shadow puppetry design process, we developed functionality for each individual design step.
+color: white;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// Currently, we have developed two systems using Unity and deployed them on the Quest 3, specifically for rapid prototyping (puppet making) and dance choreography. 
+color: white;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// Additionally, we have been exploring the integration of emerging technologies to assist the practitioner community.
+color: white;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// ShadowPlayVR
+color: white;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// ShadowRehearsal
+color: white;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// An interactive VR system that recreates the intricate nature of puppetry performance.
+color: rgba(255, 255, 255, 0.70);
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// A Mixed Reality (MR) system for quickly converting real-world sketches into virtual controllable models.
+color: rgba(255, 255, 255, 0.70);
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// ShadowCostar
+color: white;
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 700;
+ word-wrap: break-word
+---
+// A collaborative system that introduces an agent with preset behavior patterns as a performance guidance assistant.
+color: rgba(255, 255, 255, 0.70);
+ font-size: 40px;
+ font-family: Anek Latin;
+ font-weight: 500;
+ word-wrap: break-word
+---
+// Takeaways
+color: black;
+ font-size: 96px;
+ font-family: Playfair Display;
+ font-weight: 400;
+ word-wrap: break-word;
+ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+---
+// The "workflow" nature of artistic creation means that when our project aims to serve the artist community, we need to consider the project's position within the workflow.
+color: #EC562D;
+ font-size: 48px;
+ font-family: Anek Latin;
+ font-weight: 400;
+ word-wrap: break-word
