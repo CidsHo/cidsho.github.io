@@ -12,6 +12,7 @@ function initApp() {
     console.log('初始化应用程序...');
     initFloatingToolbar();
     initFlipAnimation();
+    initScrollEvents();
     // 其他初始化函数...
 }
 
@@ -130,45 +131,28 @@ function initFloatingToolbar() {
 }
 
 /**
- * 初始化元素滚动动画
+ * 初始化滚动动画
  */
-function initScrollAnimations() {
-    // 获取所有带有animate-on-scroll类的元素
+function initScrollEvents() {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     
-    // 监听滚动事件
-    window.addEventListener('scroll', function() {
+    // 初始检查元素
+    checkElements();
+    
+    // 滚动时检查元素
+    window.addEventListener('scroll', checkElements);
+    
+    function checkElements() {
+        const triggerBottom = window.innerHeight * 0.8;
+        
         animatedElements.forEach(element => {
-            // 检查元素是否在可视区域内
-            if (isElementInViewport(element)) {
-                element.classList.add('visible');
-            } else {
-                // 可选：当元素离开可视区域时移除动画类
-                // element.classList.remove('visible');
+            const elementTop = element.getBoundingClientRect().top;
+            
+            if (elementTop < triggerBottom) {
+                element.classList.add('animated');
             }
         });
-    });
-    
-    // 页面加载时立即检查一次
-    setTimeout(() => {
-        window.dispatchEvent(new Event('scroll'));
-    }, 100);
-}
-
-/**
- * 判断元素是否在可视区域内
- * @param {HTMLElement} element - 需要检查的DOM元素
- * @returns {boolean} - 是否在可视区域内
- */
-function isElementInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    
-    // 元素顶部在视口下方，且元素底部在视口上方
-    return (
-        rect.top <= windowHeight * 0.8 && // 当元素的顶部进入视口的下半部分时触发
-        rect.bottom >= 0
-    );
+    }
 }
 
 /**
