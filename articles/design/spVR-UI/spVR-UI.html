@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadowPlayVR UI Design</title>
+    <link rel="stylesheet" href="../../../../styles/components.css">
+    <link rel="stylesheet" href="../../../../styles/scroll.css">
+    
+    <!-- Favicon 配置 -->
+    <link rel="icon" type="image/png" href="../../../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../../../assets/favicon.png">
+    <link rel="manifest" href="../../../../assets/site.webmanifest">
+    <meta name="msapplication-TileImage" content="assets/favicon.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+</head>
+<body>
+    
+    <!-- 滚动区域 -->
+    <div class="scroll-area">
+        <div class="container">
+            <div class="multi-image-container">
+                <div class="image-wrapper" data-image-id="1">
+                    <img src="assets/Frontpage.png" alt="长图1" class="long-image">
+                    <div class="interest-point" style="left: 47%; top: 3%;" data-note="这是ShadowPlayVR系列项目的UI构成，这个项目的UI套件并不是一开始就确立的（需要服务于实验性项目的特质）。在完成Siggraph Asia上的展示后，我才将UI组件整理了出来。当前仍在持续更新。" data-image-id="1"></div>
+                    <div class="interest-point" style="left: 47%; top: 6%;" data-note="当前UI套件的最后开发实践在Unity 2022.3.17f1，目前最新版本为Unity 5, 使用XR Interaction Toolkit包（v3.x）辅助开发。最后应用实践于Quest3+PCVR。" data-image-id="1"></div>
+                    <div class="interest-point" style="left: 47%; top: 9%;" data-note="关于如何构建空间UI的组件库，业内完全没有公开的参考资料（包括我开发主要参考的Meta Horizon应用设计文档）。包括WWDC23的关于如何构建空间界面的视频，也只是非常泛化地展现了Vision Pro的一些预期交互效果和视觉呈现。我从移动端UI组件库构建的方向出发，根据我设计过程中的应用情形，构建了类似构成的UI组件库。" data-image-id="1"></div>
+                </div>
+                <div class="image-wrapper" data-image-id="2">
+                    <img src="assets/Menu.png" alt="长图2" class="long-image">
+                </div>
+                <div class="image-wrapper" data-image-id="3">
+                    <img src="assets/Input.png" alt="长图3" class="long-image">
+                    <div class="interest-point" style="left: 20%; top: 3%;" data-note="空间界面的一大特征是与具身交互、多模态输入的高度融合，这意味着UI设计师需要从多维度去思考用户怎么与UI交互，UI怎么在多方面下给用户提供反馈，这奠定了后续一切设计的基础。我的开发精力有限，所以只选择了“注视”和“手柄”（辅以手势控制和Debug用的键鼠操作）作为输入方式。根据Meta提供的应用设计指引，需要明确应用符合的交互场合，这一页的内容就是作出这一声明。" data-image-id="3"></div>
+                </div>
+                <div class="image-wrapper" data-image-id="4">
+                    <img src="assets/Color Palette.png" alt="长图4" class="long-image">
+                    <div class="interest-point" style="left: 25%; top: 3%;" data-note="色彩在整个实验过程中一直处于两个极端，要么是饱和度较高的拟真界面（模拟现实环境），要么是低饱和度的扁平化界面（模拟工具属性）。在初期的小样本实验当中，发现了两类界面对于专业/业余人群的吸引力差异，以及对于体验中沉浸感的差异。最终，我认为扁平化界面更符合本项目的空间界面的需求：将UI的工具属性和与现实区分的作用发挥出来（在后续的横向比较环节中，我发现这是虚拟现实应用的普遍做法，尤其是AR应用），尽可能降低UI在整个沉浸式活动、用户设计启发与实践、工作流环境活动的存在感。" data-image-id="4"></div>
+                    <div class="interest-point" style="left: 25%; top: 6%;" data-note="制定“轻UI”的整体设计方针后，中性色作为主题色的方案便自然诞生。在此基础上，我添加了两个高差异的色彩作为装饰色，以提升UI的视觉吸引力的同时，尽可能避免颜色污染加剧虚拟现实体验的视觉疲劳感。" data-image-id="4"></div>
+                </div>
+                <div class="image-wrapper" data-image-id="5">
+                    <img src="assets/Typography.png" alt="长图5" class="long-image">
+                    <div class="interest-point" style="left: 25%; top: 3%;" data-note="英文字体选择上，我在小样本实验中发现衬线字体在虚拟现实环境中识别难度较高，往往需要比衬线字体大30%才能保证识读与满足视觉效果，最终我仅在主标题上使用了衬线字体，而主内容使用单一无衬线字体方便内容识别。中文显示上，衬线字体的问题更加明显且严重，所以所有中文内容都使用单一无衬线字体用于内容呈现。" data-image-id="5"></div>
+                    <div class="interest-point" style="left: 25%; top: 6%;" data-note="通常，UI组件库会提供一个字阶参考。但在空间界面上我发现这并不可控——在空间界面中，用户与界面的距离是不可控的，UI界面并不会与用户保持在一个稳定的距离，尤其是浮动面板界面的情况下，用户会选择将浮动面板像便签一样随处安放，查看面板内容也会根据不同情况选择主动靠近界面或者将界面拉近——而至于怎么做上展现的个体差异又非常大。我没找到一个合适的规定字阶的方法，所以没有在这部分对字阶作规定。" data-image-id="5"></div>
+                    <div class="interest-point" style="left: 25%; top: 9%;" data-note="我想到的一个方法是规定一个默认交互距离，然后用响应式的方式（或者相对数值）来调整字阶——根据用户与界面的距离调整界面的内容大小，实测下来效果并不好，因为近大远小的心理模型会被这个功能破坏，反而造成了更多的困惑。" data-image-id="5"></div>
+                </div>
+                <div class="image-wrapper" data-image-id="6">
+                    <img src="assets/Misc..png" alt="长图6" class="long-image">
+                    <div class="interest-point" style="left: 25%; top: 9%;" data-note="圆角的量同样面临字阶的问题，不作赘述。这里我选择了一个相对保守的圆角量，仅为方便设计使用，仅供参考。" data-image-id="6"></div>
+                    <div class="interest-point" style="left: 25%; top: 9%;" data-note="阴影用于增添UI的“物品立体感”是空间界面的常见做法。而阴影的响应式设计在设计之初就已经敲定，在AR应用场景下，这显著地提高了用户对于UI方位的感知能力。" data-image-id="6"></div>
+                </div>
+                <div class="image-wrapper" data-image-id="7">
+                    <img src="assets/Templates.png" alt="长图7" class="long-image">
+                    <div class="interest-point" style="left: 5%; top: 9%;" data-note="这部分是对我实际应用中的应用倒推得来的界面模板。我在总结的时候发现，空间界面无法像平面界面那样轻松在平面上呈现。平面界面的情况下，大部分的视觉元素尽管存在层级，但视觉上是以“平面”的形式存在，而空间界面中，视觉元素的层级关系是“立体”的，其存在“Z轴”距离（还会因为用户的交互活动改变，比如从侧面看界面，这在平面上是不可想象的），而这一点很难在平面上进行转述表达。我简化了“Z轴”概念，用图例结合说明的方式表明界面的层级关系。" data-image-id="7"></div>
+                    <div class="interest-point" style="left: 5%; top: 12%;" data-note="实际上这里展现的界面图示情况与现实的情况不符，从硬件角度看，界面在左右眼上显示的UI是不同的，但这里为了图示的直观性，我选择将左右眼的UI显示在同一页面上，但这就牺牲了一些基于立体感构建的设计元素，好在在这个场景中并不多。图示的比例也与实际的视角度（FOV）有差异，我原本想使用机内截图，但在平面呈现上严重鱼眼变形，并不直观。顺便一提，作为背景图的内容来自于一张Google Earth的机内截图" data-image-id="7"></div>
+                </div>
+                <div class="image-wrapper" data-image-id="8">
+                    <img src="assets/Components.png" alt="长图8" class="long-image">
+                    <div class="interest-point" style="left: 4%; top: 9%;" data-note="相对来说，组件的平面呈现则简单得多，因为其大多基于Float-Panel设计，也就是三维空间内的二维内容。与界面部分不同，这部分并不是所有样式的控件都有被使用，仅作呈现之用。" data-image-id="8"></div>
+                    <div class="interest-point" style="left: 4%; top: 12%;" data-note="再次聊到规格的问题，我对被试者（n=32）进行了调查，发现用户对于空间界面的控件规格并不敏感，因为他们可以自由在空间中管理界面与他们的空间关系——太大就放远点，太小了就拉近些。顶多会在刚刚进入虚拟现实环境的时候花少许时间调整空间关系——我称之为“桌面整理”。不过用户反而在Panel内会关注控件之间的相对关系，以及在不可控HUD上对控件的大小有要求，而被问到关于大小的偏好，又呈现了较大的个体偏好差异。" data-image-id="8"></div>
+                </div>
+                <div class="image-wrapper" data-image-id="9">
+                    <img src="assets/End.png" alt="长图9" class="long-image">
+                </div>
+            </div>
+        </div>
+        
+        <!-- 信息面板容器(在容器外部) - 只需一个 -->
+        <div class="info-container">
+            <div class="info-panel">
+                <h2 class="photo-title">ShadowPlay VR UI Design</h2>
+                <div class="author-info">
+                    <span class="tag">2025年01月11日</span>
+                </div>
+                
+                <div class="description-container">
+                    <p class="photo-description"><strong>UI设计留档</strong></p>
+                </div>
+                
+                <!-- 标签在文字介绍下方 -->
+                <div class="photo-tags">
+                    <span class="tag">设计</span>
+                    <span class="tag">设计研究</span>
+                    <span class="tag">虚拟现实系统设计</span>
+                    <span class="tag">UI设计</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 工具栏 -->
+    <div class="toolbar" id="toolbar">
+        <div class="toolbar-handle"></div>
+        <button class="toolbar-btn" id="toggle-points" title="显示/隐藏兴趣点">
+            <img src="../../../../assets/tag.png" alt="兴趣点">
+        </button>
+        <button class="toolbar-btn" id="toggle-fullscreen" title="全屏">
+            <img src="../../../../assets/full-screen.png" alt="全屏">
+        </button>
+        <button class="toolbar-btn" id="jump-to-start" title="回到顶部">
+            <img src="../../../../assets/jump-to-start.png" alt="回到顶部">
+        </button>
+        <button class="toolbar-btn" id="jump-to-end" title="跳转到末尾">
+            <img src="../../../../assets/jump-to-end.png" alt="跳转到末尾">
+        </button>
+        <button class="toolbar-btn" id="go-back" title="返回上一页">
+            <img src="../../../../assets/back-icon.png" alt="返回">
+        </button>
+    </div>
+
+    <!-- 浮窗 -->
+    <div class="note-popup">
+        <div class="note-content"></div>
+        <button class="close-btn">×</button>
+    </div>
+
+    <script src="../../../../scripts/script.js"></script>
+    <script src="../../../../scripts/scroll.js"></script>
+</body>
+</html>

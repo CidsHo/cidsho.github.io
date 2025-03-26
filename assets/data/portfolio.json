@@ -557,7 +557,7 @@
     {
         "title": "ShadowCostar-Legacy: A Rule-Driven UX Guidance System with Action Detection",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/article-thumbnail/ai.png",
+        "data-src": "articles/blog/aboutinteraction/hai23/Front.png",
         "link": "articles/blog/aboutinteraction/hai23/hai23.html",
         "tags": ["精选","设计","交互开发","人工智能"],
         "description": "一个基于动作检测规则的简易用户体验引导人工智能模型",
@@ -566,7 +566,7 @@
     {
         "title": "ShadowPlayVR-Interaction 交互设计脚本",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/article-thumbnail/ai.png",
+        "data-src": "articles/design/spVR-interaction/Front.png",
         "link": "articles/design/spVR-interaction/interaction.html",
         "tags": ["精选","设计","交互设计","虚拟现实"],
         "description": "依据手柄、头显返回的坐标的距离关系来判断呈现互动效果。",
@@ -575,7 +575,7 @@
     {
         "title": "ShadowPlayVR: Understanding Traditional SP Performance Techniques Through Non-Intuitive Embodied Interactions",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/article-thumbnail/ai.png",
+        "data-src": "articles/blog/aboutinteraction/vrst23/Front2.png",
         "link": "articles/blog/aboutinteraction/vrst23/vrst23.html",
         "tags": ["精选","设计","交互设计","虚拟现实"],
         "description": "发表于VRST 2023",
@@ -589,6 +589,15 @@
         "tags": ["精选","设计","用户体验研究","虚拟现实"],
         "description": "虚拟公共空间用户陌生偶遇行为研究",
         "date": "2024-06-29"
+    },
+    {
+        "title": "ShadowPlay VR UI Design",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/spVR-UI/Front.png",
+        "link": "articles/design/spVR-UI/spVR-UI.html",
+        "tags": ["精选","设计","虚拟现实系统设计","UI设计"],
+        "description": "ShadowPlay VR UI设计留档及反思",
+        "date": "2025-01-11"
     },
 
 
@@ -624,9 +633,9 @@
     {
         "title": "VRST'23 Presentation",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/article-thumbnail/ai.png",
+        "data-src": "articles/blog/aboutinteraction/vrst23/Front1.png",
         "link": "articles/blog/aboutinteraction/vrst23/vrst-pre.html",
-        "tags": ["设计","设计研究","虚拟现实系统"],
+        "tags": ["精选","设计","设计研究","虚拟现实系统"],
         "description": "VRST'23 Presentation留档",
         "date": "2023-10-11"
     },
