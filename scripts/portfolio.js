@@ -149,6 +149,22 @@ export async function loadPortfolio() {
 
         // 初始化懒加载
         lazyLoadImages();
+
+        // 检查 URL 参数并自动触发筛选
+        const urlParams = new URLSearchParams(window.location.search);
+        const filterParam = urlParams.get('filter');
+        if (filterParam === 'star') {
+            // 找到精选按钮并触发点击
+            const filterStar = document.getElementById('filter-star');
+            if (filterStar) {
+                // 移除其他筛选按钮的激活状态
+                document.querySelectorAll('.filter-button').forEach(btn => btn.classList.remove('active'));
+                // 设置当前按钮的激活状态
+                filterStar.classList.add('active');
+                // 触发点击事件
+                filterStar.click();
+            }
+        }
     } catch (error) {
         console.error('Error loading portfolio data:', error);
     }

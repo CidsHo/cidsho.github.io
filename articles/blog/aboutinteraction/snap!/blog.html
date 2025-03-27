@@ -76,18 +76,25 @@
                     <p>使用Unity中的ScreenShotLoader插件捕获设备相机画面，并导出设备拍摄的截图。</p>
 
                     <p>由于当前Quest3未开放摄像头访问权限，无法直接通过实时视频流进行识别操作，因此通过此临时方案实现部分功能。</p>
+
+                    <p>这个项目某种意义上促进了这个<a href="../ismar2024/ismar2024.html">研究</a>的诞生。</p>
                         
                     <p>Unity project source file: <a href="https://github.com/CidsHo/CaptureScreen/blob/main/Snap!.rar">Snap!</a></p>
 
                     <p><h2>Configuration</h2></p>
+                    <p><h2>配置</h2></p>
 
                     <ol>1. Install <a href="https://github.com/CidsHo/CaptureScreen/tree/main/ScreenShotLoader">ScreenShotLoader</a> in the project Assets and also load the Meta XR All-in-one SDK.</ol>
+                    <ol>1. 在项目Assets中安装<a href="https://github.com/CidsHo/CaptureScreen/tree/main/ScreenShotLoader">ScreenShotLoader</a>，并加载Meta XR All-in-one SDK。</ol>
 
-                    <ol>2. In Unity, go to <Strong>Edit > Project Settings > Player > Android > Publishing Settings > Build</Strong>, check Custom <Strong>Main Manifest, Custom Main Gradle Template, Custom Gradle Properties Template</Strong>. This will enable the use of <Strong>AndroidManifest.xml, mainTemplate.gradle, and gradleTemplate.properties</Strong> in <Strong>Assets/Plugins/Android.</Strong></ol>
+                    <ol>2. In Unity, go to <Strong>Edit > Project Settings > Player > Android > Publishing Settings > Build</Strong>, check<Strong>Custom Main Manifest, Custom Main Gradle Template, Custom Gradle Properties Template</Strong>. This will enable the use of <Strong>AndroidManifest.xml, mainTemplate.gradle, and gradleTemplate.properties</Strong> in <Strong>Assets/Plugins/Android.</Strong></ol>
+                    <ol>2. 在Unity中，前往<Strong>Edit > Project Settings > Player > Android > Publishing Settings > Build</Strong>，勾选 <Strong>Custom Main Manifest, Custom Main Gradle Template, Custom Gradle Properties Template</Strong>。这将启用<Strong>Assets/Plugins/Android</Strong>中的<Strong>AndroidManifest.xml, mainTemplate.gradle和gradleTemplate.properties</Strong>文件。</ol>
 
                     <ol>3. Replace the mainTemplate.gradle and gradleTemplate.properties in Assets/Plugins/Android with those in ScreenShotLoader/Plugins/Android.</ol>
+                    <ol>3. 用ScreenShotLoader/Plugins/Android中的文件替换Assets/Plugins/Android中的mainTemplate.gradle和gradleTemplate.properties。</ol>
 
                     <ol>4. Edit AndroidManifest.xml in Assets/Plugins/Android and add the following configuration before the segment:</ol>
+                    <ol>4. 编辑Assets/Plugins/Android中的AndroidManifest.xml，并在片段前添加以下配置：</ol>
                     
                     <div class="code-block">
                         <div class="code-header">
