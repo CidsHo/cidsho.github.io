@@ -372,16 +372,22 @@
 }
 
 @media (max-width: 768px) {
-
     .blog-page {
         background-color: #00000000;
         background-image: url('../../../assets/texture-bg.png');
+        padding: 0; /* 移除页面内边距 */
     }
 
     .blog-banner {
-        margin: 20px auto;
-        border-radius: 8px;
-        max-width: 80%;
+        margin: 20px 0; /* 从20px auto改为20px 0，移除左右边距 */
+        border-radius: 0; /* 移除圆角 */
+        max-width: 100%; /* 从80%改为100% */
+    }
+
+    .blog-title,
+    .blog-subtitle {
+        max-width: 100%; /* 从80%改为100% */
+        padding: 0 15px; /* 添加与内容区域一致的内边距 */
     }
         
     .caption-title {
@@ -393,11 +399,11 @@
         transform: none;
     }
     .blog-title {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .blog-subtitle {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .blog-text p {
@@ -414,21 +420,23 @@
     }
 
     .blog-container {
-        width: calc(100% - 20px); /* 移动端减少边距 */
+        width: 100%; /* 移除左右边距 */
         padding: 15px;
+        border-radius: 0; /* 移除圆角 */
     }
 
     .blog-image {
         padding: 0; /* 移动端取消图片内边距 */
     }
     .blog-content-wrapper {
-        padding: 0 20px 50px;
+        padding: 0 0 50px; /* 移除左右边距，只保留底部边距 */
     }
     
     .back-button {
         left: 20px;
         bottom: 20px;
-        padding: 10px 20px;
+        padding: 8px 16px; /* 从10px 20px缩小到8px 16px */
+        font-size: 14px; /* 从16px缩小到14px */
     }
     
     .reference-item {
@@ -449,6 +457,11 @@
     .copy-button {
         padding: 3px 6px;
         font-size: 10px;
+    }
+
+    .blog-tags .tag {
+        font-size: 12px; /* 从14px缩小到12px */
+        padding: 4px 8px; /* 稍微减小内边距以配合更小的字体 */
     }
 }
 

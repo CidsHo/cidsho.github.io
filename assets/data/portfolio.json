@@ -584,7 +584,7 @@
     {
         "title": "Architecting Social VR: Exploring Encounter and Serendipitous Interactions in Virtual Public Spaces",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/article-thumbnail/ai.png",
+        "data-src": "articles/blog/aboutinteraction/hcii24/Front1.png",
         "link": "articles/blog/aboutinteraction/hcii24/hcii24.html",
         "tags": ["精选","设计","用户体验研究","虚拟现实"],
         "description": "虚拟公共空间用户陌生偶遇行为研究",
@@ -598,6 +598,24 @@
         "tags": ["精选","设计","虚拟现实系统设计","UI设计"],
         "description": "ShadowPlay VR UI设计留档及反思",
         "date": "2025-01-11"
+    },
+    {
+        "title": "Siggraph Asia 2024 Booklet",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/spVR-Booklet/Front1.png",
+        "link": "articles/design/spVR-Booklet/spVR-Booklet.html",
+        "tags": ["精选","设计","用户体验研究","版式设计"],
+        "description": "为了Siggraph Asia 2024做的一套小册子，挑了几个重要的Section作为内容。文章主要研究的内容集中在Research部分，仅供参考。",
+        "date": "2024-12-03"
+    },
+    {
+        "title": "ShadowRehearsal: Enhancing Traditional Art Design Workflows with XR Technology",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/blog/aboutinteraction/ismar2024/ismar.png",
+        "link": "articles/blog/aboutinteraction/ismar2024/ismar2024.html",
+        "tags": ["精选","设计","虚拟现实系统设计","用户体验研究"],
+        "description": "发表于ISMAR 2024",
+        "date": "2024-10-29"
     },
 
 
