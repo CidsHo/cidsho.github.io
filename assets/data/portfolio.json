@@ -389,7 +389,15 @@
 
 
     
-
+    {
+        "title": "同济大学2021年晚会主视觉",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/misc.png",
+        "link": "articles/design/stageart1/stageart1.html",
+        "tags": ["设计","舞台主视觉设计"],
+        "description": "商业项目，仅供参考",
+        "date": "2021-11-16"
+    },
     {
         "title": "练习 - 海报底图 Practice",
         "image": "assets/placeholder.jpg",
@@ -626,6 +634,16 @@
         "description": "发表于SA 2024",
         "date": "2024-12-05"
     },
+    {
+        "title": "ShadowPlayVR-创意促进交互设计",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ai.png",
+        "link": "articles/design/spVR-Grads/spVR-Grads.html",
+        "tags": ["精选","设计","虚拟现实系统设计"],
+        "description": "实验室组会版本的Presentation",
+        "date": "2024-05-10"
+    },
+
 
 
 
