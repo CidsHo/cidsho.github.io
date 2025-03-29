@@ -3,6 +3,127 @@
  */
 document.addEventListener('DOMContentLoaded', function() {
     initApp();
+    const scrollWrapper = document.querySelector('.features-scroll-wrapper');
+    const prevButton = document.querySelector('.scroll-button.prev');
+    const nextButton = document.querySelector('.scroll-button.next');
+    const cardWidth = 330; // 卡片宽度 + 间距
+    let currentPosition = 0;
+    let isDragging = false;
+    let startPosition = 0;
+    let currentTranslate = 0;
+    let animationID = 0;
+
+    // 触摸事件处理
+    scrollWrapper.addEventListener('touchstart', dragStart);
+    scrollWrapper.addEventListener('touchend', dragEnd);
+    scrollWrapper.addEventListener('touchmove', drag);
+
+    // 鼠标事件处理
+    scrollWrapper.addEventListener('mousedown', dragStart);
+    scrollWrapper.addEventListener('mouseup', dragEnd);
+    scrollWrapper.addEventListener('mouseleave', dragEnd);
+    scrollWrapper.addEventListener('mousemove', drag);
+
+    // 防止拖动时选中文本
+    scrollWrapper.addEventListener('selectstart', (e) => e.preventDefault());
+
+    function dragStart(e) {
+        isDragging = true;
+        scrollWrapper.classList.add('dragging');
+        startPosition = getPositionX(e);
+        currentTranslate = currentPosition;
+        cancelMomentumTracking();
+    }
+
+    function dragEnd() {
+        isDragging = false;
+        scrollWrapper.classList.remove('dragging');
+        
+        // 计算最大滚动范围
+        const containerWidth = scrollWrapper.parentElement.clientWidth;
+        const cards = scrollWrapper.querySelectorAll('.feature-card');
+        const lastCard = cards[cards.length - 1];
+        const lastCardRight = lastCard.offsetLeft + lastCard.offsetWidth;
+        const maxScroll = lastCardRight - containerWidth;
+        
+        // 确保最终位置在有效范围内
+        currentPosition = Math.max(0, Math.min(currentPosition, maxScroll));
+        currentTranslate = currentPosition;
+        
+        scrollWrapper.style.transform = `translateX(-${currentPosition}px)`;
+        updateScrollButtons();
+    }
+
+    function drag(e) {
+        if (!isDragging) return;
+        e.preventDefault();
+        
+        const currentX = getPositionX(e);
+        const diff = currentX - startPosition;
+        const newPosition = currentTranslate - diff;
+        
+        // 计算最大滚动范围
+        const containerWidth = scrollWrapper.parentElement.clientWidth;
+        const cards = scrollWrapper.querySelectorAll('.feature-card');
+        const lastCard = cards[cards.length - 1];
+        const lastCardRight = lastCard.offsetLeft + lastCard.offsetWidth;
+        const maxScroll = lastCardRight - containerWidth;
+        
+        // 严格限制滚动范围
+        if (newPosition < 0) {
+            currentPosition = 0;
+        } else if (newPosition > maxScroll) {
+            currentPosition = maxScroll;
+        } else {
+            currentPosition = newPosition;
+        }
+        
+        scrollWrapper.style.transform = `translateX(-${currentPosition}px)`;
+    }
+
+    function getPositionX(e) {
+        return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+    }
+
+    function cancelMomentumTracking() {
+        cancelAnimationFrame(animationID);
+    }
+
+    function updateScrollButtons() {
+        const containerWidth = scrollWrapper.parentElement.clientWidth;
+        const cards = scrollWrapper.querySelectorAll('.feature-card');
+        const lastCard = cards[cards.length - 1];
+        const lastCardRight = lastCard.offsetLeft + lastCard.offsetWidth;
+        const maxScroll = lastCardRight - containerWidth;
+        
+        prevButton.style.display = currentPosition <= 0 ? 'none' : 'flex';
+        nextButton.style.display = currentPosition >= maxScroll ? 'none' : 'flex';
+    }
+
+    function scrollCards(direction) {
+        const scrollAmount = cardWidth;
+        currentPosition += direction * scrollAmount;
+        
+        // 计算最大滚动范围
+        const containerWidth = scrollWrapper.parentElement.clientWidth;
+        const cards = scrollWrapper.querySelectorAll('.feature-card');
+        const lastCard = cards[cards.length - 1];
+        const lastCardRight = lastCard.offsetLeft + lastCard.offsetWidth;
+        const maxScroll = lastCardRight - containerWidth;
+        
+        // 确保不会滚动过头
+        currentPosition = Math.max(0, Math.min(currentPosition, maxScroll));
+        
+        currentTranslate = currentPosition;
+        scrollWrapper.style.transform = `translateX(-${currentPosition}px)`;
+        updateScrollButtons();
+    }
+
+    prevButton.addEventListener('click', () => scrollCards(-1));
+    nextButton.addEventListener('click', () => scrollCards(1));
+
+    // 初始化按钮状态
+    updateScrollButtons();
 });
 
 /**
@@ -27,12 +148,11 @@ function initFloatingToolbar() {
         return;
     }
     
-    const handle = toolbar.querySelector('.toolbar-handle');
-    
     // 主页按钮
     const homeBtn = document.getElementById('goToHome');
     if (homeBtn) {
-        homeBtn.addEventListener('click', function() {
+        homeBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
             window.location.href = '/portfolio.html';
         });
     }
@@ -40,7 +160,8 @@ function initFloatingToolbar() {
     // 回到顶部按钮
     const topBtn = document.getElementById('backToTop');
     if (topBtn) {
-        topBtn.addEventListener('click', function() {
+        topBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
@@ -48,39 +169,56 @@ function initFloatingToolbar() {
     // 到底部按钮
     const bottomBtn = document.getElementById('goToBottom');
     if (bottomBtn) {
-        bottomBtn.addEventListener('click', function() {
+        bottomBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
             window.scrollTo({ 
                 top: document.body.scrollHeight, 
                 behavior: 'smooth' 
             });
         });
     }
+
+    // 翻译按钮
+    const translateBtn = document.getElementById('translateBtn');
+    if (translateBtn) {
+        translateBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleTranslation();
+        });
+    }
     
     // 拖拽功能
     let isDragging = false;
-    let offsetX, offsetY;
+    let startX, startY;
+    let toolbarLeft, toolbarTop;
     
-    if (handle) {
-        handle.addEventListener('mousedown', startDrag);
-        handle.addEventListener('touchstart', startDrag, { passive: false });
-    }
+    // 直接在工具栏上添加事件监听
+    toolbar.addEventListener('mousedown', startDrag);
+    toolbar.addEventListener('touchstart', startDrag, { passive: false });
     
     function startDrag(e) {
-        isDragging = true;
+        // 如果点击的是按钮，不启动拖动
+        if (e.target.closest('button')) {
+            return;
+        }
         
-        // 鼠标事件
+        isDragging = true;
+        const rect = toolbar.getBoundingClientRect();
+        
         if (e.type === 'mousedown') {
-            offsetX = e.clientX - toolbar.getBoundingClientRect().left;
-            offsetY = e.clientY - toolbar.getBoundingClientRect().top;
+            startX = e.clientX;
+            startY = e.clientY;
+            toolbarLeft = rect.left;
+            toolbarTop = rect.top;
             document.addEventListener('mousemove', onDrag);
             document.addEventListener('mouseup', stopDrag);
-        } 
-        // 触摸事件
-        else if (e.type === 'touchstart') {
+        } else if (e.type === 'touchstart') {
             e.preventDefault();
             const touch = e.touches[0];
-            offsetX = touch.clientX - toolbar.getBoundingClientRect().left;
-            offsetY = touch.clientY - toolbar.getBoundingClientRect().top;
+            startX = touch.clientX;
+            startY = touch.clientY;
+            toolbarLeft = rect.left;
+            toolbarTop = rect.top;
             document.addEventListener('touchmove', onDrag, { passive: false });
             document.addEventListener('touchend', stopDrag);
         }
@@ -88,37 +226,30 @@ function initFloatingToolbar() {
     
     function onDrag(e) {
         if (!isDragging) return;
-        
         e.preventDefault();
         
-        let clientX, clientY;
-        
-        // 鼠标事件
+        let currentX, currentY;
         if (e.type === 'mousemove') {
-            clientX = e.clientX;
-            clientY = e.clientY;
-        } 
-        // 触摸事件
-        else if (e.type === 'touchmove') {
+            currentX = e.clientX;
+            currentY = e.clientY;
+        } else if (e.type === 'touchmove') {
             const touch = e.touches[0];
-            clientX = touch.clientX;
-            clientY = touch.clientY;
+            currentX = touch.clientX;
+            currentY = touch.clientY;
         }
         
-        // 计算新位置
-        let left = clientX - offsetX;
-        let top = clientY - offsetY;
+        const deltaX = currentX - startX;
+        const deltaY = currentY - startY;
+        
+        let newLeft = toolbarLeft + deltaX;
+        let newTop = toolbarTop + deltaY;
         
         // 限制在窗口范围内
-        const maxX = window.innerWidth - toolbar.offsetWidth;
-        const maxY = window.innerHeight - toolbar.offsetHeight;
+        newLeft = Math.max(0, Math.min(newLeft, window.innerWidth - toolbar.offsetWidth));
+        newTop = Math.max(0, Math.min(newTop, window.innerHeight - toolbar.offsetHeight));
         
-        left = Math.max(0, Math.min(left, maxX));
-        top = Math.max(0, Math.min(top, maxY));
-        
-        // 应用新位置
-        toolbar.style.left = left + 'px';
-        toolbar.style.top = top + 'px';
+        toolbar.style.left = newLeft + 'px';
+        toolbar.style.top = newTop + 'px';
     }
     
     function stopDrag() {
@@ -302,3 +433,80 @@ function preventImageDragging() {
 
 // 在页面加载完成后调用
 document.addEventListener('DOMContentLoaded', preventImageDragging);
+
+// 翻译功能相关变量
+let isTranslated = false;
+let originalTexts = new Map();
+let translations = null;
+
+// 加载翻译文件
+async function loadTranslations() {
+    try {
+        const response = await fetch('/articles/design/spVR-allinone/assets/translation/zh-CN.json');
+        translations = await response.json();
+        console.log('翻译文件加载成功');
+    } catch (error) {
+        console.error('加载翻译文件失败:', error);
+    }
+}
+
+// 保存原始文本
+function saveOriginalTexts() {
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        // 保存包含HTML标签的原始内容
+        originalTexts.set(key, element.innerHTML);
+    });
+}
+
+// 切换翻译
+async function toggleTranslation() {
+    if (!translations) {
+        await loadTranslations();
+    }
+    
+    if (!translations) {
+        console.error('无法加载翻译文件');
+        return;
+    }
+    
+    if (!isTranslated) {
+        // 保存原始文本
+        saveOriginalTexts();
+        
+        // 应用翻译
+        const elements = document.querySelectorAll('[data-translate]');
+        elements.forEach(element => {
+            const key = element.getAttribute('data-translate');
+            if (translations[key]) {
+                // 处理换行符
+                const translatedText = translations[key].replace(/\\n/g, '\n');
+                element.innerHTML = translatedText.replace(/\n/g, '<br>');
+            }
+        });
+        
+        // 更新按钮状态
+        const translateBtn = document.getElementById('translateBtn');
+        if (translateBtn) {
+            translateBtn.querySelector('.lang-indicator').textContent = 'CN';
+        }
+    } else {
+        // 恢复原始文本
+        const elements = document.querySelectorAll('[data-translate]');
+        elements.forEach(element => {
+            const key = element.getAttribute('data-translate');
+            if (originalTexts.has(key)) {
+                element.innerHTML = originalTexts.get(key);
+            }
+        });
+        
+        // 更新按钮状态
+        const translateBtn = document.getElementById('translateBtn');
+        if (translateBtn) {
+            translateBtn.querySelector('.lang-indicator').textContent = 'EN';
+        }
+    }
+    
+    isTranslated = !isTranslated;
+}
