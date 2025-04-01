@@ -10,14 +10,15 @@ html {
 }
 
 body {
-    font-family: 'Microsoft YaHei', 'Anek Latin', sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: #ffffff; /* 白色文字在灰色背景上 */
+    color: #333;
     background-image: url('assets/ui/bg.png');
     background-repeat: repeat;
     background-size: 500px 500px;
     background-blend-mode: overlay;
-    overflow-x: hidden;
+    overflow-x: auto; /* 允许水平滚动 */
+    min-width: 1080px; /* 设置最小宽度为1080px */
     -webkit-user-select: none;  /* Chrome, Safari, Opera */
     -moz-user-select: none;     /* Firefox */
     -ms-user-select: none;      /* IE/Edge */
@@ -26,18 +27,18 @@ body {
 
 /* 容器样式 */
 .container {
-    width: 95%;
-    max-width: 1920px;
+    width: 100%;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2rem;
+    min-width: 1080px; /* 设置最小宽度为1080px */
 }
 
 /* 浮动工具栏样式 */
 .floating-toolbar {
     position: fixed;
     right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 30px;
     background: rgba(217, 217, 217, 0.9);
     border-radius: 30px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -50,7 +51,6 @@ body {
     transition: box-shadow 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
     width: 60px;
-    min-height: 200px;
 }
 
 .floating-toolbar:hover {
@@ -286,8 +286,9 @@ body {
 
 /* 模块样式 */
 .module {
-    padding: 5rem 0;
+    padding: 6rem 0;
     background-color: #f8f8f8;
+    min-width: 1080px; /* 设置最小宽度为1080px */
 }
 
 /* 关于模块特定样式 */
@@ -380,7 +381,15 @@ body {
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1080px) {
+    body {
+        overflow-x: auto; /* 确保可以水平滚动 */
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
     .main-title {
         font-size: 3rem;
     }
@@ -571,7 +580,7 @@ body {
 
 /* 项目展示模块 */
 #showcase {
-    background-color: #333333;
+    background-color: #333333f3;
 }
 
 .showcase-slider {
@@ -647,6 +656,7 @@ body {
 @media (max-width: 768px) {
     .floating-toolbar {
         right: 10px;
+        bottom: 20px;
         padding: 8px;
     }
     
@@ -861,4 +871,257 @@ body {
 .flip-letter .back {
     font-family: 'Playfair Display', serif;
     /* 这里不需要修改，因为艺术标题是英文字母 */
+}
+
+/* 选择模块样式 */
+#choice {
+    background-color: #33333365;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0;
+}
+
+.choice-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* 图片选择区域样式 */
+.choice-images {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.choice-image-container {
+    position: relative;
+    width: 45%;
+    max-width: 600px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.choice-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.3s ease;
+}
+
+.choice-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.choice-image-container:hover .choice-overlay {
+    opacity: 1;
+}
+
+.choice-overlay span {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 内容展示区域样式 */
+.choice-content {
+    position: relative;
+    min-height: 0;
+    margin-bottom: 0;
+    width: 100%;
+    transition: min-height 0.5s ease, margin-bottom 0.5s ease;
+}
+
+.choice-content.expanded {
+    min-height: auto;
+    margin-bottom: 8rem;
+}
+
+.choice-detail {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+    padding-bottom: 8rem;
+    transform: translateY(20px);
+}
+
+.choice-detail.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 内容切换按钮 */
+.content-switch {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.content-switch.right {
+    right: -100px;
+    background: none;
+}
+
+.content-switch.left {
+    left: -100px;
+    background: none;
+}
+
+.switch-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transform: translateX(0);
+    transition: all 0.3s ease;
+}
+
+.content-switch:hover .switch-content {
+    opacity: 1;
+}
+
+.content-switch.right:hover .switch-content {
+    transform: translateX(-20px);
+}
+
+.content-switch.left:hover .switch-content {
+    transform: translateX(20px);
+}
+
+.switch-text {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.switch-content i {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 992px) {
+    .choice-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .choice-image-container {
+        width: 80%;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .left-title {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .right-content {
+        padding-right: 0;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    #choice .section-title {
+        text-align: center;
+    }
+
+    .choice-content {
+        margin-bottom: 6rem; /* 平板设备上的留白 */
+    }
+    
+    .choice-detail {
+        padding-bottom: 6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .choice-image-container {
+        width: 90%;
+    }
+    
+    .choice-overlay span {
+        font-size: 3rem;
+    }
+    
+    .content-switch {
+        width: 60px; /* 移动端减小按钮宽度 */
+    }
+    
+    .content-switch.right {
+        right: -60px; /* 调整移动端右侧按钮位置 */
+    }
+    
+    .content-switch.left {
+        left: -60px; /* 调整移动端左侧按钮位置 */
+    }
+    
+    .switch-content {
+        padding: 10px;
+    }
+    
+    .switch-text {
+        font-size: 0.8rem;
+    }
+    
+    .switch-content i {
+        font-size: 1rem;
+    }
+    
+    #choice {
+        padding: 80px 0;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .overview-text {
+        font-size: 1rem;
+    }
+
+    .choice-content {
+        margin-bottom: 4rem; /* 手机设备上的留白 */
+    }
+    
+    .choice-detail {
+        padding-bottom: 4rem;
+    }
 }

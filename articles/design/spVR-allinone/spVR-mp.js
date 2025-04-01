@@ -124,6 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 初始化按钮状态
     updateScrollButtons();
+
+    initChoiceModule();
 });
 
 /**
@@ -190,12 +192,12 @@ function initFloatingToolbar() {
     // 拖拽功能
     let isDragging = false;
     let startX, startY;
-    let toolbarLeft, toolbarTop;
-    
-    // 直接在工具栏上添加事件监听
+    let toolbarOffsetX, toolbarOffsetY;
+
+    // 添加拖动事件监听器
     toolbar.addEventListener('mousedown', startDrag);
     toolbar.addEventListener('touchstart', startDrag, { passive: false });
-    
+
     function startDrag(e) {
         // 如果点击的是按钮，不启动拖动
         if (e.target.closest('button')) {
@@ -205,11 +207,19 @@ function initFloatingToolbar() {
         isDragging = true;
         const rect = toolbar.getBoundingClientRect();
         
+        // 如果工具栏使用right/bottom定位，转换为left/top
+        if (getComputedStyle(toolbar).right !== 'auto') {
+            toolbar.style.left = rect.left + 'px';
+            toolbar.style.top = rect.top + 'px';
+            toolbar.style.right = 'auto';
+            toolbar.style.bottom = 'auto';
+        }
+        
         if (e.type === 'mousedown') {
             startX = e.clientX;
             startY = e.clientY;
-            toolbarLeft = rect.left;
-            toolbarTop = rect.top;
+            toolbarOffsetX = e.clientX - rect.left;
+            toolbarOffsetY = e.clientY - rect.top;
             document.addEventListener('mousemove', onDrag);
             document.addEventListener('mouseup', stopDrag);
         } else if (e.type === 'touchstart') {
@@ -217,8 +227,8 @@ function initFloatingToolbar() {
             const touch = e.touches[0];
             startX = touch.clientX;
             startY = touch.clientY;
-            toolbarLeft = rect.left;
-            toolbarTop = rect.top;
+            toolbarOffsetX = touch.clientX - rect.left;
+            toolbarOffsetY = touch.clientY - rect.top;
             document.addEventListener('touchmove', onDrag, { passive: false });
             document.addEventListener('touchend', stopDrag);
         }
@@ -238,18 +248,16 @@ function initFloatingToolbar() {
             currentY = touch.clientY;
         }
         
-        const deltaX = currentX - startX;
-        const deltaY = currentY - startY;
-        
-        let newLeft = toolbarLeft + deltaX;
-        let newTop = toolbarTop + deltaY;
+        // 计算新位置
+        const left = currentX - toolbarOffsetX;
+        const top = currentY - toolbarOffsetY;
         
         // 限制在窗口范围内
-        newLeft = Math.max(0, Math.min(newLeft, window.innerWidth - toolbar.offsetWidth));
-        newTop = Math.max(0, Math.min(newTop, window.innerHeight - toolbar.offsetHeight));
+        const maxX = window.innerWidth - toolbar.offsetWidth;
+        const maxY = window.innerHeight - toolbar.offsetHeight;
         
-        toolbar.style.left = newLeft + 'px';
-        toolbar.style.top = newTop + 'px';
+        toolbar.style.left = Math.max(0, Math.min(left, maxX)) + 'px';
+        toolbar.style.top = Math.max(0, Math.min(top, maxY)) + 'px';
     }
     
     function stopDrag() {
@@ -509,4 +517,60 @@ async function toggleTranslation() {
     }
     
     isTranslated = !isTranslated;
+}
+
+/**
+ * 初始化选择模块
+ */
+function initChoiceModule() {
+    const choiceImages = document.querySelectorAll('.choice-image-container');
+    const choiceContents = document.querySelectorAll('.choice-detail');
+    const choiceContent = document.querySelector('.choice-content');
+    let currentChoice = null;
+
+    // 为每个图片添加点击事件
+    choiceImages.forEach(image => {
+        image.addEventListener('click', () => {
+            const choice = image.getAttribute('data-choice');
+            showChoiceContent(choice);
+        });
+    });
+
+    // 为内容区域添加切换事件
+    choiceContents.forEach(content => {
+        const switchButtons = content.querySelectorAll('.content-switch');
+        switchButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const isRight = button.classList.contains('right');
+                if (isRight) {
+                    showChoiceContent('B');
+                } else {
+                    showChoiceContent('A');
+                }
+            });
+        });
+    });
+
+    // 显示选择的内容
+    function showChoiceContent(choice) {
+        if (currentChoice === choice) return;
+        
+        // 展开内容区域
+        choiceContent.classList.add('expanded');
+        
+        // 移除所有活动状态
+        choiceContents.forEach(content => {
+            content.classList.remove('active');
+        });
+
+        // 添加新的活动状态
+        const targetContent = document.getElementById(`choice${choice}-content`);
+        if (targetContent) {
+            targetContent.classList.add('active');
+            currentChoice = choice;
+        }
+    }
+
+    // 默认不显示任何内容
+    choiceContent.classList.remove('expanded');
 }
