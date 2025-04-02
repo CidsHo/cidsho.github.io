@@ -943,23 +943,27 @@ body {
     position: relative;
     min-height: 0;
     margin-bottom: 0;
-    width: 100%;
     transition: min-height 0.5s ease, margin-bottom 0.5s ease;
+    overflow: hidden;
 }
 
 .choice-content.expanded {
-    min-height: auto;
+    min-height: 500px;
     margin-bottom: 8rem;
 }
 
 .choice-detail {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
-    padding-bottom: 8rem;
     transform: translateY(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
 }
 
 .choice-detail.active {
@@ -967,6 +971,9 @@ body {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    pointer-events: auto;
+    height: auto;
+    overflow: visible;
 }
 
 /* 内容切换按钮 */

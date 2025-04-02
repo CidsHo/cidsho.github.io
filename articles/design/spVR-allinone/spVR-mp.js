@@ -555,22 +555,36 @@ function initChoiceModule() {
     function showChoiceContent(choice) {
         if (currentChoice === choice) return;
         
-        // 展开内容区域
-        choiceContent.classList.add('expanded');
-        
-        // 移除所有活动状态
+        // 先移除所有活动状态
         choiceContents.forEach(content => {
             content.classList.remove('active');
+            content.style.visibility = 'hidden';
         });
 
         // 添加新的活动状态
         const targetContent = document.getElementById(`choice${choice}-content`);
         if (targetContent) {
-            targetContent.classList.add('active');
-            currentChoice = choice;
+            // 如果内容区域未展开，先展开
+            if (!choiceContent.classList.contains('expanded')) {
+                choiceContent.classList.add('expanded');
+                // 等待展开动画完成后再显示内容
+                setTimeout(() => {
+                    targetContent.style.visibility = 'visible';
+                    targetContent.classList.add('active');
+                    currentChoice = choice;
+                }, 500);
+            } else {
+                // 如果已经展开，直接显示内容
+                targetContent.style.visibility = 'visible';
+                targetContent.classList.add('active');
+                currentChoice = choice;
+            }
         }
     }
 
     // 默认不显示任何内容
     choiceContent.classList.remove('expanded');
+    choiceContents.forEach(content => {
+        content.style.visibility = 'hidden';
+    });
 }
