@@ -29,4 +29,11 @@ html, body {
     height: 100%;
     overflow-x: hidden; /* 防止横向溢出 */
     position: relative; /* 建立定位上下文 */
+    -ms-overflow-style: none;  /* IE 和 Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
 }

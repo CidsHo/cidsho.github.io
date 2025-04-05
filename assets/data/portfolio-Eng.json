@@ -1,0 +1,999 @@
+[
+    {
+        "title": "23岁 23rd",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/photograph/23th-birthday/portrait.webp", 
+        "link": "articles/photograph/23th-birthday/23th-birthday.html",
+        "tags": ["摄影","自拍"],
+        "description": "2022年年度肖像环节",
+        "date": "2022-03-12"
+    },
+    {
+        "title": "24岁 24th",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/photograph/24th-birthday/portrait.webp", 
+        "link": "articles/photograph/24th-birthday/24th-birthday.html",
+        "tags": ["摄影","自拍"],
+        "description": "24岁的帷幕于渐显的未来前揭示。",
+        "date": "2023-03-12"
+    },
+    {
+        "title": "锈蚀与鲜花 Rust & Blossom",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/photograph/rust&blossom/rust&blossom.webp", 
+        "link": "articles/photograph/rust&blossom/rust&blossom.html",
+        "tags": ["摄影","抽象"],
+        "description": "",
+        "date": "2022-06-03"
+    },
+    {
+        "title": "空中 VOID",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/photograph/void/void.webp", 
+        "link": "articles/photograph/void/void.html",
+        "tags": ["摄影","抽象"],
+        "description": "",
+        "date": "2019-05-08"
+    },
+    {
+        "title": "江河守护 River Guardian",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/photograph/riverguardian/rg.webp", 
+        "link": "articles/photograph/riverguardian/riverguardian.html",
+        "tags": ["摄影","人像"],
+        "description": "",
+        "date": "2019-05-08"
+    },
+    {
+        "title": "丹霞 Danxia",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/photograph/danxia/danxia.webp", 
+        "link": "articles/photograph/danxia/danxia.html",
+        "tags": ["摄影","风光"],
+        "description": "",
+        "date": "2018-08-10"
+    },
+    {
+        "title": "上海保利大剧院 Shanghai Poly Grand Theatre",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/shPolygrandtheatre/shPolygrandtheatre.webp",
+        "link": "articles/photograph/shPolygrandtheatre/shPolygrandtheatre.html",
+        "tags": ["精选","摄影"],
+        "description": "商业摄影",
+        "date": "2022/11/6"
+    },
+    {
+        "title": "格子山道 Grid",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/grid1/grid1.webp",
+        "link": "articles/photograph/grid1/grid1.html",
+        "tags": ["摄影","街景"],
+        "description": "原本只想留一张，但最后都留下了",
+        "date": "2023/02/25"
+    },
+    {
+        "title": "舞者 Dancer",
+        "image": "assets/placeholder.jpg", 
+        "data-src": "articles/photograph/dancer/dancer.webp", 
+        "link": "articles/photograph/dancer/dancer.html",
+        "tags": ["摄影","抽象"],
+        "description": "某些夜晚，再进一步，振翅欲飞。",
+        "date": "2022-11-19"
+    },
+    {
+        "title": "鲜艳幕后 Beyond Radiance",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/beyondRadiance/beyondRadiance.webp",
+        "link": "articles/photograph/beyondRadiance/beyondRadiance.html",
+        "tags": ["精选","摄影"],
+        "description": "竞赛作品",
+        "date": "2022-07-06"
+    },
+    {
+        "title": "西区街市 Western Market",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/westernMarket/westernMarket.webp",
+        "link": "articles/photograph/westernMarket/westernMarket.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2023-02-10"
+    },
+    {
+        "title": "葡京酒店 Hotel Lisboa Macau",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/hotelLisboaMacau/hotelLisboaMacau.webp",
+        "link": "articles/photograph/hotelLisboaMacau/hotelLisboaMacau.html",
+        "tags": ["摄影","建筑"],
+        "description": "",
+        "date": "2023-02-19"
+    },
+    {
+        "title": "花贩 Flower Vendor",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/flowerVendor/flowerVendor2.webp",
+        "link": "articles/photograph/flowerVendor/flowerVendor.html",
+        "tags": ["摄影","人像"],
+        "description": "",
+        "date": "2022-11-16"
+    },
+    {
+        "title": "马鞍山码头 Dock",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/dock/dock.webp",
+        "link": "articles/photograph/dock/dock.html",
+        "tags": ["摄影","风光"],
+        "description": "",
+        "date": "2019-08-30"
+    },
+    {
+        "title": "淡出 Lead Out",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/leadOut/leadOut.webp",
+        "link": "articles/photograph/leadOut/leadOut.html",
+        "tags": ["摄影","抽象"],
+        "description": "",
+        "date": "2022-10-07"
+    },
+    {
+        "title": "夜更 Night Stall",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/nightStall/nightStall1.webp",
+        "link": "articles/photograph/nightStall/nightStall.html",
+        "tags": ["精选","摄影","人像"],
+        "description": "",
+        "date": "2023-02-07"
+    },
+    {
+        "title": "小民 Vendor",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/vendor/vendor.webp",
+        "link": "articles/photograph/vendor/vendor.html",
+        "tags": ["摄影", "人像"],
+        "description": "",
+        "date": "2022-11-06"
+    },
+    {
+        "title": "Walk Pass SH",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/walkPasssh/walkPasssh.webp",
+        "link": "articles/photograph/walkPasssh/walkPasssh.html",
+        "tags": ["摄影","建筑"],
+        "description": "",
+        "date": "2022-11-04"
+    },
+    {
+        "title": "Fading Wedding Dressing",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/fadingweddingdressing/fadingweddingdressing.webp",
+        "link": "articles/photograph/fadingweddingdressing/fadingweddingdressing.html",
+        "tags": ["摄影","建筑"],
+        "description": "",
+        "date": "2022-09-13"
+    },
+    {
+        "title": "米面粮油 Vendor",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/vendor2/vendor.webp",
+        "link": "articles/photograph/vendor2/vendor.html",
+        "tags": ["摄影", "人像"],
+        "description": "",
+        "date": "2023-05-02"
+    },
+    {
+        "title": "上海 Shanghai",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/sh1/sh1.webp",
+        "link": "articles/photograph/sh1/sh1.html",
+        "tags": ["摄影","建筑"],
+        "description": "",
+        "date": "2022-10-03"
+    },    
+    {
+        "title": "都市风格 Urban Style",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/urbanStyle/urbanStyle.webp",
+        "link": "articles/photograph/urbanStyle/urbanStyle.html",
+        "tags": ["摄影","建筑"],
+        "description": "",
+        "date": "2022-09-30"
+    },
+    {
+        "title": "洪崖洞 Hongyadong",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/hongyadong/hongyadong.webp",
+        "link": "articles/photograph/hongyadong/hongyadong.html",
+        "tags": ["摄影","建筑"],
+        "description": "经典机位留念",
+        "date": "2019-12-03"
+    },
+    {
+        "title": "构成 Composition",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/composition3/composition3.webp",
+        "link": "articles/photograph/composition3/composition.html",
+        "tags": ["摄影","抽象"],
+        "description": "",
+        "date": "2024-04-28"
+    },
+    {
+        "title": "穿梭 Portal",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/portal/portal.webp",
+        "link": "articles/photograph/portal/portal.html",
+        "tags": ["摄影","人像"],
+        "description": "",
+        "date": "2023-05-02"
+    },
+    {
+        "title": "格 Lyra",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/ge1/ge.webp",
+        "link": "articles/photograph/ge1/ge.html",
+        "tags": ["摄影","人像"],
+        "description": "",
+        "date": "2023-07-31"
+    },
+    {
+        "title": "构成 Composition",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/composition2/composition.webp",
+        "link": "articles/photograph/composition2/composition2.html",
+        "tags": ["摄影","抽象"],
+        "description": "",
+        "date": "2017-11-09"
+    },
+    {
+        "title": "构成 Composition",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/composition1/composition1.jpeg",
+        "link": "articles/photograph/composition1/composition1.html",
+        "tags": ["摄影","抽象"],
+        "description": "",
+        "date": "2019-08-30"
+    },
+    {
+        "title": "拱 Arch",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/arch-wuhan/arch.webp",
+        "link": "articles/photograph/arch-wuhan/arch.html",
+        "tags": ["摄影","建筑"],
+        "description": "",
+        "date": "2021-10-25"
+    },
+    {
+        "title": "湎于歌声 Siren",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/siren/siren.jpg",
+        "link": "articles/photograph/siren/siren.html",
+        "tags": ["摄影","人像"],
+        "description": "@Chinese Football",
+        "date": "2021-12-17"
+    },
+    {
+        "title": "戏外 Interval",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/interval/interval.webp",
+        "link": "articles/photograph/interval/interval.html",
+        "tags": ["摄影","人像"],
+        "description": "",
+        "date": "2022-01-31"
+    },
+    {
+        "title": "红炉左右 Hotpot",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/hotpot/hotpot1.webp",
+        "link": "articles/photograph/hotpot/hotpot.html",
+        "tags": ["摄影","人像"],
+        "description": "",
+        "date": "2022-01-26"
+    },
+    {
+        "title": "月食 lunaEclipse",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/lunaEclipse/lunaEclipse.jpg",
+        "link": "articles/photograph/lunaEclipse/lunaEclipse.html",
+        "tags": ["摄影","抽象"],
+        "description": "",
+        "date": "2023-10-28"
+    },
+    {
+        "title": "20岁 20th",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/20th-birthday/20th-birthday.webp",
+        "link": "articles/photograph/20th-birthday/20th-birthday.html",
+        "tags": ["摄影","人像"],
+        "description": "",
+        "date": "2019-03-12"
+    },
+    {
+        "title": "自拍 Selfie",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/selfie/selfie.jpg",
+        "link": "articles/photograph/selfie/selfie.html",
+        "tags": ["摄影","人像"],
+        "description": "",
+        "date": "2021-06-02"
+    },
+    {
+        "title": "19岁 19th",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/19th-birthday/19th-birthday.webp",
+        "link": "articles/photograph/19th-birthday/19th-birthday.html",
+        "tags": ["摄影","人像"],
+        "description": "",
+        "date": "2018-03-12"
+    },
+    {
+        "title": "糖果店 Candy Shop",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/candyshop/candyshop.webp",
+        "link": "articles/photograph/candyshop/candyshop.html",
+        "tags": ["摄影","街拍"],
+        "description": "",
+        "date": "2023-04-09"
+    },
+    {
+        "title": "杏黄 Apricot",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/Apricot/Apricot.webp",
+        "link": "articles/photograph/Apricot/Apricot.html",
+        "tags": ["摄影","植物"],
+        "description": "",
+        "date": "2017-10-28"
+    },
+    {
+        "title": "Birdie",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/birdie1/birdie.webp",
+        "link": "articles/photograph/birdie1/birdie.html",
+        "tags": ["摄影","动物"],
+        "description": "",
+        "date": "2022-02-24"
+    },
+    {
+        "title": "人像 Portrait",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/portrait1/portrait.webp",
+        "link": "articles/photograph/portrait1/portrait.html",
+        "tags": ["摄影","人像"],
+        "description": "商业摄影，请勿使用",
+        "date": "2019-06-05"
+    },
+    {
+        "title": "皇后镇 Queenstown",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/newzealand/1.webp",
+        "link": "articles/photograph/newzealand/newzealand.html",
+        "tags": ["摄影","风光"],
+        "description": "VRST 2023 会后小游",
+        "date": "2023-10-15"
+    },
+    {
+        "title": "花贩 Flower Vendor",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/flowerVendor2/flowerVendor2.webp",
+        "link": "articles/photograph/flowerVendor2/flowerVendor.html",
+        "tags": ["摄影","人像"],
+        "description": "",
+        "date": "2023-02-04"
+    },
+    {
+        "title": "沙路 Sand Road",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/sandroad/sandroad.webp",
+        "link": "articles/photograph/sandroad/sandroad.html",
+        "tags": ["摄影","风光"],
+        "description": "",
+        "date": "2018-08-11"
+    },
+
+
+    
+    {
+        "title": "同济大学2021年晚会主视觉",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/misc.png",
+        "link": "articles/design/stageart1/stageart1.html",
+        "tags": ["设计","舞台主视觉设计"],
+        "description": "商业项目，仅供参考",
+        "date": "2021-11-16"
+    },
+    {
+        "title": "练习 - 海报底图 Practice",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/practice1/Practice.webp",
+        "link": "articles/design/practice1/practice1.html",
+        "tags": ["设计","数字绘画"],
+        "description": "练习 - 海报底图",
+        "date": "2020-06-01"
+    },
+    {
+        "title": "鱼 Sakana",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/sakana/sakana.JPG",
+        "link": "articles/design/sakana/sakana.html",
+        "tags": ["设计","绘画"],
+        "description": "明信片设计",
+        "date": "2020-08-17"
+    },
+    {
+        "title": "R&D",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/r&d/r&d.JPG",
+        "link": "articles/design/r&d/r&d.html",
+        "tags": ["设计","绘画"],
+        "description": "明信片设计",
+        "date": "2021-03-24"
+    },
+    {
+        "title": "练习 - 鸟 Practice",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/practice4/Practice.png",
+        "link": "articles/design/practice4/practice4.html",
+        "tags": ["设计","数字绘画"],
+        "description": "练习",
+        "date": "2022-04-05"
+    },
+    {
+        "title": "与“生”对谈 - Birdie",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/birdie/cover.png",
+        "link": "articles/design/birdie/birdie.html",
+        "tags": ["设计","课堂作业"],
+        "description": "新媒体艺术创作课堂作业，项目受到新冠肺炎疫情影响最终没有落地，仅供参考",
+        "date": "2022-06-18"
+    },
+    {
+        "title": "练习 Practice",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/practice5/Practice.png",
+        "link": "articles/design/practice5/practice5.html",
+        "tags": ["设计","数字绘画"],
+        "description": "练习",
+        "date": "2022-12-25"
+    },
+    {
+        "title": "心 Heart",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/heart/heart.png",
+        "link": "articles/design/heart/heart.html",
+        "tags": ["设计","数字绘画"],
+        "description": "以撒玩疯了",
+        "date": "2023-02-25"
+    },  
+    {
+        "title": "Onsome",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/onsome/onsome.png",
+        "link": "articles/design/onsome/onsome.html",
+        "tags": ["设计","数字绘画"],
+        "description": "香港社会福利署海报设计",
+        "date": "2023-06-01"
+    },
+    {
+        "title": "练习 Practice",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/practice3/Practice.png",
+        "link": "articles/design/practice3/practice3.html",
+        "tags": ["设计","数字绘画"],
+        "description": "练习",
+        "date": "2023-06-05"
+    },
+    {
+        "title": "练习 - 结晶 Practice",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/practice2/Practice.png",
+        "link": "articles/design/practice2/practice2.html",
+        "tags": ["设计","数字绘画"],
+        "description": "练习 - 结晶",
+        "date": "2023-09-07"
+    },
+    {
+        "title": "逗猫棒 Cat-Teaser",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/cat-teaser/1.png",
+        "link": "articles/design/cat-teaser/cat-teaser.html",
+        "tags": ["设计","交互设计"],
+        "description": "一个交互装置设计想法",
+        "date": "2023-01-18"
+    },
+    {
+        "title": "黄昏 Dusk",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/dusk/dusk.webp",
+        "link": "articles/design/dusk/dusk.html",
+        "tags": ["设计","数字绘画"],
+        "description": "宿舍门口，恰到好处的光线",
+        "date": "2024-4-17"
+    },
+    {
+        "title": "港铁 XR 互动体验企划 MTR XR-Proposal Part 1",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/MTR/MTR-Proposal-PPT/MTR-Proposal-PPT.png",
+        "link": "articles/design/MTR/MTR-Proposal-PPT/MTR-Proposal-PPT.html",
+        "tags": ["设计","设计研究","想法"],
+        "description": "在研商业项目企划 Part 1",
+        "date": "2024-11-01"
+    },
+    {
+        "title": "港铁 XR 互动体验企划 MTR XR-Proposal Part 2",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/MTR/MTR-Proposal-Booklet/MTR-Proposal-Booklet.png",
+        "link": "articles/design/MTR/MTR-Proposal-Booklet/MTR-Proposal-Booklet.html",
+        "tags": ["设计","设计研究","想法"],
+        "description": "在研商业项目企划 Part 2",
+        "date": "2024-11-02"
+    },
+
+
+    {
+        "title": "Snap!",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ai.png",
+        "link": "articles/blog/aboutinteraction/snap!/blog.html",
+        "tags": ["设计","交互开发","虚拟现实"],
+        "description": "一种基于截图功能的伪Quest3摄像头识别方案",
+        "date": "2024-07-28"
+    },
+    {
+        "title": "关闭应用安全边界 Boundless Setting",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ai.png",
+        "link": "articles/blog/aboutinteraction/boundlesssetting/blog.html",
+        "tags": ["设计","交互开发","虚拟现实"],
+        "description": "关闭Quest应用安全边界",
+        "date": "2024-08-01"
+    },
+    {
+        "title": "利用Quest3头显实现物体识别功能（YOLO v8框架）",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ai.png",
+        "link": "articles/blog/aboutinteraction/quest3-item-detection/blog.html",
+        "tags": ["设计","应用开发","虚拟现实"],
+        "description": "将串流的视频当作数据源，然后进行AI检测，最后将检测结果显示在Quest的屏幕上",
+        "date": "2024-11-17"
+    },
+    {
+        "title": "Cursor用Figma MCP直出设计图",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ai.png",
+        "link": "articles/blog/aboutinteraction/cursormcp/blog.html",
+        "tags": ["设计","AIGC","界面设计"],
+        "description": "图一乐阶段的AIGC工具",
+        "date": "2025-03-19"
+    },
+    {
+        "title": "ShadowCostar-Legacy: A Rule-Driven UX Guidance System with Action Detection",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/blog/aboutinteraction/hai23/Front.png",
+        "link": "articles/blog/aboutinteraction/hai23/hai23.html",
+        "tags": ["精选","设计","交互开发","人工智能"],
+        "description": "一个基于动作检测规则的简易用户体验引导人工智能模型",
+        "date": "2023-12-04"
+    },
+    {
+        "title": "ShadowPlayVR-Interaction 交互设计脚本",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/spVR-interaction/Front.png",
+        "link": "articles/design/spVR-interaction/interaction.html",
+        "tags": ["精选","设计","交互设计","虚拟现实"],
+        "description": "依据手柄、头显返回的坐标的距离关系来判断呈现互动效果。",
+        "date": "2023-10-09"
+    },
+    {
+        "title": "ShadowPlayVR: Understanding Traditional SP Performance Techniques Through Non-Intuitive Embodied Interactions",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/blog/aboutinteraction/vrst23/Front2.png",
+        "link": "articles/blog/aboutinteraction/vrst23/vrst23.html",
+        "tags": ["精选","设计","交互设计","虚拟现实"],
+        "description": "发表于VRST 2023",
+        "date": "2023-10-12"
+    },
+    {
+        "title": "Architecting Social VR: Exploring Encounter and Serendipitous Interactions in Virtual Public Spaces",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/blog/aboutinteraction/hcii24/Front1.png",
+        "link": "articles/blog/aboutinteraction/hcii24/hcii24.html",
+        "tags": ["精选","设计","用户体验研究","虚拟现实"],
+        "description": "虚拟公共空间用户陌生偶遇行为研究",
+        "date": "2024-06-29"
+    },
+    {
+        "title": "ShadowPlay VR UI Design",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/spVR-UI/Front.png",
+        "link": "articles/design/spVR-UI/spVR-UI.html",
+        "tags": ["精选","设计","虚拟现实系统设计","UI设计"],
+        "description": "ShadowPlay VR UI设计留档及反思",
+        "date": "2025-01-11"
+    },
+    {
+        "title": "Siggraph Asia 2024 Booklet",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/spVR-Booklet/Front1.png",
+        "link": "articles/design/spVR-Booklet/spVR-Booklet.html",
+        "tags": ["精选","设计","用户体验研究","版式设计"],
+        "description": "为了Siggraph Asia 2024做的一套小册子，挑了几个重要的Section作为内容。文章主要研究的内容集中在Research部分，仅供参考。",
+        "date": "2024-12-03"
+    },
+    {
+        "title": "ShadowRehearsal: Enhancing Traditional Art Design Workflows with XR Technology",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/blog/aboutinteraction/ismar2024/ismar.png",
+        "link": "articles/blog/aboutinteraction/ismar2024/ismar2024.html",
+        "tags": ["精选","设计","虚拟现实系统设计","用户体验研究"],
+        "description": "发表于ISMAR 2024",
+        "date": "2024-10-29"
+    },
+    {
+        "title": "Designing Interactive Media Art to Empower Embedded Culture's Practitioner",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/blog/aboutinteraction/sa2024/Front1.png",
+        "link": "articles/blog/aboutinteraction/sa2024/sa2024.html",
+        "tags": ["精选","设计","交互媒体艺术","文化遗产保存"],
+        "description": "发表于SA 2024",
+        "date": "2024-12-05"
+    },
+    {
+        "title": "ShadowPlayVR-创意促进交互设计",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ai.png",
+        "link": "articles/design/spVR-Grads/spVR-Grads.html",
+        "tags": ["精选","设计","虚拟现实系统设计"],
+        "description": "实验室组会版本的Presentation",
+        "date": "2024-05-10"
+    },
+
+
+
+
+
+    {
+        "title": "虚拟空间中的行动方式及引导浅探",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/wt.png",
+        "link": "articles/blog/aboutinteraction/vrnavigation/blog.html",
+        "tags": ["想法","交互研究"],
+        "description": "",
+        "date": "2022-01-02"
+    },
+    {
+        "title": "从接受美学的角度看当今新媒体创作环境的迭代变迁",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/wt.png",
+        "link": "articles/blog/worldthinking/jauss/blog.html",
+        "tags": ["想法","媒介分析"],
+        "description": "",
+        "date": "2022-06-18"
+    },
+    {
+        "title": "平台策略指引下艺术科普自媒体运营与内容创作的反思与选择",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/wt.png",
+        "link": "articles/blog/worldthinking/arthistory/blog.html",
+        "tags": ["想法","媒介分析"],
+        "description": "",
+        "date": "2022-06-21"
+    },
+    {
+        "title": "VRST'23 Presentation",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/blog/aboutinteraction/vrst23/Front1.png",
+        "link": "articles/blog/aboutinteraction/vrst23/vrst-pre.html",
+        "tags": ["精选","设计","设计研究","虚拟现实系统"],
+        "description": "VRST'23 Presentation留档",
+        "date": "2023-10-11"
+    },
+
+
+
+
+
+    {
+        "title": "格式塔心理学​ Gestalt Psychology",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/gestalttheory/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2023-03-17"
+    },
+    {
+        "title": "交互娱乐​ Interactive Entertainment",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/interactiveentertainment/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2022-11-04"
+    },
+    {
+        "title": "非线性叙事​ Non-Linear Narrative",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/non-linearnarrative/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2022-11-03"
+    },
+    {
+        "title": "KANO",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/KANO/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2022-02-13"
+    },
+    {
+        "title": "绿野仙踪测试​ Wizard of Oz",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/wizardofoz/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2022-01-09"
+    },
+    {
+        "title": "尼尔森原则​ Nelson Principles",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/nelson/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2021-12-03"
+    },
+    {
+        "title": "无障碍设计小记 Accessibility",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/accessibility/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2021-11-17"
+    },
+    {
+        "title": "About Face Chap 17",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap17/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2021-01-18"
+    },
+    {
+        "title": "About Face Chap 16",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap16/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2021-01-18"
+    },
+    {
+        "title": "About Face Chap 15",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap15/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2021-01-18"
+    },
+    {
+        "title": "About Face Chap 14",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap14/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2021-01-18"
+    },
+    {
+        "title": "About Face Chap 13",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap13/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-12-25"
+    },
+    {
+        "title": "About Face Chap 12",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap12/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-12-22"
+    },
+    {
+        "title": "About Face Chap 11",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap11/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-12-22"
+    },
+    {
+        "title": "About Face Chap 10",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap10/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-12-22"
+    },
+    {
+        "title": "About Face Chap 9",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap9/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-12-22"
+    },
+    {
+        "title": "About Face Chap 6",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap6/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-05-31"
+    },
+    {
+        "title": "About Face Chap 5",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap5/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-05-30"
+    },
+    {
+        "title": "About Face Chap 4",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap4/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-05-29"
+    },
+    {
+        "title": "About Face Chap 3",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap3/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-05-28"
+    },
+    {
+        "title": "About Face Chap 2",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap2/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-05-27"
+    },
+    {
+        "title": "About Face Chap 1",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/aboutface/chap1/blog.html",
+        "tags": ["学习"],
+        "description": "",
+        "date": "2020-05-21"
+    },
+    {
+        "title": "Collection of metaphors for human-robot interaction.",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/metaphor/blog.html",
+        "tags": ["学习","交互研究","互动机器人"],
+        "description": "人-机器人交互之间的隐喻",
+        "date": "2022-02-21"
+    },
+    {
+        "title": "Bubblebot: Designing playful encounters with robots.",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/bubblebot/blog.html",
+        "tags": ["学习","交互研究","互动机器人"],
+        "description": "泡泡机器人",
+        "date": "2022-04-25"
+    },
+    {
+        "title": "Interfacing & Embodiment: \"Baby Tango\" Dancing Robot Attempts to Communicate",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/baby-tango/blog.html",
+        "tags": ["学习","交互研究","互动机器人"],
+        "description": "界面化，具身化，舞蹈机器人的沟通方式",
+        "date": "2022-03-17"
+    },
+    {
+        "title": "Ludic-hri: Designing playful experiences with robots.",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/ludichri/blog.html",
+        "tags": ["学习","交互研究","互动机器人"],
+        "description": "玩乐设计与机器人交互",
+        "date": "2022-03-16"
+    },
+    {
+        "title": "(Not) Interacting with a Robot Photographer",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/notinteract/blog.html",
+        "tags": ["学习","交互研究","互动机器人"],
+        "description": "不互动的互动",
+        "date": "2022-03-24"
+    },
+    {
+        "title": "Movable, kick-/flickable light fragments eliciting ad-hoc interaction in public space.",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/kickflickable/blog.html",
+        "tags": ["学习","交互研究","公共空间"],
+        "description": "公共空间中的异形显示屏以及身体交互实例",
+        "date": "2022-04-07"
+    },
+    {
+        "title": "Rayuela: A Hopscotch Playground for Plastic Awareness",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/rayuela/blog.html",
+        "tags": ["学习","交互研究","公共空间"],
+        "description": "跳房子：通过玩乐互动装置传递严肃信息",
+        "date": "2022-05-12"
+    },
+    {
+        "title": "A Survey of Socially Interactive Robots:  Concepts, Design, and Applications",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/sir101/blog.html",
+        "tags": ["学习","交互研究","机器人"],
+        "description": "社交互动机器人：概念，设计和应用",
+        "date": "2022-09-17"
+    },
+    {
+        "title": "布尔迪厄",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/bedr/blog.html",
+        "tags": ["学习","社会学"],
+        "description": "",
+        "date": "2023-01-02"
+    },
+    {
+        "title": "媒体融合",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/mediaconvergence/blog.html",
+        "tags": ["学习","传播学"],
+        "description": "",
+        "date": "2023-01-14"
+    },
+    {
+        "title": "先锋艺术",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/pioneerart/blog.html",
+        "tags": ["学习","艺术"],
+        "description": "",
+        "date": "2023-04-02"
+    },
+    {
+        "title": "Sounds of Infinity: Playful Illusions with Performative Interaction",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/article-thumbnail/ls.png",
+        "link": "articles/blog/learnstuffs/soundofinfinity/blog.html",
+        "tags": ["学习","交互研究","表演性交互"],
+        "description": "无限之声：玩乐幻像与述行性（表演性）交互",
+        "date": "2022-05-05"
+    }
+    
+]

@@ -49,21 +49,50 @@ h1 {
     gap: 5px; /* 字符间距 */
 }
 
-.char {
-    display: inline-block;
-    animation: float 6s ease-in-out infinite; /* 持续动画 */
+/* 去除旋转效果，改为字符间距变化 */
+@keyframes charSpacing {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(4px); /* 向右位移 */
+    }
+    50% {
+        transform: translateX(6px); /* 向右位移更多 */
+    }
+    75% {
+        transform: translateX(2px); /* 回到中间位置 */
+    }
 }
 
-/* 为每个字符设置不同的动画延迟 */
-.char:nth-child(1) { animation-delay: 0.24s; }
-.char:nth-child(2) { animation-delay: 0s; }
-.char:nth-child(3) { animation-delay: 0.44s; }
-.char:nth-child(4) { animation-delay: 0.14s; }
-.char:nth-child(5) { animation-delay: 0.84s; }
-.char:nth-child(6) { animation-delay: 0.54s; }
-.char:nth-child(7) { animation-delay: 0.94s; }
-.char:nth-child(8) { animation-delay: 0.64s; }
-.char:nth-child(9) { animation-delay: 0.24s; }
+/* 替换原有的字符动画 */
+.char {
+    display: inline-block;
+    animation: charSpacing 8s ease-in-out infinite; /* 更慢的动画 */
+    position: relative; /* 确保位置相对定位 */
+}
+
+/* 偶数字符向左移动，奇数字符向右移动 */
+.char:nth-child(even) {
+    animation-direction: alternate; /* 偶数字符从右到左 */
+}
+
+.char:nth-child(odd) {
+    animation-direction: alternate-reverse; /* 奇数字符从左到右 */
+}
+
+/* 每个字符有不同的动画延迟，创造随机效果 */
+.char:nth-child(1) { animation-delay: 0.1s; }
+.char:nth-child(2) { animation-delay: 3.7s; }
+.char:nth-child(3) { animation-delay: 1.3s; }
+.char:nth-child(4) { animation-delay: 4.5s; }
+.char:nth-child(5) { animation-delay: 2.1s; }
+.char:nth-child(6) { animation-delay: 0.8s; }
+.char:nth-child(7) { animation-delay: 3.2s; }
+.char:nth-child(8) { animation-delay: 1.7s; }
+.char:nth-child(9) { animation-delay: 4.9s; }
+.char:nth-child(10) { animation-delay: 2.5s; }
+.char:nth-child(11) { animation-delay: 0.4s; }
 
 .star-button {
     background: none;
@@ -106,6 +135,13 @@ h1 {
     background-size: 500px 500px;
     background-blend-mode: overlay;
     overflow: auto; /* 允许滚动 */
+    -ms-overflow-style: none;  /* IE 和 Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+/* Chrome, Safari 和 Opera */
+.portfolio-page::-webkit-scrollbar {
+    display: none;
 }
 
 /* 作品集部分 */
@@ -223,7 +259,7 @@ h1 {
 
 .portfolio-container {
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 0px;
 }
 
 /* 卡片容器 */
@@ -304,7 +340,7 @@ h1 {
     color: #999;
 }
 
-/* 高亮“精选”标签 */
+/* 高亮"精选"标签 */
 .highlighted-tag {
     background-color: #ffcc00 !important; /* 高亮颜色 */
     color: #000 !important; /* 文字颜色 */
@@ -409,7 +445,7 @@ h1 {
     }
 
     .portfolio-container {
-        padding: 0 20px;
+        padding: 0 0px;
     }
 
     /* 筛选栏优化 */

@@ -1,216 +1,92 @@
-/* 导航栏容器 */
-#navbar {
+/* 新的顶部导航栏样式 */
+.top-navbar {
+    position: absolute; /* 改为绝对定位而非固定定位 */
+    top: 10px;
+    right: 30px;
+    background-color: rgba(200, 200, 200, 0.8); /* 灰底 */
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 900; /* 稍微降低z-index */
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+}
+
+.nav-links {
     display: flex;
-    justify-content: flex-end; /* 导航栏内容靠右 */
-    padding: 8px;
-    position: fixed; /* 固定定位 */
-    top: 0;
-    right: 0;
-    z-index: 1000; /* 确保导航栏位于最上层 */
-    background-color: rgba(255, 255, 255, 0.3); /* 更透明的白色背景 */
-    backdrop-filter: blur(15px); /* 背景模糊 */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 更柔和的阴影 */
-    border-radius: 8px; /* 更大的圆角 */
-    margin: 28px; /* 外边距 */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+    gap: 18px;
 }
 
-#navbar:hover {
-    background-color: rgba(255, 255, 255, 0.5); /* 悬停时背景更明显 */
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* 悬停时阴影更深 */
-}
-
-/* 导航栏按钮 */
-#nav-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* 导航栏图标 */
-.nav-icon {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* 添加缩放和透明度动画 */
-}
-
-/* 鼠标悬停时放大图标 */
-#nav-toggle:hover .nav-icon {
-    transform: scale(1.1);
-    opacity: 0.8; /* 悬停时稍微透明 */
-}
-
-/* 点击时缩小图标 */
-#nav-toggle:active .nav-icon {
-    transform: scale(0.9);
-}
-
-/* 旋转图标（用于菜单展开时） */
-#nav-toggle.rotate .nav-icon {
-    transform: rotate(90deg);
-}
-
-/* 菜单栏覆盖层 */
-.menu-overlay {
-    position: fixed;
-    top: 0;
-    right: -100%; /* 初始位置完全隐藏在屏幕外 */
-    width: 280px; /* 稍微加宽 */
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.2); /* 更透明的白色背景 */
-    backdrop-filter: blur(20px); /* 更强的背景模糊 */
-    transition: right 0.5s ; /* 弹性动画 */
-    z-index: 999;
-    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1); /* 更柔和的阴影 */
-    padding: 20px; /* 内边距 */
-    border-left: 1px solid rgba(0, 0, 0, 0.1); /* 左侧边框 */
-}
-
-/* 菜单栏展开时 */
-.menu-overlay.active {
-    right: 0; /* 滑动到屏幕内 */
-}
-
-/* 菜单项列表 */
-#nav-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-family: "Playfair Display", "Microsoft Yahei", sans-serif;
-    font-weight: 300;
-}
-
-/* 菜单项 */
-#nav-menu li {
-    top: 50px;
-    margin: 25px 0; /* 增加间距 */
-    position: relative;
-    padding-left: 30px; /* 为图标留出空间 */
-    opacity: 0; /* 初始隐藏 */
-    transform: translateX(20px); /* 初始偏移 */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* 添加动画 */
-}
-
-/* 菜单项逐项显示 */
-.menu-overlay.active #nav-menu li {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.menu-overlay.active #nav-menu li:nth-child(1) {
-    transition-delay: 0.1s;
-}
-
-.menu-overlay.active #nav-menu li:nth-child(2) {
-    transition-delay: 0.2s;
-}
-
-.menu-overlay.active #nav-menu li:nth-child(3) {
-    transition-delay: 0.3s;
-}
-
-/* 菜单项链接 */
-#nav-menu li a {
+.nav-item {
+    color: #333; /* 黑字 */
     text-decoration: none;
-    color: #ffffffc6; /* 文字颜色 */
-    font-size: 18px;
-    transition: color 0.3s ease, transform 0.3s ease; /* 添加颜色和缩放动画 */
-    position: relative;
-    display: inline-block;
-}
-
-/* 鼠标悬停时改变文字颜色和缩放 */
-#nav-menu li a:hover {
-    color: #ffcc00;
-    transform: translateX(5px); /* 悬停时向右移动 */
-}
-
-/* 当前页面菜单项 */
-.current-page a {
-    font-weight: bold;
-    color: #ffcc00;
-}
-
-/* 当前页面图标 */
-#nav-menu li.current-page::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px; /* 图标宽度 */
-    height: 20px; /* 图标高度 */
-    background-image: url('../assets/current-page-icon.png'); /* 图标路径 */
-    background-size: cover; /* 确保图标完整显示 */
-}
-
-/* 菜单项下划线动画 */
-#nav-menu li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background-color: #ffcc00; /* 下划线颜色 */
-    transition: width 0.3s ease; /* 添加宽度过渡效果 */
-}
-
-/* 鼠标悬停时显示下划线 */
-#nav-menu li a:hover::after {
-    width: 100%;
-}
-
-/* More 和图标 */
-.more-frontpage {
-    margin-top: 120px;
-    text-align: center;
-}
-
-.more-frontpage p {
+    font-family: 'Anek Latin', sans-serif;
+    font-weight: 400;
     font-size: 16px;
-    color: #333;
-    margin-bottom: 10px;
+    padding: 5px 10px;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-.icon-row {
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* 图标间距 */
+/* 悬停效果 */
+.nav-item:hover {
+    color: white; /* 反色 */
 }
 
-.icon-row .icon {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* 添加缩放和透明度动画 */
+/* 背景条覆盖效果 */
+.nav-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0; /* 初始高度为0 */
+    background-color: #333; /* 深色背景 */
+    z-index: -1;
+    transition: height 0.3s ease;
+    border-radius: 3px;
 }
 
-.icon-row .icon:hover {
-    transform: scale(1.2);
-    opacity: 0.8; /* 悬停时稍微透明 */
+.nav-item:hover::before {
+    height: 100%; /* 悬停时扩展至全高 */
 }
 
-@media (max-width: 768px) {
-    #navbar {
-        padding: 5px; /* 减少内边距 */
-        margin: 10px; /* 减少外边距 */
+/* 当前页面高亮 */
+.nav-item.active {
+    font-weight: 500;
+}
+
+.nav-item.active::before {
+    height: 3px; /* 当前页面底部有一个小条 */
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+    .top-navbar {
+        position: fixed; /* 移动端改为固定定位 */
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 0;
+        padding: 5px 5px;
+        background-color: rgba(200, 200, 200, 0.95);
+        transform: translateY(0); /* 初始位置 */
+        transition: transform 0.3s ease;
     }
-
-    .menu-overlay {
-        width: 100%; /* 菜单栏占满整个屏幕宽度 */
-        right: -120%; /* 初始位置完全隐藏在屏幕外 */
+    
+    /* 隐藏状态（下滑时） */
+    .top-navbar.hidden {
+        transform: translateY(-100%); /* 向上移出屏幕 */
     }
-
-    .menu-overlay.active {
-        right: 0; /* 滑动到屏幕内 */
+    
+    .nav-links {
+        justify-content: space-around; /* 均匀分布 */
+        width: 100%;
     }
-
-    #nav-menu li {
-        margin: 15px 0; /* 减少菜单项间距 */
-        padding-left: 80px; /* 减少左侧留白 */
+    
+    .nav-item {
+        font-size: 14px;
+        padding: 3px 6px;
     }
 }

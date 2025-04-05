@@ -45,11 +45,6 @@
     margin: 0 auto; /* 居中 */
 }
 
-/* 鼠标悬停时提升卡片 */
-.profile-card:hover {
-    transform: translateY(-5px); /* 向上移动 */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* 增强阴影 */
-}
 
 /* 姓名区 */
 .name-section {
@@ -451,4 +446,15 @@
     .desktop-profile {
         display: block;
     }
+}
+
+/* 隐藏滚动条同时保持可滚动 */
+body {
+    -ms-overflow-style: none;  /* IE 和 Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+/* Chrome, Safari 和 Opera */
+body::-webkit-scrollbar {
+    display: none;
 }
