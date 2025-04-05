@@ -1,6 +1,6 @@
 [
     {
-        "title": "23岁 23rd",
+        "title": "23岁",
         "image": "assets/placeholder.jpg", 
         "data-src": "articles/photograph/23th-birthday/portrait.webp", 
         "link": "articles/photograph/23th-birthday/23th-birthday.html",
@@ -9,7 +9,7 @@
         "date": "2022-03-12"
     },
     {
-        "title": "24岁 24th",
+        "title": "24岁",
         "image": "assets/placeholder.jpg", 
         "data-src": "articles/photograph/24th-birthday/portrait.webp", 
         "link": "articles/photograph/24th-birthday/24th-birthday.html",
@@ -18,7 +18,7 @@
         "date": "2023-03-12"
     },
     {
-        "title": "锈蚀与鲜花 Rust & Blossom",
+        "title": "锈蚀与鲜花",
         "image": "assets/placeholder.jpg", 
         "data-src": "articles/photograph/rust&blossom/rust&blossom.webp", 
         "link": "articles/photograph/rust&blossom/rust&blossom.html",
@@ -27,7 +27,7 @@
         "date": "2022-06-03"
     },
     {
-        "title": "空中 VOID",
+        "title": "空中",
         "image": "assets/placeholder.jpg", 
         "data-src": "articles/photograph/void/void.webp", 
         "link": "articles/photograph/void/void.html",
@@ -36,7 +36,7 @@
         "date": "2019-05-08"
     },
     {
-        "title": "江河守护 River Guardian",
+        "title": "江河守护",
         "image": "assets/placeholder.jpg", 
         "data-src": "articles/photograph/riverguardian/rg.webp", 
         "link": "articles/photograph/riverguardian/riverguardian.html",
@@ -45,7 +45,7 @@
         "date": "2019-05-08"
     },
     {
-        "title": "丹霞 Danxia",
+        "title": "丹霞",
         "image": "assets/placeholder.jpg", 
         "data-src": "articles/photograph/danxia/danxia.webp", 
         "link": "articles/photograph/danxia/danxia.html",
@@ -54,7 +54,7 @@
         "date": "2018-08-10"
     },
     {
-        "title": "上海保利大剧院 Shanghai Poly Grand Theatre",
+        "title": "上海保利大剧院",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/shPolygrandtheatre/shPolygrandtheatre.webp",
         "link": "articles/photograph/shPolygrandtheatre/shPolygrandtheatre.html",
@@ -63,7 +63,7 @@
         "date": "2022/11/6"
     },
     {
-        "title": "格子山道 Grid",
+        "title": "格子山道",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/grid1/grid1.webp",
         "link": "articles/photograph/grid1/grid1.html",
@@ -72,7 +72,7 @@
         "date": "2023/02/25"
     },
     {
-        "title": "舞者 Dancer",
+        "title": "舞者",
         "image": "assets/placeholder.jpg", 
         "data-src": "articles/photograph/dancer/dancer.webp", 
         "link": "articles/photograph/dancer/dancer.html",
@@ -81,7 +81,7 @@
         "date": "2022-11-19"
     },
     {
-        "title": "鲜艳幕后 Beyond Radiance",
+        "title": "鲜艳幕后",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/beyondRadiance/beyondRadiance.webp",
         "link": "articles/photograph/beyondRadiance/beyondRadiance.html",
@@ -90,7 +90,7 @@
         "date": "2022-07-06"
     },
     {
-        "title": "西区街市 Western Market",
+        "title": "西区街市",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/westernMarket/westernMarket.webp",
         "link": "articles/photograph/westernMarket/westernMarket.html",
@@ -99,7 +99,7 @@
         "date": "2023-02-10"
     },
     {
-        "title": "葡京酒店 Hotel Lisboa Macau",
+        "title": "葡京酒店",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/hotelLisboaMacau/hotelLisboaMacau.webp",
         "link": "articles/photograph/hotelLisboaMacau/hotelLisboaMacau.html",
@@ -108,7 +108,7 @@
         "date": "2023-02-19"
     },
     {
-        "title": "花贩 Flower Vendor",
+        "title": "花贩",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/flowerVendor/flowerVendor2.webp",
         "link": "articles/photograph/flowerVendor/flowerVendor.html",
@@ -117,7 +117,7 @@
         "date": "2022-11-16"
     },
     {
-        "title": "马鞍山码头 Dock",
+        "title": "马鞍山码头",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/dock/dock.webp",
         "link": "articles/photograph/dock/dock.html",
@@ -126,7 +126,7 @@
         "date": "2019-08-30"
     },
     {
-        "title": "淡出 Lead Out",
+        "title": "淡出",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/leadOut/leadOut.webp",
         "link": "articles/photograph/leadOut/leadOut.html",
@@ -135,7 +135,7 @@
         "date": "2022-10-07"
     },
     {
-        "title": "夜更 Night Stall",
+        "title": "夜更",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/nightStall/nightStall1.webp",
         "link": "articles/photograph/nightStall/nightStall.html",
@@ -144,7 +144,7 @@
         "date": "2023-02-07"
     },
     {
-        "title": "小民 Vendor",
+        "title": "小民",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/vendor/vendor.webp",
         "link": "articles/photograph/vendor/vendor.html",
@@ -171,7 +171,7 @@
         "date": "2022-09-13"
     },
     {
-        "title": "米面粮油 Vendor",
+        "title": "米面粮油",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/vendor2/vendor.webp",
         "link": "articles/photograph/vendor2/vendor.html",
@@ -180,7 +180,7 @@
         "date": "2023-05-02"
     },
     {
-        "title": "上海 Shanghai",
+        "title": "上海",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/sh1/sh1.webp",
         "link": "articles/photograph/sh1/sh1.html",
@@ -189,7 +189,7 @@
         "date": "2022-10-03"
     },    
     {
-        "title": "都市风格 Urban Style",
+        "title": "都市风格",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/urbanStyle/urbanStyle.webp",
         "link": "articles/photograph/urbanStyle/urbanStyle.html",
@@ -198,7 +198,7 @@
         "date": "2022-09-30"
     },
     {
-        "title": "洪崖洞 Hongyadong",
+        "title": "洪崖洞",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/hongyadong/hongyadong.webp",
         "link": "articles/photograph/hongyadong/hongyadong.html",
@@ -207,7 +207,7 @@
         "date": "2019-12-03"
     },
     {
-        "title": "构成 Composition",
+        "title": "构成",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/composition3/composition3.webp",
         "link": "articles/photograph/composition3/composition.html",
@@ -216,7 +216,7 @@
         "date": "2024-04-28"
     },
     {
-        "title": "穿梭 Portal",
+        "title": "穿梭",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/portal/portal.webp",
         "link": "articles/photograph/portal/portal.html",
@@ -225,7 +225,7 @@
         "date": "2023-05-02"
     },
     {
-        "title": "格 Lyra",
+        "title": "格",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/ge1/ge.webp",
         "link": "articles/photograph/ge1/ge.html",
@@ -234,7 +234,7 @@
         "date": "2023-07-31"
     },
     {
-        "title": "构成 Composition",
+        "title": "构成",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/composition2/composition.webp",
         "link": "articles/photograph/composition2/composition2.html",
@@ -243,7 +243,7 @@
         "date": "2017-11-09"
     },
     {
-        "title": "构成 Composition",
+        "title": "构成",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/composition1/composition1.jpeg",
         "link": "articles/photograph/composition1/composition1.html",
@@ -252,7 +252,7 @@
         "date": "2019-08-30"
     },
     {
-        "title": "拱 Arch",
+        "title": "拱",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/arch-wuhan/arch.webp",
         "link": "articles/photograph/arch-wuhan/arch.html",
@@ -261,7 +261,7 @@
         "date": "2021-10-25"
     },
     {
-        "title": "湎于歌声 Siren",
+        "title": "湎于歌声",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/siren/siren.jpg",
         "link": "articles/photograph/siren/siren.html",
@@ -270,7 +270,7 @@
         "date": "2021-12-17"
     },
     {
-        "title": "戏外 Interval",
+        "title": "戏外",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/interval/interval.webp",
         "link": "articles/photograph/interval/interval.html",
@@ -279,7 +279,7 @@
         "date": "2022-01-31"
     },
     {
-        "title": "红炉左右 Hotpot",
+        "title": "红炉左右",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/hotpot/hotpot1.webp",
         "link": "articles/photograph/hotpot/hotpot.html",
@@ -288,7 +288,7 @@
         "date": "2022-01-26"
     },
     {
-        "title": "月食 lunaEclipse",
+        "title": "月食",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/lunaEclipse/lunaEclipse.jpg",
         "link": "articles/photograph/lunaEclipse/lunaEclipse.html",
@@ -297,7 +297,7 @@
         "date": "2023-10-28"
     },
     {
-        "title": "20岁 20th",
+        "title": "20岁",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/20th-birthday/20th-birthday.webp",
         "link": "articles/photograph/20th-birthday/20th-birthday.html",
@@ -306,7 +306,7 @@
         "date": "2019-03-12"
     },
     {
-        "title": "自拍 Selfie",
+        "title": "自拍",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/selfie/selfie.jpg",
         "link": "articles/photograph/selfie/selfie.html",
@@ -315,7 +315,7 @@
         "date": "2021-06-02"
     },
     {
-        "title": "19岁 19th",
+        "title": "19岁",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/19th-birthday/19th-birthday.webp",
         "link": "articles/photograph/19th-birthday/19th-birthday.html",
@@ -324,7 +324,7 @@
         "date": "2018-03-12"
     },
     {
-        "title": "糖果店 Candy Shop",
+        "title": "糖果店",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/candyshop/candyshop.webp",
         "link": "articles/photograph/candyshop/candyshop.html",
@@ -333,7 +333,7 @@
         "date": "2023-04-09"
     },
     {
-        "title": "杏黄 Apricot",
+        "title": "杏黄",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/Apricot/Apricot.webp",
         "link": "articles/photograph/Apricot/Apricot.html",
@@ -351,7 +351,7 @@
         "date": "2022-02-24"
     },
     {
-        "title": "人像 Portrait",
+        "title": "人像",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/portrait1/portrait.webp",
         "link": "articles/photograph/portrait1/portrait.html",
@@ -360,7 +360,7 @@
         "date": "2019-06-05"
     },
     {
-        "title": "皇后镇 Queenstown",
+        "title": "皇后镇",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/newzealand/1.webp",
         "link": "articles/photograph/newzealand/newzealand.html",
@@ -369,7 +369,7 @@
         "date": "2023-10-15"
     },
     {
-        "title": "花贩 Flower Vendor",
+        "title": "花贩",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/flowerVendor2/flowerVendor2.webp",
         "link": "articles/photograph/flowerVendor2/flowerVendor.html",
@@ -378,7 +378,7 @@
         "date": "2023-02-04"
     },
     {
-        "title": "沙路 Sand Road",
+        "title": "沙路",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/photograph/sandroad/sandroad.webp",
         "link": "articles/photograph/sandroad/sandroad.html",
@@ -399,7 +399,7 @@
         "date": "2021-11-16"
     },
     {
-        "title": "练习 - 海报底图 Practice",
+        "title": "练习 - 海报底图",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/practice1/Practice.webp",
         "link": "articles/design/practice1/practice1.html",
@@ -408,7 +408,7 @@
         "date": "2020-06-01"
     },
     {
-        "title": "鱼 Sakana",
+        "title": "鱼",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/sakana/sakana.JPG",
         "link": "articles/design/sakana/sakana.html",
@@ -426,7 +426,7 @@
         "date": "2021-03-24"
     },
     {
-        "title": "练习 - 鸟 Practice",
+        "title": "练习 - 鸟",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/practice4/Practice.png",
         "link": "articles/design/practice4/practice4.html",
@@ -444,7 +444,7 @@
         "date": "2022-06-18"
     },
     {
-        "title": "练习 Practice",
+        "title": "练习",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/practice5/Practice.png",
         "link": "articles/design/practice5/practice5.html",
@@ -453,7 +453,7 @@
         "date": "2022-12-25"
     },
     {
-        "title": "心 Heart",
+        "title": "心",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/heart/heart.png",
         "link": "articles/design/heart/heart.html",
@@ -471,7 +471,7 @@
         "date": "2023-06-01"
     },
     {
-        "title": "练习 Practice",
+        "title": "练习",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/practice3/Practice.png",
         "link": "articles/design/practice3/practice3.html",
@@ -480,7 +480,7 @@
         "date": "2023-06-05"
     },
     {
-        "title": "练习 - 结晶 Practice",
+        "title": "练习 - 结晶",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/practice2/Practice.png",
         "link": "articles/design/practice2/practice2.html",
@@ -489,7 +489,7 @@
         "date": "2023-09-07"
     },
     {
-        "title": "逗猫棒 Cat-Teaser",
+        "title": "逗猫棒",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/cat-teaser/1.png",
         "link": "articles/design/cat-teaser/cat-teaser.html",
@@ -498,7 +498,7 @@
         "date": "2023-01-18"
     },
     {
-        "title": "黄昏 Dusk",
+        "title": "黄昏",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/dusk/dusk.webp",
         "link": "articles/design/dusk/dusk.html",
@@ -507,7 +507,7 @@
         "date": "2024-4-17"
     },
     {
-        "title": "港铁 XR 互动体验企划 MTR XR-Proposal Part 1",
+        "title": "港铁 XR 互动体验企划 Part 1",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/MTR/MTR-Proposal-PPT/MTR-Proposal-PPT.png",
         "link": "articles/design/MTR/MTR-Proposal-PPT/MTR-Proposal-PPT.html",
@@ -516,7 +516,7 @@
         "date": "2024-11-01"
     },
     {
-        "title": "港铁 XR 互动体验企划 MTR XR-Proposal Part 2",
+        "title": "港铁 XR 互动体验企划 Part 2",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/MTR/MTR-Proposal-Booklet/MTR-Proposal-Booklet.png",
         "link": "articles/design/MTR/MTR-Proposal-Booklet/MTR-Proposal-Booklet.html",
@@ -536,7 +536,7 @@
         "date": "2024-07-28"
     },
     {
-        "title": "关闭应用安全边界 Boundless Setting",
+        "title": "关闭应用安全边界",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ai.png",
         "link": "articles/blog/aboutinteraction/boundlesssetting/blog.html",
@@ -690,7 +690,7 @@
 
 
     {
-        "title": "格式塔心理学​ Gestalt Psychology",
+        "title": "格式塔心理学",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ls.png",
         "link": "articles/blog/learnstuffs/gestalttheory/blog.html",
@@ -699,7 +699,7 @@
         "date": "2023-03-17"
     },
     {
-        "title": "交互娱乐​ Interactive Entertainment",
+        "title": "交互娱乐",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ls.png",
         "link": "articles/blog/learnstuffs/interactiveentertainment/blog.html",
@@ -708,7 +708,7 @@
         "date": "2022-11-04"
     },
     {
-        "title": "非线性叙事​ Non-Linear Narrative",
+        "title": "非线性叙事",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ls.png",
         "link": "articles/blog/learnstuffs/non-linearnarrative/blog.html",
@@ -726,7 +726,7 @@
         "date": "2022-02-13"
     },
     {
-        "title": "绿野仙踪测试​ Wizard of Oz",
+        "title": "绿野仙踪测试",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ls.png",
         "link": "articles/blog/learnstuffs/wizardofoz/blog.html",
@@ -735,7 +735,7 @@
         "date": "2022-01-09"
     },
     {
-        "title": "尼尔森原则​ Nelson Principles",
+        "title": "尼尔森原则",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ls.png",
         "link": "articles/blog/learnstuffs/nelson/blog.html",
@@ -744,7 +744,7 @@
         "date": "2021-12-03"
     },
     {
-        "title": "无障碍设计小记 Accessibility",
+        "title": "无障碍设计小记",
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ls.png",
         "link": "articles/blog/learnstuffs/accessibility/blog.html",

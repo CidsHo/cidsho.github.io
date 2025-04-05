@@ -2,6 +2,7 @@
 import { setupSearch } from './search.js';
 import { setupFilterAndSort } from './filterAndSort.js';
 import { lazyLoadImages } from './lazyLoad.js'; // 确保导入名称正确
+import { initLanguageSwitch, loadPortfolioData } from './languageSwitch.js';
 
 let currentPage = 1;
 const pageSize = 10; // 每次加载的图片数量
@@ -71,104 +72,95 @@ window.addEventListener('scroll', function () {
 // 初始化加载第一页
 loadMoreItems();
 
-export async function loadPortfolio() {
-    try {
-        const response = await fetch('assets/data/portfolio.json');
-        if (!response.ok) {
-            throw new Error('Failed to load portfolio data');
-        }
-        const portfolioData = await response.json();
-        console.log('Loaded portfolio data:', portfolioData);
+// 监听作品集数据加载事件
+document.addEventListener('portfolioDataLoaded', (event) => {
+    const portfolioData = event.detail.data;
+    renderPortfolio(portfolioData);
+});
 
-        portfolioData.sort((a, b) => new Date(b.date) - new Date(a.date));
+// 渲染作品集
+function renderPortfolio(portfolioData) {
+    console.log('Rendering portfolio data:', portfolioData);
 
-        const portfolioGrid = document.querySelector('.portfolio-grid');
-        if (!portfolioGrid) {
-            console.error('Portfolio grid not found');
-            return;
-        }
+    portfolioData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-        portfolioGrid.innerHTML = '';
+    const portfolioGrid = document.querySelector('.portfolio-grid');
+    if (!portfolioGrid) {
+        console.error('Portfolio grid not found');
+        return;
+    }
 
-        portfolioData.forEach(item => {
-            const card = document.createElement('div');
-            card.classList.add('portfolio-item');
-            card.setAttribute('data-date', item.date);
-            card.setAttribute('data-tags', item.tags.join(','));
+    portfolioGrid.innerHTML = '';
 
-            const imageContainer = document.createElement('div');
-            imageContainer.classList.add('image-container');
-            const imageLink = document.createElement('a');
-            imageLink.href = item.link;
-            const image = document.createElement('img');
-            image.src = item.image; // 占位符图片
-            image.setAttribute('data-src', item['data-src']); // 实际图片 URL
-            image.alt = item.title;
-            image.classList.add('portfolio-image', 'lazy-load'); // 添加 lazy-load 类
-            imageLink.appendChild(image);
-            imageContainer.appendChild(imageLink);
+    portfolioData.forEach(item => {
+        const card = document.createElement('div');
+        card.classList.add('portfolio-item');
+        card.setAttribute('data-date', item.date);
+        card.setAttribute('data-tags', item.tags.join(','));
 
-            const info = document.createElement('div');
-            info.classList.add('portfolio-info');
-            const title = document.createElement('h2');
-            title.textContent = item.title;
+        const imageContainer = document.createElement('div');
+        imageContainer.classList.add('image-container');
+        const imageLink = document.createElement('a');
+        imageLink.href = item.link;
+        const image = document.createElement('img');
+        image.src = item.image;
+        image.setAttribute('data-src', item['data-src']);
+        image.alt = item.title;
+        image.classList.add('portfolio-image', 'lazy-load');
+        imageLink.appendChild(image);
+        imageContainer.appendChild(imageLink);
 
-            const tags = document.createElement('div');
-            tags.classList.add('portfolio-tags');
-            item.tags.slice(0, 5).forEach(tag => {
-                const tagSpan = document.createElement('span');
-                tagSpan.textContent = tag;
-                if (tag === '精选') {
-                    tagSpan.classList.add('highlighted-tag');
-                }
-                tags.appendChild(tagSpan);
-            });
+        const info = document.createElement('div');
+        info.classList.add('portfolio-info');
+        const title = document.createElement('h2');
+        title.textContent = item.title;
 
-            const description = document.createElement('p');
-            description.textContent = item.description;
-            const date = document.createElement('div');
-            date.classList.add('portfolio-date');
-            date.textContent = item.date;
-
-            info.appendChild(title);
-            info.appendChild(tags);
-            info.appendChild(description);
-            info.appendChild(date);
-
-            card.appendChild(imageContainer);
-            card.appendChild(info);
-
-            portfolioGrid.appendChild(card);
+        const tags = document.createElement('div');
+        tags.classList.add('portfolio-tags');
+        item.tags.slice(0, 5).forEach(tag => {
+            const tagSpan = document.createElement('span');
+            tagSpan.textContent = tag;
+            if (tag === '精选' || tag === 'Featured') {
+                tagSpan.classList.add('highlighted-tag');
+            }
+            tags.appendChild(tagSpan);
         });
 
-        // 初始化搜索功能
-        setupSearch();
+        const description = document.createElement('p');
+        description.textContent = item.description;
+        const date = document.createElement('div');
+        date.classList.add('portfolio-date');
+        date.textContent = item.date;
 
-        // 初始化筛选和排序功能
-        setupFilterAndSort();
+        info.appendChild(title);
+        info.appendChild(tags);
+        info.appendChild(description);
+        info.appendChild(date);
 
-        // 初始化懒加载
-        lazyLoadImages();
+        card.appendChild(imageContainer);
+        card.appendChild(info);
 
-        // 检查 URL 参数并自动触发筛选
-        const urlParams = new URLSearchParams(window.location.search);
-        const filterParam = urlParams.get('filter');
-        if (filterParam === 'star') {
-            // 找到精选按钮并触发点击
-            const filterStar = document.getElementById('filter-star');
-            if (filterStar) {
-                // 移除其他筛选按钮的激活状态
-                document.querySelectorAll('.filter-button').forEach(btn => btn.classList.remove('active'));
-                // 设置当前按钮的激活状态
-                filterStar.classList.add('active');
-                // 触发点击事件
-                filterStar.click();
-            }
-        }
-    } catch (error) {
-        console.error('Error loading portfolio data:', error);
-    }
+        portfolioGrid.appendChild(card);
+    });
+
+    // 初始化搜索功能
+    setupSearch();
+
+    // 初始化筛选和排序功能
+    setupFilterAndSort();
+
+    // 初始化懒加载
+    lazyLoadImages();
 }
 
-// 在 DOM 加载完成后调用 loadPortfolio
+export function loadPortfolio() {
+    // 初始化语言切换功能
+    initLanguageSwitch();
+    
+    // 加载默认语言数据
+    const savedLanguage = localStorage.getItem('portfolioLanguage') || 'zh';
+    loadPortfolioData(savedLanguage);
+}
+
+// 在DOM加载完成后初始化
 document.addEventListener('DOMContentLoaded', loadPortfolio);

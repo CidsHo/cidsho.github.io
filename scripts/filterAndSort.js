@@ -103,11 +103,16 @@ export function setupFilterAndSort() {
     if (sortDateAsc) sortDateAsc.addEventListener('click', () => setSort('asc', sortDateAsc));
     if (sortDateDesc) sortDateDesc.addEventListener('click', () => setSort('desc', sortDateDesc));
     if (filterPhotography) filterPhotography.addEventListener('click', () => setFilter('摄影', filterPhotography));
+    if (filterPhotography) filterPhotography.addEventListener('click', () => setFilter('Photography', filterPhotography));
     if (filterDesign) filterDesign.addEventListener('click', () => setFilter('设计', filterDesign));
+    if (filterDesign) filterDesign.addEventListener('click', () => setFilter('Design', filterDesign));
     if (filterIdeas) filterIdeas.addEventListener('click', () => setFilter('想法', filterIdeas));
+    if (filterIdeas) filterIdeas.addEventListener('click', () => setFilter('Ideas', filterIdeas));
     if (resetFilter) resetFilter.addEventListener('click', resetFilters);
     if (filterStar) filterStar.addEventListener('click', () => setFilter('精选', filterStar));
+    if (filterStar) filterStar.addEventListener('click', () => setFilter('Featured', filterStar));
     if (filterStarIcon) filterStarIcon.addEventListener('click', () => setFilter('精选', filterStarIcon));
+    if (filterStarIcon) filterStarIcon.addEventListener('click', () => setFilter('Featured', filterStarIcon));
 
     // 初始化默认状态
     setSort('desc', sortDateDesc); // 默认按日期降序
