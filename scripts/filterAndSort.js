@@ -32,26 +32,46 @@ export function setupFilterAndSort() {
 
     // 应用筛选和排序
     function applyFilterAndSort() {
-        // 添加移动动画
         portfolioItems.forEach(item => item.classList.add('move'));
 
-        // 延迟执行筛选、排序和重新布局
         setTimeout(() => {
             // 筛选
             portfolioItems.forEach(item => {
+                // 获取并预处理标签
                 const itemTags = item.getAttribute('data-tags')
                     .split(',')
-                    .map(tag => tag.trim().toLowerCase());
+                    .map(tag => tag.trim()); // 不转换为小写，保持原始大小写
 
-                const isFeatured = itemTags.includes('精选'.toLowerCase());
+                // 检查精选/Featured标签
+                const isFeatured = itemTags.some(tag => 
+                    tag === '精选' || tag === 'Featured'
+                );
 
-                if (currentFilter === '精选') {
-                    item.style.display = isFeatured ? 'block' : 'none';
-                } else if (currentFilter === 'all' || itemTags.includes(currentFilter.toLowerCase())) {
-                    item.style.display = 'block';
+                // 根据当前筛选条件显示/隐藏项目
+                let shouldShow = false;
+
+                if (currentFilter === '精选' || currentFilter === 'Featured') {
+                    shouldShow = isFeatured;
+                } else if (currentFilter === 'all') {
+                    shouldShow = true;
                 } else {
-                    item.style.display = 'none';
+                    // 标签映射表
+                    const tagMap = {
+                        '摄影': ['摄影', 'Photography'],
+                        'Photography': ['摄影', 'Photography'],
+                        '设计': ['设计', 'Design'],
+                        'Design': ['设计', 'Design'],
+                        '想法': ['想法', 'Ideas'],
+                        'Ideas': ['想法', 'Ideas']
+                    };
+
+                    // 检查标签是否匹配（考虑中英文对应关系）
+                    shouldShow = itemTags.some(tag => 
+                        tagMap[currentFilter]?.includes(tag)
+                    );
                 }
+
+                item.style.display = shouldShow ? 'block' : 'none';
             });
 
             // 排序
@@ -74,15 +94,16 @@ export function setupFilterAndSort() {
             // 移除移动动画
             setTimeout(() => {
                 portfolioItems.forEach(item => item.classList.remove('move'));
-            }, 10); // 稍微延迟以确保动画生效
-        }, 500); // 等待动画完成
+            }, 10);
+        }, 500);
     }
 
     // 设置筛选状态
     function setFilter(category, button) {
+        console.log('Setting filter to:', category); // 调试日志
         currentFilter = category;
         applyFilterAndSort();
-        setActiveButton(button, 'filter'); // 设置筛选按钮的选中状态
+        setActiveButton(button, 'filter');
     }
 
     // 设置排序状态
@@ -99,20 +120,40 @@ export function setupFilterAndSort() {
         setActiveButton(null, 'filter'); // 清除筛选按钮的选中状态
     }
 
-    // 初始化事件监听
+    // 修改事件监听器设置
     if (sortDateAsc) sortDateAsc.addEventListener('click', () => setSort('asc', sortDateAsc));
     if (sortDateDesc) sortDateDesc.addEventListener('click', () => setSort('desc', sortDateDesc));
-    if (filterPhotography) filterPhotography.addEventListener('click', () => setFilter('摄影', filterPhotography));
-    if (filterPhotography) filterPhotography.addEventListener('click', () => setFilter('Photography', filterPhotography));
-    if (filterDesign) filterDesign.addEventListener('click', () => setFilter('设计', filterDesign));
-    if (filterDesign) filterDesign.addEventListener('click', () => setFilter('Design', filterDesign));
-    if (filterIdeas) filterIdeas.addEventListener('click', () => setFilter('想法', filterIdeas));
-    if (filterIdeas) filterIdeas.addEventListener('click', () => setFilter('Ideas', filterIdeas));
-    if (resetFilter) resetFilter.addEventListener('click', resetFilters);
-    if (filterStar) filterStar.addEventListener('click', () => setFilter('精选', filterStar));
-    if (filterStar) filterStar.addEventListener('click', () => setFilter('Featured', filterStar));
-    if (filterStarIcon) filterStarIcon.addEventListener('click', () => setFilter('精选', filterStarIcon));
-    if (filterStarIcon) filterStarIcon.addEventListener('click', () => setFilter('Featured', filterStarIcon));
+    
+    // 筛选按钮事件监听器
+    if (filterPhotography) {
+        filterPhotography.addEventListener('click', () => {
+            setFilter('摄影', filterPhotography);
+        });
+    }
+    
+    if (filterDesign) {
+        filterDesign.addEventListener('click', () => {
+            setFilter('设计', filterDesign);
+        });
+    }
+    
+    if (filterIdeas) {
+        filterIdeas.addEventListener('click', () => {
+            setFilter('想法', filterIdeas);
+        });
+    }
+    
+    if (resetFilter) {
+        resetFilter.addEventListener('click', resetFilters);
+    }
+    
+    if (filterStar || filterStarIcon) {
+        const starHandler = () => {
+            setFilter('精选', filterStar || filterStarIcon);
+        };
+        if (filterStar) filterStar.addEventListener('click', starHandler);
+        if (filterStarIcon) filterStarIcon.addEventListener('click', starHandler);
+    }
 
     // 初始化默认状态
     setSort('desc', sortDateDesc); // 默认按日期降序
