@@ -403,23 +403,35 @@ h1 {
 
 /* 响应式设计 */
 
-@media (min-width: 1800px) {
+@media (min-width: 1921px) {
     .portfolio-grid {
         grid-template-columns: repeat(5, 1fr); /* 每行 5 张卡片 */
     }
     .portfolio-container {
-        padding: 0 80px; /* 增加留白 */
+        padding: 0 5vw; /* 增加留白 */
     }
 }
 
-@media (max-width: 1799px) and (min-width: 768px) {
+@media (max-width: 1920px) and (min-width: 1201px) {
     .portfolio-grid {
         grid-template-columns: repeat(3, 1fr); /* 每行 3 张卡片 */
     }
     .portfolio-container {
-        padding: 0 40px;
+        padding: 0 5vw;
     }
 }
+
+@media (max-width: 1200px) and (min-width: 1000px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr); /* 每行 2 张卡片 */
+    }
+    .portfolio-container {
+        padding: 0 5vw;
+    }
+}
+
+
+
 
 @media (max-width: 768px) {
 
