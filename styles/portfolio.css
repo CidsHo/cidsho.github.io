@@ -414,7 +414,7 @@ h1 {
 
 @media (max-width: 1920px) and (min-width: 1201px) {
     .portfolio-grid {
-        grid-template-columns: repeat(3, 1fr); /* 每行 3 张卡片 */
+        grid-template-columns: repeat(4, 1fr); /* 每行 4 张卡片 */
     }
     .portfolio-container {
         padding: 0 5vw;
