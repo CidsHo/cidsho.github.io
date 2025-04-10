@@ -533,6 +533,15 @@
         "description": "In-progress commercial project proposal Part 2",
         "date": "2024-11-02"
     },
+    {
+        "title": "Lucky Star",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/luckystar/4.jpg",
+        "link": "articles/design/luckystar/luckystar.html",
+        "tags": ["Design","Digital Painting"],
+        "description": "Dark history, a period of time when I was obsessed with Lucky Star",
+        "date": "2017-06-15"
+    },
 
 
     {
