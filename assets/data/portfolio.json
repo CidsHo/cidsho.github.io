@@ -386,6 +386,15 @@
         "description": "",
         "date": "2018-08-11"
     },
+    {
+        "title": "恭贺新禧",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/newyear1/newyear1.webp",
+        "link": "articles/photograph/newyear1/newyear1.html",
+        "tags": ["摄影"],
+        "description": "",
+        "date": "2023-02-04"
+    },
 
 
     
@@ -523,6 +532,15 @@
         "tags": ["设计","设计研究","想法"],
         "description": "在研商业项目企划 Part 2",
         "date": "2024-11-02"
+    },
+    {
+        "title": "幸运星",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/luckystar/4.jpg",
+        "link": "articles/design/luckystar/luckystar.html",
+        "tags": ["设计","数字绘画"],
+        "description": "黑历史，迷过一段时间的幸运星",
+        "date": "2017-06-15"
     },
 
 

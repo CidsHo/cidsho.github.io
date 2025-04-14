@@ -386,6 +386,15 @@
         "description": "",
         "date": "2018-08-11"
     },
+    {
+        "title": "New Year",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/photograph/newyear1/newyear1.webp",
+        "link": "articles/photograph/newyear1/newyear1.html",
+        "tags": ["Photography"],
+        "description": "",
+        "date": "2023-02-04"
+    },
 
 
     
@@ -523,6 +532,15 @@
         "tags": ["Design","Design Research","Ideas"],
         "description": "In-progress commercial project proposal Part 2",
         "date": "2024-11-02"
+    },
+    {
+        "title": "Lucky Star",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/luckystar/4.jpg",
+        "link": "articles/design/luckystar/luckystar.html",
+        "tags": ["Design","Digital Painting"],
+        "description": "Dark history, a period of time when I was obsessed with Lucky Star",
+        "date": "2017-06-15"
     },
 
 
