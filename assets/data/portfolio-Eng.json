@@ -542,6 +542,15 @@
         "description": "Dark history, a period of time when I was obsessed with Lucky Star",
         "date": "2017-06-15"
     },
+    {
+        "title": "Darkest Dungeon UI Rebuild",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/darkestdungeon-ui-rebuild/Cover.png",
+        "link": "articles/design/darkestdungeon-ui-rebuild/darkestdungeon-ui-rebuild.html",
+        "tags": ["Featured","Game UI","Design"],
+        "description": "Turn-Based Combat UI Design for Mobile",
+        "date": "2025-03-01"
+    },
 
 
     {
@@ -661,6 +670,7 @@
         "description": "Presentation version of the lab meeting",
         "date": "2024-05-10"
     },
+    
 
 
 

@@ -542,6 +542,16 @@
         "description": "黑历史，迷过一段时间的幸运星",
         "date": "2017-06-15"
     },
+    {
+        "title": "暗黑地牢UI重构",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/darkestdungeon-ui-rebuild/Cover.png",
+        "link": "articles/design/darkestdungeon-ui-rebuild/darkestdungeon-ui-rebuild.html",
+        "tags": ["精选","设计","游戏UI设计","交互设计"],
+        "description": "回合制战斗界面移动版适配",
+        "date": "2025-03-01"
+    },
+
 
 
     {
