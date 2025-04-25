@@ -558,7 +558,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ai.png",
         "link": "articles/blog/aboutinteraction/snap!/blog.html",
-        "tags": ["Design","Interaction Development","Virtual Reality"],
+        "tags": ["Design","Interaction Development","VR"],
         "description": "A pseudo-Quest3 camera recognition scheme based on screenshot function",
         "date": "2024-07-28"
     },
@@ -567,7 +567,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ai.png",
         "link": "articles/blog/aboutinteraction/boundlesssetting/blog.html",
-        "tags": ["Design","Interaction Development","Virtual Reality"],
+        "tags": ["Design","Interaction Development","VR"],
         "description": "Closing the security boundary of Quest applications",
         "date": "2024-08-01"
     },
@@ -576,7 +576,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ai.png",
         "link": "articles/blog/aboutinteraction/quest3-item-detection/blog.html",
-        "tags": ["Design","Application Development","Virtual Reality"],
+        "tags": ["Design","Application Development","VR"],
         "description": "Using the streaming video as the data source, then performing AI detection, and finally displaying the detection results on the Quest screen",
         "date": "2024-11-17"
     },
@@ -603,7 +603,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/spVR-interaction/Front.png",
         "link": "articles/design/spVR-interaction/interaction.html",
-        "tags": ["Featured","Design","Interaction Design","Virtual Reality"],
+        "tags": ["Featured","Design","Interaction Design","VR"],
         "description": "Based on the distance relationship between the hand controller and the head-mounted display, the interaction effect is judged.",
         "date": "2023-10-09"
     },
@@ -612,7 +612,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/blog/aboutinteraction/vrst23/Front2.png",
         "link": "articles/blog/aboutinteraction/vrst23/vrst23.html",
-        "tags": ["Featured","Design","Interaction Design","Virtual Reality"],
+        "tags": ["Featured","Design","Interaction Design","VR"],
         "description": "Published in VRST 2023",
         "date": "2023-10-12"
     },
@@ -621,7 +621,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/blog/aboutinteraction/hcii24/Front1.png",
         "link": "articles/blog/aboutinteraction/hcii24/hcii24.html",
-        "tags": ["Featured","Design","UX Research","Virtual Reality"],
+        "tags": ["Featured","Design","UX Research","VR"],
         "description": "Research on user's encounter and serendipitous interactions in virtual public spaces",
         "date": "2024-06-29"
     },
@@ -630,7 +630,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/design/spVR-UI/Front.png",
         "link": "articles/design/spVR-UI/spVR-UI.html",
-        "tags": ["Featured","Design","Virtual Reality System Design","UI Design"],
+        "tags": ["Featured","Design","VR System Design","UI Design"],
         "description": "",
         "date": "2025-01-11"
     },
@@ -648,7 +648,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/blog/aboutinteraction/ismar2024/ismar.png",
         "link": "articles/blog/aboutinteraction/ismar2024/ismar2024.html",
-        "tags": ["Featured","Design","Virtual Reality System Design","UX Research"],
+        "tags": ["Featured","Design","VR System Design","UX Research"],
         "description": "Published in ISMAR 2024",
         "date": "2024-10-29"
     },
@@ -666,7 +666,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/article-thumbnail/ai.png",
         "link": "articles/design/spVR-Grads/spVR-Grads.html",
-        "tags": ["Featured","Design","Virtual Reality System Design"],
+        "tags": ["Featured","Design","VR System Design"],
         "description": "Presentation version of the lab meeting",
         "date": "2024-05-10"
     },
@@ -708,7 +708,7 @@
         "image": "assets/placeholder.jpg",
         "data-src": "articles/blog/aboutinteraction/vrst23/Front1.png",
         "link": "articles/blog/aboutinteraction/vrst23/vrst-pre.html",
-        "tags": ["Featured","Design","Design Research","Virtual Reality System"],
+        "tags": ["Featured","Design","Design Research","VR System"],
         "description": "",
         "date": "2023-10-11"
     },
