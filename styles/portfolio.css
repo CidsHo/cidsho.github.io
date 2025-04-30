@@ -244,7 +244,6 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 默认列数 */
     gap: 20px;
-    padding: 20px;
     justify-content: center; /* 卡片居中 */
     align-items: start;
     grid-auto-flow: dense;
@@ -405,28 +404,26 @@ h1 {
 
 @media (min-width: 1921px) {
     .portfolio-grid {
-        grid-template-columns: repeat(5, 1fr); /* 每行 5 张卡片 */
+        grid-template-columns: repeat(3, 1fr); /* 每行 4 张卡片 */
+        padding: 12vw;
+        padding-top: 0;
     }
-    .portfolio-container {
-        padding: 0 5vw; /* 增加留白 */
-    }
+
 }
 
 @media (max-width: 1920px) and (min-width: 1201px) {
     .portfolio-grid {
-        grid-template-columns: repeat(4, 1fr); /* 每行 4 张卡片 */
-    }
-    .portfolio-container {
-        padding: 0 5vw;
+        grid-template-columns: repeat(3, 1fr); /* 每行 4 张卡片 */
+        padding: 8vw;
+        padding-top: 0;
     }
 }
 
 @media (max-width: 1200px) and (min-width: 1000px) {
     .portfolio-grid {
         grid-template-columns: repeat(2, 1fr); /* 每行 2 张卡片 */
-    }
-    .portfolio-container {
-        padding: 0 5vw;
+        padding: 1vw;
+        padding-top: 0;
     }
 }
 
@@ -442,6 +439,8 @@ h1 {
 
     .portfolio-grid {
         grid-template-columns: 1fr; /* 每行 1 张卡片 */
+        padding: 1vw;
+        padding-top: 0;
     }
 
     .portfolio-banner {
@@ -454,10 +453,6 @@ h1 {
 
     .portfolio-banner h7 {
         font-size: 16px; /* 缩小副标题字体 */
-    }
-
-    .portfolio-container {
-        padding: 0 0px;
     }
 
     /* 筛选栏优化 */
