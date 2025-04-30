@@ -309,12 +309,12 @@ h1 {
 }
 
 .portfolio-info h2 {
-    font-size: 18px;
+    font-size: clamp(18px, 1vw, 24px);
     margin-bottom: 10px;
 }
 
 .portfolio-info p {
-    font-size: 14px;
+    font-size: clamp(14px, 0.7vw, 24px);
     color: #666;
     margin-bottom: 10px;
 }
@@ -322,20 +322,20 @@ h1 {
 /* 标签和日期 */
 .portfolio-tags {
     display: flex;
-    gap: 5px;
-    margin-bottom: 10px;
+    gap: clamp(5px, 0.3vw, 10px);
+    margin-bottom: clamp(5px, 0.3vw, 10px);
 }
 
 .portfolio-tags span {
-    font-size: 12px;
-    padding: 4px 8px;
+    font-size: clamp(12px, 0.6vw, 24px);
+    padding: clamp(4px, 0.2vw, 8px) clamp(8px, 0.4vw, 16px);
     background-color: #f0f0f0;
     border-radius: 4px;
     color: #333;
 }
 
 .portfolio-date {
-    font-size: 12px;
+    font-size: clamp(12px, 0.6vw, 24px);
     color: #999;
 }
 
