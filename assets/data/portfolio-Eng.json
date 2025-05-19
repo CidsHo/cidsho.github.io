@@ -551,6 +551,15 @@
         "description": "Turn-Based Combat UI Design for Mobile",
         "date": "2025-03-01"
     },
+    {
+        "title": "LudicMetric Data Visualization System",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/data-visualization-LudicMetric/Cover.png",
+        "link": "articles/design/data-visualization-LudicMetric/data-visualization-LudicMetric.html",
+        "tags": ["Featured","Data Visualization","Design"],
+        "description": "",
+        "date": "2025-05-02"
+    },
 
 
     {
