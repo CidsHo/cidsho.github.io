@@ -57,7 +57,7 @@
 }
 
 .nav-item.active::before {
-    height: 3px; /* 当前页面底部有一个小条 */
+    height: 2px; /* 当前页面底部有一个小条 */
 }
 
 /* 响应式调整 */

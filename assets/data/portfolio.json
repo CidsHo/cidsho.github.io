@@ -551,6 +551,15 @@
         "description": "回合制战斗界面移动版适配",
         "date": "2025-03-01"
     },
+    {
+        "title": "LudicMetric数据库系统数据可视化组件",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/data-visualization-LudicMetric/Cover.png",
+        "link": "articles/design/data-visualization-LudicMetric/data-visualization-LudicMetric.html",
+        "tags": ["精选","设计", "数据可视化设计","交互设计"],
+        "description": "",
+        "date": "2025-05-02"
+    },
 
 
 

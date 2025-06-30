@@ -7,7 +7,7 @@
     background-position: center; /* 背景图片居中 */
     width: 100%; /* 覆盖整个宽度 */
     min-height: 400px; /* 设置最小高度 */
-    padding: 60px 20px; /* 内边距 */
+    padding: 40px 15px 0 15px;; /* 内边距 */
     text-align: center; /* 内容居中 */
     color: #fff; /* 文字颜色 */
     position: relative; /* 相对定位 */
@@ -70,6 +70,8 @@ h1 {
     display: inline-block;
     animation: charSpacing 8s ease-in-out infinite; /* 更慢的动画 */
     position: relative; /* 确保位置相对定位 */
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 600;
 }
 
 /* 偶数字符向左移动，奇数字符向右移动 */
@@ -444,11 +446,13 @@ h1 {
     }
 
     .portfolio-banner {
-        padding: 40px 15px; /* 缩小内边距 */
+        padding: 40px 15px 0 15px; /* 缩小内边距 */
+        margin-bottom: 0px;
+        min-height: 0;
     }
 
     .portfolio-banner h1 {
-        font-size: 36px; /* 缩小标题字体 */
+        font-size: 48px; /* 缩小标题字体 */
     }
 
     .portfolio-banner h7 {

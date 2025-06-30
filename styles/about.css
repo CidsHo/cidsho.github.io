@@ -315,7 +315,7 @@
 
     .profile-card {
         max-width: 90%; /* 缩小卡片宽度 */
-        margin: 20px auto; /* 居中并增加上下边距 */
+        margin: 5vh 5vh 0 5vh; /* 居中并增加上下边距 */
     }
 
     /* 头像 */
