@@ -578,7 +578,15 @@
         "description": "",
         "date": "2025-07-01"
     },
-
+    {
+        "title": "后末日科幻 X 怪谈风格化FPS界面设计",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/truncate/Cover.png",
+        "link": "articles/design/truncate/truncate.html",
+        "tags": ["精选","设计", "游戏UI设计","交互设计"],
+        "description": "",
+        "date": "2025-08-01"
+    },
 
 
     {
