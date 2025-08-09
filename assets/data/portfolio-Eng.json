@@ -572,9 +572,9 @@
     {
         "title": "FPS Tournament Observer System Main Interface Design: Based on 'Delta Force' Game Design",
         "image": "assets/placeholder.jpg",
-        "data-src": "articles/design/deadlock-hud-rebuild/Cover.png",
-        "link": "articles/design/deadlock-hud-rebuild/deadlock-hud-rebuild.html",
-        "tags": ["精选","设计", "游戏UI设计","交互设计"],
+        "data-src": "articles/design/fps-ob-DF/Cover.png",
+        "link": "articles/design/fps-ob-DF/fps-ob-DF.html",
+        "tags": ["Featured","Design", "Game UI Design","Interaction Design"],
         "description": "",
         "date": "2025-07-01"
     },
