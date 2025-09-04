@@ -587,6 +587,24 @@
         "description": "",
         "date": "2025-08-01"
     },
+    {
+        "title": "跳出框架！FPS垂直空间战斗体验关卡设计——《装卸区》",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/discharge/Cover.png",
+        "link": "articles/design/discharge/discharge.html",
+        "tags": ["精选","设计", "FPS关卡设计","白模设计"],
+        "description": "",
+        "date": "2025-08-28"
+    },
+    {
+        "title": "如何搜打撤? 搜索撤离类FPS关卡兴趣点设计——《精炼工坊》",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/refinery/Cover.png",
+        "link": "articles/design/refinery/refinery.html",
+        "tags": ["精选","设计", "FPS关卡设计","白模设计"],
+        "description": "",
+        "date": "2025-09-01"
+    },
 
 
     {
