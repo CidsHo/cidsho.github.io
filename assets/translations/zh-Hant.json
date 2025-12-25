@@ -61,6 +61,12 @@
     "projectExperience": "項目經驗",
     "projectExperienceList": [
         {
+            "period": "2025-進行中",
+            "title": "關卡主策劃（在研英雄射擊項目）",
+            "institution": "上海米哈游網絡科技股份有限公司",
+            "role": "進行4v4 團隊競技, 搜索撤離模式, 線性故事關卡等多種 PVP/PVE 模式的關卡設計與玩法探索"
+        },
+        {
             "period": "2024-進行中",
             "title": "港鐵 XR 互動體驗：透過無接觸 XR 技術增強乘客互動",
             "institution": "香港理工大學，中國。",

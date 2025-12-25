@@ -61,7 +61,13 @@
     "projectExperience": "Project Experience",
     "projectExperienceList": [
         {
-            "period": "2024-Ongoing",
+            "period": "2025-Ongoing",
+            "title": "Level Designer for a TPS Project (not yet revealed)",
+            "institution": "Shanghai Mihoyo Network Technology Co., Ltd",
+            "role": "Conduct Level Design and gameplay loop verification for various PVP/PVE Modes (4v4 Team Battle, Extraction Shooter, Linear Story Stage)"
+        },
+        {
+            "period": "2024-2025",
             "title": "MTR XR Interactive Experience: Enhancing Passenger Interaction with Contactless XR Technology",
             "institution": "The Hong Kong Polytechnic University, China.",
             "role": "Research Assistant, Designer"
