@@ -614,6 +614,27 @@
         "description": "",
         "date": "2025-09-01"
     },
+    {
+        "title": "微恐怖风格FPS关卡/POI设计————《浸没荒村》",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/soaked/Cover.png",
+        "link": "articles/design/soaked/soaked.html",
+        "tags": ["精选","设计", "FPS关卡设计","白模设计"],
+        "description": "",
+        "date": "2025-12-28"
+    },
+    {
+        "title": "Splatoon-like TPS占点地图设计————《C位争夺战》",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/cypher/Cover.png",
+        "link": "articles/design/cypher/cypher.html",
+        "tags": ["精选","设计", "TPS占点地图设计","白模设计"],
+        "description": "",
+        "date": "2025-11-08"
+    },
+
+
+
 
 
     {

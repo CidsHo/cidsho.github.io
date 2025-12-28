@@ -596,6 +596,10 @@
         "description": "",
         "date": "2025-08-01"
     },
+
+
+
+    
     {
         "title": "Jump out of the box! Designing for Vertical Space Combat Experience in FPS——Discharge",
         "image": "assets/placeholder.jpg",
@@ -614,6 +618,28 @@
         "description": "",
         "date": "2025-09-01"
     },
+    {
+        "title": "Micro-Horror Style FPS Level/POI Design————Soaked",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/soaked/Cover.png",
+        "link": "articles/design/soaked/soaked.html",
+        "tags": ["Featured","Design", "FPS Level Design","Blockout Design"],
+        "description": "",
+        "date": "2025-12-28"
+    },
+    {
+        "title": "Splatoon-like TPS Point of Interest Design————Cypher",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/cypher/Cover.png",
+        "link": "articles/design/cypher/cypher.html",
+        "tags": ["Featured","Design", "TPS Point of Interest Design","Blockout Design"],
+        "description": "",
+        "date": "2025-11-08"
+    },
+
+
+
+
 
 
     {
