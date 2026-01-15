@@ -596,6 +596,8 @@
         "description": "",
         "date": "2025-08-01"
     },
+
+
     {
         "title": "跳出框架！FPS垂直空间战斗体验关卡设计——《装卸区》",
         "image": "assets/placeholder.jpg",
@@ -632,7 +634,15 @@
         "description": "",
         "date": "2025-11-08"
     },
-
+    {
+        "title": "关卡设计笔试策划案留档——《灰蛊风暴区》",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/locustswarm/Cover.png",
+        "link": "articles/design/locustswarm/locustswarm.html",
+        "tags": ["精选","设计", "FPS关卡设计","关卡设计策划案"],
+        "description": "给腾讯北极光工作室《灰镜行者》项目的笔试，成功通关（但没去）。脱敏后记录一下。",
+        "date": "2025-01-04"
+    },
 
 
 

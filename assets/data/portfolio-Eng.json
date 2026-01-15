@@ -636,7 +636,15 @@
         "description": "",
         "date": "2025-11-08"
     },
-
+    {
+        "title": "FPS Level Design Proposal (Archived)——Locust Swarm",
+        "image": "assets/placeholder.jpg",
+        "data-src": "articles/design/locustswarm/Cover.png",
+        "link": "articles/design/locustswarm/locustswarm.html",
+        "tags": ["Featured","Design", "FPS Level Design","Level Design Proposal"],
+        "description": "Archived test results for Aurora Studio.",
+        "date": "2025-01-04"
+    },
 
 
 
